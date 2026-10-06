@@ -1,5 +1,5 @@
 // Forgia service worker: app shell offline + cache of exercise images
-const SHELL = 'forgia-shell-v4';
+const SHELL = 'forgia-shell-v5';
 const IMG = 'forgia-img-v1';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png', './zxing.min.js'];
 self.addEventListener('install', e => {
