@@ -531,6 +531,7 @@ hr.sep { border: 0; height: 1px; background: var(--line); margin: 2px 0; width: 
 .set-row input::placeholder { font-size: 14px; }
 .set-row .ty.ts, .rt-set .ty.ts { color: var(--ember); }
 .set-row .ty.bo, .rt-set .ty.bo { color: var(--good); }
+.pk-row { padding-right: 6px; } .pk-row .icon-btn { color: var(--muted); }
 
 </style>
 <div id="app">
@@ -1737,7 +1738,7 @@ function pickerList(l) {
   const multi = l.mode === 'add' || l.mode === 'routine';
   return list.slice(0, max).map(x => {
     const sel = multi && l.sel.includes(x.id);
-    return `<button class="li" data-a="pickEx" data-id="${esc(x.id)}" style="${sel ? 'background:var(--warm-bg)' : ''}">${thumbHTML(x)}<div class="grow"><div class="t">${esc(x.n)}</div><div class="s">${(x.p || []).map(m => MUSCLE_IT[m]).join(', ') || CAT_IT[x.c] || ''} · ${EQUIP_IT[x.e] || 'Altro'}</div></div>${sel ? `<span class="chip warm">${l.sel.indexOf(x.id) + 1}</span>` : POP_RANK.has(x.id) && !l.q ? `<span class="faint">${icon('star', 16)}</span>` : ''}${multi ? '' : icon('chev', 18)}</button>`;
+    return `${multi ? `<div class="li pk-row" style="${sel ? 'background:var(--warm-bg)' : ''}"><button class="row grow" data-a="pickEx" data-id="${esc(x.id)}" style="text-align:left;min-width:0;gap:12px">` : `<button class="li" data-a="pickEx" data-id="${esc(x.id)}">`}${thumbHTML(x)}<div class="grow"><div class="t">${esc(x.n)}</div><div class="s">${(x.p || []).map(m => MUSCLE_IT[m]).join(', ') || CAT_IT[x.c] || ''} · ${EQUIP_IT[x.e] || 'Altro'}</div></div>${sel ? `<span class="chip warm">${l.sel.indexOf(x.id) + 1}</span>` : POP_RANK.has(x.id) && !l.q ? `<span class="faint">${icon('star', 16)}</span>` : ''}${multi ? `</button><button class="icon-btn" data-a="openEx" data-id="${esc(x.id)}" aria-label="Esecuzione e muscoli">${icon('info', 20)}</button></div>` : icon('chev', 18) + '</button>'}`;
   }).join('') + (list.length > max ? `<div class="li small muted">Altri ${list.length - max} risultati: affina la ricerca.</div>` : '') + (!list.length ? `<div class="empty">${icon('search', 30)}<b>Nessun esercizio trovato</b><button class="btn sm" data-a="newEx">${icon('plus', 16)} Crea “${esc(l.q || 'nuovo esercizio')}”</button></div>` : '');
 }
 function layerPicker(l, i) {
@@ -1810,7 +1811,7 @@ function layerRoutine(l, i) {
         <button class="icon-btn" data-a="rtDelSet" data-ei="${ei}" data-si="${si}" aria-label="Elimina serie" ${e.plan.length < 2 ? 'disabled style="opacity:.3"' : ''}>${icon('x', 16)}</button></div>`; }).join('');
     return `<div class="ed-ex ${groups[ei] ? 'ss' : ''}">
           ${groups[ei] ? `<div class="ss-tag">Superserie ${groups[ei]}</div>` : ''}
-          <div class="row">${thumbHTML(x)}<div class="grow" style="min-width:0"><b style="display:block;line-height:1.25">${esc(x.n)}</b><span class="small muted">${(x.p || []).map(m => MUSCLE_IT[m]).join(', ')}</span></div>
+          <div class="row"><button class="row grow" data-a="openEx" data-id="${esc(e.id)}" style="text-align:left;min-width:0" aria-label="Vedi esecuzione e muscoli">${thumbHTML(x)}<div class="grow" style="min-width:0"><b style="display:block;line-height:1.25">${esc(x.n)}</b><span class="small muted">${(x.p || []).map(m => MUSCLE_IT[m]).join(', ')}</span><span class="small" style="display:block;color:var(--gold)">${icon('info', 12)} Esecuzione e muscoli</span></div></button>
             <button class="icon-btn" data-a="rtMove" data-ei="${ei}" data-d="-1" aria-label="Sposta su" ${ei === 0 ? 'disabled style="opacity:.3"' : ''}>${icon('up')}</button>
             <button class="icon-btn" data-a="rtMove" data-ei="${ei}" data-d="1" aria-label="Sposta giù" ${ei === r.ex.length - 1 ? 'disabled style="opacity:.3"' : ''}>${icon('down')}</button>
             <button class="icon-btn" data-a="rtRemove" data-ei="${ei}" aria-label="Rimuovi">${icon('x')}</button></div>
@@ -2090,7 +2091,7 @@ const A = {
       save();
     } else if (l.target === 'routine') {
       const rl = UI.layers.find(x => x.type === 'routine');
-      for (const id of l.sel) { const x = ex(id); const iso = x.k === 'isolation'; rl.draft.ex.push({ id, sets: 3, rmin: iso ? 10 : 6, rmax: iso ? 15 : 10, rest: iso ? 75 : 150, ss: false, plan: [...Array(3)].map(() => ({ t: 'n', a: iso ? 10 : 6, b: iso ? 15 : 10 })) }); }
+      for (const id of l.sel) { const x = ex(id); const iso = x.k === 'isolation'; rl.draft.ex.push({ id, sets: 3, rmin: iso ? 10 : 6, rmax: iso ? 10 : 6, rest: iso ? 75 : 150, ss: false, plan: [...Array(3)].map(() => ({ t: 'n', a: iso ? 10 : 6, b: null })) }); }
     }
     popLayer();
   },
