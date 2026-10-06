@@ -508,6 +508,29 @@ hr.sep { border: 0; height: 1px; background: var(--line); margin: 2px 0; width: 
 .sbars i { display: block; width: 100%; border-radius: 4px 4px 2px 2px; }
 .sbars span { font-size: 10px; color: var(--faint); line-height: 14px; height: 14px; }
 .sbars em { position: absolute; left: 0; right: 0; border-top: 1px dashed var(--muted); pointer-events: none; }
+.set-row.c2, .set-hd.c2 { grid-template-columns: 34px minmax(0, 1fr) 76px 64px 40px; }
+.rt-sets { display: flex; flex-direction: column; gap: 6px; }
+.rt-set { display: grid; grid-template-columns: 38px minmax(0, 1fr) 12px minmax(0, 1fr) 36px; gap: 6px; align-items: center; }
+.rt-set.hd { font-size: 11px; font-weight: 700; color: var(--faint); letter-spacing: .06em; text-transform: uppercase; }
+.rt-set.hd span:nth-child(2), .rt-set.hd span:nth-child(4) { text-align: center; }
+.rt-set .input { min-height: 38px; padding: 4px 8px; text-align: center; font-weight: 700; }
+.rt-set .ty { height: 36px; border-radius: 8px; background: var(--surface-2); font-family: var(--font-display); font-weight: 700; font-size: 15px; }
+.rt-set .ty.w { color: var(--gold); } .rt-set .ty.d { color: var(--steel); } .rt-set .ty.f, .rt-set .ty.rp, .rt-set .ty.m { color: var(--bad); }
+.rt-set .icon-btn { width: 36px; height: 36px; }
+/* routine folders */
+.folder { background: var(--surface); border-radius: var(--r-lg); border-left: 3px solid var(--fc); display: flex; flex-direction: column; }
+.fold-h { display: flex; align-items: center; gap: 6px; padding: 10px 6px 10px 12px; }
+.fold-h > button.row { gap: 12px; }
+.fold-n { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 16px; }
+.fold-img { border-radius: 12px; flex-shrink: 0; object-fit: cover; display: grid; place-items: center; color: var(--fc); background: color-mix(in srgb, var(--fc) 16%, transparent); }
+.fold-body { display: flex; flex-direction: column; gap: 10px; padding: 0 10px 12px; }
+.fold-body .rt { background: var(--surface-2); }
+.fdc { width: 32px; height: 32px; border-radius: 50%; border: 3px solid transparent; }
+.fdc.on { border-color: var(--fg); }
+.section-title .link { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+.set-row input::placeholder { font-size: 14px; }
+.set-row .ty.ts, .rt-set .ty.ts { color: var(--ember); }
+.set-row .ty.bo, .rt-set .ty.bo { color: var(--good); }
 
 </style>
 <div id="app">
@@ -575,6 +598,8 @@ const VOL_GROUPS = [
 const SET_TYPES = {
   n: { l: 'Serie normale', s: '', d: 'Serie allenante classica' },
   w: { l: 'Riscaldamento', s: 'W', d: 'Non conta per volume e record' },
+  ts: { l: 'Top set', s: 'T', d: 'La serie più pesante della giornata, poche ripetizioni' },
+  bo: { l: 'Back-off', s: 'B', d: 'Dopo il top set: carico ridotto (−10/20%) e più ripetizioni' },
   d: { l: 'Drop set', s: 'D', d: 'Scali il peso subito dopo la serie precedente' },
   f: { l: 'Cedimento', s: 'F', d: 'Serie portata a cedimento muscolare' },
   rp: { l: 'Rest-pause', s: 'RP', d: 'Pause di 10–20 s e altre ripetizioni' },
@@ -634,7 +659,7 @@ function defaultState() {
     profile: { name: '', restDefault: 120, weeklyGoal: 4, sound: true, onboarded: false, dayEnd: 0, exLang: 'en' },
     ai: { key: '', model: 'claude-haiku-4-5' },
     customEx: [], routines: [], workouts: [], active: null, exNotes: {}, seenBadges: [],
-    foods: {}, diary: {}, savedMeals: [], nutri: null, body: {}, health: {},
+    foods: {}, diary: {}, savedMeals: [], nutri: null, body: {}, health: {}, folders: [], exRir: {},
   };
 }
 function loadState() {
@@ -723,6 +748,21 @@ function defaultMT(x) {
 }
 function exType(id) { return (S.exType && S.exType[id]) || defaultMT(ex(id)); }
 function mtOf(e) { return e.mt || exType(e.id); }
+/* per-set plan of a routine exercise: [{ t, a, b }] a = reps (min), b = max (null = fixed reps) */
+function planOf(e) {
+  if (Array.isArray(e.plan) && e.plan.length) return e.plan;
+  return [...Array(clamp(+e.sets || 3, 1, 20))].map(() => ({ t: 'n', a: e.rmin ?? 8, b: e.rmax != null && e.rmax !== e.rmin ? e.rmax : null }));
+}
+function repTxt(a, b) { return a == null ? '' : b != null && b !== a ? a + '–' + b : String(a); }
+function planSummary(plan) {
+  const w = plan.filter(p => p.t !== 'w'), txt = [...new Set(w.map(p => repTxt(p.a, p.b)))];
+  const warm = plan.length - w.length;
+  return `${w.length} × ${txt.length === 1 ? txt[0] : txt.join(' / ')}${warm ? ` + ${warm} risc.` : ''}`;
+}
+/* targets of the work sets of an exercise in the active workout */
+function workTargets(aex) { return aex.sets.filter(isWork).map(s => s.ta != null ? { a: s.ta, b: s.tb ?? s.ta } : { a: aex.rmin || 8, b: aex.rmax || 12 }); }
+function rirTarget(aex) { const t = (aex.tags || []).find(x => /^RIR \d/.test(x)); return t ? +t[4] : aex.rir ?? 2; }
+function rirOn(e) { return !!(S.exRir && S.exRir[e.id]); }
 function setDone(s, mt) { return mt === 'time' ? !!s.sec : mt === 'dist' ? !!(s.km || s.min) : s.kg != null && !!s.r; }
 function workSets(e) { const mt = mtOf(e); return (e.sets || []).filter(s => isWork(s) && setDone(s, mt)); }
 function fmtSet(s, mt) {
@@ -879,7 +919,7 @@ const PROGRAMS = [
 function routineFromTemplate(t) {
   return {
     id: uid(), name: t.name, note: '',
-    ex: t.ex.map(r => ({ id: r[0], sets: r[1], rmin: r[2], rmax: r[3], rir: r[4], rest: r[5], ss: false })),
+    ex: t.ex.map(r => ({ id: r[0], sets: r[1], rmin: r[2], rmax: r[3], rest: r[5], ss: false, tags: ['RIR ' + r[4]], plan: [...Array(r[1])].map(() => ({ t: 'n', a: r[2], b: r[3] })) })),
   };
 }
 
@@ -903,33 +943,37 @@ function suggestion(aex, wid) {
     const top = Math.max(...workSets(last.e).map(s => s.sec || 0));
     return { kind: 'reps', sec: top + 5, text: `Ultima volta <b>${top} s</b>: prova a tenere <b>${top + 5} s</b>.` };
   }
-  const rmin = aex.rmin || 8, rmax = aex.rmax || 12, rirT = aex.rir ?? 2;
+  const T = workTargets(aex), T0 = T[0] || { a: aex.rmin || 8, b: aex.rmax || 12 };
+  const rmin = T0.a, rmax = T0.b, rirT = rirTarget(aex), same = T.every(t => t.a === T0.a && t.b === T0.b);
+  const maxTxt = same ? `${rmax} reps` : 'il massimo delle reps', minTxt = same ? `le ${rmin} reps` : 'il minimo di reps';
   const last = lastSession(aex.id, wid);
   if (!last) return { kind: 'new', text: `Prima volta: scegli un carico con cui arrivi a <b>${rmax}</b> ripetizioni lasciandone <b>${rirT}</b> in riserva.` };
   const ws = workSets(last.e);
   const top = Math.max(...ws.map(s => s.kg));
-  const atTop = ws.filter(s => s.kg === top);
+  const tg = i => T[i] || T[T.length - 1] || T0;
+  const atTopI = ws.map((s, i) => ({ s, t: tg(i) })).filter(o => o.s.kg === top), atTop = atTopI.map(o => o.s);
   const inc = increment(x);
   const rirs = atTop.map(s => s.rir).filter(v => v != null);
   const avgRir = rirs.length ? rirs.reduce((a, b) => a + b, 0) / rirs.length : null;
-  const allHit = atTop.every(s => s.r >= rmax);
-  const miss = atTop.some(s => s.r < rmin);
+  const allHit = atTopI.every(o => o.s.r >= o.t.b);
+  const miss = atTopI.some(o => o.s.r < o.t.a);
   if (inc === 0) {
-    if (allHit) return { kind: 'up', kg: top, text: `Hai chiuso ${rmax} reps su tutte le serie: <b>aggiungi zavorra</b> o rallenta l'eccentrica.` };
+    if (allHit) return { kind: 'up', kg: top, text: `Hai chiuso ${maxTxt} su tutte le serie: <b>aggiungi zavorra</b> o rallenta l'eccentrica.` };
     return { kind: 'reps', kg: top, r: Math.min(rmax, Math.max(...atTop.map(s => s.r)) + 1), text: `Punta a <b>+1 ripetizione</b> per serie rispetto all'ultima volta.` };
   }
   if (allHit) {
     const big = avgRir != null && avgRir >= rirT + 2;
     const kg = +(top + inc * (big ? 2 : 1)).toFixed(2);
-    return { kind: 'up', kg, r: rmin, text: `Hai chiuso ${rmax} reps su tutte le serie${big ? ' con margine' : ''}: <b>passa a ${fmtKg(kg)} kg</b> e riparti da ${rmin} reps.` };
+    return { kind: 'up', kg, r: rmin, text: `Hai chiuso ${maxTxt} su tutte le serie${big ? ' con margine' : ''}: <b>passa a ${fmtKg(kg)} kg</b> e riparti ${same ? 'da ' + rmin + ' reps' : 'dal minimo di ogni serie'}.` };
   }
   if (miss) {
     const prev = lastSession(aex.id, last.w.id);
     const missAgain = prev && workSets(prev.e).some(s => s.kg === top && s.r < rmin);
-    if (missAgain) { const kg = Math.round(top * 0.9 / 0.5) * 0.5; return { kind: 'down', kg, r: rmax, text: `Sotto le ${rmin} reps per due sedute: <b>scarica a ${fmtKg(kg)} kg</b> e riprendi a salire.` }; }
-    return { kind: 'hold', kg: top, r: rmin, text: `Ultima volta sotto le ${rmin} reps: <b>resta a ${fmtKg(top)} kg</b> e consolida.` };
+    if (missAgain) { const kg = Math.round(top * 0.9 / 0.5) * 0.5; return { kind: 'down', kg, r: rmax, text: `Sotto ${minTxt} per due sedute: <b>scarica a ${fmtKg(kg)} kg</b> e riprendi a salire.` }; }
+    return { kind: 'hold', kg: top, r: rmin, text: `Ultima volta sotto ${minTxt}: <b>resta a ${fmtKg(top)} kg</b> e consolida.` };
   }
   const tr = Math.min(rmax, Math.max(...atTop.map(s => s.r)) + 1);
+  if (!same) return { kind: 'reps', kg: top, text: `<b>${fmtKg(top)} kg</b>: punta a +1 ripetizione per serie prima di aumentare il carico.` };
   return { kind: 'reps', kg: top, r: tr, text: `<b>${fmtKg(top)} kg</b>: punta a ${tr} reps (+1) prima di aumentare il carico.` };
 }
 
@@ -1267,17 +1311,18 @@ function estMinutes(r) { return Math.round(r.ex.reduce((a, e) => a + e.sets * (4
 
 /* ---------- TRAIN ---------- */
 function viewTrain() {
-  const rts = S.routines.map(r => `
+  const card = r => `
     <div class="rt">
       <div class="row"><h4 class="grow">${esc(r.name)}</h4><button class="icon-btn" data-a="routineMenu" data-id="${r.id}" aria-label="Opzioni scheda">${icon('more')}</button></div>
       <div class="ex">${r.ex.map(e => esc(ex(e.id).n)).join(' · ') || 'Nessun esercizio'}</div>
-      <div class="row"><span class="small muted grow">${r.ex.length} esercizi · ${r.ex.reduce((a, e) => a + e.sets, 0)} serie · ~${estMinutes(r)} min</span><button class="btn primary sm" data-a="startRoutine" data-id="${r.id}">${icon('play', 14)} Avvia</button></div>
-    </div>`).join('');
+      <div class="row"><span class="small muted grow">${r.ex.length} esercizi · ${r.ex.reduce((a, e) => a + planOf(e).length, 0)} serie · ~${estMinutes(r)} min</span><button class="btn primary sm" data-a="startRoutine" data-id="${r.id}">${icon('play', 14)} Avvia</button></div>
+    </div>`;
+  const rts = routinesHTML(card);
   return `
   <div class="page-head"><h1>Allenamento</h1></div>
   ${S.active ? `<button class="card hero" data-a="openWorkout" style="text-align:left"><div class="row"><div class="grow"><div class="eyebrow" style="color:var(--gold)">In corso</div><b style="font-size:17px">${esc(S.active.name)}</b></div>${icon('chev')}</div></button>` : ''}
   <div class="row"><button class="btn primary grow" data-a="startEmpty">${icon('play', 18)} Allenamento libero</button><button class="btn" data-a="newRoutine">${icon('plus', 18)} Scheda</button></div>
-  <div class="stack"><div class="section-title">Le mie schede</div>
+  <div class="stack"><div class="section-title">Le mie schede <button class="link" data-a="folderNew">${icon('plus', 14)} Cartella</button></div>
     ${rts || `<div class="empty card">${icon('layers', 34)}<b>Nessuna scheda</b><span class="small">Creane una o aggiungi un programma qui sotto.</span></div>`}
   </div>
   <hr class="sep">
@@ -1496,7 +1541,7 @@ function startWorkout(fromRoutine, fromWorkout) {
   const w = { id: uid(), name: 'Allenamento libero', rid: null, start: now, ex: [], note: '', restEnd: 0, restTotal: 0 };
   if (fromRoutine) {
     w.name = fromRoutine.name; w.rid = fromRoutine.id;
-    w.ex = fromRoutine.ex.map(e => ({ id: e.id, mt: exType(e.id), tags: e.tags ? [...e.tags] : [], rmin: e.rmin, rmax: e.rmax, rir: e.rir, rest: e.rest, ss: !!e.ss, note: '', sets: [...Array(e.sets || 3)].map(() => ({ t: 'n', kg: null, r: null, rir: null, done: false })) }));
+    w.ex = fromRoutine.ex.map(e => { const plan = planOf(e), w0 = plan.find(p => p.t !== 'w') || plan[0]; return { id: e.id, mt: exType(e.id), tags: e.tags ? [...e.tags] : [], rmin: w0.a, rmax: w0.b ?? w0.a, rir: e.rir, rest: e.rest, ss: !!e.ss, note: '', sets: plan.map(p => ({ t: p.t || 'n', kg: p.kg ?? null, r: null, rir: null, ta: p.a ?? null, tb: p.b ?? null, done: false })) }; });
   } else if (fromWorkout) {
     w.name = fromWorkout.name; w.rid = fromWorkout.rid;
     w.ex = fromWorkout.ex.map(e => ({ id: e.id, mt: e.mt || exType(e.id), tags: e.tags ? [...e.tags] : [], rmin: 8, rmax: 12, rir: 2, rest: S.profile.restDefault, ss: false, note: '', sets: e.sets.map(s => ({ t: s.t, kg: null, r: null, rir: null, done: false })) }));
@@ -1549,7 +1594,8 @@ function layerWorkout() {
     </div></div></div>`;
 }
 
-const TECH_TAGS = ['Eccentrica 3 s', 'Eccentrica 4–5 s', 'Fermo 1–2 s', 'Esplosivo in salita', 'Parziali in allungamento', 'ROM completo', 'Unilaterale', 'Presa larga', 'Presa stretta', 'Con cintura', 'Con fasce'];
+const RIR_TAGS = ['RIR 0 (cedimento)', 'RIR 1', 'RIR 2', 'RIR 3'];
+const TECH_TAGS = [...RIR_TAGS, 'Eccentrica 3 s', 'Eccentrica 4–5 s', 'Fermo 1–2 s', 'Esplosivo in salita', 'Parziali in allungamento', 'ROM completo', 'Unilaterale', 'Presa larga', 'Presa stretta', 'Con cintura', 'Con fasce'];
 function tagChips(e, ei, editable) {
   const tags = e.tags || [];
   if (!tags.length && !editable) return '';
@@ -1568,27 +1614,30 @@ function exerciseCard(e, ei, ss) {
   const anyDone = e.sets.some(s => s.done);
   let wi = 0, wu = 0;
   const prevWork = prev.filter(isWork), prevWarm = prev.filter(s => !isWork(s));
-  const fields = mt === 'time' ? ['kg', 'sec', 'rir'] : mt === 'dist' ? ['km', 'min'] : ['kg', 'r', 'rir'];
+  const ro = rirOn(e) && mt !== 'dist';
+  const fields = (mt === 'time' ? ['kg', 'sec'] : mt === 'dist' ? ['km', 'min'] : ['kg', 'r']).concat(ro ? ['rir'] : []);
+  const cols = MT[mt].cols.slice(0, 2).concat(ro ? ['RIR'] : []);
   const rows = e.sets.map((s, si) => {
     const work = isWork(s);
     const label = s.t === 'n' ? wi + 1 : SET_TYPES[s.t].s;
     const p = work ? prevWork[wi++] : prevWarm[wu++];
     const ph = {
       kg: work && sg && sg.kg != null && sg.kind !== 'new' ? fmtKg(sg.kg) : p && p.kg != null ? fmtKg(p.kg) : (mt === 'wr' ? 'kg' : mt === 'bw' ? '0' : ''),
-      r: work && sg && sg.r ? sg.r : p ? p.r : (e.rmax || ''),
-      rir: work ? (e.rir ?? '') : '',
+      r: s.ta != null ? repTxt(s.ta, s.tb) : work && sg && sg.r ? sg.r : p ? p.r : (e.rmax || ''),
+      rir: work ? rirTarget(e) : '',
       sec: work && sg && sg.sec ? sg.sec : p ? p.sec : '',
       km: p && p.km ? fmtN(p.km, 2) : '', min: p && p.min ? fmtN(p.min, 1) : '',
     };
-    return `<div class="set-row ${s.done ? 'done' : ''}">
+    return `<div class="set-row c${fields.length} ${s.done ? 'done' : ''}">
       <button class="ty ${s.t}" data-a="setMenu" data-ei="${ei}" data-si="${si}" aria-label="Tipo serie">${label}</button>
       <span class="prev">${p ? fmtSet(p, mt) : '–'}${s.pr ? ` <span class="pr-flag">${icon('trophy', 12)}</span>` : ''}</span>
-      ${fields.map((f, k) => setInput(f, e, s, ei, si, ph[f], k === fields.length - 1)).join('')}${fields.length < 3 ? '<span></span>' : ''}
+      ${fields.map((f, k) => setInput(f, e, s, ei, si, ph[f], k === fields.length - 1)).join('')}
       <button class="chk" data-a="toggleSet" data-ei="${ei}" data-si="${si}" aria-label="Serie completata">${icon('check', 20, 3)}</button>
     </div>`;
   }).join('');
   const showNote = e.noteOpen || e.note || S.exNotes[e.id];
-  const sub = mt === 'wr' || mt === 'bw' ? (e.rmin ? `${e.rmin}–${e.rmax} reps · RIR ${e.rir ?? '–'} · ` : '') : MT[mt].l + ' · ';
+  const tg = e.sets.filter(s => s.ta != null), tt = [...new Set(tg.map(s => repTxt(s.ta, s.tb)))];
+  const sub = mt === 'wr' || mt === 'bw' ? (tg.length ? (tt.length === 1 ? tt[0] + ' reps · ' : 'reps per serie · ') : e.rmin ? `${repTxt(e.rmin, e.rmax)} reps · ` : '') : MT[mt].l + ' · ';
   return `<div class="exc ${ss ? 'ss' : ''}">
     ${ss ? `<div class="ss-tag">Superserie ${ss}</div>` : ''}
     <div class="exc-head">${thumbHTML(x)}<button class="name grow" data-a="openEx" data-id="${esc(e.id)}">${esc(x.n)}<div class="small muted" style="font-weight:500">${sub}rec. ${fmtClock((e.rest || S.profile.restDefault) * 1000)}</div></button><button class="icon-btn" data-a="exMenu" data-ei="${ei}" aria-label="Opzioni esercizio">${icon('more')}</button></div>
@@ -1596,7 +1645,7 @@ function exerciseCard(e, ei, ss) {
     ${S.exNotes[e.id] ? `<div class="small" style="color:var(--steel)">${icon('info', 14)} ${esc(S.exNotes[e.id])}</div>` : ''}
     ${showNote ? `<input class="note-in" data-in="exNote" data-ei="${ei}" maxlength="120" value="${esc(e.note)}" placeholder="Nota per questa seduta…">` : ''}
     ${sg && !anyDone ? `<div class="sugg">${icon(sg.kind === 'up' ? 'up' : sg.kind === 'down' ? 'down' : 'target', 18)}<div class="grow">${sg.text}</div>${sg.kg != null && sg.kind !== 'new' && mt !== 'time' ? `<button class="btn sm" data-a="applySugg" data-ei="${ei}">Applica</button>` : ''}</div>` : ''}
-    <div class="sets"><div class="set-hd"><span>Serie</span><span>Prec.</span>${MT[mt].cols.map(c => `<span>${c}</span>`).join('')}<span></span></div>${rows}</div>
+    <div class="sets"><div class="set-hd c${fields.length}"><span>Serie</span><span>Prec.</span>${cols.map(c => `<span>${c}</span>`).join('')}<span></span></div>${rows}</div>
     <div class="exc-foot"><button class="btn" data-a="addSet" data-ei="${ei}">${icon('plus', 16)} Serie</button></div>
   </div>`;
 }
@@ -1752,25 +1801,28 @@ function layerRoutine(l, i) {
       <div class="field"><label for="rt-name">Nome scheda</label><input id="rt-name" class="input" data-in="rtName" value="${esc(r.name)}" placeholder="Es. Push A"></div>
       ${r.ex.map((e, ei) => {
     const x = ex(e.id);
+    if (!Array.isArray(e.plan) || !e.plan.length) e.plan = planOf(e).map(p => ({ ...p }));
+    const mt = exType(e.id), repsMode = mt === 'wr' || mt === 'bw';
+    let wn = 0;
+    const rows = e.plan.map((p, si) => { const lab = p.t === 'n' || !SET_TYPES[p.t] ? ++wn : (p.t === 'w' ? 'W' : (wn++, SET_TYPES[p.t].s));
+      return `<div class="rt-set"><button class="ty ${p.t}" data-a="rtSetType" data-ei="${ei}" data-si="${si}" aria-label="Tipo serie">${lab}</button>
+        ${repsMode ? `<input class="input" inputmode="numeric" data-in="rtSet" data-ei="${ei}" data-si="${si}" data-f="a" data-max="100" value="${p.a ?? ''}" placeholder="reps" aria-label="Ripetizioni (min)"><span class="faint">–</span><input class="input" inputmode="numeric" data-in="rtSet" data-ei="${ei}" data-si="${si}" data-f="b" data-max="100" value="${p.b ?? ''}" placeholder="max" aria-label="Ripetizioni max (vuoto = secche)">` : `<span class="small muted" style="grid-column:span 3">${MT[mt].l}</span>`}
+        <button class="icon-btn" data-a="rtDelSet" data-ei="${ei}" data-si="${si}" aria-label="Elimina serie" ${e.plan.length < 2 ? 'disabled style="opacity:.3"' : ''}>${icon('x', 16)}</button></div>`; }).join('');
     return `<div class="ed-ex ${groups[ei] ? 'ss' : ''}">
           ${groups[ei] ? `<div class="ss-tag">Superserie ${groups[ei]}</div>` : ''}
           <div class="row">${thumbHTML(x)}<div class="grow" style="min-width:0"><b style="display:block;line-height:1.25">${esc(x.n)}</b><span class="small muted">${(x.p || []).map(m => MUSCLE_IT[m]).join(', ')}</span></div>
             <button class="icon-btn" data-a="rtMove" data-ei="${ei}" data-d="-1" aria-label="Sposta su" ${ei === 0 ? 'disabled style="opacity:.3"' : ''}>${icon('up')}</button>
             <button class="icon-btn" data-a="rtMove" data-ei="${ei}" data-d="1" aria-label="Sposta giù" ${ei === r.ex.length - 1 ? 'disabled style="opacity:.3"' : ''}>${icon('down')}</button>
             <button class="icon-btn" data-a="rtRemove" data-ei="${ei}" aria-label="Rimuovi">${icon('x')}</button></div>
-          <div class="ed-grid">
-            <div class="field"><label>Serie</label><input class="input" inputmode="numeric" data-in="rtEx" data-ei="${ei}" data-f="sets" data-max="20" value="${e.sets}"></div>
-            <div class="field"><label>Reps min</label><input class="input" inputmode="numeric" data-in="rtEx" data-ei="${ei}" data-f="rmin" value="${e.rmin}"></div>
-            <div class="field"><label>Reps max</label><input class="input" inputmode="numeric" data-in="rtEx" data-ei="${ei}" data-f="rmax" value="${e.rmax}"></div>
-            <div class="field"><label>RIR</label><input class="input" inputmode="numeric" data-in="rtEx" data-ei="${ei}" data-f="rir" data-max="10" value="${e.rir}"></div>
-          </div>
+          <div class="rt-sets">${repsMode ? `<div class="rt-set hd"><span>Serie</span><span>Reps</span><span></span><span>Max</span><span></span></div>` : ''}${rows}
+            <button class="btn sm ghost" data-a="rtAddSet" data-ei="${ei}" style="align-self:flex-start">${icon('plus', 14)} Serie</button></div>
           <div class="row"><span class="lbl grow">Recupero</span><select class="input" style="width:auto;min-height:38px;padding:4px 10px" data-in="rtEx" data-ei="${ei}" data-f="rest">${restOpts.map(s => `<option value="${s}" ${e.rest == s ? 'selected' : ''}>${fmtClock(s * 1000)}</option>`).join('')}</select></div>
           <div class="row" style="align-items:flex-start"><span class="lbl" style="padding-top:6px">Esecuzione</span><div class="grow">${tagChips(e, ei, 'rtTags')}</div></div>
           ${ei < r.ex.length - 1 ? `<div class="row"><span class="lbl grow row" style="gap:6px">${icon('link', 16)} Superserie con il successivo</span><button class="switch ${e.ss ? 'on' : ''}" data-a="rtSS" data-ei="${ei}" aria-label="Superserie"></button></div>` : ''}
         </div>`;
   }).join('')}
       <button class="btn block" data-a="pickForRoutine">${icon('plus', 18)} Aggiungi esercizi</button>
-      <div class="small faint">La progressione usa il range di ripetizioni: quando chiudi tutte le serie al massimo delle reps, l'app ti propone di aumentare il carico. RIR = ripetizioni lasciate in riserva.</div>
+      <div class="small faint">Ogni riga è una serie: scrivi un range (8 – 10) o solo le reps secche (8, max vuoto). Se cambi una riga si aggiornano anche quelle sotto, non quelle sopra. Tocca il numero della serie per cambiarne il tipo (riscaldamento, drop, cedimento…). Il RIR lo trovi in Esecuzione.</div>
     </div></div></div>`;
 }
 
@@ -1909,7 +1961,11 @@ function importData(file) {
 const A = {
   woTags(el) { const e = S.active.ex[+el.dataset.ei]; pushLayer({ type: 'tags', get: () => (e.tags = e.tags || []), done: () => save() }); },
   rtTags(el) { const e = topLayer().draft.ex[+el.dataset.ei]; pushLayer({ type: 'tags', get: () => (e.tags = e.tags || []), done: () => { } }); },
-  tagToggle(el) { const l = topLayer(), list = l.get(), t = el.dataset.t, i = list.indexOf(t); i >= 0 ? list.splice(i, 1) : list.push(t); l.done(); renderLayers(); },
+  tagToggle(el) {
+    const l = topLayer(), list = l.get(), t = el.dataset.t, i = list.indexOf(t);
+    if (i >= 0) list.splice(i, 1); else { if (/^RIR \d/.test(t)) for (let j = list.length - 1; j >= 0; j--) if (/^RIR \d/.test(list[j])) list.splice(j, 1); list.push(t); }
+    l.done(); renderLayers();
+  },
   more(el) { UI[el.dataset.k] = true; render(); },
   tab(el) { UI.tab = el.dataset.k; UI.layers = []; render(); window.scrollTo(0, 0); },
   pop() { popLayer(); },
@@ -1975,7 +2031,7 @@ const A = {
   },
   addSet(el) {
     const e = S.active.ex[+el.dataset.ei]; const last = e.sets[e.sets.length - 1];
-    e.sets.push({ t: last && last.t !== 'w' ? last.t : 'n', kg: last ? last.kg : null, r: null, rir: null, sec: null, km: null, min: null, done: false }); save(); renderLayers();
+    e.sets.push({ t: last && last.t !== 'w' ? last.t : 'n', kg: last ? last.kg : null, r: null, rir: null, sec: null, km: null, min: null, ta: last ? last.ta ?? null : null, tb: last ? last.tb ?? null : null, done: false }); save(); renderLayers();
   },
   setMenu(el) {
     const ei = +el.dataset.ei, si = +el.dataset.si, s = S.active.ex[ei].sets[si];
@@ -1993,6 +2049,7 @@ const A = {
       type: 'sheet', title: ex(e.id).n, items: [
         { label: 'Aggiungi nota', ic: 'edit', fn: () => { e.noteOpen = true; save(); } },
         { label: 'Esecuzione / tempo', desc: (e.tags || []).join(', ') || 'Es. eccentrica 3 s, fermo, parziali', ic: 'timer', fn: () => setTimeout(() => A.woTags({ dataset: { ei } }), 0) },
+        ...(mtOf(e) !== 'dist' ? [{ label: rirOn(e) ? 'Non registrare il RIR' : 'Registra RIR', desc: 'Colonna RIR per ogni serie (ripetizioni lasciate in riserva)', ic: 'target', fn: () => { S.exRir = S.exRir || {}; if (rirOn(e)) delete S.exRir[e.id]; else S.exRir[e.id] = true; save(); } }] : []),
         { label: 'Come lo registri', desc: MT[mtOf(e)].l, ic: 'layers', fn: () => setTimeout(() => pushLayer({ type: 'sheet', title: 'Come lo registri', items: Object.entries(MT).map(([k, v]) => ({ label: v.l, desc: v.d, on: mtOf(e) === k, fn: () => { e.mt = k; S.exType = S.exType || {}; S.exType[e.id] = k; save(); } })) }), 0) },
         { label: 'Tempo di recupero', desc: fmtClock((e.rest || S.profile.restDefault) * 1000), ic: 'timer', fn: () => setTimeout(() => pushLayer({ type: 'sheet', title: 'Recupero', items: restOpts.map(s => ({ label: fmtClock(s * 1000), on: (e.rest || S.profile.restDefault) === s, fn: () => { e.rest = s; save(); } })) }), 0) },
         ...(ei < list.length - 1 ? [{ label: e.ss ? 'Sciogli superserie' : 'Superserie con il successivo', ic: 'link', fn: () => { e.ss = !e.ss; save(); } }] : []),
@@ -2033,7 +2090,7 @@ const A = {
       save();
     } else if (l.target === 'routine') {
       const rl = UI.layers.find(x => x.type === 'routine');
-      for (const id of l.sel) { const x = ex(id); const iso = x.k === 'isolation'; rl.draft.ex.push({ id, sets: 3, rmin: iso ? 10 : 6, rmax: iso ? 15 : 10, rir: 2, rest: iso ? 75 : 150, ss: false }); }
+      for (const id of l.sel) { const x = ex(id); const iso = x.k === 'isolation'; rl.draft.ex.push({ id, sets: 3, rmin: iso ? 10 : 6, rmax: iso ? 15 : 10, rest: iso ? 75 : 150, ss: false, plan: [...Array(3)].map(() => ({ t: 'n', a: iso ? 10 : 6, b: iso ? 15 : 10 })) }); }
     }
     popLayer();
   },
@@ -2060,6 +2117,7 @@ const A = {
         { label: 'Avvia', ic: 'play', fn: () => guardStart(() => startWorkout(r)) },
         { label: 'Modifica', ic: 'edit', fn: () => setTimeout(() => pushLayer({ type: 'routine', draft: JSON.parse(JSON.stringify(r)) }), 0) },
         { label: 'Duplica', ic: 'copy', fn: () => { const c = JSON.parse(JSON.stringify(r)); c.id = uid(); c.name += ' (copia)'; S.routines.splice(S.routines.indexOf(r) + 1, 0, c); save(); } },
+        { label: 'Sposta in cartella', desc: folderOf(r) ? 'Ora in: ' + folderOf(r).name : 'Ora fuori dalle cartelle', ic: 'layers', fn: () => setTimeout(() => moveRoutineSheet(r), 0) },
         ...(S.routines.indexOf(r) > 0 ? [{ label: 'Sposta su', ic: 'up', fn: () => { const i = S.routines.indexOf(r); S.routines.splice(i - 1, 0, S.routines.splice(i, 1)[0]); save(); } }] : []),
         { label: 'Elimina', ic: 'trash', danger: true, fn: () => setTimeout(() => pushLayer({ type: 'confirm', title: 'Eliminare la scheda?', text: `“${r.name}” verrà eliminata. Lo storico degli allenamenti resta.`, ok: 'Elimina', danger: true, fn: () => { S.routines = S.routines.filter(x => x !== r); save(); } }), 0) },
       ]
@@ -2069,18 +2127,31 @@ const A = {
   rtMove(el) { const r = topLayer().draft, i = +el.dataset.ei, j = i + +el.dataset.d; if (j < 0 || j >= r.ex.length) return; r.ex.splice(j, 0, r.ex.splice(i, 1)[0]); renderLayers(); },
   rtRemove(el) { const r = topLayer().draft; r.ex.splice(+el.dataset.ei, 1); if (r.ex.length) r.ex[r.ex.length - 1].ss = false; renderLayers(); },
   rtSS(el) { const e = topLayer().draft.ex[+el.dataset.ei]; e.ss = !e.ss; renderLayers(); },
+  rtAddSet(el) { const e = topLayer().draft.ex[+el.dataset.ei], last = e.plan[e.plan.length - 1]; if (e.plan.length >= 20) return; e.plan.push({ ...(last || { a: 8, b: 12 }), t: last && last.t !== 'w' ? last.t : 'n' }); renderLayers(); },
+  rtDelSet(el) { const e = topLayer().draft.ex[+el.dataset.ei]; if (e.plan.length > 1) e.plan.splice(+el.dataset.si, 1); renderLayers(); },
+  rtSetType(el) {
+    const e = topLayer().draft.ex[+el.dataset.ei], si = +el.dataset.si, p = e.plan[si];
+    /* back-off goes down to the normal sets below; other types change only this row */
+    pushLayer({ type: 'sheet', title: 'Tipo di serie', items: Object.entries(SET_TYPES).map(([k, v]) => ({ label: v.l, desc: v.d, on: (p.t || 'n') === k, fn: () => { p.t = k; if (k === 'bo') for (let j = si + 1; j < e.plan.length; j++) if ((e.plan[j].t || 'n') === 'n') e.plan[j].t = 'bo'; } })) });
+  },
   saveRoutine() {
     const l = topLayer(), r = l.draft;
     if (!r.name.trim()) r.name = 'Scheda ' + (S.routines.length + 1);
     if (!r.ex.length) { toast('Aggiungi almeno un esercizio'); return; }
-    r.ex.forEach(e => { e.sets = clamp(Math.round(num(e.sets) || 3), 1, 12); e.rmin = clamp(Math.round(num(e.rmin) || 8), 1, 100); e.rmax = Math.max(e.rmin, Math.round(num(e.rmax) || e.rmin)); e.rir = clamp(Math.round(num(e.rir) ?? 2), 0, 5); e.rest = +e.rest || 120; });
+    r.ex.forEach(e => {
+      e.plan = planOf(e).map(p => { const a = p.a != null ? clamp(Math.round(p.a), 1, 100) : null; let b = p.b != null ? clamp(Math.round(p.b), 1, 100) : null; if (a == null && b != null) return { t: p.t || 'n', a: b, b: null }; if (b != null && a != null && b <= a) b = null; return { t: p.t || 'n', a, b }; });
+      const w = e.plan.filter(p => p.t !== 'w'), w0 = w[0] || e.plan[0];
+      e.sets = w.length || e.plan.length; e.rmin = w0.a ?? 8; e.rmax = w0.b ?? w0.a ?? 12; delete e.rir; e.rest = +e.rest || 120;
+    });
     const i = S.routines.findIndex(x => x.id === r.id);
     if (i >= 0) S.routines[i] = r; else S.routines.push(r);
     save(); popLayer(); render(); toast('Scheda salvata');
   },
   addProgram(el) {
     const p = PROGRAMS.find(x => x.id === el.dataset.id);
-    S.routines.push(...p.routines.map(routineFromTemplate)); save(); render(); toast(`${p.routines.length} schede aggiunte`);
+    const f = { id: uid(), name: p.name, img: null, c: FOLDER_COLORS[folders().length % FOLDER_COLORS.length] }; folders().push(f);
+    S.routines.push(...p.routines.map(t => ({ ...routineFromTemplate(t), fid: f.id }))); UI.fopen = UI.fopen || {}; UI.fopen[f.id] = true;
+    save(); render(); toast(`${p.routines.length} schede aggiunte nella cartella “${p.name}”`);
   },
   /* history */
   openHist(el) { pushLayer({ type: 'history', id: el.dataset.id }); },
@@ -2091,7 +2162,7 @@ const A = {
   repeatWorkout(el) { const w = S.workouts.find(x => x.id === el.dataset.id); guardStart(() => startWorkout(null, w)); },
   saveAsRoutine(el) {
     const w = S.workouts.find(x => x.id === el.dataset.id);
-    S.routines.push({ id: uid(), name: w.name, note: '', ex: w.ex.map(e => ({ id: e.id, sets: e.sets.filter(isWork).length || 3, rmin: 8, rmax: 12, rir: 2, rest: 120, ss: false })) });
+    S.routines.push({ id: uid(), name: w.name, note: '', ex: w.ex.map(e => ({ id: e.id, sets: e.sets.filter(isWork).length || 3, rmin: 8, rmax: 12, rest: 120, ss: false, tags: e.tags ? [...e.tags] : undefined, plan: e.sets.map(s => ({ t: s.t || 'n', a: s.r || 8, b: null })) })) });
     save(); toast('Scheda creata in Allenamento');
   },
   /* sheets */
@@ -2170,6 +2241,16 @@ document.addEventListener('input', ev => {
   if (k === 'pickerQ') { const l = topLayer(); l.q = el.value; clearTimeout(pickerTimer); pickerTimer = setTimeout(() => refreshPicker(false), 90); return; }
   if (k === 'pickerEq') { topLayer().eq = el.value; refreshPicker(false); return; }
   if (k === 'rtName') { topLayer().draft.name = el.value; return; }
+  if (k === 'rtSet') {
+    /* cascade: the edited row and every row below take the value, rows above stay */
+    const e = topLayer().draft.ex[+el.dataset.ei], si = +el.dataset.si, f = el.dataset.f, v = num(el.value);
+    const val = v == null ? null : Math.round(v);
+    for (let j = si; j < e.plan.length; j++) {
+      e.plan[j][f] = val;
+      if (j > si) { const inp = document.querySelector(`input[data-in="rtSet"][data-ei="${el.dataset.ei}"][data-si="${j}"][data-f="${f}"]`); if (inp) inp.value = val ?? ''; }
+    }
+    return;
+  }
   if (k === 'rtEx') { const e = topLayer().draft.ex[+el.dataset.ei]; e[el.dataset.f] = el.dataset.f === 'rest' ? +el.value : el.value; return; }
 });
 document.addEventListener('submit', ev => {
@@ -2196,6 +2277,102 @@ document.addEventListener('keydown', ev => {
   if (i < ins.length - 1) ins[i + 1].focus(); else { el.blur(); row.querySelector('.chk').click(); }
 });
 
+
+/* =========================================================
+   CARTELLE DELLE SCHEDE
+   S.folders = [{ id, name, img (dataURL piccolo, quadrato) | null, c (colore) }]
+   routine.fid = id della cartella (assente = fuori dalle cartelle)
+   ========================================================= */
+const FOLDER_COLORS = ['#ff6b2c', '#7fb2e5', '#3ddc97', '#c792ea', '#ffb547', '#ff5c6c'];
+function folders() { return S.folders || (S.folders = []); }
+function folderById(id) { return folders().find(f => f.id === id) || null; }
+function folderOf(r) { return r.fid ? folderById(r.fid) : null; }
+function folderIcon(f, size = 48) {
+  return f.img ? `<img class="fold-img" src="${f.img}" alt="" style="width:${size}px;height:${size}px">`
+    : `<span class="fold-img" style="width:${size}px;height:${size}px;--fc:${f.c || FOLDER_COLORS[0]}">${icon('layers', Math.round(size * 0.45))}</span>`;
+}
+function routinesHTML(card) {
+  const loose = S.routines.filter(r => !folderOf(r));
+  const fs = folders();
+  if (!S.routines.length && !fs.length) return '';
+  const fold = fs.map(f => {
+    const rs = S.routines.filter(r => r.fid === f.id), open = !!(UI.fopen && UI.fopen[f.id]);
+    return `<div class="folder ${open ? 'open' : ''}" style="--fc:${f.c || FOLDER_COLORS[0]}">
+      <div class="fold-h"><button class="row grow" data-a="folderToggle" data-id="${f.id}" style="text-align:left;min-width:0">${folderIcon(f)}<div class="grow" style="min-width:0"><b class="fold-n">${esc(f.name)}</b><div class="small muted">${rs.length} ${rs.length === 1 ? 'scheda' : 'schede'}</div></div>${icon(open ? 'up' : 'down', 18)}</button>
+        <button class="icon-btn" data-a="folderMenu" data-id="${f.id}" aria-label="Opzioni cartella">${icon('more')}</button></div>
+      ${open ? `<div class="fold-body">${rs.length ? rs.map(card).join('') : `<div class="small muted">Vuota. Sposta qui una scheda dal suo menu ⋯ → "Sposta in cartella".</div>`}</div>` : ''}
+    </div>`;
+  }).join('');
+  return loose.map(card).join('') + fold;
+}
+
+/* square crop + shrink, returns a small JPEG data URL (syncs with the account) */
+function cropSquare(file, size = 200) {
+  return new Promise((res, rej) => {
+    const img = new Image(), u = URL.createObjectURL(file);
+    img.onload = () => {
+      const s = Math.min(img.width, img.height), c = document.createElement('canvas'); c.width = c.height = size;
+      c.getContext('2d').drawImage(img, (img.width - s) / 2, (img.height - s) / 2, s, s, 0, 0, size, size);
+      URL.revokeObjectURL(u); res(c.toDataURL('image/jpeg', 0.78));
+    };
+    img.onerror = () => { URL.revokeObjectURL(u); rej(new Error('img')); };
+    img.src = u;
+  });
+}
+function fdInput() { let f = $('#fdFile'); if (!f) { f = document.createElement('input'); f.type = 'file'; f.accept = 'image/*'; f.id = 'fdFile'; f.hidden = true; document.body.appendChild(f); } return f; }
+const FD = { target: null };
+document.addEventListener('change', async ev => {
+  const el = ev.target; if (el.id !== 'fdFile' || !el.files || !el.files[0]) return;
+  const f = folderById(FD.target); const file = el.files[0]; el.value = '';
+  if (!f) return;
+  try { f.img = await cropSquare(file); save(); render(); toast('Immagine della cartella aggiornata'); } catch (e) { toast('Non riesco a leggere l\'immagine'); }
+});
+
+function folderNameSheet(title, value, action, extra = '') {
+  pushLayer({ type: 'sheet', title, html: `<div class="field"><label for="fd-name">Nome della cartella</label><input id="fd-name" class="input" maxlength="40" value="${esc(value || '')}" placeholder="Es. Massa 2026, PPL, Vecchie"></div>
+    <div class="row" style="margin-top:8px;gap:8px">${FOLDER_COLORS.map(c => `<button class="fdc ${c === (FD.color || FOLDER_COLORS[0]) ? 'on' : ''}" data-a="fdColor" data-c="${c}" style="background:${c}" aria-label="Colore"></button>`).join('')}</div>
+    <button class="btn primary block" style="margin-top:12px" data-a="${action}" ${extra}>Salva</button>`, items: [] });
+  setTimeout(() => $('#fd-name')?.focus(), 60);
+}
+function moveRoutineSheet(r) {
+  pushLayer({
+    type: 'sheet', title: 'Sposta in cartella', items: [
+      { label: 'Nessuna cartella', ic: 'x', on: !r.fid, fn: () => { delete r.fid; save(); } },
+      ...folders().map(f => ({ label: f.name, ic: 'layers', on: r.fid === f.id, fn: () => { r.fid = f.id; UI.fopen = UI.fopen || {}; UI.fopen[f.id] = true; save(); } })),
+      { label: 'Nuova cartella…', ic: 'plus', fn: () => setTimeout(() => { FD.moveId = r.id; FD.color = FOLDER_COLORS[folders().length % FOLDER_COLORS.length]; folderNameSheet('Nuova cartella', '', 'folderCreate'); }, 0) },
+    ]
+  });
+}
+
+Object.assign(A, {
+  folderNew() { FD.moveId = null; FD.color = FOLDER_COLORS[folders().length % FOLDER_COLORS.length]; folderNameSheet('Nuova cartella', '', 'folderCreate'); },
+  fdColor(el) { FD.color = el.dataset.c; document.querySelectorAll('.fdc').forEach(b => b.classList.toggle('on', b.dataset.c === FD.color)); },
+  folderCreate() {
+    const name = ($('#fd-name')?.value || '').trim() || 'Cartella ' + (folders().length + 1);
+    const f = { id: uid(), name, img: null, c: FD.color || FOLDER_COLORS[0] }; folders().push(f);
+    if (FD.moveId) { const r = S.routines.find(x => x.id === FD.moveId); if (r) r.fid = f.id; FD.moveId = null; }
+    UI.fopen = UI.fopen || {}; UI.fopen[f.id] = true;
+    save(); popLayer(); render(); toast('Cartella creata');
+  },
+  folderToggle(el) { UI.fopen = UI.fopen || {}; UI.fopen[el.dataset.id] = !UI.fopen[el.dataset.id]; render(); },
+  folderMenu(el) {
+    const f = folderById(el.dataset.id); if (!f) return;
+    const rs = () => S.routines.filter(r => r.fid === f.id);
+    pushLayer({
+      type: 'sheet', title: f.name, items: [
+        { label: 'Rinomina e colore', ic: 'edit', fn: () => setTimeout(() => { FD.editId = f.id; FD.color = f.c; folderNameSheet('Modifica cartella', f.name, 'folderRename'); }, 0) },
+        { label: f.img ? 'Cambia immagine' : 'Aggiungi immagine', desc: 'Dalla galleria o dalla fotocamera', ic: 'camera', fn: () => { FD.target = f.id; fdInput().click(); } },
+        ...(f.img ? [{ label: 'Togli immagine', ic: 'x', fn: () => { f.img = null; save(); } }] : []),
+        { label: 'Duplica cartella', desc: 'Copia anche tutte le schede', ic: 'copy', fn: () => { const c = { ...f, id: uid(), name: f.name + ' (copia)' }; folders().splice(folders().indexOf(f) + 1, 0, c); for (const r of rs()) { const n = JSON.parse(JSON.stringify(r)); n.id = uid(); n.fid = c.id; S.routines.push(n); } save(); toast('Cartella duplicata'); } },
+        ...(folders().indexOf(f) > 0 ? [{ label: 'Sposta su', ic: 'up', fn: () => { const a = folders(), i = a.indexOf(f); a.splice(i - 1, 0, a.splice(i, 1)[0]); save(); } }] : []),
+        { label: 'Elimina cartella', desc: 'Le schede restano, fuori dalle cartelle', ic: 'trash', danger: true, fn: () => { for (const r of rs()) delete r.fid; S.folders = folders().filter(x => x !== f); save(); } },
+        ...(rs().length ? [{ label: 'Elimina cartella e schede', desc: `${rs().length} schede. Lo storico degli allenamenti resta.`, ic: 'trash', danger: true, fn: () => setTimeout(() => pushLayer({ type: 'confirm', title: 'Eliminare cartella e schede?', text: `“${f.name}” e le sue ${rs().length} schede verranno eliminate.`, ok: 'Elimina', danger: true, fn: () => { S.routines = S.routines.filter(r => r.fid !== f.id); S.folders = folders().filter(x => x !== f); save(); } }), 0) }] : []),
+      ]
+    });
+  },
+  folderRename() { const f = folderById(FD.editId); if (!f) return popLayer(); const n = ($('#fd-name')?.value || '').trim(); if (n) f.name = n; f.c = FD.color || f.c; save(); popLayer(); render(); },
+  routineMove(el) { const r = S.routines.find(x => x.id === el.dataset.id); if (r) moveRoutineSheet(r); },
+});
 
 /* =========================================================
    DIETA — Fase 2
@@ -4349,7 +4526,7 @@ function localItems() {
   for (const sm of S.savedMeals) m.set('m|' + sm.id, sm);
   for (const [k, b] of Object.entries(S.body || {})) if (!b.demo) m.set('b|' + k, b);
   for (const [k, h] of Object.entries(S.health || {})) m.set('h|' + k, h);
-  m.set('s|main', { profile: S.profile, nutri: S.nutri, exType: S.exType || {}, exNotes: S.exNotes, customEx: S.customEx, customTags: S.customTags || [], aiModel: S.ai?.model });
+  m.set('s|main', { profile: S.profile, nutri: S.nutri, exType: S.exType || {}, exNotes: S.exNotes, customEx: S.customEx, customTags: S.customTags || [], folders: S.folders || [], exRir: S.exRir || {}, aiModel: S.ai?.model });
   return m;
 }
 function applyItem(kind, id, data, deleted) {
@@ -4362,7 +4539,7 @@ function applyItem(kind, id, data, deleted) {
   else if (kind === 'm') { S.savedMeals = S.savedMeals.filter(x => x.id !== id); if (!deleted) S.savedMeals.push(data); }
   else if (kind === 's' && !deleted && data) {
     S.profile = Object.assign(defaultState().profile, data.profile || {}, { onboarded: true });
-    S.nutri = data.nutri || S.nutri; S.exType = data.exType || {}; S.exNotes = data.exNotes || {}; S.customEx = data.customEx || []; S.customTags = data.customTags || [];
+    S.nutri = data.nutri || S.nutri; S.exType = data.exType || {}; S.exNotes = data.exNotes || {}; S.customEx = data.customEx || []; S.customTags = data.customTags || []; S.folders = data.folders || S.folders || []; S.exRir = data.exRir || S.exRir || {};
     if (data.aiModel) S.ai.model = data.aiModel;
     applyExLang();
   }
