@@ -630,6 +630,7 @@ function save() {
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => { try { localStorage.setItem(KEY, serialize(S)); } catch (e) { } }, 120);
   CACHE.k = null;
+  if (typeof syncSoon === 'function') syncSoon();
 }
 function serialize(o, space) { return JSON.stringify(o, (k, v) => (k === '_ix' || k === '_s') ? undefined : v, space); }
 window.addEventListener('pagehide', () => { try { localStorage.setItem(KEY, serialize(S)); } catch (e) { } });
@@ -1174,6 +1175,7 @@ function viewOnboard() {
     </div>
     <label class="row card tight" style="flex-direction:row;cursor:pointer"><input type="checkbox" id="ob-demo" style="width:22px;height:22px;accent-color:#ff6b2c"><div class="grow"><b>Aggiungi 6 settimane di dati di esempio</b><div class="small muted">Per vedere subito grafici e record. Li cancelli quando vuoi dal Profilo.</div></div></label>
     <button class="btn primary block" data-a="finishOnboard">Inizia ad allenarti</button>
+    ${syncConfigured() ? `<div class="stack"><div class="section-title">Hai già un account?</div>${accountCard()}<div class="small faint">Dopo l'accesso ritrovi schede, allenamenti e diario.</div></div>` : ''}
   </div>`;
 }
 
@@ -1315,6 +1317,7 @@ function viewMe() {
   <div class="page-head"><h1>Profilo</h1></div>
   <div class="card hero"><div class="row"><div class="grow"><div class="rank" style="font-size:28px">${esc(S.profile.name || 'Atleta')}</div><div class="small muted">In Forgia da ${S.workouts.length ? fmtDate(Math.min(...S.workouts.map(w => w.start))) : 'oggi'}</div></div><span class="pr-flag">${icon('trophy', 30)}</span></div>
     <div class="tiles"><div class="tile" style="background:var(--surface-2)"><div class="v">${S.workouts.length}</div><div class="k">Allenamenti</div></div><div class="tile" style="background:var(--surface-2)"><div class="v">${globalStats().prs}</div><div class="k">Record</div></div><div class="tile" style="background:var(--surface-2)"><div class="v">${got}<small>/${bs.length}</small></div><div class="k">Traguardi</div></div></div></div>
+  ${syncConfigured() || !window.FORGIA_PWA ? `<div class="stack"><div class="section-title">Account</div>${accountCard()}</div>` : ''}
   <div class="stack"><div class="section-title">Traguardi <span class="small muted" style="font-family:var(--font-body);text-transform:none;letter-spacing:0">${got}/${bs.length}</span></div>
     <div class="badges">${bs.map(b => `<div class="badge ${b.got ? 'got' : ''}"><span class="ic">${icon(b.ic, 22)}</span><span class="n">${b.n}</span><span class="p">${b.got ? b.d : fmtN(Math.min(b.val, b.goal), 0) + ' / ' + b.goal}</span></div>`).join('')}</div>
   </div>
@@ -1344,7 +1347,7 @@ function viewMe() {
       <label class="li" style="cursor:pointer">${icon('upload')}<div class="grow"><div class="t">Importa backup</div><div class="s">Sostituisce i dati attuali</div></div><input type="file" id="importFile" accept=".json,application/json" hidden></label>
       ${hasDemo ? `<button class="li" data-a="removeDemo">${icon('trash')}<div class="grow"><div class="t">Rimuovi dati di esempio</div><div class="s">Tiene solo i tuoi dati reali</div></div></button>` : `<button class="li" data-a="addDemo">${icon('sparkle')}<div class="grow"><div class="t">Carica dati di esempio</div><div class="s">6 settimane di allenamenti + 2 di diario</div></div></button>`}
     </div>
-    <div class="small faint">I dati sono salvati su questo dispositivo. La sincronizzazione telefono–PC arriva nella fase 5: fino ad allora fai un backup ogni tanto.</div>
+    <div class="small faint">${SYNC.user ? 'I dati sono salvati su questo dispositivo e sincronizzati con il tuo account.' : 'I dati sono salvati solo su questo dispositivo. Accedi con un account per salvarli online, oppure fai un backup ogni tanto.'}</div>
   </div>
   <div class="stack"><div class="section-title" style="color:var(--bad)">Zona pericolosa</div>
     <div class="card" style="border:1px solid rgba(255,92,108,.3)">
@@ -2069,7 +2072,7 @@ const A = {
   addDemo() { S.workouts.push(...makeDemo()); makeDietDemo(); save(); render(); toast('Dati di esempio caricati'); },
   removeDemo() { S.workouts = S.workouts.filter(w => !w.demo); removeDietDemo(); save(); render(); toast('Dati di esempio rimossi'); },
   resetAll() {
-    pushLayer({ type: 'sheet', title: 'Eliminare tutti i dati?', html: `<p class="muted small" style="margin:0 0 10px">Verranno eliminati allenamenti, schede, diario alimentare, cibi creati, obiettivi e impostazioni. Se vuoi tenerli, esporta prima un backup.</p><div class="field"><label for="del-confirm">Per confermare scrivi <b>ELIMINA</b></label><input id="del-confirm" class="input" autocomplete="off" autocapitalize="characters" maxlength="10"></div><div class="row" style="margin-top:12px"><button class="btn grow" data-a="exportData">${icon('download', 16)} Backup</button><button class="btn danger grow" data-a="resetConfirm">Elimina tutto</button></div>`, items: [] });
+    pushLayer({ type: 'sheet', title: 'Eliminare tutti i dati?', html: `<p class="muted small" style="margin:0 0 10px">Verranno eliminati allenamenti, schede, diario alimentare, cibi creati, obiettivi e impostazioni${SYNC.user ? ', <b>anche dall\'account online</b>' : ''}. Se vuoi tenerli, esporta prima un backup.</p><div class="field"><label for="del-confirm">Per confermare scrivi <b>ELIMINA</b></label><input id="del-confirm" class="input" autocomplete="off" autocapitalize="characters" maxlength="10"></div><div class="row" style="margin-top:12px"><button class="btn grow" data-a="exportData">${icon('download', 16)} Backup</button><button class="btn danger grow" data-a="resetConfirm">Elimina tutto</button></div>`, items: [] });
   },
   resetConfirm() {
     if (($('#del-confirm')?.value || '').trim().toUpperCase() !== 'ELIMINA') { toast('Scrivi ELIMINA per confermare'); return; }
@@ -3633,6 +3636,217 @@ Object.assign(A, {
   methodCat(el) { UI.methodCat = el.dataset.k; render(); },
   openMethod(el) { pushLayer({ type: 'method', id: el.dataset.id }); },
 });
+
+/* =========================================================
+   ACCOUNT E SINCRONIZZAZIONE (Supabase)
+   Una riga per oggetto: allenamento (w), scheda (r), giorno di diario (d),
+   alimento personale (f), pasto salvato (m), impostazioni (s).
+   ========================================================= */
+const SUPA = {"url": "https://jtfqjrkeotzilhvtoqjd.supabase.co", "key": "sb_publishable_LwW9avmH_RGulfXlPZmaQg_NiXj9sdP"};
+const SYNC_KEY = 'forgia.sync';
+const SYNC = { client: null, user: null, busy: false, again: false, timer: null, status: 'off', lastOk: 0, err: '' };
+function syncConfigured() { return !!(SUPA.url && SUPA.key && window.FORGIA_PWA); }
+function syncMeta() { try { return JSON.parse(localStorage.getItem(SYNC_KEY)) || { hashes: {}, last: null }; } catch (e) { return { hashes: {}, last: null }; } }
+function syncMetaSave(m) { try { localStorage.setItem(SYNC_KEY, JSON.stringify(m)); } catch (e) { } }
+function fnv(str) { let h = 0x811c9dc5; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193); } return (h >>> 0).toString(36); }
+
+/* local state -> items */
+function localItems() {
+  const m = new Map();
+  for (const w of S.workouts) if (!w.demo) m.set('w|' + w.id, w);
+  S.routines.forEach((r, i) => m.set('r|' + r.id, { ...r, _o: i }));
+  for (const [k, d] of Object.entries(S.diary)) {
+    const e = (d.e || []).filter(x => !x.demo);
+    if (e.length || d.type) m.set('d|' + k, { e, type: d.type || null });
+  }
+  for (const [id, f] of Object.entries(S.foods)) m.set('f|' + id, f);
+  for (const sm of S.savedMeals) m.set('m|' + sm.id, sm);
+  m.set('s|main', { profile: S.profile, nutri: S.nutri, exType: S.exType || {}, exNotes: S.exNotes, customEx: S.customEx, customTags: S.customTags || [], aiModel: S.ai?.model });
+  return m;
+}
+function applyItem(kind, id, data, deleted) {
+  if (kind === 'w') { S.workouts = S.workouts.filter(w => w.id !== id); if (!deleted) S.workouts.push(data); }
+  else if (kind === 'r') { S.routines = S.routines.filter(r => r.id !== id); if (!deleted) S.routines.push(data); S.routines.sort((a, b) => (a._o ?? 0) - (b._o ?? 0)); }
+  else if (kind === 'd') { const demo = (S.diary[id]?.e || []).filter(e => e.demo); if (deleted && !demo.length) delete S.diary[id]; else S.diary[id] = { e: [...demo, ...(deleted ? [] : data.e || [])], type: deleted ? null : data.type }; }
+  else if (kind === 'f') { if (deleted) delete S.foods[id]; else S.foods[id] = data; }
+  else if (kind === 'm') { S.savedMeals = S.savedMeals.filter(x => x.id !== id); if (!deleted) S.savedMeals.push(data); }
+  else if (kind === 's' && !deleted && data) {
+    S.profile = Object.assign(defaultState().profile, data.profile || {}, { onboarded: true });
+    S.nutri = data.nutri || S.nutri; S.exType = data.exType || {}; S.exNotes = data.exNotes || {}; S.customEx = data.customEx || []; S.customTags = data.customTags || [];
+    if (data.aiModel) S.ai.model = data.aiModel;
+    applyExLang();
+  }
+}
+
+/* ---------- client & auth ---------- */
+async function syncInit() {
+  if (!syncConfigured()) return null;
+  if (SYNC.client) return SYNC.client;
+  try {
+    if (!window.supabase) await loadScript('supabase.min.js');
+    SYNC.client = window.supabase.createClient(SUPA.url, SUPA.key, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, storageKey: 'forgia.auth' } });
+    SYNC.client.auth.onAuthStateChange((ev, session) => {
+      const was = SYNC.user?.id;
+      SYNC.user = session?.user || null;
+      if (ev === 'PASSWORD_RECOVERY') setTimeout(() => pushLayer({ type: 'pwReset' }), 300);
+      if (SYNC.user && SYNC.user.id !== was) { const m = syncMeta(); if (m.uid && m.uid !== SYNC.user.id) syncMetaSave({ hashes: {}, last: null, uid: SYNC.user.id }); syncNow(); }
+      if (UI.tab === 'me' || !S.profile.onboarded) render();
+    });
+    const { data } = await SYNC.client.auth.getSession();
+    SYNC.user = data.session?.user || null;
+    return SYNC.client;
+  } catch (e) { SYNC.err = 'Libreria di sincronizzazione non caricata (sei offline?)'; return null; }
+}
+function syncSoon(ms = 3000) { if (!SYNC.user) return; clearTimeout(SYNC.timer); SYNC.timer = setTimeout(syncNow, ms); }
+async function pullSince(since, onRow) {
+  let from = 0, maxTs = since;
+  for (; ;) {
+    let q = SYNC.client.from('items').select('kind,id,data,deleted,updated_at').order('updated_at', { ascending: true }).range(from, from + 999);
+    if (since) q = q.gte('updated_at', since);
+    const { data, error } = await q; if (error) throw error;
+    for (const r of data) { onRow(r); if (!maxTs || r.updated_at > maxTs) maxTs = r.updated_at; }
+    if (data.length < 1000) break; from += 1000;
+  }
+  return maxTs;
+}
+async function pushRows(rows) {
+  for (let i = 0; i < rows.length; i += 200) {
+    const { error } = await SYNC.client.from('items').upsert(rows.slice(i, i + 200), { onConflict: 'user_id,kind,id' });
+    if (error) throw error;
+  }
+}
+function rowFor(key, data, deleted) { const [kind, ...rest] = key.split('|'); return { user_id: SYNC.user.id, kind, id: rest.join('|'), data: deleted ? null : JSON.parse(serialize(data)), deleted: !!deleted }; }
+async function syncNow() {
+  if (!SYNC.client || !SYNC.user || !navigator.onLine) return;
+  if (SYNC.busy) { SYNC.again = true; return; }
+  SYNC.busy = true; SYNC.status = 'sync'; SYNC.err = ''; updateSyncBadge();
+  const meta = syncMeta(); meta.uid = SYNC.user.id;
+  let changed = false;
+  try {
+    if (!meta.last) {
+      // first sync on this device: what is online wins, then upload what exists only here
+      const remoteKeys = new Set();
+      const maxTs = await pullSince(null, r => {
+        const key = r.kind + '|' + r.id; remoteKeys.add(key);
+        if (!r.deleted) { applyItem(r.kind, r.id, r.data, false); changed = true; meta.hashes[key] = fnv(serialize(r.data)); }
+      });
+      const rows = [];
+      for (const [key, data] of localItems()) if (!remoteKeys.has(key)) { rows.push(rowFor(key, data)); meta.hashes[key] = fnv(serialize(data)); }
+      await pushRows(rows);
+      meta.last = maxTs || new Date(Date.now() - 60000).toISOString();
+      if (rows.length && !maxTs) meta.last = new Date(Date.now() - 60000).toISOString();
+    } else {
+      // 1) push local changes
+      const cur = localItems(), rows = [], newHash = {};
+      for (const [key, data] of cur) { const h = fnv(serialize(data)); newHash[key] = h; if (meta.hashes[key] !== h) rows.push(rowFor(key, data)); }
+      for (const key of Object.keys(meta.hashes)) if (!cur.has(key)) rows.push(rowFor(key, null, true));
+      await pushRows(rows);
+      for (const r of rows) { const key = r.kind + '|' + r.id; if (r.deleted) delete meta.hashes[key]; else meta.hashes[key] = newHash[key]; }
+      // 2) pull changes made on other devices
+      meta.last = await pullSince(meta.last, r => {
+        const key = r.kind + '|' + r.id, h = r.deleted ? null : fnv(serialize(r.data));
+        const differs = r.deleted ? key in meta.hashes : meta.hashes[key] !== h;
+        if (differs) { applyItem(r.kind, r.id, r.data, r.deleted); changed = true; }
+        if (r.deleted) delete meta.hashes[key]; else meta.hashes[key] = h;
+      });
+    }
+    syncMetaSave(meta);
+    SYNC.status = 'ok'; SYNC.lastOk = Date.now();
+    if (changed) {
+      CACHE.k = null; try { localStorage.setItem(KEY, serialize(S)); } catch (e) { }
+      const ae = document.activeElement; if (!ae || !/INPUT|TEXTAREA|SELECT/.test(ae.tagName)) render();
+    }
+  } catch (e) {
+    SYNC.status = 'err'; SYNC.err = e?.message || 'Errore di sincronizzazione';
+  } finally {
+    SYNC.busy = false; updateSyncBadge();
+    if (SYNC.again) { SYNC.again = false; syncSoon(1000); }
+  }
+}
+function updateSyncBadge() { const el = $('#sync-state'); if (el) el.innerHTML = syncStateText(); }
+function syncStateText() {
+  if (!SYNC.user) return '';
+  if (SYNC.status === 'sync') return `<span class="muted">${icon('swap', 14)} Sincronizzo…</span>`;
+  if (SYNC.status === 'err') return `<span style="color:var(--bad)">${icon('info', 14)} ${esc(SYNC.err)}</span>`;
+  if (SYNC.lastOk) return `<span style="color:var(--good)">${icon('check', 14)} Sincronizzato alle ${new Date(SYNC.lastOk).toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' })}</span>`;
+  return '';
+}
+
+/* ---------- UI ---------- */
+function accountCard() {
+  if (!window.FORGIA_PWA) return `<div class="card tight small muted">${icon('info', 14)} Account e sincronizzazione funzionano nell'app installata (GitHub Pages), non in questa anteprima.</div>`;
+  if (!SUPA.url) return '';
+  if (!SYNC.client) return `<div class="card tight small muted">${SYNC.err || 'Carico la sincronizzazione…'}</div>`;
+  if (SYNC.user) return `<div class="card">
+      <div class="row"><span class="coach-ic">${icon('user', 20)}</span><div class="grow" style="min-width:0"><b style="overflow-wrap:anywhere">${esc(SYNC.user.email)}</b><div class="small" id="sync-state">${syncStateText()}</div></div></div>
+      <div class="small muted">I tuoi dati sono salvati online e sincronizzati su tutti i dispositivi dove accedi con questo account. Solo tu puoi vederli.</div>
+      <div class="row"><button class="btn grow" data-a="syncNow">${icon('swap', 16)} Sincronizza ora</button><button class="btn ghost" data-a="logout" style="color:var(--bad)">Esci</button></div>
+    </div>`;
+  return `<div class="card">
+      <div><b>Salva i tuoi dati online</b><div class="small muted">Crea un account per non perdere niente e usare l'app su telefono e PC.</div></div>
+      <div class="field"><label for="acc-email">Email</label><input id="acc-email" class="input" type="email" autocomplete="email" autocapitalize="off" maxlength="80"></div>
+      <div class="field"><label for="acc-pw">Password</label><input id="acc-pw" class="input" type="password" autocomplete="current-password" maxlength="72" placeholder="Almeno 8 caratteri"></div>
+      <div id="acc-msg" class="small"></div>
+      <div class="row"><button class="btn primary grow" data-a="login">Accedi</button><button class="btn grow" data-a="signup">Crea account</button></div>
+      <button class="link small" data-a="pwForgot" style="color:var(--gold);text-align:left">Password dimenticata?</button>
+    </div>`;
+}
+function layerPwReset() {
+  return `<div class="layer modal" data-a="backdrop"><div class="sheet" role="dialog" aria-label="Nuova password"><div class="grab"></div><h3>Nuova password</h3>
+    <div class="stack"><div class="field"><label for="pw-new">Nuova password</label><input id="pw-new" class="input" type="password" autocomplete="new-password" maxlength="72"></div>
+    <div id="pw-msg" class="small"></div><button class="btn primary block" data-a="pwSave">Salva password</button></div></div></div>`;
+}
+Object.assign(LAYER_RENDER, { pwReset: layerPwReset });
+function accMsg(t, bad) { const m = $('#acc-msg'); if (m) { m.textContent = t; m.style.color = bad ? 'var(--bad)' : 'var(--good)'; } }
+function authErr(e) {
+  const m = (e?.message || '').toLowerCase();
+  if (m.includes('invalid login')) return 'Email o password sbagliate.';
+  if (m.includes('not confirmed')) return 'Devi prima confermare l\'email: apri il link che ti è arrivato.';
+  if (m.includes('already registered')) return 'Esiste già un account con questa email: usa "Accedi".';
+  if (m.includes('password')) return 'Password troppo debole: usa almeno 8 caratteri.';
+  if (m.includes('rate limit')) return 'Troppi tentativi: riprova tra qualche minuto.';
+  return e?.message || 'Errore, riprova.';
+}
+Object.assign(A, {
+  async login() {
+    const email = $('#acc-email').value.trim(), password = $('#acc-pw').value;
+    if (!email || !password) return accMsg('Inserisci email e password', true);
+    accMsg('Accedo…');
+    const { error } = await SYNC.client.auth.signInWithPassword({ email, password });
+    if (error) accMsg(authErr(error), true); else toast('Accesso effettuato: sincronizzo i dati');
+  },
+  async signup() {
+    const email = $('#acc-email').value.trim(), password = $('#acc-pw').value;
+    if (!email || password.length < 8) return accMsg('Inserisci l\'email e una password di almeno 8 caratteri', true);
+    accMsg('Creo l\'account…');
+    const { data, error } = await SYNC.client.auth.signUp({ email, password, options: { emailRedirectTo: location.origin + location.pathname } });
+    if (error) return accMsg(authErr(error), true);
+    if (!data.session) accMsg('Ti ho mandato una mail: apri il link per confermare, poi torna qui e premi "Accedi".');
+    else toast('Account creato: sincronizzo i dati');
+  },
+  async pwForgot() {
+    const email = $('#acc-email').value.trim(); if (!email) return accMsg('Scrivi prima la tua email', true);
+    const { error } = await SYNC.client.auth.resetPasswordForEmail(email, { redirectTo: location.origin + location.pathname });
+    accMsg(error ? authErr(error) : 'Ti ho mandato una mail con il link per cambiare password.', !!error);
+  },
+  async pwSave() {
+    const pw = $('#pw-new').value; const m = $('#pw-msg');
+    if (pw.length < 8) { m.textContent = 'Almeno 8 caratteri'; m.style.color = 'var(--bad)'; return; }
+    const { error } = await SYNC.client.auth.updateUser({ password: pw });
+    if (error) { m.textContent = authErr(error); m.style.color = 'var(--bad)'; return; }
+    popLayer(); toast('Password aggiornata');
+  },
+  syncNow() { syncNow(); },
+  logout() {
+    pushLayer({
+      type: 'confirm', title: 'Uscire dall\'account?', text: 'I dati restano su questo dispositivo e online. Smetteranno solo di sincronizzarsi finché non accedi di nuovo.', ok: 'Esci',
+      fn: async () => { await SYNC.client.auth.signOut(); syncMetaSave({ hashes: {}, last: null }); SYNC.status = 'off'; SYNC.lastOk = 0; render(); toast('Sei uscito'); }
+    });
+  },
+});
+window.addEventListener('online', () => syncSoon(500));
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') syncSoon(800); else if (SYNC.user) syncNow(); });
+if (syncConfigured()) syncInit().then(() => { if (UI.tab === 'me' || !S.profile.onboarded) render(); });
 
 /* ---------- boot ---------- */
 if (S.active && S.active.restEnd && S.active.restEnd < Date.now()) { S.active.restEnd = 0; S.active.restBeeped = true; }
