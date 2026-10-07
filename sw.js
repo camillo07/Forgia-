@@ -1,7 +1,7 @@
 // Forgia service worker: app shell offline + cache of exercise images
-const SHELL = 'forgia-shell-v18';
+const SHELL = 'forgia-shell-v20';
 const IMG = 'forgia-img-v1';
-const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png', './zxing.min.js', './supabase.min.js'];
+const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png', './zxing.min.js', './supabase.min.js', './leaflet.min.js'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(SHELL).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
@@ -12,7 +12,7 @@ self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET') return;
   // exercise images and fonts: cache first
-  if (url.hostname === 'raw.githubusercontent.com' || url.hostname.includes('fonts.g')) {
+  if (url.hostname === 'raw.githubusercontent.com' || url.hostname.includes('fonts.g') || url.hostname === 'tile.openstreetmap.org') {
     e.respondWith(caches.open(IMG).then(async c => {
       const hit = await c.match(e.request);
       if (hit) return hit;

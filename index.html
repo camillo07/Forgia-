@@ -819,6 +819,714 @@ u.dr { background: var(--steel); }
 .w7.none b { color: var(--faint); }
 .w7.today { box-shadow: inset 0 0 0 1.5px var(--fg); }
 
+/* 4.6 — coach, carico, home personalizzabile */
+.coach { gap: 10px; }
+.ci { display: flex; gap: 10px; align-items: flex-start; padding-top: 10px; border-top: 1px solid var(--line); }
+.ci:first-of-type { border-top: 0; padding-top: 2px; }
+.ci b { font-size: 15px; }
+.ci .small { line-height: 1.4; margin-top: 2px; }
+.ci .btn { margin-top: 8px; }
+.ci-ic { width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0; background: var(--surface-2); color: var(--muted); }
+.ci.c-r .ci-ic { background: rgba(255, 92, 108, .15); color: var(--bad); }
+.ci.c-y .ci-ic { background: var(--gold-bg); color: var(--gold); }
+.ci.c-g .ci-ic { background: var(--good-bg); color: var(--good); }
+.ci.c-o .ci-ic { background: rgba(255, 107, 44, .15); color: #ff8a3d; }
+.ci.c-b .ci-ic { background: var(--steel-bg); color: var(--steel); }
+.home-edit { align-self: center; display: inline-flex; gap: 6px; align-items: center; color: var(--muted); font-weight: 600; padding: 6px 0 14px; }
+.home-ed { display: flex; flex-direction: column; gap: 10px; }
+.home-ed .row { gap: 6px; }
+.vs-last { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); background: var(--surface-2); border-radius: 10px; padding: 6px 10px; }
+.vs-last span { flex: 1; min-width: 0; }
+.vs-last b { color: var(--fg); }
+.vs-last em { font-style: normal; font-weight: 800; white-space: nowrap; }
+.vs-last.up em { color: var(--good); } .vs-last.dn em { color: var(--bad); } .vs-last.eq em { color: var(--muted); }
+.light-card { flex-direction: row; align-items: center; gap: 10px; border: 1px solid rgba(255, 92, 108, .3); color: var(--fg); }
+.light-card > svg { color: var(--bad); flex-shrink: 0; }
+.light-card.offer { flex-wrap: wrap; }
+.ld-bars { display: flex; gap: 6px; align-items: flex-end; height: 110px; }
+.ld-bars div { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 0; }
+.ld-bars i { display: block; width: 70%; max-height: 90px; }
+.ld-bars i.g { background: #ff6b2c; border-radius: 0 0 4px 4px; }
+.ld-bars i.r { background: var(--steel); border-radius: 4px 4px 0 0; }
+.ld-bars span { font-size: 10px; color: var(--faint); margin-top: 4px; }
+/* required styles */
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	}
+.leaflet-container {
+	overflow: hidden;
+	}
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	        user-select: none;
+	  -webkit-user-drag: none;
+	}
+/* Prevents IE11 from highlighting tiles in blue */
+.leaflet-tile::selection {
+	background: transparent;
+}
+/* Safari renders non-retina tile on retina better with this, but Chrome is worse */
+.leaflet-safari .leaflet-tile {
+	image-rendering: -webkit-optimize-contrast;
+	}
+/* hack that prevents hw layers "stretching" when loading new tiles */
+.leaflet-safari .leaflet-tile-container {
+	width: 1600px;
+	height: 1600px;
+	-webkit-transform-origin: 0 0;
+	}
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	display: block;
+	}
+/* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
+/* .leaflet-container img: map is broken in FF if you have max-width: 100% on tiles */
+.leaflet-container .leaflet-overlay-pane svg {
+	max-width: none !important;
+	max-height: none !important;
+	}
+.leaflet-container .leaflet-marker-pane img,
+.leaflet-container .leaflet-shadow-pane img,
+.leaflet-container .leaflet-tile-pane img,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-tile {
+	max-width: none !important;
+	max-height: none !important;
+	width: auto;
+	padding: 0;
+	}
+
+.leaflet-container img.leaflet-tile {
+	/* See: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
+	mix-blend-mode: plus-lighter;
+}
+
+.leaflet-container.leaflet-touch-zoom {
+	-ms-touch-action: pan-x pan-y;
+	touch-action: pan-x pan-y;
+	}
+.leaflet-container.leaflet-touch-drag {
+	-ms-touch-action: pinch-zoom;
+	/* Fallback for FF which doesn't support pinch-zoom */
+	touch-action: none;
+	touch-action: pinch-zoom;
+}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.leaflet-container {
+	-webkit-tap-highlight-color: transparent;
+}
+.leaflet-container a {
+	-webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+}
+.leaflet-tile {
+	filter: inherit;
+	visibility: hidden;
+	}
+.leaflet-tile-loaded {
+	visibility: inherit;
+	}
+.leaflet-zoom-box {
+	width: 0;
+	height: 0;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	z-index: 800;
+	}
+/* workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=888319 */
+.leaflet-overlay-pane svg {
+	-moz-user-select: none;
+	}
+
+.leaflet-pane         { z-index: 400; }
+
+.leaflet-tile-pane    { z-index: 200; }
+.leaflet-overlay-pane { z-index: 400; }
+.leaflet-shadow-pane  { z-index: 500; }
+.leaflet-marker-pane  { z-index: 600; }
+.leaflet-tooltip-pane   { z-index: 650; }
+.leaflet-popup-pane   { z-index: 700; }
+
+.leaflet-map-pane canvas { z-index: 100; }
+.leaflet-map-pane svg    { z-index: 200; }
+
+.leaflet-vml-shape {
+	width: 1px;
+	height: 1px;
+	}
+.lvml {
+	behavior: url(#default#VML);
+	display: inline-block;
+	position: absolute;
+	}
+
+
+/* control positioning */
+
+.leaflet-control {
+	position: relative;
+	z-index: 800;
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
+.leaflet-top,
+.leaflet-bottom {
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	}
+.leaflet-top {
+	top: 0;
+	}
+.leaflet-right {
+	right: 0;
+	}
+.leaflet-bottom {
+	bottom: 0;
+	}
+.leaflet-left {
+	left: 0;
+	}
+.leaflet-control {
+	float: left;
+	clear: both;
+	}
+.leaflet-right .leaflet-control {
+	float: right;
+	}
+.leaflet-top .leaflet-control {
+	margin-top: 10px;
+	}
+.leaflet-bottom .leaflet-control {
+	margin-bottom: 10px;
+	}
+.leaflet-left .leaflet-control {
+	margin-left: 10px;
+	}
+.leaflet-right .leaflet-control {
+	margin-right: 10px;
+	}
+
+
+/* zoom and fade animations */
+
+.leaflet-fade-anim .leaflet-popup {
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
+	   -moz-transition: opacity 0.2s linear;
+	        transition: opacity 0.2s linear;
+	}
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
+	opacity: 1;
+	}
+.leaflet-zoom-animated {
+	-webkit-transform-origin: 0 0;
+	    -ms-transform-origin: 0 0;
+	        transform-origin: 0 0;
+	}
+svg.leaflet-zoom-animated {
+	will-change: transform;
+}
+
+.leaflet-zoom-anim .leaflet-zoom-animated {
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
+	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
+	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
+	}
+.leaflet-zoom-anim .leaflet-tile,
+.leaflet-pan-anim .leaflet-tile {
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+	}
+
+.leaflet-zoom-anim .leaflet-zoom-hide {
+	visibility: hidden;
+	}
+
+
+/* cursors */
+
+.leaflet-interactive {
+	cursor: pointer;
+	}
+.leaflet-grab {
+	cursor: -webkit-grab;
+	cursor:    -moz-grab;
+	cursor:         grab;
+	}
+.leaflet-crosshair,
+.leaflet-crosshair .leaflet-interactive {
+	cursor: crosshair;
+	}
+.leaflet-popup-pane,
+.leaflet-control {
+	cursor: auto;
+	}
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab .leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
+	cursor: move;
+	cursor: -webkit-grabbing;
+	cursor:    -moz-grabbing;
+	cursor:         grabbing;
+	}
+
+/* marker & overlays interactivity */
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-image-layer,
+.leaflet-pane > svg path,
+.leaflet-tile-container {
+	pointer-events: none;
+	}
+
+.leaflet-marker-icon.leaflet-interactive,
+.leaflet-image-layer.leaflet-interactive,
+.leaflet-pane > svg path.leaflet-interactive,
+svg.leaflet-image-layer.leaflet-interactive path {
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
+
+/* visual tweaks */
+
+.leaflet-container {
+	background: #ddd;
+	outline-offset: 1px;
+	}
+.leaflet-container a {
+	color: #0078A8;
+	}
+.leaflet-zoom-box {
+	border: 2px dotted #38f;
+	background: rgba(255,255,255,0.5);
+	}
+
+
+/* general typography */
+.leaflet-container {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1.5;
+	}
+
+
+/* general toolbar styles */
+
+.leaflet-bar {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+	border-radius: 4px;
+	}
+.leaflet-bar a {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	}
+.leaflet-bar a,
+.leaflet-control-layers-toggle {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+	}
+.leaflet-bar a:hover,
+.leaflet-bar a:focus {
+	background-color: #f4f4f4;
+	}
+.leaflet-bar a:first-child {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	}
+.leaflet-bar a:last-child {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom: none;
+	}
+.leaflet-bar a.leaflet-disabled {
+	cursor: default;
+	background-color: #f4f4f4;
+	color: #bbb;
+	}
+
+.leaflet-touch .leaflet-bar a {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	}
+.leaflet-touch .leaflet-bar a:first-child {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	}
+.leaflet-touch .leaflet-bar a:last-child {
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	}
+
+/* zoom control */
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+	font: bold 18px 'Lucida Console', Monaco, monospace;
+	text-indent: 1px;
+	}
+
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
+	font-size: 22px;
+	}
+
+
+/* layers control */
+
+.leaflet-control-layers {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	background: #fff;
+	border-radius: 5px;
+	}
+.leaflet-control-layers-toggle {
+	background-image: url(images/layers.png);
+	width: 36px;
+	height: 36px;
+	}
+.leaflet-retina .leaflet-control-layers-toggle {
+	background-image: url(images/layers-2x.png);
+	background-size: 26px 26px;
+	}
+.leaflet-touch .leaflet-control-layers-toggle {
+	width: 44px;
+	height: 44px;
+	}
+.leaflet-control-layers .leaflet-control-layers-list,
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+	display: none;
+	}
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+	display: block;
+	position: relative;
+	}
+.leaflet-control-layers-expanded {
+	padding: 6px 10px 6px 6px;
+	color: #333;
+	background: #fff;
+	}
+.leaflet-control-layers-scrollbar {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-right: 5px;
+	}
+.leaflet-control-layers-selector {
+	margin-top: 2px;
+	position: relative;
+	top: 1px;
+	}
+.leaflet-control-layers label {
+	display: block;
+	font-size: 13px;
+	font-size: 1.08333em;
+	}
+.leaflet-control-layers-separator {
+	height: 0;
+	border-top: 1px solid #ddd;
+	margin: 5px -10px 5px -6px;
+	}
+
+/* Default icon URLs */
+.leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */
+	background-image: url(images/marker-icon.png);
+	}
+
+
+/* attribution and scale controls */
+
+.leaflet-container .leaflet-control-attribution {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 0;
+	}
+.leaflet-control-attribution,
+.leaflet-control-scale-line {
+	padding: 0 5px;
+	color: #333;
+	line-height: 1.4;
+	}
+.leaflet-control-attribution a {
+	text-decoration: none;
+	}
+.leaflet-control-attribution a:hover,
+.leaflet-control-attribution a:focus {
+	text-decoration: underline;
+	}
+.leaflet-attribution-flag {
+	display: inline !important;
+	vertical-align: baseline !important;
+	width: 1em;
+	height: 0.6669em;
+	}
+.leaflet-left .leaflet-control-scale {
+	margin-left: 5px;
+	}
+.leaflet-bottom .leaflet-control-scale {
+	margin-bottom: 5px;
+	}
+.leaflet-control-scale-line {
+	border: 2px solid #777;
+	border-top: none;
+	line-height: 1.1;
+	padding: 2px 5px 1px;
+	white-space: nowrap;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	background: rgba(255, 255, 255, 0.8);
+	text-shadow: 1px 1px #fff;
+	}
+.leaflet-control-scale-line:not(:first-child) {
+	border-top: 2px solid #777;
+	border-bottom: none;
+	margin-top: -2px;
+	}
+.leaflet-control-scale-line:not(:first-child):not(:last-child) {
+	border-bottom: 2px solid #777;
+	}
+
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	box-shadow: none;
+	}
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	border: 2px solid rgba(0,0,0,0.2);
+	background-clip: padding-box;
+	}
+
+
+/* popup */
+
+.leaflet-popup {
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+	}
+.leaflet-popup-content-wrapper {
+	padding: 1px;
+	text-align: left;
+	border-radius: 12px;
+	}
+.leaflet-popup-content {
+	margin: 13px 24px 13px 20px;
+	line-height: 1.3;
+	font-size: 13px;
+	font-size: 1.08333em;
+	min-height: 1px;
+	}
+.leaflet-popup-content p {
+	margin: 17px 0;
+	margin: 1.3em 0;
+	}
+.leaflet-popup-tip-container {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-top: -1px;
+	margin-left: -20px;
+	overflow: hidden;
+	pointer-events: none;
+	}
+.leaflet-popup-tip {
+	width: 17px;
+	height: 17px;
+	padding: 1px;
+
+	margin: -10px auto 0;
+	pointer-events: auto;
+
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: white;
+	color: #333;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+	}
+.leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	font: 16px/24px Tahoma, Verdana, sans-serif;
+	color: #757575;
+	text-decoration: none;
+	background: transparent;
+	}
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+	color: #585858;
+	}
+.leaflet-popup-scrolled {
+	overflow: auto;
+	}
+
+.leaflet-oldie .leaflet-popup-content-wrapper {
+	-ms-zoom: 1;
+	}
+.leaflet-oldie .leaflet-popup-tip {
+	width: 24px;
+	margin: 0 auto;
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+	}
+
+.leaflet-oldie .leaflet-control-zoom,
+.leaflet-oldie .leaflet-control-layers,
+.leaflet-oldie .leaflet-popup-content-wrapper,
+.leaflet-oldie .leaflet-popup-tip {
+	border: 1px solid #999;
+	}
+
+
+/* div icon */
+
+.leaflet-div-icon {
+	background: #fff;
+	border: 1px solid #666;
+	}
+
+
+/* Tooltip */
+/* Base styles for the element that has a tooltip */
+.leaflet-tooltip {
+	position: absolute;
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #222;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	}
+.leaflet-tooltip.leaflet-interactive {
+	cursor: pointer;
+	pointer-events: auto;
+	}
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	position: absolute;
+	pointer-events: none;
+	border: 6px solid transparent;
+	background: transparent;
+	content: "";
+	}
+
+/* Directions */
+
+.leaflet-tooltip-bottom {
+	margin-top: 6px;
+}
+.leaflet-tooltip-top {
+	margin-top: -6px;
+}
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-top:before {
+	left: 50%;
+	margin-left: -6px;
+	}
+.leaflet-tooltip-top:before {
+	bottom: 0;
+	margin-bottom: -12px;
+	border-top-color: #fff;
+	}
+.leaflet-tooltip-bottom:before {
+	top: 0;
+	margin-top: -12px;
+	margin-left: -6px;
+	border-bottom-color: #fff;
+	}
+.leaflet-tooltip-left {
+	margin-left: -6px;
+}
+.leaflet-tooltip-right {
+	margin-left: 6px;
+}
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	top: 50%;
+	margin-top: -6px;
+	}
+.leaflet-tooltip-left:before {
+	right: 0;
+	margin-right: -12px;
+	border-left-color: #fff;
+	}
+.leaflet-tooltip-right:before {
+	left: 0;
+	margin-left: -12px;
+	border-right-color: #fff;
+	}
+
+/* Printing */
+
+@media print {
+	/* Prevent printers from removing background-images of controls. */
+	.leaflet-control {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+		}
+	}
+
+/* map */
+.route-card { position: relative; }
+.route-card .lmap { position: absolute; inset: 0; z-index: 1; opacity: 0; transition: opacity .3s; background: #161b22; }
+.route-card.has-map .lmap { opacity: 1; }
+.lmap .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.88) saturate(.6); }
+.lmap .leaflet-control-attribution { background: rgba(17, 21, 27, .7); color: #8b95a4; font-size: 9px; }
+.lmap .leaflet-control-attribution a { color: #8b95a4; }
+.km-ic { background: #11151b; color: #ffb547; border: 2px solid #ff8a3d; border-radius: 50%; font: 700 10px/18px var(--font-body); text-align: center; }
+.route-card.live { min-height: 200px; }
+.route-card.live.big { height: 46vh; }
+.route-card.live.big > svg { height: 100%; }
+.run-modes { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; background: var(--surface-2); border-radius: 12px; padding: 3px; }
+.run-modes button { min-height: 34px; border-radius: 10px; font-weight: 700; font-size: 13px; color: var(--muted); }
+.run-modes button.on { background: var(--fg); color: var(--bg); }
+#rn-center { position: absolute; right: 10px; bottom: 26px; z-index: 5; }
+
 </style>
 <div id="app">
   <main id="main" tabindex="-1"></main>
@@ -1054,7 +1762,7 @@ function planSummary(plan) {
 /* targets of the work sets of an exercise in the active workout */
 function workTargets(aex) { return aex.sets.filter(isWork).map(s => s.ta != null ? { a: s.ta, b: s.tb ?? s.ta } : { a: aex.rmin || 8, b: aex.rmax || 12 }); }
 function rirTarget(aex) { const t = (aex.tags || []).find(x => /^RIR \d/.test(x)); return t ? +t[4] : aex.rir ?? 2; }
-function rirOn(e) { return !!(S.exRir && S.exRir[e.id]); }
+function rirOn(e) { return !!(S.exRir && S.exRir[e.id]) || e.prog === 'rir'; }
 function setDone(s, mt) { return mt === 'time' ? !!s.sec : mt === 'dist' ? !!(s.km || s.min) : s.kg != null && !!s.r; }
 function workSets(e) { const mt = mtOf(e); return (e.sets || []).filter(s => isWork(s) && setDone(s, mt)); }
 function fmtSet(s, mt) {
@@ -1236,6 +1944,8 @@ function suggestion(aex, wid) {
     return { kind: 'reps', sec: top + 5, text: `Ultima volta <b>${top} s</b>: prova a tenere <b>${top + 5} s</b>.` };
   }
   if (aex.sets.some(s => s.rm) && typeof oneRM === 'function' && oneRM(aex.id)) return { kind: 'pct', text: `Carichi calcolati sul massimale: <b>${fmtKg(oneRM(aex.id))} kg</b>${S.rm?.[aex.id] ? '' : ' (stimato)'}. Lo cambi nella scheda dell'esercizio.` };
+  if (aex.prog === 'fixed') { const l0 = lastSession(aex.id, wid), kg = l0 ? Math.max(...workSets(l0.e).map(s => s.kg || 0)) : null; return kg ? { kind: 'hold', kg, text: `Peso fisso: <b>${fmtKg(kg)} kg</b>. Il carico non cambia: cerca ripetizioni pulite e controllate.` } : { kind: 'new', text: 'Peso fisso: scegli il carico e tienilo uguale a ogni seduta.' }; }
+  if (aex.prog === 'rir' && typeof rirSuggestion === 'function') { const rs = rirSuggestion(aex, wid); if (rs) return rs; }
   if (aex.prog === 'linear' && typeof linearSuggestion === 'function') { const ls = linearSuggestion(aex, wid); if (ls) return ls; }
   const T = workTargets(aex), T0 = T[0] || { a: aex.rmin || 8, b: aex.rmax || 12 };
   const rmin = T0.a, rmax = T0.b, rirT = rirTarget(aex), same = T.every(t => t.a === T0.a && t.b === T0.b);
@@ -1608,26 +2318,33 @@ function viewHome() {
   const lastWo = [...S.workouts].sort((a, b) => b.start - a.start)[0];
   const d = derive();
   const recent = workoutsSorted().reverse().slice(0, 12).flatMap(w => (d.prByW[w.id] || []).filter(p => ['e1rm', 'reps', 'sec', 'km'].includes(p.type)).map(p => ({ ...p, t: w.start }))).slice(0, 6);
+  const sec = {
+    coach: () => todayCoachCard(),
+    workout: () => hero,
+    quick: () => `<div class="qa">${qa.map(([a, ic, n, extra]) => `<button data-a="${a}" ${extra}><span>${icon(ic, 22)}</span>${n}</button>`).join('')}</div>`,
+    week: () => `<div class="card wk-card">
+    <div class="row" style="gap:14px"><div class="wk-ring">${ringSVG(goal ? wkW.length / goal : 0)}<b>${wkW.length}<small>/${goal}</small></b></div>
+      <div class="grow"><b style="font-size:17px">La tua settimana</b><div class="small muted">${wkW.length >= goal ? 'Obiettivo raggiunto, grande!' : `Ancora ${goal - wkW.length} ${goal - wkW.length === 1 ? 'allenamento' : 'allenamenti'} per l'obiettivo`}</div></div><button class="icon-btn" data-a="tab" data-k="progress" aria-label="Progressi">${icon('chev', 18)}</button></div>
+    <div class="week">${days}</div>
+    <div class="wk-stats"><div><b>${fmtTon(vol)}</b><span>volume${volL && vol ? ` <em class="${vol >= volL ? 'up' : 'dn'}">${vol >= volL ? '▲' : '▼'} ${Math.abs(Math.round((vol - volL) / volL * 100))}%</em>` : ''}</span></div><div><b>${sets}</b><span>serie</span></div><div><b>${fmtN(km, 1)}</b><span>km corsa</span></div><div><b>${fmtN(kcalW, 0)}</b><span>kcal attive</span></div></div>
+  </div>${[1, 2].includes(new Date().getDay()) && weekStats(wk - 7 * DAY).n + weekStats(wk - 7 * DAY).runs ? recapCard(1, true) : ''}`,
+    diet: () => dietHomeCard(),
+    body: () => bodyHomeCard(),
+    readiness: () => readinessCard(),
+    load: () => loadCard(),
+    muscles: () => ms.length ? `<button class="card tight mus-card" data-a="tab" data-k="progress" style="text-align:left"><div class="row"><b class="grow">Muscoli allenati</b><span class="small muted">serie questa settimana</span>${icon('chev', 16)}</div>
+    <div class="mus">${ms.slice(0, 6).map(m => `<div><span>${m.n}</span><i><u style="width:${m.v / mmax * 100}%" class="${m.v >= 10 ? 'ok' : ''}"></u></i><b class="tnum">${fmtN(m.v)}</b></div>`).join('')}</div></button>` : '',
+    last: () => lastWo ? `<button class="card tight last-wo" data-a="openHist" data-id="${lastWo.id}" style="text-align:left"><div class="row"><div class="grow"><div class="small muted">Ultimo allenamento · ${relDay(lastWo.start).toLowerCase()}</div><b style="font-size:17px">${esc(lastWo.name)}</b></div>${prCount(lastWo) ? `<span class="chip gold">${icon('trophy', 14)} ${prCount(lastWo)}</span>` : ''}${icon('chev', 18)}</div>
+    <div class="lw-stats"><span>${icon('timer', 14)} ${fmtDur((lastWo.end || lastWo.start) - lastWo.start)}</span><span>${icon('dumbbell', 14)} ${fmtTon(wVolume(lastWo))}</span><span>${icon('layers', 14)} ${lastWo.ex.reduce((a, e) => a + e.sets.filter(isWork).length, 0)} serie</span></div></button>` : '',
+    records: () => recent.length ? `<div class="stack"><div class="section-title">Ultimi record <button class="link" data-a="tab" data-k="progress">Tutti</button></div><div class="pr-scroll">${recent.map(p => { const x = ex(p.exId); return `<button data-a="openEx" data-id="${esc(p.exId)}">${thumbHTML(x)}<span class="pr-flag">${icon('trophy', 16)}</span><b>${esc(x.n)}</b><small>${prText(p)}</small><em>${relDay(p.t)}</em></button>`; }).join('')}</div></div>` : '',
+  };
+  const busy = S.active || S.runActive;
   return `
   <div class="home-head"><div class="grow"><div class="eyebrow">${fmtDateLong(Date.now())}</div><h1>${greet},<br><span>${esc(name)}</span></h1></div>
     <button class="streak ${streak ? 'on' : ''}" data-a="tab" data-k="me" aria-label="Settimane di fila">${icon('flame', 22)}<b>${streak}</b><small>${streak === 1 ? 'settimana' : 'settimane'}</small></button></div>
-  ${hero}
-  <div class="qa">${qa.map(([a, ic, n, extra]) => `<button data-a="${a}" ${extra}><span>${icon(ic, 22)}</span>${n}</button>`).join('')}</div>
-  <div class="card wk-card">
-    <div class="row" style="gap:14px"><div class="wk-ring">${ringSVG(goal ? wkW.length / goal : 0)}<b>${wkW.length}<small>/${goal}</small></b></div>
-      <div class="grow"><b style="font-size:17px">La tua settimana</b><div class="small muted">${wkW.length >= goal ? 'Obiettivo raggiunto, grande!' : `Ancora ${goal - wkW.length} ${goal - wkW.length === 1 ? 'allenamento' : 'allenamenti'} per l'obiettivo`}</div></div></div>
-    <div class="week">${days}</div>
-    <div class="wk-stats"><div><b>${fmtTon(vol)}</b><span>volume${volL && vol ? ` <em class="${vol >= volL ? 'up' : 'dn'}">${vol >= volL ? '▲' : '▼'} ${Math.abs(Math.round((vol - volL) / volL * 100))}%</em>` : ''}</span></div><div><b>${sets}</b><span>serie</span></div><div><b>${fmtN(km, 1)}</b><span>km corsa</span></div><div><b>${fmtN(kcalW, 0)}</b><span>kcal attive</span></div></div>
-  </div>
-  ${[1, 2].includes(new Date().getDay()) && weekStats(wk - 7 * DAY).n + weekStats(wk - 7 * DAY).runs ? recapCard(1, true) : ''}
-  ${readinessCard()}
-  ${ms.length ? `<button class="card tight mus-card" data-a="tab" data-k="progress" style="text-align:left"><div class="row"><b class="grow">Muscoli allenati</b><span class="small muted">serie questa settimana</span>${icon('chev', 16)}</div>
-    <div class="mus">${ms.slice(0, 6).map(m => `<div><span>${m.n}</span><i><u style="width:${m.v / mmax * 100}%" class="${m.v >= 10 ? 'ok' : ''}"></u></i><b class="tnum">${fmtN(m.v)}</b></div>`).join('')}</div></button>` : ''}
-  ${lastWo ? `<button class="card tight last-wo" data-a="openHist" data-id="${lastWo.id}" style="text-align:left"><div class="row"><div class="grow"><div class="small muted">Ultimo allenamento · ${relDay(lastWo.start).toLowerCase()}</div><b style="font-size:17px">${esc(lastWo.name)}</b></div>${prCount(lastWo) ? `<span class="chip gold">${icon('trophy', 14)} ${prCount(lastWo)}</span>` : ''}${icon('chev', 18)}</div>
-    <div class="lw-stats"><span>${icon('timer', 14)} ${fmtDur((lastWo.end || lastWo.start) - lastWo.start)}</span><span>${icon('dumbbell', 14)} ${fmtTon(wVolume(lastWo))}</span><span>${icon('layers', 14)} ${lastWo.ex.reduce((a, e) => a + e.sets.filter(isWork).length, 0)} serie</span></div></button>` : ''}
-  ${dietHomeCard()}
-  ${bodyHomeCard()}
-  ${recent.length ? `<div class="stack"><div class="section-title">Ultimi record <button class="link" data-a="tab" data-k="progress">Tutti</button></div><div class="pr-scroll">${recent.map(p => { const x = ex(p.exId); return `<button data-a="openEx" data-id="${esc(p.exId)}">${thumbHTML(x)}<span class="pr-flag">${icon('trophy', 16)}</span><b>${esc(x.n)}</b><small>${prText(p)}</small><em>${relDay(p.t)}</em></button>`; }).join('')}</div></div>` : ''}
+  ${busy ? hero : ''}
+  ${homeLayout().filter(c => c.on && !(busy && c.k === 'workout')).map(c => sec[c.k]()).join('')}
+  <button class="link home-edit" data-a="homeEdit">${icon('edit', 14)} Personalizza Oggi</button>
   `;
 }
 function estMinutes(r) { return Math.round(r.ex.reduce((a, e) => a + e.sets * (45 + (e.rest || 120)), 0) / 60); }
@@ -1694,6 +2411,7 @@ function viewProgress() {
   <div class="page-head"><h1>Progressi</h1></div>
   ${progSegHTML()}
   ${UI.progSeg === 'body' ? viewBody() : `${recapCard()}
+  ${loadCard()}
   ${calendarCard()}
   ${corrCard()}
   <div class="tiles">
@@ -1855,6 +2573,7 @@ function renderLayers() {
   host.querySelectorAll('[data-scroll-key]').forEach(el => { const v = UI.scroll[el.dataset.scrollKey]; if (v) el.scrollTop = v; });
   document.body.style.overflow = UI.layers.length ? 'hidden' : '';
   updateRestBar();
+  if (typeof mapsAfterRender === 'function') mapsAfterRender();
 }
 
 const LAYER_RENDER = {
@@ -1875,7 +2594,7 @@ function head(title, left = 'back', right = '') {
 }
 
 /* ---------- active workout ---------- */
-function startWorkout(fromRoutine, fromWorkout) {
+function startWorkout(fromRoutine, fromWorkout, opts = {}) {
   const now = Date.now();
   const w = { id: uid(), name: 'Allenamento libero', rid: null, start: now, ex: [], note: '', restEnd: 0, restTotal: 0 };
   if (fromRoutine) {
@@ -1885,6 +2604,7 @@ function startWorkout(fromRoutine, fromWorkout) {
       let plan = planOf(e); const w0 = plan.find(p => p.t !== 'w') || plan[0];
       plan = plan.map((p, i) => ({ ...p, pi: i }));
       if (dl) { const warm = plan.filter(p => p.t === 'w'), work = plan.filter(p => p.t !== 'w'); plan = [...warm, ...work.slice(0, Math.max(1, Math.ceil(work.length * 0.6)))]; }
+      if (opts.light) { const warm = plan.filter(p => p.t === 'w'), work = plan.filter(p => p.t !== 'w'); if (work.length > 1) plan = [...warm, ...work.slice(0, work.length - 1)]; }
       const aex = { src: fromRoutine.ex.indexOf(e), id: e.id, mt: exType(e.id), tags: e.tags ? [...e.tags] : [], rmin: w0.a, rmax: w0.b ?? w0.a, rir: e.rir, rest: e.rest, ss: !!e.ss, note: '', pnote: e.note || undefined, prog: e.prog || undefined, sets: plan.map(p => ({ t: p.t || 'n', kg: p.kg ?? null, r: null, rir: null, ta: p.a ?? null, tb: p.b ?? null, bpct: p.pct ?? undefined, rm: p.rm ?? undefined, pi: p.pi, done: false })) };
       if (e.warm) addWarmup(aex, w.id, true);
       return aex;
@@ -1893,6 +2613,7 @@ function startWorkout(fromRoutine, fromWorkout) {
     w.name = fromWorkout.name; w.rid = fromWorkout.rid;
     w.ex = fromWorkout.ex.map(e => ({ id: e.id, mt: e.mt || exType(e.id), tags: e.tags ? [...e.tags] : [], rmin: 8, rmax: 12, rir: 2, rest: S.profile.restDefault, ss: false, note: '', sets: e.sets.map(s => ({ t: s.t, kg: null, r: null, rir: null, done: false })) }));
   }
+  if (opts.light) w.light = true;
   S.active = w; save();
   closeLayersOfType('workout');
   pushLayer({ type: 'workout' });
@@ -1935,6 +2656,8 @@ function layerWorkout() {
       <button class="btn primary sm" data-a="finishWorkout">${w.past ? 'Salva' : 'Fine'}</button></div>
     <div class="layer-body" data-scroll-key="workout"><div class="layer-inner">
       ${w.past ? pastWhenCard(w) : ''}
+      ${typeof lightOfferHTML === 'function' ? lightOfferHTML(w) : ''}
+      ${w.light ? `<div class="card tight light-card">${icon('heart', 18)}<div class="grow small"><b>Versione leggera</b> · recupero basso: una serie in meno per esercizio e 1 ripetizione di margine in più del solito. La scheda non cambia.</div></div>` : ''}
       <div class="wo-stats"><div><b id="wo-sets">${done}</b><span>Serie fatte</span></div><div><b>${fmtTon(vol)}</b><span>Volume</span></div><div><b>${w.ex.length}</b><span>Esercizi</span></div></div>
       ${cards || `<div class="empty card">${icon('dumbbell', 34)}<b>Nessun esercizio</b><span class="small">Aggiungi il primo esercizio per iniziare.</span></div>`}
       <button class="btn block" data-a="pickForWorkout">${icon('plus', 18)} Aggiungi esercizio</button>
@@ -1988,10 +2711,11 @@ function exerciseCard(e, ei, ss) {
   const sub = mt === 'wr' || mt === 'bw' ? (tg.length ? (tt.length === 1 ? tt[0] + ' reps · ' : 'reps per serie · ') : e.rmin ? `${repTxt(e.rmin, e.rmax)} reps · ` : '') : MT[mt].l + ' · ';
   const nDone = e.sets.filter(s => s.done).length, allDone = nDone === e.sets.length && nDone > 0;
   const headHTML = `<div class="exc-head" data-lp="wo"><button class="icon-btn drag-h" data-drag="wo" aria-label="Trascina per spostare">${icon('grip', 18)}</button>${thumbHTML(x)}<button class="name grow" data-a="openEx" data-id="${esc(e.id)}">${esc(x.n)}<div class="small muted" style="font-weight:500">${e.col ? `${nDone}/${e.sets.length} serie${allDone ? ' ✓' : ''}` : `${sub}rec. ${fmtClock((e.rest || S.profile.restDefault) * 1000)}`}</div></button><button class="icon-btn" data-a="exCollapse" data-ei="${ei}" aria-label="${e.col ? 'Apri' : 'Chiudi'}">${icon(e.col ? 'down' : 'up', 18)}</button><button class="icon-btn" data-a="exMenu" data-ei="${ei}" aria-label="Opzioni esercizio">${icon('more')}</button></div>`;
-  if (e.col) return `<div class="exc collapsed ${ss ? 'ss' : ''} ${allDone ? 'alldone' : ''}" data-drag-item>${ss ? `<div class="ss-tag">Superserie ${ss}</div>` : ''}${headHTML}${nDone ? `<div class="small muted tnum" style="padding-left:4px">${e.sets.filter(s => s.done).map(s => fmtSet(s, mt)).join(' · ')}</div>` : ''}</div>`;
+  if (e.col) return `<div class="exc collapsed ${ss ? 'ss' : ''} ${allDone ? 'alldone' : ''}" data-drag-item>${ss ? `<div class="ss-tag">Superserie ${ss}</div>` : ''}${headHTML}${typeof vsLastHTML === 'function' ? vsLastHTML(e) : ''}${nDone ? `<div class="small muted tnum" style="padding-left:4px">${e.sets.filter(s => s.done).map(s => fmtSet(s, mt)).join(' · ')}</div>` : ''}</div>`;
   return `<div class="exc ${ss ? 'ss' : ''}" data-drag-item>
     ${ss ? `<div class="ss-tag">Superserie ${ss}</div>` : ''}
     ${headHTML}
+    ${typeof vsLastHTML === 'function' ? vsLastHTML(e) : ''}
     ${tagChips(e, ei, 'woTags')}
     ${e.pnote ? `<button class="pnote small ${e.pnoteOpen ? 'open' : ''}" data-a="pnoteToggle" data-ei="${ei}">${icon('layers', 14)} ${esc(e.pnote)}</button>` : ''}
     ${S.exNotes[e.id] ? `<div class="small" style="color:var(--steel)">${icon('info', 14)} ${esc(S.exNotes[e.id])}</div>` : ''}
@@ -2028,7 +2752,7 @@ function finishWorkout(force, decided) {
   if (pending && !force) {
     return pushLayer({ type: 'confirm', title: 'Terminare l\'allenamento?', text: `${pending} ${pending === 1 ? 'serie non completata verrà scartata' : 'serie non completate verranno scartate'} dallo storico (nella scheda restano).`, ok: 'Termina', fn: () => setTimeout(() => finishWorkout(true), 0) });
   }
-  if (!decided && w.rid) {
+  if (!decided && w.rid && !w.light) {
     const df = routineDiff(w);
     if (df) {
       const rn = S.routines.find(r => r.id === w.rid)?.name || 'scheda';
@@ -3053,14 +3777,14 @@ function rowsToText(rows) { return rows.map(r => r.filter(c => String(c).trim())
 function fileToB64(file) { return new Promise((res, rej) => { const fr = new FileReader(); fr.onload = () => res(String(fr.result).split(',')[1]); fr.onerror = rej; fr.readAsDataURL(file); }); }
 
 /* ---------- UI ---------- */
-function impInput() { let f = $('#impFile'); if (!f) { f = document.createElement('input'); f.type = 'file'; f.id = 'impFile'; f.hidden = true; f.accept = '.xlsx,.csv,.txt,.tsv,image/*,application/pdf'; document.body.appendChild(f); } return f; }
+function impInput() { let f = $('#impFile'); if (!f) { f = document.createElement('input'); f.type = 'file'; f.id = 'impFile'; f.hidden = true; f.accept = '.xlsx,.csv,.txt,.tsv,.json,application/json,image/*,application/pdf'; document.body.appendChild(f); } return f; }
 function layerImport(l, i) {
   if (l.step === 'review') return layerImportReview(l, i);
   const ai = aiReady();
   return `<div class="layer">${head('Importa scheda')}<div class="layer-body" data-scroll-key="im${i}"><div class="layer-inner">
     <div class="small muted">Le schede importate finiscono in una <b>cartella nuova</b>. Prima di salvare controlli gli esercizi abbinati e puoi cambiarli.</div>
     <div class="list">
-      <button class="li" data-a="impPick" data-k="file">${icon('upload')}<div class="grow"><div class="t">File Excel o CSV</div><div class="s">La scheda del PT (.xlsx o .csv)</div></div>${icon('chev', 18)}</button>
+      <button class="li" data-a="impPick" data-k="file">${icon('upload')}<div class="grow"><div class="t">File</div><div class="s">Excel o CSV del PT, o file di Forgia (.json)</div></div>${icon('chev', 18)}</button>
       <button class="li" data-a="impMode" data-k="text">${icon('edit')}<div class="grow"><div class="t">Incolla testo</div><div class="s">Da Lyfta, note, WhatsApp: "Panca 4x8-10", "Squat 5x5"…</div></div>${icon('chev', 18)}</button>
       <button class="li" data-a="impMode" data-k="ai">${icon('sparkle')}<div class="grow"><div class="t">Con l'AI</div><div class="s">Foto, PDF o schede complicate${ai ? '' : ' · gratis copiando per Claude'}</div></div>${icon('chev', 18)}</button>
     </div>
@@ -3105,6 +3829,11 @@ async function impHandleFile(file) {
       const j = await aiAsk(content, { json: true, maxTokens: 4000 });
       l.busy = false; impShow(l, fromAiJson(j)); return;
     }
+    if (nm.endsWith('.json') || nm.endsWith('.txt') || file.type === 'application/json') {
+      const t = (await file.text()).trim();
+      if (/^[\[{]/.test(t) && /"days"\s*:/.test(t)) { impShow(l, fromAiJson(JSON.parse(t.match(/[\[{][\s\S]*[\]}]/)[0]))); return; }
+      if (nm.endsWith('.json')) { l.err = 'Il file JSON non contiene una scheda di Forgia.'; renderLayers(); return; }
+    }
     if (nm.endsWith('.xls')) { l.err = 'Il vecchio formato .xls non è supportato: in Excel o Numbers salvalo come .xlsx o .csv.'; renderLayers(); return; }
     const rows = nm.endsWith('.xlsx') ? await readXlsx(await file.arrayBuffer()) : readCsv(await file.text());
     l.rowsText = rowsToText(rows);
@@ -3124,7 +3853,7 @@ Object.assign(LAYER_RENDER, { import: layerImport });
 Object.assign(A, {
   importOpen() { pushLayer({ type: 'import', step: 'src', mode: null }); },
   impMode(el) { const l = topLayer(); l.text = $('#imp-text')?.value || l.text; l.mode = el.dataset.k; l.err = ''; renderLayers(); },
-  impPick(el) { const l = topLayer(); l.fileFor = el.dataset.k; impInput().accept = el.dataset.k === 'ai' ? 'image/*,application/pdf' : '.xlsx,.csv,.txt,.tsv'; impInput().click(); },
+  impPick(el) { const l = topLayer(); l.fileFor = el.dataset.k; impInput().accept = el.dataset.k === 'ai' ? 'image/*,application/pdf' : '.xlsx,.csv,.txt,.tsv,.json,application/json'; impInput().click(); },
   impParseText() { const l = topLayer(); l.text = $('#imp-text')?.value || ''; if (!l.text.trim()) return toast('Incolla prima la scheda'); impShow(l, parseText(l.text)); },
   async impAiRun() {
     const l = topLayer(); l.text = $('#imp-text')?.value || ''; if (!l.text.trim()) return toast('Incolla il testo o carica una foto');
@@ -5703,7 +6432,7 @@ Object.assign(A, {
    back-off in %, serie in % del massimale, riscaldamento automatico,
    progressione lineare, settimana di scarico, creazione guidata delle schede
    ========================================================= */
-const PROGS = [['double', 'Doppia progressione'], ['linear', 'Lineare (+peso ogni seduta)']];
+const PROGS = [['double', 'Doppia progressione'], ['linear', 'Lineare (+peso ogni seduta)'], ['rir', 'Regolata sul RIR'], ['fixed', 'Peso fisso']];
 
 /* ---------- loads ---------- */
 function roundKg(kg, id) { const x = ex(id), step = x && (x.e === 'dumbbell' || x.e === 'kettlebells') ? 2 : 2.5; return Math.max(0, Math.round(kg / step) * step); }
@@ -6170,7 +6899,7 @@ function runResume() {
   if (!RUN.tick) RUN.tick = setInterval(runTick, 1000);
   if (a.sess?.steps && !a.pauseAt && runMoving(a) > 0) runAudioStart();
 }
-function runDetach() { if (RUN.watch != null) { try { navigator.geolocation.clearWatch(RUN.watch); } catch (e) { } RUN.watch = null; } clearInterval(RUN.tick); RUN.tick = null; runAudioStop(); }
+function runDetach() { if (typeof liveMapDestroy === 'function') liveMapDestroy(); if (RUN.watch != null) { try { navigator.geolocation.clearWatch(RUN.watch); } catch (e) { } RUN.watch = null; } clearInterval(RUN.tick); RUN.tick = null; runAudioStop(); }
 function runPosErr(err) {
   const a = S.runActive; if (!a) return;
   a.gpsErr = err && err.code === 1 ? 'Posizione negata: attivala in Impostazioni › Privacy › Localizzazione' : err && err.code === 3 ? null : 'Segnale GPS assente';
@@ -6184,11 +6913,12 @@ function runPos(p) {
   if (t < 0 || a.pauseAt || c.accuracy > 35) return;
   const pt = [+c.latitude.toFixed(6), +c.longitude.toFixed(6), Math.round(t * 10) / 10];
   const last = a.pts[a.pts.length - 1];
-  if (!last || a.gap) { a.gap = false; a.pts.push([...pt, Math.round(a.m)]); runSaveSoon(); return; }
+  if (!last || a.gap) { a.gap = false; a.pts.push([...pt, Math.round(a.m)]); if (typeof liveMapUpdate === 'function') liveMapUpdate(); runSaveSoon(); return; }
   const d = hav(last, pt), dt = pt[2] - last[2];
   if (dt <= 0 || d / dt > 9) return;                       // GPS jump (over 32 km/h)
   if (d < Math.max(4, c.accuracy * 0.25)) return;          // jitter while standing
   const m0 = a.m; a.m += d; a.pts.push([...pt, Math.round(a.m)]);
+  if (typeof liveMapUpdate === 'function') liveMapUpdate();
   while (a.m >= (a.splits.length + 1) * 1000) {
     const target = (a.splits.length + 1) * 1000, tk = last[2] + dt * ((target - m0) / d);
     a.splits.push(Math.round(tk - a.splitAt)); a.splitAt = tk; runSplitCue(a);
@@ -6395,6 +7125,7 @@ function viewRun() {
   ${runHrCard()}
   <div class="card"><div class="section-title">Impostazioni corsa</div>
     <div class="row"><div class="grow"><div class="lbl">Voce guida</div><div class="small faint">Annuncia ogni km, i cambi degli intervalli e il passo</div></div><button class="switch ${S.profile.runVoice !== false ? 'on' : ''}" data-a="runVoice" aria-label="Voce guida"></button></div>
+    <div class="row"><div class="grow"><div class="lbl">Mappa (OpenStreetMap)</div><div class="small faint">Strade sotto il percorso, durante e dopo la corsa. Serve internet: senza rete vedi solo il percorso</div></div><button class="switch ${S.profile.mapOff !== true ? 'on' : ''}" data-a="mapToggle" aria-label="Mappa"></button></div>
     <div class="row"><div class="grow"><div class="lbl">Bip degli intervalli a schermo bloccato</div><div class="small faint">Usa una traccia audio come il timer di recupero: funziona col telefono bloccato ma mette in pausa la musica</div></div><button class="switch ${S.profile.runLockBeep ? 'on' : ''}" data-a="runLockBeep" aria-label="Bip a schermo bloccato"></button></div>
   </div>`;
 }
@@ -6456,11 +7187,13 @@ function layerRun(l, i) {
     <div class="layer-head"><button class="icon-btn" data-a="minimize" aria-label="Riduci">${icon('down')}</button><h2>${esc(a.sess?.n || T.n)}</h2><button class="icon-btn" data-a="runVoice" aria-label="Voce guida">${icon(S.profile.runVoice === false ? 'volx' : 'vol')}</button><button class="btn primary sm" data-a="runFinish">Fine</button></div>
     <div class="layer-body" data-scroll-key="run"><div class="layer-inner">
       <div class="row"><span class="gps ${v.gps[1]}" id="rn-gps">${v.gps[0]}</span><span class="grow"></span>${a.pauseAt ? '<span class="chip warm">In pausa</span>' : ''}</div>
+      ${a.gps && mapOn() ? `<div class="run-modes"><button class="${UI.runMode !== 'data' ? 'on' : ''}" data-a="runViewMode" data-v="map">Mappa</button><button class="${UI.runMode === 'data' ? 'on' : ''}" data-a="runViewMode" data-v="data">Solo dati</button></div>
+      ${UI.runMode !== 'data' ? `<div class="route-card live big" data-map="live">${a.pts.length > 2 ? routeSVG(a.pts, 320, 260) : ''}<button class="btn sm" id="rn-center" data-a="mapFollow" ${MAP.follow ? 'hidden' : ''}>${icon('target', 14)} Centra</button></div>` : ''}` : ''}
       ${v.t < 0 ? `<div class="run-cd" id="rn-cd">${Math.ceil(-v.t)}</div>` : ''}
       ${a.sess?.steps ? stepCard(a, v.t) : a.sess?.km ? `<div class="step-card k-steady"><div class="row"><b class="grow">Obiettivo ${fmtN(a.sess.km, 1)} km</b><span class="small">${a.sess.p ? paceLabel(a.sess.p) : ''}</span></div><div class="step-bar"><i style="width:${Math.min(100, a.m / 10 / a.sess.km).toFixed(1)}%"></i></div></div>` : ''}
       <div class="run-big"><b id="rn-km" class="tnum">${v.km}</b><span>km</span></div>
       <div class="run-grid"><div><b id="rn-time" class="tnum">${v.time}</b><span>Tempo</span></div><div><b id="rn-avg" class="tnum">${v.avg}</b><span>Passo medio</span></div><div><b id="rn-cur" class="tnum">${v.cur}</b><span>Passo attuale</span></div></div>
-      ${a.pts.length > 2 ? `<div class="route-card">${routeSVG(a.pts, 320, 180)}</div>` : ''}
+      ${a.gps && mapOn() ? '' : a.pts.length > 2 ? `<div class="route-card">${routeSVG(a.pts, 320, 180)}</div>` : ''}
       ${a.splits.length ? `<div class="card tight"><div class="section-title">Parziali</div>${splitsHTML(a.splits, 0, 0)}</div>` : ''}
       <div class="small faint">${a.gps ? 'Lo schermo resta acceso da solo: usa "Blocca" per evitare tocchi in tasca. Su iPhone, se blocchi il telefono il GPS si ferma e il tratto viene stimato in linea retta.' : 'Senza GPS: a fine corsa inserisci la distanza letta sul tapis roulant.'}</div>
     </div></div>
@@ -6469,7 +7202,7 @@ function layerRun(l, i) {
   </div>`;
 }
 function runEditSummary(r) {
-  return `${r.route && r.route.length > 2 ? `<div class="route-card">${routeSVG(r.route, 320, 190)}</div>` : ''}
+  return `${r.route && r.route.length > 2 ? `<div class="route-card" data-map="${runs().some(x => x.id === r.id) ? 'run:' + r.id : 'draft'}">${routeSVG(r.route, 320, 190)}</div>` : ''}
     ${r.km > 0 ? `<div class="tiles"><div class="tile"><div class="v">${fmtN(r.km, 2)}<small>km</small></div><div class="k">Distanza</div></div><div class="tile"><div class="v">${fmtClock(r.sec * 1000)}</div><div class="k">Tempo</div></div><div class="tile"><div class="v">${paceTxt(runPace(r))}</div><div class="k">Passo /km</div></div></div>` : ''}`;
 }
 function layerRunEdit(l, i) {
@@ -6498,7 +7231,7 @@ function layerRunView(l, i) {
   return `<div class="layer">${head(esc(runTitle(r)), 'back', `<button class="icon-btn" data-a="runMenu" data-id="${r.id}" aria-label="Opzioni">${icon('more')}</button>`)}
     <div class="layer-body" data-scroll-key="rv${i}"><div class="layer-inner">
       <div class="row"><span class="chip" style="color:${T.c};border-color:${T.c}55">${T.n}</span><span class="small muted grow">${fmtDateLong(r.start)} · ${hhmm(r.start)}</span>${r.demo ? '<span class="demo-tag">esempio</span>' : ''}</div>
-      ${r.route && r.route.length > 2 ? `<div class="route-card">${routeSVG(r.route, 320, 200)}</div>` : ''}
+      ${r.route && r.route.length > 2 ? `<div class="route-card" data-map="run:${r.id}">${routeSVG(r.route, 320, 200)}</div>` : ''}
       <div class="run-big"><b>${fmtN(r.km, 2)}</b><span>km</span></div>
       <div class="tiles"><div class="tile"><div class="v">${fmtClock(r.sec * 1000)}</div><div class="k">Tempo</div></div><div class="tile"><div class="v">${paceTxt(runPace(r))}</div><div class="k">Passo /km</div></div><div class="tile"><div class="v">${runKcal(r)}</div><div class="k">kcal attive</div></div></div>
       ${kcalLine(kcalRun(r), 'corsa')}
@@ -6997,6 +7730,274 @@ function lastWeight() { const b = weightNow(); return b && Date.now() - b.t < 30
 function dietWeight(n = S.nutri) { return n && n.wMode === 'last' ? lastWeight() : bodyWeight(); }
 Object.assign(A, {
   ntWMode(el) { const d = topLayer().draft; d.wMode = el.dataset.v; const w = dietWeight(d); if (w) d.weight = w; renderLayers(); },
+});
+
+/* =========================================================
+   COACH: poche indicazioni concrete per oggi · carico settimanale unico (palestra + corsa)
+   · "rispetto all'ultima volta" · progressione sul RIR · versione leggera · Home personalizzabile
+   ========================================================= */
+
+/* ---------- progression driven by RIR ---------- */
+function rirSuggestion(aex, wid) {
+  const last = lastSession(aex.id, wid); if (!last) return null;
+  const ws = workSets(last.e); if (!ws.length) return null;
+  const top = Math.max(...ws.map(s => s.kg || 0)), atTop = ws.filter(s => (s.kg || 0) === top), rirs = atTop.map(s => s.rir).filter(v => v != null);
+  if (!rirs.length) return { kind: 'hold', kg: top, text: `<b>${fmtKg(top)} kg</b>. Per la progressione sul RIR segna quante ripetizioni ti restavano in ogni serie (colonna RIR).` };
+  const avg = rirs.reduce((a, b) => a + b, 0) / rirs.length, T = rirTarget(aex), inc = increment(ex(aex.id)) || 2.5;
+  if (avg >= T + 1.5) { const kg = +(top + inc * (avg >= T + 3 ? 2 : 1)).toFixed(2); return { kind: 'up', kg, text: `Ultima volta RIR ${fmtN(avg, 1)}, più facile del previsto (${T}): <b>passa a ${fmtKg(kg)} kg</b>.` }; }
+  if (avg <= T - 1) { const kg = roundKg(top * 0.95, aex.id); return { kind: 'down', kg, text: `Ultima volta RIR ${fmtN(avg, 1)}, troppo vicino al cedimento: <b>${fmtKg(kg)} kg</b> e torna a RIR ${T}.` }; }
+  return { kind: 'hold', kg: top, text: `RIR ${fmtN(avg, 1)} come previsto: <b>resta a ${fmtKg(top)} kg</b> e prova a fare 1 ripetizione in più allo stesso RIR.` };
+}
+
+/* ---------- today vs last time ---------- */
+function vsLastHTML(e) {
+  if (!S.active) return '';
+  const mt = mtOf(e), done = e.sets.filter(s => s.done && isWork(s) && setDone(s, mt)); if (!done.length) return '';
+  const last = lastSession(e.id, S.active.id); if (!last) return '';
+  const lw = workSets(last.e); if (!lw.length) return '';
+  let a, b, sa, sb;
+  if (mt === 'time') { sa = done.reduce((m, s) => (s.sec || 0) > (m.sec || 0) ? s : m, done[0]); sb = lw.reduce((m, s) => (s.sec || 0) > (m.sec || 0) ? s : m, lw[0]); a = sa.sec || 0; b = sb.sec || 0; }
+  else if (mt === 'dist') { sa = done.reduce((m, s) => (s.km || 0) > (m.km || 0) ? s : m, done[0]); sb = lw.reduce((m, s) => (s.km || 0) > (m.km || 0) ? s : m, lw[0]); a = sa.km || 0; b = sb.km || 0; }
+  else {
+    const score = s => s.kg ? e1rm(s.kg, s.r) : s.r;
+    sa = done.reduce((m, s) => score(s) > score(m) ? s : m, done[0]); sb = lw.reduce((m, s) => score(s) > score(m) ? s : m, lw[0]); a = score(sa); b = score(sb);
+  }
+  if (!b) return '';
+  const d = (a - b) / b, cls = Math.abs(d) < 0.01 ? 'eq' : d > 0 ? 'up' : 'dn';
+  return `<div class="vs-last ${cls}"><span>Oggi <b>${fmtSet(sa, mt)}</b> · ultima volta ${fmtSet(sb, mt)}</span><em>${cls === 'eq' ? '= uguale' : (d > 0 ? '▲ +' : '▼ −') + fmtN(Math.abs(d * 100), 1) + '%'}</em></div>`;
+}
+
+/* ---------- weekly load (session RPE × minutes) for gym and running ---------- */
+const RUN_RPE = { easy: 4, long: 5, tempo: 7, int: 8, race: 9, walk: 2, free: 5 };
+function wLoad(w) {
+  const min = clamp(((w.end || w.start) - w.start) / 60000, 10, 180);
+  const rirs = w.ex.flatMap(e => (e.sets || []).filter(isWork).map(s => s.rir)).filter(v => v != null);
+  const rpe = rirs.length ? clamp(10 - rirs.reduce((a, b) => a + b, 0) / rirs.length, 5, 10) : 7.5;
+  return min * rpe * 0.9;
+}
+function rLoad(r) { return r.sec / 60 * (r.rpe || RUN_RPE[r.type] || 5); }
+function loadBetween(t0, t1) {
+  let g = 0, r = 0;
+  for (const w of S.workouts) if (w.start >= t0 && w.start < t1) g += wLoad(w);
+  for (const x of runs()) if (x.start >= t0 && x.start < t1) r += rLoad(x);
+  return { g, r, t: g + r };
+}
+function loadRatio() {
+  const now = Date.now(), first = Math.min(...S.workouts.map(w => w.start), ...runs().map(r => r.start), now);
+  if (now - first < 21 * DAY) return null;
+  const acute = loadBetween(now - 7 * DAY, now).t, chronic = loadBetween(now - 28 * DAY, now).t / 4;
+  if (chronic < 150) return null;
+  return { acute, chronic, ratio: acute / chronic };
+}
+function loadZone(x) { return x == null ? null : x < 0.8 ? ['Sotto il solito', 'steel'] : x <= 1.3 ? ['Nella norma', 'good'] : x <= 1.5 ? ['In aumento', 'gold'] : ['Troppo in fretta', 'bad']; }
+function loadCard() {
+  const ws = startOfWeek(Date.now()), weeks = [];
+  for (let i = 7; i >= 0; i--) { const s = ws - i * 7 * DAY; weeks.push({ s, ...loadBetween(s, s + 7 * DAY) }); }
+  if (!weeks.some(w => w.t)) return '';
+  const mx = Math.max(...weeks.map(w => w.t), 1), lr = loadRatio(), z = loadZone(lr?.ratio);
+  return `<div class="card"><div class="section-title">Carico settimanale</div>
+    ${lr ? `<div class="row"><div class="grow"><div class="small muted">Ultimi 7 giorni rispetto alla media di 4 settimane</div><b style="font-size:22px;color:var(--${z[1]})">${z[0]}</b></div><b class="tnum" style="font-size:26px;font-family:var(--font-display)">${fmtN(lr.ratio, 2)}×</b></div>` : '<div class="small muted">Servono 3 settimane di dati per confrontare il carico con il tuo solito.</div>'}
+    <div class="ld-bars">${weeks.map((w, i) => `<div title="${fmtDate(w.s)}"><i class="r" style="height:${w.r / mx * 100}%"></i><i class="g" style="height:${w.g / mx * 100}%"></i><span>${i === weeks.length - 1 ? 'ora' : fmtDate(w.s).split(' ')[0]}</span></div>`).join('')}</div>
+    <div class="row small muted" style="gap:14px"><span><u class="dg"></u> Palestra</span><span><u class="dr"></u> Corsa</span></div>
+    <div class="small faint">Carico = minuti × fatica (RIR in palestra, tipo di corsa o fatica percepita). Tra 0,8 e 1,3 volte il solito sei nella zona sicura. Sopra 1,5 il rischio di stancarti troppo o farti male sale: in quel caso non aggiungere serie o chilometri.</div></div>`;
+}
+
+/* ---------- today's coach ---------- */
+function plannedRoutine() { return (UI.homeRid && S.routines.find(r => r.id === UI.homeRid)) || nextRoutine(); }
+function aexPreview(e) { const plan = planOf(e), w0 = plan.find(p => p.t !== 'w') || plan[0] || {}; return { id: e.id, mt: exType(e.id), rmin: w0.a, rmax: w0.b ?? w0.a, rir: e.rir, tags: e.tags || [], prog: e.prog, sets: plan.map(p => ({ t: p.t || 'n', ta: p.a ?? null, tb: p.b ?? null, rm: p.rm, bpct: p.pct })) }; }
+function proteinIdea(g) { return g >= 60 ? '300 g di yogurt greco + 1 misurino di whey + 150 g di pollo' : g >= 35 ? '150 g di pollo o tacchino, oppure yogurt greco + whey' : '1 misurino di whey o 250 g di albume'; }
+function coachItems() {
+  const items = [], k = todayKey(), t0 = kdate(k), hr = new Date().getHours(), add = (p, c, ic, t, d, btn) => items.push({ p, c, ic, t, d, btn });
+  const nr = plannedRoutine(), trained = S.workouts.filter(w => w.start >= t0 && w.start < t0 + DAY), ranToday = runs().some(r => r.start >= t0 && r.start < t0 + DAY);
+  /* recovery & sleep */
+  let red = false;
+  if (healthRecent()) {
+    const s = scoresToday(), z = zone(s.rec.score), sl = dayVal(k, 'sleep');
+    if (z === 'r') { red = true; add(95, 'r', 'heart', `Recupero basso (${s.rec.score})`, 'Oggi versione leggera: una serie in meno per esercizio e 1 ripetizione di margine in più. Stasera punta a 8 ore di sonno.', nr && !trained.length && !S.active ? { a: 'startLight', id: nr.id, l: 'Versione leggera' } : null); }
+    else if (z === 'g') add(48, 'g', 'bolt', `Recupero alto (${s.rec.score})`, 'Giornata buona per spingere: prova un record sul primo esercizio.');
+    else if (z === 'y') add(30, 'y', 'heart', `Recupero nella media (${s.rec.score})`, 'Segui la scheda e lascia 2 ripetizioni di margine.');
+    if (sl != null && sl < 6.5) add(72, 'y', 'moon', `Hai dormito ${fmtN(sl, 1)} h`, 'Con poco sonno la forza cala: non cercare record oggi e stasera vai a letto prima.');
+  }
+  /* training */
+  if (trained.length) {
+    const w = trained[trained.length - 1], pc = prCount(w);
+    add(28, 'g', 'check', 'Allenamento fatto', `${esc(w.name)}: ${wSetCount(w)} serie${pc ? ` e ${pc} ${pc === 1 ? 'record' : 'record'}` : ''}. Ora proteine e recupero.`);
+  } else if (!S.active && nr && dayType(k) === 'train') {
+    const first = nr.ex.find(e => ['wr', 'bw'].includes(exType(e.id)));
+    const sg = first ? deloadAdj(suggestion(aexPreview(first)), aexPreview(first)) : null;
+    add(red ? 20 : 60, 'o', 'dumbbell', `Oggi: ${esc(nr.name)}`, first && sg ? `${esc(ex(first.id).n)} — ${sg.text}` : `${nr.ex.length} esercizi, circa ${estMinutes(nr)} minuti.`, red ? null : { a: 'startRoutine', id: nr.id, l: 'Inizia' });
+  } else if (!S.active && !ranToday && dayType(k) === 'rest') add(18, 'b', 'moon', 'Giorno di riposo', 'Cammina, mangia le tue proteine e dormi bene: i muscoli crescono oggi.');
+  /* load */
+  const lr = loadRatio();
+  if (lr && lr.ratio > 1.5) add(80, 'r', 'bolt', 'Carico in forte aumento', `Ultimi 7 giorni: ${fmtN((lr.ratio - 1) * 100, 0)}% sopra la tua media. Oggi non aggiungere serie o chilometri e tieni 2 ripetizioni di margine.`);
+  else if (lr && lr.ratio > 1.3) add(42, 'y', 'bolt', 'Carico in aumento', `${fmtN((lr.ratio - 1) * 100, 0)}% sopra la tua media di 4 settimane: va bene, ma non salire ancora questa settimana.`);
+  /* nutrition */
+  if (S.nutri) {
+    const tg = targetsFor(k), logged = dayEntries(k).length, tot = dayTotals(k).tot;
+    if (hr >= 12 && !logged) add(55, 'y', 'food', 'Diario vuoto', 'Registra i pasti di oggi: senza diario non posso controllare calorie e proteine.', { a: 'foodAdd', m: mealByTime(), l: 'Aggiungi' });
+    else if (logged && tg) {
+      const frac = clamp((hr - 7) / 14, 0, 1), miss = Math.round(tg.p - tot.p);
+      if (hr >= 14 && tot.p < tg.p * frac - 25 && miss > 15) add(66, 'y', 'target', `Proteine: mancano ${miss} g`, `Sei a ${fmtN(tot.p, 0)} su ${tg.p} g. Per esempio: ${proteinIdea(miss)}.`, { a: 'foodAdd', m: mealByTime(), l: 'Aggiungi' });
+      if (hr >= 20 && tot.kcal > tg.kcal + 200) add(46, 'y', 'flame', `Sopra di ${fmtN(tot.kcal - tg.kcal, 0)} kcal`, 'Nessun dramma: conta la media della settimana. Domani resta sul target, senza compensare.');
+    }
+  }
+  /* weight */
+  const wn = weightNow(), wToday = dayVal(k, 'w');
+  if (hr < 12 && wToday == null && (wn || S.nutri)) add(57, 'b', 'scale', 'Pesati', 'Al mattino, a digiuno, dopo il bagno: serve alla media dei 7 giorni.', { a: 'bodyLog', l: 'Registra' });
+  if (wn && wn.rate != null && Date.now() - wn.t < 4 * DAY) {
+    const cutting = S.nutri && ((!S.nutri.manual && S.nutri.rate < 0) || (S.nutri.manual && S.profile.goalW && S.profile.goalW < wn.trend - 0.5) || (!S.nutri.manual && S.profile.goalW && S.profile.goalW < wn.trend - 0.5));
+    if (cutting && wn.rate > -0.1) add(62, 'y', 'scale', 'Peso fermo', `Media 7 giorni: ${sgn(wn.rate, 2)} kg a settimana. Se resta così un'altra settimana: −150 kcal oppure +2.000 passi al giorno.`);
+    else if (cutting && wn.rate < -0.8) add(62, 'y', 'scale', 'Stai scendendo veloce', `${sgn(wn.rate, 2)} kg a settimana: aggiungi circa 150 kcal per non perdere muscolo.`);
+    else if (cutting) add(22, 'g', 'scale', 'Peso in linea', `${sgn(wn.rate, 2)} kg a settimana sulla media dei 7 giorni: continua così.`);
+  }
+  /* steps */
+  const st = dayVal(k, 'steps'), sgoal = stepsGoal();
+  if (hr >= 17 && st != null && st < sgoal * 0.7) add(34, 'b', 'steps', `Passi: ${fmtN(st, 0)} su ${fmtN(sgoal, 0)}`, `Mancano ${fmtN(sgoal - st, 0)} passi, circa ${Math.round((sgoal - st) / 110)} minuti di camminata.`);
+  items.sort((a, b) => b.p - a.p);
+  return items;
+}
+function todayCoachCard() {
+  const it = coachItems();
+  if (!it.length) return `<div class="card tight coach"><div class="row"><span class="kc-ic">${icon('sparkle', 18)}</span><b class="grow">Coach di oggi</b></div><div class="small muted">Tutto in ordine. Registra allenamenti, pasti e peso: più dati hai, più consigli precisi ricevi.</div></div>`;
+  const list = UI.coachAll ? it : it.slice(0, 3);
+  return `<div class="card tight coach"><div class="row"><span class="kc-ic">${icon('sparkle', 18)}</span><b class="grow">Coach di oggi</b>${it.length > 3 ? `<button class="link" data-a="coachAll">${UI.coachAll ? 'Meno' : `Altri ${it.length - 3}`}</button>` : ''}</div>
+    ${list.map(x => `<div class="ci c-${x.c}"><span class="ci-ic">${icon(x.ic, 18)}</span><div class="grow"><b>${x.t}</b><div class="small muted">${x.d}</div>${x.btn ? `<button class="btn sm ${x.c === 'r' ? 'primary' : ''}" data-a="${x.btn.a}" ${x.btn.id ? `data-id="${x.btn.id}"` : ''} ${x.btn.m ? `data-m="${x.btn.m}"` : ''}>${x.btn.l}</button>` : ''}</div></div>`).join('')}</div>`;
+}
+
+/* ---------- customizable Home ---------- */
+const HOME_CARDS = [
+  { k: 'coach', n: 'Coach di oggi', d: 'Le 3 cose più importanti di oggi', on: true },
+  { k: 'workout', n: 'Allenamento di oggi', d: 'La scheda di oggi e il tasto per iniziare', on: true },
+  { k: 'quick', n: 'Azioni rapide', d: 'Libero, corsa, peso, pasto', on: true },
+  { k: 'week', n: 'La tua settimana', d: 'Allenamenti, volume, km, calorie', on: true },
+  { k: 'readiness', n: 'Prontezza', d: 'Recupero, sforzo e sonno (Apple Salute)', on: true },
+  { k: 'diet', n: 'Dieta di oggi', d: 'Calorie e macro', on: true },
+  { k: 'body', n: 'Peso e acqua', d: 'Peso di oggi e media', on: true },
+  { k: 'load', n: 'Carico settimanale', d: 'Palestra + corsa rispetto al solito', on: false },
+  { k: 'muscles', n: 'Muscoli allenati', d: 'Serie per muscolo della settimana', on: false },
+  { k: 'last', n: 'Ultimo allenamento', d: '', on: false },
+  { k: 'records', n: 'Ultimi record', d: '', on: false },
+];
+function homeLayout() {
+  const saved = S.profile.home || [], out = [];
+  for (const s of saved) { const c = HOME_CARDS.find(x => x.k === s.k); if (c) out.push({ ...c, on: !!s.on }); }
+  for (const c of HOME_CARDS) if (!out.some(x => x.k === c.k)) out.push({ ...c });
+  return out;
+}
+function homeEditHTML() {
+  const L = homeLayout();
+  return `<div class="small muted" style="margin-bottom:8px">Scegli cosa vedere in Oggi e in che ordine. Il riepilogo della settimana scorsa compare da solo il lunedì e il martedì.</div>
+    <div class="home-ed">${L.map((c, i) => `<div class="row"><div class="grow"><b>${c.n}</b>${c.d ? `<div class="small faint">${c.d}</div>` : ''}</div>
+      <button class="icon-btn" data-a="homeMove" data-i="${i}" data-d="-1" ${i ? '' : 'disabled style="opacity:.3"'} aria-label="Su">${icon('up', 18)}</button><button class="icon-btn" data-a="homeMove" data-i="${i}" data-d="1" ${i < L.length - 1 ? '' : 'disabled style="opacity:.3"'} aria-label="Giù">${icon('down', 18)}</button>
+      <button class="switch ${c.on ? 'on' : ''}" data-a="homeToggle" data-i="${i}" aria-label="Mostra ${c.n}"></button></div>`).join('')}</div>
+    <button class="btn ghost block" data-a="homeReset" style="margin-top:8px">Ripristina</button>`;
+}
+function homeSaveLayout(L) { S.profile.home = L.map(c => ({ k: c.k, on: c.on })); save(); }
+
+Object.assign(A, {
+  coachAll() { UI.coachAll = !UI.coachAll; render(); },
+  startLight(el) { const r = S.routines.find(x => x.id === el.dataset.id); if (r) guardStart(() => startWorkout(r, null, { light: true })); },
+  homeEdit() { pushLayer({ type: 'sheet', title: 'Personalizza Oggi', items: [], html: homeEditHTML() }); },
+  homeMove(el) { const L = homeLayout(), i = +el.dataset.i, j = i + +el.dataset.d; if (j < 0 || j >= L.length) return; L.splice(j, 0, L.splice(i, 1)[0]); homeSaveLayout(L); topLayer().html = homeEditHTML(); renderLayers(); render(); },
+  homeToggle(el) { const L = homeLayout(), i = +el.dataset.i; L[i].on = !L[i].on; homeSaveLayout(L); topLayer().html = homeEditHTML(); renderLayers(); render(); },
+  homeReset() { delete S.profile.home; save(); topLayer().html = homeEditHTML(); renderLayers(); render(); },
+});
+
+/* low recovery: offer the light version inside the workout (no extra dialog) */
+function coachRed() { try { return healthRecent() && zone(scoresToday().rec.score) === 'r'; } catch (e) { return false; } }
+function lightOfferHTML(w) {
+  if (!w.rid || w.light || w.past || w.lightNo || w.ex.some(e => e.sets.some(s => s.done)) || !coachRed()) return '';
+  return `<div class="card tight light-card offer">${icon('heart', 18)}<div class="grow small"><b>Recupero basso oggi.</b> Vuoi la versione leggera? Una serie in meno per esercizio e 1 ripetizione di margine in più.</div>
+    <div class="row" style="gap:6px"><button class="btn sm primary" data-a="goLight">Sì</button><button class="btn sm" data-a="noLight">No</button></div></div>`;
+}
+Object.assign(A, {
+  goLight() {
+    const w = S.active; if (!w) return;
+    for (const e of w.ex) { if (e.sets.some(s => s.done)) continue; const work = e.sets.filter(isWork); if (work.length > 1) e.sets.splice(e.sets.lastIndexOf(work[work.length - 1]), 1); }
+    w.light = true; save(); renderLayers(); toast('Versione leggera attiva');
+  },
+  noLight() { if (S.active) { S.active.lightNo = true; save(); renderLayers(); } },
+});
+
+/* =========================================================
+   MAPPA REALE (OpenStreetMap + Leaflet, senza account né chiavi)
+   Il percorso disegnato resta sotto come riserva: offline o senza mappa si vede quello.
+   ========================================================= */
+const MAP = { lib: null, live: null, box: null, line: null, dot: null, follow: true, n: 0 };
+function mapOn() { return S.profile.mapOff !== true && navigator.onLine !== false; }
+function leafletReady() {
+  if (window.L && window.L.map) return Promise.resolve(window.L);
+  if (!MAP.lib) MAP.lib = loadScript('leaflet.min.js').then(() => window.L || null).catch(() => { MAP.lib = null; return null; });
+  return MAP.lib;
+}
+function osmLayer(L, el) {
+  let ok = 0, fail = 0;
+  return L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap' })
+    .on('tileload', () => { ok++; if (ok === 1) el.classList.add('has-map'); })
+    .on('tileerror', () => { fail++; if (fail > 8 && !ok) el.classList.remove('has-map'); });
+}
+function kmMarks(route) {
+  const out = []; let m = 0, next = 1000;
+  for (let i = 1; i < route.length; i++) {
+    const d = hav(route[i - 1], route[i]);
+    while (d > 0 && m + d >= next) { const f = (next - m) / d; out.push([route[i - 1][0] + (route[i][0] - route[i - 1][0]) * f, route[i - 1][1] + (route[i][1] - route[i - 1][1]) * f, next / 1000]); next += 1000; }
+    m += d;
+  }
+  return out;
+}
+function mountRouteMap(el, route) {
+  if (!mapOn() || !route || route.length < 2 || el.dataset.mapped) return;
+  el.dataset.mapped = '1';
+  leafletReady().then(L => {
+    if (!L || !document.contains(el)) return;
+    const box = document.createElement('div'); box.className = 'lmap'; el.appendChild(box);
+    const map = L.map(box, { zoomControl: false, scrollWheelZoom: false, attributionControl: true });
+    osmLayer(L, el).addTo(map);
+    const ll = route.map(p => [p[0], p[1]]);
+    L.polyline(ll, { color: '#ff6b2c', weight: 9, opacity: .25 }).addTo(map);
+    const line = L.polyline(ll, { color: '#ff8a3d', weight: 4 }).addTo(map);
+    L.circleMarker(ll[0], { radius: 7, color: '#11151b', weight: 2, fillColor: '#3ddc97', fillOpacity: 1 }).addTo(map);
+    L.circleMarker(ll[ll.length - 1], { radius: 7, color: '#11151b', weight: 2, fillColor: '#ff5c6c', fillOpacity: 1 }).addTo(map);
+    for (const [la, lo, k] of kmMarks(route)) L.marker([la, lo], { icon: L.divIcon({ className: 'km-ic', html: String(k), iconSize: [22, 22] }), interactive: false }).addTo(map);
+    map.fitBounds(line.getBounds(), { padding: [20, 20] });
+  });
+}
+/* live map: one Leaflet instance kept alive across re-renders of the run screen */
+function liveMapMount(slot) {
+  const a = S.runActive; if (!a || !mapOn()) return;
+  if (MAP.box) { slot.appendChild(MAP.box); slot.classList.toggle('has-map', MAP.ok); setTimeout(() => MAP.live && MAP.live.invalidateSize(), 0); return; }
+  MAP.box = document.createElement('div'); MAP.box.className = 'lmap'; slot.appendChild(MAP.box); MAP.follow = true; MAP.ok = false;
+  leafletReady().then(L => {
+    if (!L || !MAP.box || !S.runActive) return;
+    const P = S.runActive.pts, c = P.length ? [P[P.length - 1][0], P[P.length - 1][1]] : [41.9, 12.5];
+    MAP.live = L.map(MAP.box, { zoomControl: false, attributionControl: true }).setView(c, P.length ? 16 : 5);
+    osmLayer(L, slot).on('tileload', () => { MAP.ok = true; }).addTo(MAP.live);
+    MAP.line = L.polyline(P.map(p => [p[0], p[1]]), { color: '#ff8a3d', weight: 5 }).addTo(MAP.live);
+    MAP.dot = L.circleMarker(c, { radius: 8, color: '#fff', weight: 3, fillColor: '#2f80ff', fillOpacity: 1 }).addTo(MAP.live);
+    MAP.n = P.length;
+    MAP.live.on('dragstart', () => { MAP.follow = false; const b = document.getElementById('rn-center'); if (b) b.hidden = false; });
+  });
+}
+function liveMapUpdate() {
+  const a = S.runActive; if (!a || !MAP.live || !MAP.line) return;
+  const P = a.pts; for (let i = MAP.n; i < P.length; i++) MAP.line.addLatLng([P[i][0], P[i][1]]); MAP.n = P.length;
+  if (!P.length) return;
+  const c = [P[P.length - 1][0], P[P.length - 1][1]]; MAP.dot.setLatLng(c);
+  if (MAP.follow) MAP.live.setView(c, Math.max(MAP.live.getZoom(), 16), { animate: true });
+}
+function liveMapDestroy() { try { MAP.live && MAP.live.remove(); } catch (e) { } Object.assign(MAP, { live: null, box: null, line: null, dot: null, n: 0, follow: true }); }
+function mapsAfterRender() {
+  document.querySelectorAll('.route-card[data-map]').forEach(el => {
+    const k = el.dataset.map;
+    if (k === 'live') return liveMapMount(el);
+    if (k === 'draft') { const l = UI.layers.find(x => x.type === 'runEdit'); return mountRouteMap(el, l && l.draft.route); }
+    if (k.startsWith('run:')) { const r = runs().find(x => x.id === k.slice(4)); return mountRouteMap(el, r && r.route); }
+  });
+}
+Object.assign(A, {
+  mapFollow(el) { MAP.follow = true; el.hidden = true; liveMapUpdate(); },
+  runViewMode(el) { UI.runMode = el.dataset.v; renderLayers(); },
+  mapToggle() { S.profile.mapOff = S.profile.mapOff !== true; save(); render(); },
 });
 
 /* =========================================================
