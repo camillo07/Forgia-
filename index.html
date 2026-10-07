@@ -2468,8 +2468,8 @@ function viewMe() {
       <div class="row"><div class="grow"><div class="lbl">Nomi degli esercizi</div><div class="small faint">La ricerca funziona in entrambe le lingue</div></div><div class="seg" style="width:170px"><button class="${S.profile.exLang !== 'it' ? 'on' : ''}" data-a="exLang" data-v="en">Inglese</button><button class="${S.profile.exLang === 'it' ? 'on' : ''}" data-a="exLang" data-v="it">Italiano</button></div></div>
       <div class="row"><div class="grow"><div class="lbl">Obiettivo settimanale</div><div class="small faint">Quanti allenamenti vuoi fare a settimana</div></div><div class="stepper"><button data-a="goal" data-d="-1" aria-label="Meno">−</button><span id="goalv">${S.profile.weeklyGoal}</span><button data-a="goal" data-d="1" aria-label="Più">+</button></div></div>
       <div class="row"><div class="grow"><div class="lbl">Recupero predefinito</div><div class="small faint">Per gli allenamenti liberi</div></div><select id="pf-rest" class="input" style="width:auto" data-in="profile" data-f="restDefault">${[60, 90, 120, 150, 180, 240, 300].map(s => `<option value="${s}" ${S.profile.restDefault == s ? 'selected' : ''}>${fmtClock(s * 1000)}</option>`).join('')}</select></div>
-      <div class="row"><div class="grow"><div class="lbl">Suono fine recupero</div></div><button class="switch ${S.profile.sound ? 'on' : ''}" data-a="toggleSound" aria-label="Suono"></button></div>
-      <div class="row"><div class="grow"><div class="lbl">Recupero sulla schermata di blocco</div><div class="small faint">Il timer resta visibile e suona anche col telefono bloccato, come un brano musicale</div></div><button class="switch ${S.profile.lockTimer !== false ? 'on' : ''}" data-a="toggleLockTimer" aria-label="Recupero sulla schermata di blocco"></button></div>
+      <div class="row"><div class="grow"><div class="lbl">Suono fine recupero</div><div class="small faint">Suona sopra la tua musica senza fermarla (a schermo acceso; non suona se l'iPhone è in silenzioso)</div></div><button class="switch ${S.profile.sound ? 'on' : ''}" data-a="toggleSound" aria-label="Suono"></button></div>
+      <div class="row"><div class="grow"><div class="lbl">Recupero sulla schermata di blocco</div><div class="small faint">Il timer resta visibile e suona anche col telefono bloccato. Attenzione: l'iPhone lo tratta come un brano, quindi <b>ferma Spotify o Apple Music</b></div></div><button class="switch ${S.profile.lockTimer === true ? 'on' : ''}" data-a="toggleLockTimer" aria-label="Recupero sulla schermata di blocco"></button></div>
       <div class="row"><div class="grow"><div class="lbl">Obiettivo passi</div><div class="small faint">Al giorno</div></div><select class="input" style="width:auto" data-in="stepsGoal" aria-label="Obiettivo passi">${[5000, 6000, 7000, 8000, 10000, 12000, 15000].map(v => `<option value="${v}" ${stepsGoal() === v ? 'selected' : ''}>${fmtN(v, 0)}</option>`).join('')}</select></div>
       <div class="row"><div class="grow"><div class="lbl">Il giorno del diario finisce alle</div><div class="small faint">Uno spuntino all'una di notte conta per la sera prima</div></div><select class="input" style="width:auto" data-in="dayEnd" aria-label="Fine giornata">${[0, 1, 2, 3, 4, 5].map(h => `<option value="${h}" ${(S.profile.dayEnd || 0) === h ? 'selected' : ''}>${String(h).padStart(2, '0')}:00</option>`).join('')}</select></div>
     </div>
@@ -2993,7 +2993,11 @@ function haptic(ms = 20) { try { navigator.vibrate && navigator.vibrate(ms); } c
 
 /* ---------- audio & wake lock ---------- */
 let AC = null;
-function unlockAudio() { try { if (!AC) AC = new (window.AudioContext || window.webkitAudioContext)(); if (AC.state === 'suspended') AC.resume(); } catch (e) { } }
+/* iOS audio session: 'ambient' mixes with the user's music (Spotify, Apple Music) instead of stopping it.
+   Only the lock-screen tracks (rest timer, run intervals) switch to 'playback', because they must keep playing with the phone locked. */
+function audioMode(m) { try { if (navigator.audioSession && navigator.audioSession.type !== m) navigator.audioSession.type = m; } catch (e) { } }
+function audioIdle() { if (!(typeof RA !== 'undefined' && RA.audio) && !(typeof RUN !== 'undefined' && RUN.audio)) audioMode('ambient'); }
+function unlockAudio() { audioIdle(); try { if (!AC) AC = new (window.AudioContext || window.webkitAudioContext)(); if (AC.state === 'suspended') AC.resume(); } catch (e) { } }
 function beep() {
   if (!S.profile.sound || !AC) return;
   try {
@@ -4050,15 +4054,15 @@ function restWav(sec, beepOn) {
   if (beepOn) { const beeps = [[-1.0, 784], [-0.7, 784], [-0.4, 1046]]; for (const [t0, f] of beeps) { const s0 = Math.max(0, n + Math.round(t0 * sr)); for (let i = 0; i < Math.round(0.18 * sr) && s0 + i < n; i++) { const env = Math.min(1, i / 40, (0.18 * sr - i) / 80); d[s0 + i] = 128 + Math.round(90 * env * Math.sin(2 * Math.PI * f * i / sr)); } } }
   return new Blob([buf], { type: 'audio/wav' });
 }
-function restAudioStop() { RA.until = 0; try { if (RA.audio) { RA.audio.pause(); RA.audio.src = ''; } if (RA.url) URL.revokeObjectURL(RA.url); } catch (e) { } RA.audio = null; RA.url = null; try { if ('mediaSession' in navigator) { navigator.mediaSession.metadata = null; navigator.mediaSession.playbackState = 'none'; } } catch (e) { } }
+function restAudioStop() { RA.until = 0; try { if (RA.audio) { RA.audio.pause(); RA.audio.src = ''; } if (RA.url) URL.revokeObjectURL(RA.url); } catch (e) { } RA.audio = null; RA.url = null; audioIdle(); try { if ('mediaSession' in navigator) { navigator.mediaSession.metadata = null; navigator.mediaSession.playbackState = 'none'; } } catch (e) { } }
 function restAudioStart() {
   const a = S.active;
   restAudioStop();
-  if (!a || !a.restEnd || S.profile.lockTimer === false) return;
+  if (!a || !a.restEnd || S.profile.lockTimer !== true) return;
   const left = (a.restEnd - Date.now()) / 1000; if (left < 3) return;
   try {
     RA.url = URL.createObjectURL(restWav(left, S.profile.sound !== false)); RA.until = a.restEnd;
-    RA.audio = new Audio(RA.url); RA.audio.setAttribute('playsinline', ''); RA.audio.volume = 1;
+    audioMode('playback'); RA.audio = new Audio(RA.url); RA.audio.setAttribute('playsinline', ''); RA.audio.volume = 1;
     RA.audio.addEventListener('ended', () => { const u = RA.until; restAudioStop(); RA.until = u; setTimeout(() => { if (RA.until === u) RA.until = 0; }, 4000); });
     const p = RA.audio.play(); if (p && p.catch) p.catch(() => { });
     if ('mediaSession' in navigator) {
@@ -4088,7 +4092,7 @@ function recentWorkoutsCard() {
 }
 
 Object.assign(A, {
-  toggleLockTimer() { S.profile.lockTimer = S.profile.lockTimer === false; save(); render(); if (S.profile.lockTimer === false) restAudioStop(); },
+  toggleLockTimer() { S.profile.lockTimer = S.profile.lockTimer !== true; save(); render(); if (S.profile.lockTimer) { toast('Timer sul blocco attivo: con la musica accesa la mette in pausa'); restAudioStart(); } else restAudioStop(); },
   exCollapse(el) { const ei = +el.dataset.ei, e = S.active.ex[ei]; e.col = !e.col; save(); renderLayers(); if (!e.col) flash(document.querySelector(`[data-a="exCollapse"][data-ei="${ei}"]`)?.closest('.exc'), 'open-anim'); },
   copyWorkout(el) {
     const w = S.workouts.find(x => x.id === el.dataset.id); if (!w) return;
@@ -7040,7 +7044,7 @@ function toneWav(sec, beeps, sr = 2000) {
   for (const [t0, f, len] of beeps) { const s0 = Math.round(t0 * sr), L = Math.round(len * sr); for (let i = 0; i < L && s0 + i < n; i++) { if (s0 + i < 0) continue; const env = Math.min(1, i / 30, (L - i) / 60); d[s0 + i] = 128 + Math.round(95 * env * Math.sin(2 * Math.PI * f * i / sr)); } }
   return new Blob([buf], { type: 'audio/wav' });
 }
-function runAudioStop() { try { if (RUN.audio) { RUN.audio.pause(); RUN.audio.src = ''; } if (RUN.url) URL.revokeObjectURL(RUN.url); } catch (e) { } RUN.audio = null; RUN.url = null; }
+function runAudioStop() { try { if (RUN.audio) { RUN.audio.pause(); RUN.audio.src = ''; } if (RUN.url) URL.revokeObjectURL(RUN.url); } catch (e) { } RUN.audio = null; RUN.url = null; audioIdle(); }
 function runAudioStart() {
   runAudioStop();
   const a = S.runActive; if (!a || !a.sess?.steps || !S.profile.runLockBeep || a.pauseAt) return;
@@ -7048,7 +7052,7 @@ function runAudioStart() {
   for (let i = a.si; i < st.length; i++) { acc += st[i].s; const nk = st[i + 1]?.k, hi = !nk || STEP_HI.includes(nk); beeps.push([acc - 3, 440, 0.12], [acc - 2, 440, 0.12], [acc - 1, 440, 0.12], [acc, hi ? 880 : 330, hi ? 0.6 : 0.4]); }
   const total = acc + 1; if (total < 6 || total > 100 * 60) return;
   try {
-    RUN.url = URL.createObjectURL(toneWav(total, beeps)); RUN.audio = new Audio(RUN.url); RUN.audio.setAttribute('playsinline', '');
+    audioMode('playback'); RUN.url = URL.createObjectURL(toneWav(total, beeps)); RUN.audio = new Audio(RUN.url); RUN.audio.setAttribute('playsinline', '');
     const p = RUN.audio.play(); if (p && p.catch) p.catch(() => { });
     if ('mediaSession' in navigator) { navigator.mediaSession.metadata = new MediaMetadata({ title: a.sess.n || 'Intervalli', artist: 'Forgia · corsa', artwork: [{ src: 'icon-512.png', sizes: '512x512', type: 'image/png' }] }); try { navigator.mediaSession.setActionHandler('pause', () => A.runPause()); } catch (e) { } }
   } catch (e) { }
