@@ -1,0 +1,926 @@
+{
+"Lingua dell'app": [
+"App language",
+"Idioma de la app"
+],
+"Testi, date, voce della corsa e risposte dell'AI": [
+"Text, dates, running voice and AI answers",
+"Textos, fechas, voz de la carrera y respuestas de la IA"
+],
+"Nomi degli esercizi": [
+"Exercise names",
+"Nombres de los ejercicios"
+],
+"La ricerca funziona in tutte le lingue": [
+"Search works in every language",
+"La búsqueda funciona en todos los idiomas"
+],
+"Valori in": [
+"Values in",
+"Valores en"
+],
+"corsivo": [
+"italics",
+"cursiva"
+],
+"Trazioni, dip, piegamenti: kg = zavorra aggiunta": [
+"Pull-ups, dips, push-ups: kg = added weight",
+"Dominadas, fondos, flexiones: kg = lastre añadido"
+],
+"Suona sopra la tua musica senza fermarla (a schermo acceso; non suona se l'iPhone è in silenzioso)": [
+"Plays over your music without stopping it (screen on; silent if the iPhone is on mute)",
+"Suena encima de tu música sin pararla (con la pantalla encendida; no suena si el iPhone está en silencio)"
+],
+"Le serie che hai lasciato senza spunta restano nella scheda; si tolgono solo quelle che hai eliminato.": [
+"Sets you left unticked stay in the routine; only the ones you deleted are removed.",
+"Las series que dejaste sin marcar se quedan en la rutina; solo se quitan las que borraste."
+],
+"Ripetizioni max (vuoto = secche)": [
+"Max reps (empty = fixed)",
+"Reps máx. (vacío = fijas)"
+],
+"% = quota del fabbisogno giornaliero con questa quantità. Verde: fonte ricca (≥ 20%).": [
+"% = share of the daily requirement with this amount. Green: rich source (≥ 20%).",
+"% = parte de la necesidad diaria con esta cantidad. Verde: fuente rica (≥ 20%)."
+],
+"Percentuale delle calorie per qualità. Prodotti confezionati: Nutri-Score ufficiale di Open Food Facts; cibi base e tuoi: stima con lo stesso metodo.": [
+"Share of calories by quality. Packaged products: official Nutri-Score from Open Food Facts; basic and your foods: estimated with the same method.",
+"Porcentaje de calorías por calidad. Productos envasados: Nutri-Score oficial de Open Food Facts; alimentos básicos y tuyos: estimación con el mismo método."
+],
+"HRV sopra la tua media e battito a riposo sotto = corpo recuperato. HRV bassa, battito alto = stress, poco sonno, alcol, malattia o allenamenti pesanti.": [
+"HRV above your average and resting heart rate below = recovered body. Low HRV, high heart rate = stress, little sleep, alcohol, illness or hard workouts.",
+"HRV por encima de tu media y pulso en reposo por debajo = cuerpo recuperado. HRV baja, pulso alto = estrés, poco sueño, alcohol, enfermedad o entrenamientos duros."
+],
+"= chiave qui sotto. Corpo richiesta": [
+"= key below. Request body",
+"= clave de abajo. Cuerpo de la solicitud"
+],
+"= il tuo codice,": [
+"= your code,",
+"= tu código,"
+],
+"= SONNO,": [
+"= SLEEP,",
+"= SUEÑO,"
+],
+"= PASSI,": [
+"= STEPS,",
+"= PASOS,"
+],
+"= PESO.": [
+"= WEIGHT.",
+"= PESO."
+],
+"La vitamina D arriva soprattutto dal sole (15–20 min al giorno su braccia e viso). Con il cibo è difficile arrivarci: pesce grasso e uova aiutano; in inverno valuta un integratore con il medico.": [
+"Vitamin D comes mostly from the sun (15–20 min a day on arms and face). It's hard to reach with food: oily fish and eggs help; in winter consider a supplement with your doctor.",
+"La vitamina D llega sobre todo del sol (15–20 min al día en brazos y cara). Con la comida es difícil llegar: el pescado azul y los huevos ayudan; en invierno valora un suplemento con tu médico."
+],
+"Panca manubri ↔ rematore manubrio; curl ↔ pushdown.": [
+"Dumbbell bench ↔ dumbbell row; curl ↔ pushdown.",
+"Press con mancuernas ↔ remo con mancuerna; curl ↔ pushdown."
+],
+"= uguale": [
+"= same",
+"= igual"
+],
+"Carico = minuti × fatica (RIR in palestra, tipo di corsa o fatica percepita). Tra 0,8 e 1,3 volte il solito sei nella zona sicura. Sopra 1,5 il rischio di stancarti troppo o farti male sale: in quel caso non aggiungere serie o chilometri.": [
+"Load = minutes × effort (RIR in the gym, run type or perceived effort). Between 0,8 and 1,3 times your usual you're in the safe zone. Above 1,5 the risk of overdoing it or getting hurt rises: in that case don't add sets or kilometres.",
+"Carga = minutos × esfuerzo (RIR en el gimnasio, tipo de carrera o esfuerzo percibido). Entre 0,8 y 1,3 veces lo habitual estás en la zona segura. Por encima de 1,5 sube el riesgo de pasarte o lesionarte: en ese caso no añadas series ni kilómetros."
+],
+"Zona tratteggiata: 10–20 serie a settimana, range indicativo per l'ipertrofia. Le serie sui muscoli secondari contano 0,5.": [
+"Dashed area: 10–20 sets per week, a rough range for hypertrophy. Sets on secondary muscles count 0,5.",
+"Zona discontinua: 10–20 series por semana, rango orientativo para la hipertrofia. Las series en músculos secundarios cuentan 0,5."
+],
+"allenamento": [
+"workout",
+"entrenamiento"
+],
+"allenamenti": [
+"workouts",
+"entrenamientos"
+],
+"esercizio": [
+"exercise",
+"ejercicio"
+],
+"esercizi": [
+"exercises",
+"ejercicios"
+],
+"serie": [
+"sets",
+"series"
+],
+"oggi": [
+"today",
+"hoy"
+],
+"giorno": [
+"day",
+"día"
+],
+"giorni": [
+"days",
+"días"
+],
+"giorno attivo": [
+"active day",
+"día activo"
+],
+"giorni attivi": [
+"active days",
+"días activos"
+],
+"settimana": [
+"week",
+"semana"
+],
+"settimane": [
+"weeks",
+"semanas"
+],
+"volte": [
+"times",
+"veces"
+],
+"volta": [
+"time",
+"vez"
+],
+"minuti": [
+"minutes",
+"minutos"
+],
+"sedute": [
+"sessions",
+"sesiones"
+],
+"seduta": [
+"session",
+"sesión"
+],
+"record": [
+"records",
+"récords"
+],
+"Ancora {0} {1} per l'obiettivo": [
+"{0} more {1} to reach your goal",
+"Te faltan {0} {1} para el objetivo"
+],
+"Media 7 gg {0} kg": [
+"7-day average {0} kg",
+"Media 7 días {0} kg"
+],
+"{0} in 7 gg": [
+"{0} in 7 days",
+"{0} en 7 días"
+],
+"{0} kg oggi": [
+"{0} kg today",
+"{0} kg hoy"
+],
+"Italia e Spagna, più {0} cibi base già pronti": [
+"Italy and Spain, plus {0} ready-made basic foods",
+"Italia y España, más {0} alimentos básicos listos"
+],
+"stesso movimento": [
+"same movement",
+"mismo movimiento"
+],
+"stessi muscoli": [
+"same muscles",
+"mismos músculos"
+],
+"stesso attrezzo": [
+"same equipment",
+"mismo material"
+],
+"già fatto": [
+"done before",
+"ya hecho"
+],
+"ultima: {0}": [
+"last: {0}",
+"última: {0}"
+],
+"con bilanciere": [
+"with barbell",
+"con barra"
+],
+"con manubri": [
+"with dumbbells",
+"con mancuernas"
+],
+"con cavi": [
+"with cables",
+"con poleas"
+],
+"con macchina": [
+"with machine",
+"con máquina"
+],
+"con corpo libero": [
+"bodyweight",
+"peso corporal"
+],
+"con kettlebell": [
+"with kettlebell",
+"con kettlebell"
+],
+"con elastici": [
+"with bands",
+"con gomas"
+],
+"con palla medica": [
+"with medicine ball",
+"con balón medicinal"
+],
+"con fitball": [
+"with fitball",
+"con fitball"
+],
+"con foam roller": [
+"with foam roller",
+"con foam roller"
+],
+"con bilanciere ez": [
+"with EZ bar",
+"con barra EZ"
+],
+"con altro attrezzo": [
+"other equipment",
+"otro material"
+],
+"Simili a": [
+"Similar to",
+"Similares a"
+],
+"{0} giorni attivi": [
+"{0} active days",
+"{0} días activos"
+],
+"{0} giorno attivo": [
+"{0} active day",
+"{0} día activo"
+],
+"all'obiettivo": [
+"at goal",
+"en el objetivo"
+],
+"sotto l'obiettivo": [
+"below goal",
+"por debajo del objetivo"
+],
+"al target": [
+"on target",
+"en el objetivo"
+],
+"sotto il target": [
+"below target",
+"por debajo del objetivo"
+],
+"ultima": [
+"last",
+"última"
+],
+"scarico": [
+"deload",
+"descarga"
+],
+", su {0} sedute": [
+", over {0} sessions",
+", en {0} sesiones"
+],
+"Serie a settimana": [
+"Sets per week",
+"Series por semana"
+],
+"Per crescere": [
+"To grow",
+"Para crecer"
+],
+"10–20 serie per muscolo.": [
+"10–20 sets per muscle.",
+"10–20 series por músculo."
+],
+"10–20 serie per muscolo": [
+"10–20 sets per muscle",
+"10–20 series por músculo"
+],
+"({0}): {1}.": [
+"({0}): {1}.",
+"({0}): {1}."
+],
+"aggiungi principio di priorità o specializzazione per dargli più spazio": [
+"add the priority principle or specialization to give them more room",
+"añade el principio de prioridad o la especialización para darles más espacio"
+],
+"messi a inizio seduta, quando sei più fresco": [
+"placed at the start of the session, when you're freshest",
+"colocados al principio de la sesión, cuando estás más fresco"
+],
+"Aggiungi le azioni in quest'ordine:": [
+"Add the actions in this order:",
+"Añade las acciones en este orden:"
+],
+"Intestazioni": [
+"Headers",
+"Encabezados"
+],
+"Ottieni dettagli →": [
+"Get Details →",
+"Obtener detalles →"
+],
+"Poi": [
+"Then",
+"Luego"
+],
+"Poi Ottieni dettagli →": [
+"Then Get Details →",
+"Luego Obtener detalles →"
+],
+"Prima di salvare controlli gli esercizi abbinati e puoi cambiarli.": [
+"Before saving you check the matched exercises and can change them.",
+"Antes de guardar revisas los ejercicios emparejados y puedes cambiarlos."
+],
+"uscita": [
+"run",
+"salida"
+],
+"uscite": [
+"runs",
+"salidas"
+],
+"passi": [
+"steps",
+"pasos"
+],
+"h sonno": [
+"h sleep",
+"h de sueño"
+],
+"grasso": [
+"fat",
+"grasa"
+],
+"misure": [
+"measurements",
+"medidas"
+],
+"kcal/giorno": [
+"kcal/day",
+"kcal/día"
+],
+"pesate": [
+"weigh-ins",
+"pesajes"
+],
+"a obiettivo": [
+"on target",
+"en el objetivo"
+],
+"2–3 serie ciascuno vicino al cedimento": [
+"2–3 sets each close to failure",
+"2–3 series cada uno cerca del fallo"
+],
+"4–5 esercizi per seduta (spinta, tirata, gambe, cerniera, core)": [
+"4–5 exercises per session (push, pull, legs, hinge, core)",
+"4–5 ejercicios por sesión (empuje, tirón, piernas, bisagra, core)"
+],
+"Con vita e collo stimo la % di grasso (serve l'altezza negli obiettivi dieta).": [
+"With waist and neck I estimate body fat % (needs your height in the diet goals).",
+"Con cintura y cuello estimo el % de grasa (necesita tu altura en los objetivos de dieta)."
+],
+"Controlla in Dieta che la media settimanale sia vicina all'obiettivo": [
+"Check in Diet that the weekly average is close to your target",
+"Comprueba en Dieta que la media semanal esté cerca del objetivo"
+],
+"Foto, PDF o schede complicate": [
+"Photos, PDFs or complex routines",
+"Fotos, PDF o rutinas complicadas"
+],
+"gratis copiando per Claude": [
+"free by copying for Claude",
+"gratis copiando para Claude"
+],
+"I record su 1, 5 e 10 km usano i parziali al km delle corse col GPS.": [
+"1, 5 and 10 km records use the km splits of GPS runs.",
+"Los récords de 1, 5 y 10 km usan los parciales por km de las carreras con GPS."
+],
+"Il grafico \"Serie per muscolo\" in Oggi ti dice dove sei": [
+"The \"Sets per muscle\" chart in Today tells you where you are",
+"El gráfico \"Series por músculo\" en Hoy te dice dónde estás"
+],
+"Inizio mesociclo: ~10 serie/settimana per muscolo": [
+"Start of mesocycle: ~10 sets/week per muscle",
+"Inicio del mesociclo: ~10 series/semana por músculo"
+],
+"La crescita dipende soprattutto dalle serie allenanti settimanali per muscolo. Parti basso e aumenta nel mesociclo.": [
+"Growth depends mostly on weekly working sets per muscle. Start low and build up during the mesocycle.",
+"El crecimiento depende sobre todo de las series efectivas semanales por músculo. Empieza bajo y aumenta durante el mesociclo."
+],
+"Mostra tutte ({0})": [
+"Show all ({0})",
+"Mostrar todas ({0})"
+],
+"Mostra tutti ({0})": [
+"Show all ({0})",
+"Mostrar todos ({0})"
+],
+"dal {0}": [
+"since {0}",
+"desde el {0}"
+],
+"nessun allenamento": [
+"no workout",
+"sin entrenamiento"
+],
+"Quando un muscolo è indietro rispetto agli altri da mesi. Il coach te lo segnala dal grafico \"Serie per muscolo\".": [
+"When a muscle has lagged behind the others for months. The coach flags it from the \"Sets per muscle\" chart.",
+"Cuando un músculo va por detrás de los demás desde hace meses. El coach te lo señala en el gráfico \"Series por músculo\"."
+],
+"Serie allenanti a 0–3 RIR (vicino al cedimento)": [
+"Working sets at 0–3 RIR (close to failure)",
+"Series efectivas a 0–3 RIR (cerca del fallo)"
+],
+"Peso: media 7 giorni dal registro corporeo.": [
+"Weight: 7-day average from the body log.",
+"Peso: media de 7 días del registro corporal."
+],
+"Peso: ultima pesata dal registro corporeo.": [
+"Weight: latest weigh-in from the body log.",
+"Peso: último pesaje del registro corporal."
+],
+"stima da esercizi, serie, carichi, tempo e peso": [
+"estimated from exercises, sets, loads, time and weight",
+"estimado a partir de ejercicios, series, cargas, tiempo y peso"
+],
+"calcolate anche dal battito medio": [
+"also using average heart rate",
+"calculadas también con el pulso medio"
+],
+"Totali con il metabolismo a riposo: ~{0} kcal": [
+"Total including resting metabolism: ~{0} kcal",
+"Totales con el metabolismo en reposo: ~{0} kcal"
+],
+"Valori per 100 g (li trovi nella tabella sulla confezione)": [
+"Values per 100 g (you'll find them in the table on the pack)",
+"Valores por 100 g (los encuentras en la tabla del envase)"
+],
+"con {0} giorni {1}": [
+"with {0} days {1}",
+"con {0} días {1}"
+],
+"il full body allena ogni muscolo 2–3 volte a settimana: è la scelta più efficiente": [
+"full body trains each muscle 2–3 times a week: the most efficient choice",
+"el full body entrena cada músculo 2–3 veces por semana: es la opción más eficiente"
+],
+"upper/lower allena ogni muscolo 2 volte a settimana con sedute gestibili": [
+"upper/lower trains each muscle twice a week with manageable sessions",
+"upper/lower entrena cada músculo 2 veces por semana con sesiones manejables"
+],
+"Il codice permette solo di": [
+"The code only lets you",
+"El código solo permite"
+],
+"scrivere": [
+"write",
+"escribir"
+],
+"i tuoi dati di Salute, non di leggerli. Se lo perdi o lo condividi per errore, rigeneralo.": [
+"your Health data, not read it. If you lose it or share it by mistake, regenerate it.",
+"tus datos de Salud, no leerlos. Si lo pierdes o lo compartes por error, regenéralo."
+],
+"ne servono {0} per lato": [
+"{0} needed per side",
+"se necesitan {0} por lado"
+],
+"sotto 60": [
+"below 60",
+"por debajo de 60"
+],
+"Il numero piccolo è la differenza con la pesata precedente": [
+"The small number is the change from the previous weigh-in",
+"El número pequeño es la diferencia con el pesaje anterior"
+],
+"Tocca un giorno per modificarlo": [
+"Tap a day to edit it",
+"Toca un día para editarlo"
+],
+"Allenamenti a settimana": [
+"Workouts per week",
+"Entrenamientos por semana"
+],
+"Giorni a settimana": [
+"Days per week",
+"Días por semana"
+],
+"Km a settimana": [
+"Km per week",
+"Km por semana"
+],
+"Minuti per seduta": [
+"Minutes per session",
+"Minutos por sesión"
+],
+"Quanti allenamenti vuoi fare a settimana": [
+"How many workouts you want to do per week",
+"Cuántos entrenamientos quieres hacer por semana"
+],
+"Al giorno": [
+"Per day",
+"Al día"
+],
+"I valori che inserisci sono per": [
+"The values you enter are per",
+"Los valores que introduces son por"
+],
+"Serie per muscolo": [
+"Sets per muscle",
+"Series por músculo"
+],
+"con {0} giorni il full body allena ogni muscolo 2–3 volte a settimana: è la scelta più efficiente.": [
+"with {0} days, full body trains each muscle 2–3 times a week: the most efficient choice.",
+"con {0} días, el full body entrena cada músculo 2–3 veces por semana: es la opción más eficiente."
+],
+"con {0} giorni upper/lower allena ogni muscolo 2 volte a settimana con sedute gestibili.": [
+"with {0} days, upper/lower trains each muscle twice a week with manageable sessions.",
+"con {0} días, upper/lower entrena cada músculo 2 veces por semana con sesiones manejables."
+],
+"con {0} giorni si possono dividere i muscoli e aumentare il volume.": [
+"with {0} days you can split the muscles and raise the volume.",
+"con {0} días puedes dividir los músculos y aumentar el volumen."
+],
+"media 7 giorni dal registro corporeo": [
+"7-day average from the body log",
+"media de 7 días del registro corporal"
+],
+"ultima pesata dal registro corporeo": [
+"latest weigh-in from the body log",
+"último pesaje del registro corporal"
+],
+"stima da esercizi": [
+"estimated from exercises",
+"estimado a partir de ejercicios"
+],
+"carichi": [
+"loads",
+"cargas"
+],
+"tempo e peso": [
+"time and weight",
+"tiempo y peso"
+],
+"schede complicate": [
+"complex routines",
+"rutinas complicadas"
+],
+"{0} allenamenti su {1} di obiettivo": [
+"{0} workouts out of a {1} goal",
+"{0} entrenamientos de un objetivo de {1}"
+],
+"Da corsa del {0}: {1} km in {2}": [
+"From the run on {0}: {1} km in {2}",
+"De la carrera del {0}: {1} km en {2}"
+],
+"Da tempo inserito: {0} km in {1}": [
+"From entered time: {0} km in {1}",
+"Del tiempo introducido: {0} km en {1}"
+],
+"Se vuoi tenerli, esporta prima un backup.": [
+"If you want to keep them, export a backup first.",
+"Si quieres conservarlos, exporta antes una copia de seguridad."
+],
+"Allenamento salvato": [
+"Workout saved",
+"Entrenamiento guardado"
+],
+"Verranno eliminati allenamenti, schede, diario alimentare, peso e misure, foto, cibi creati, obiettivi e impostazioni,": [
+"This will delete workouts, routines, food diary, weight and measurements, photos, created foods, goals and settings,",
+"Se borrarán entrenamientos, rutinas, diario de comidas, peso y medidas, fotos, alimentos creados, objetivos y ajustes,"
+],
+"Muscoli": [
+"Muscles",
+"Músculos"
+],
+"Tocca un muscolo": [
+"Tap a muscle",
+"Toca un músculo"
+],
+"Si ingrandisce e vedi come è diviso. Poi tocca una parte per gli esercizi migliori. Con due dita ingrandisci e sposti.": [
+"It zooms in and shows how it's divided. Then tap a part for the best exercises. Use two fingers to zoom and move.",
+"Se amplía y ves cómo está dividido. Luego toca una parte para ver los mejores ejercicios. Con dos dedos amplías y mueves."
+],
+"Colori: serie allenanti di questa settimana": [
+"Colours: working sets this week",
+"Colores: series efectivas de esta semana"
+],
+"serie questa settimana": [
+"sets this week",
+"series esta semana"
+],
+"Tocca una parte del muscolo (o un colore qui sopra) per vedere a cosa serve e gli esercizi migliori.": [
+"Tap a part of the muscle (or a colour above) to see what it does and the best exercises.",
+"Toca una parte del músculo (o un color de arriba) para ver para qué sirve y los mejores ejercicios."
+],
+"Tutti gli esercizi": [
+"All exercises",
+"Todos los ejercicios"
+],
+"Esercizi migliori": [
+"Best exercises",
+"Mejores ejercicios"
+],
+"Il più efficace": [
+"Most effective",
+"El más eficaz"
+],
+"già in scheda": [
+"already in your routine",
+"ya en tu rutina"
+],
+"Tocca la mappa per esplorare i muscoli": [
+"Tap the map to explore the muscles",
+"Toca el mapa para explorar los músculos"
+],
+"Esplora i muscoli sul corpo": [
+"Explore muscles on the body",
+"Explora los músculos en el cuerpo"
+],
+"Apri la mappa dei muscoli": [
+"Open the muscle map",
+"Abrir el mapa de músculos"
+],
+"Ingrandisci": [
+"Zoom in",
+"Ampliar"
+],
+"Riduci": [
+"Zoom out",
+"Reducir"
+],
+"Vista intera": [
+"Full view",
+"Vista completa"
+],
+"Timer di recupero": [
+"Rest timer",
+"Temporizador de descanso"
+],
+"Suona sopra la tua musica senza fermarla, con l'app aperta. Non suona se l'iPhone è in silenzioso": [
+"Plays over your music without stopping it, while the app is open. Silent if the iPhone is on mute",
+"Suena encima de tu música sin pararla, con la app abierta. No suena si el iPhone está en silencio"
+],
+"Suono": [
+"Sound",
+"Sonido"
+],
+"Prova": [
+"Test",
+"Probar"
+],
+"Volume": [
+"Volume",
+"Volumen"
+],
+"Basso": [
+"Low",
+"Bajo"
+],
+"Medio": [
+"Medium",
+"Medio"
+],
+"Alto": [
+"High",
+"Alto"
+],
+"Avviso a 10 secondi": [
+"10-second warning",
+"Aviso a 10 segundos"
+],
+"Un suono leggero quando mancano 10 secondi": [
+"A soft sound when 10 seconds are left",
+"Un sonido suave cuando faltan 10 segundos"
+],
+"Campanella": [
+"Bell",
+"Campanilla"
+],
+"Gong": [
+"Gong",
+"Gong"
+],
+"Dolce": [
+"Soft",
+"Suave"
+],
+"Fischietto": [
+"Whistle",
+"Silbato"
+],
+"Bip": [
+"Beep",
+"Pitido"
+],
+"Inquadra il codice a barre dentro il riquadro, a 10–20 cm": [
+"Frame the barcode inside the box, 10–20 cm away",
+"Encuadra el código de barras dentro del recuadro, a 10–20 cm"
+],
+"Avvio lo scanner…": [
+"Starting the scanner…",
+"Iniciando el escáner…"
+],
+"Torcia": [
+"Torch",
+"Linterna"
+],
+"Torcia non disponibile": [
+"Torch not available",
+"Linterna no disponible"
+],
+"Avambracci": [
+"Forearms",
+"Antebrazos"
+],
+"Stima con la formula Mifflin-St Jeor × attività. Puoi attivare il mantenimento reale qui sotto. Peso: media 7 giorni dal registro corporeo.": [
+"Estimated with the Mifflin-St Jeor formula × activity. You can turn on real maintenance below. Weight: 7-day average from the body log.",
+"Estimación con la fórmula Mifflin-St Jeor × actividad. Puedes activar el mantenimiento real abajo. Peso: media de 7 días del registro corporal."
+],
+"Capo laterale": [
+"Lateral head",
+"Cabeza lateral"
+],
+"Capo mediale": [
+"Medial head",
+"Cabeza medial"
+],
+"Muscoli allenati": [
+"Muscles worked",
+"Músculos trabajados"
+],
+"Esplora": [
+"Explore",
+"Explorar"
+],
+"Poco": [
+"Little",
+"Poco"
+],
+"Molto": [
+"A lot",
+"Mucho"
+],
+"Principale": [
+"Main",
+"Principal"
+],
+"Secondario": [
+"Secondary",
+"Secundario"
+],
+"Di supporto": [
+"Support",
+"De apoyo"
+],
+"Più il colore è acceso, più lavora quella parte. È una stima basata sul tipo di movimento (angolo, presa, posizione del braccio).": [
+"The brighter the colour, the harder that part works. It's an estimate based on the type of movement (angle, grip, arm position).",
+"Cuanto más vivo el color, más trabaja esa parte. Es una estimación según el tipo de movimiento (ángulo, agarre, posición del brazo)."
+],
+"Davanti": [
+"Front",
+"Delante"
+],
+"Dietro": [
+"Back",
+"Detrás"
+],
+"Coach AI": [
+"AI Coach",
+"Coach IA"
+],
+"Chiedimi qualsiasi cosa": [
+"Ask me anything",
+"Pregúntame lo que quieras"
+],
+"Conosco i tuoi allenamenti, le schede, la dieta, il peso, il sonno e le corse. Rispondo con i tuoi numeri, non con consigli generici.": [
+"I know your workouts, routines, diet, weight, sleep and runs. I answer with your numbers, not generic advice.",
+"Conozco tus entrenamientos, rutinas, dieta, peso, sueño y carreras. Respondo con tus números, no con consejos genéricos."
+],
+"Come sta andando questa settimana?": [
+"How is this week going?",
+"¿Cómo va esta semana?"
+],
+"Cosa mi conviene allenare oggi?": [
+"What should I train today?",
+"¿Qué me conviene entrenar hoy?"
+],
+"Su quali esercizi sto progredendo e su quali no?": [
+"Which exercises am I progressing on and which not?",
+"¿En qué ejercicios estoy progresando y en cuáles no?"
+],
+"Cosa mangio stasera per chiudere i macro?": [
+"What should I eat tonight to hit my macros?",
+"¿Qué ceno hoy para cerrar los macros?"
+],
+"Il mio peso scende al ritmo giusto?": [
+"Is my weight dropping at the right pace?",
+"¿Mi peso baja al ritmo adecuado?"
+],
+"Come posso recuperare meglio?": [
+"How can I recover better?",
+"¿Cómo puedo recuperarme mejor?"
+],
+"Per la chat serve la chiave API": [
+"The chat needs an API key",
+"El chat necesita la clave API"
+],
+"Inseriscila in Profilo → Coach AI (con Haiku una risposta costa meno di 1 centesimo). Gratis: copia la domanda con i tuoi dati e incollala in una chat con Claude.": [
+"Enter it in Profile → AI Coach (with Haiku an answer costs less than 1 cent). Free: copy the question with your data and paste it into a chat with Claude.",
+"Introdúcela en Perfil → Coach IA (con Haiku una respuesta cuesta menos de 1 céntimo). Gratis: copia la pregunta con tus datos y pégala en un chat con Claude."
+],
+"Vai al Profilo": [
+"Go to Profile",
+"Ir al Perfil"
+],
+"Scrivi una domanda…": [
+"Type a question…",
+"Escribe una pregunta…"
+],
+"Domanda al coach": [
+"Question for the coach",
+"Pregunta al coach"
+],
+"Invia": [
+"Send",
+"Enviar"
+],
+"Nuova chat": [
+"New chat",
+"Nuevo chat"
+],
+"Nuova chat?": [
+"New chat?",
+"¿Nuevo chat?"
+],
+"La conversazione attuale viene cancellata da questo telefono.": [
+"The current conversation is deleted from this phone.",
+"La conversación actual se borra de este teléfono."
+],
+"Cancella": [
+"Delete",
+"Borrar"
+],
+"Riprova": [
+"Retry",
+"Reintentar"
+],
+"Copia": [
+"Copy",
+"Copiar"
+],
+"Copiato": [
+"Copied",
+"Copiado"
+],
+"Non riesco a copiare": [
+"Can't copy",
+"No puedo copiar"
+],
+"Chiedi": [
+"Ask",
+"Preguntar"
+],
+"Settimana": [
+"Week",
+"Semana"
+],
+"Apri la chat con il coach": [
+"Open the coach chat",
+"Abrir el chat con el coach"
+],
+"Fai una domanda al coach": [
+"Ask the coach a question",
+"Haz una pregunta al coach"
+],
+"Chiedi al coach su questo esercizio": [
+"Ask the coach about this exercise",
+"Pregunta al coach sobre este ejercicio"
+],
+"Serve la chiave API: Profilo → Coach AI": [
+"You need an API key: Profile → AI Coach",
+"Necesitas la clave API: Perfil → Coach IA"
+],
+"Serve per la chat con il coach, per stimare piatti fuori casa e cibi non presenti, e per le analisi della giornata e degli obiettivi. I consigli base del coach funzionano anche senza.": [
+"Used for the coach chat, to estimate meals out and missing foods, and for the day and target analyses. The basic coach tips work without it.",
+"Sirve para el chat con el coach, para estimar platos fuera de casa y alimentos que faltan, y para los análisis del día y de los objetivos. Los consejos básicos del coach funcionan sin ella."
+],
+"Recupero nella media ({0})": [
+"Average recovery ({0})",
+"Recuperación media ({0})"
+],
+"Segui la scheda e lascia 2 ripetizioni di margine.": [
+"Follow the plan and leave 2 reps in reserve.",
+"Sigue la rutina y deja 2 repeticiones de margen."
+]
+}

@@ -1,0 +1,2310 @@
+{
+"577": [
+"Load set: {0} kg",
+"Carga fijada: {0} kg"
+],
+"578": [
+"Replaced with {0}",
+"Sustituido por {0}"
+],
+"579": [
+"Cancel",
+"Cancelar"
+],
+"580": [
+"Name the exercise",
+"Ponle nombre al ejercicio"
+],
+"581": [
+"Exercise created",
+"Ejercicio creado"
+],
+"582": [
+"Delete the exercise?",
+"¿Eliminar el ejercicio?"
+],
+"583": [
+"History stays, but the exercise will no longer be in the library.",
+"El historial se queda, pero el ejercicio ya no estará en la biblioteca."
+],
+"584": [
+"Delete",
+"Eliminar"
+],
+"585": [
+"Duplicate",
+"Duplicar"
+],
+"586": [
+"Move to folder",
+"Mover a carpeta"
+],
+"587": [
+"Now in:",
+"Ahora en:"
+],
+"588": [
+"Now outside folders",
+"Ahora fuera de las carpetas"
+],
+"589": [
+"Delete the routine?",
+"¿Eliminar la rutina?"
+],
+"590": [
+"“{0}” will be deleted. Workout history stays.",
+"“{0}” se eliminará. El historial de entrenamientos se queda."
+],
+"591": [
+"Back-off weight relative to the top set",
+"Peso del back-off respecto al top set"
+],
+"592": [
+"% of max (1RM)",
+"% del máximo (1RM)"
+],
+"593": [
+"Set type",
+"Tipo de serie"
+],
+"594": [
+"Add at least one exercise",
+"Añade al menos un ejercicio"
+],
+"595": [
+"Routine saved",
+"Rutina guardada"
+],
+"596": [
+"{0} routines added to the “{1}” folder",
+"{0} rutinas añadidas a la carpeta “{1}”"
+],
+"597": [
+"Date, duration, exercises, sets and weights",
+"Fecha, duración, ejercicios, series y pesos"
+],
+"598": [
+"Delete workout",
+"Eliminar entrenamiento"
+],
+"599": [
+"Delete the workout?",
+"¿Eliminar el entrenamiento?"
+],
+"600": [
+"Records and stats will be recalculated.",
+"Los récords y las estadísticas se recalcularán."
+],
+"601": [
+"Routine created in Workout",
+"Rutina creada en Entrenamiento"
+],
+"602": [
+"Sample data loaded",
+"Datos de ejemplo cargados"
+],
+"603": [
+"Sample data removed",
+"Datos de ejemplo eliminados"
+],
+"604": [
+"Delete all data?",
+"¿Eliminar todos los datos?"
+],
+"605": [
+"also from your online account",
+"también de la cuenta online"
+],
+"606": [
+"Workouts, routines, food diary, weight and measurements, photos, custom foods, goals and settings will be deleted{0}. If you want to keep them, export a backup first.",
+"Se eliminarán entrenamientos, rutinas, diario de comidas, peso y medidas, fotos, alimentos creados, objetivos y ajustes{0}. Si quieres conservarlos, exporta antes una copia de seguridad."
+],
+"607": [
+"To confirm, type",
+"Para confirmar, escribe"
+],
+"608": [
+"ELIMINA",
+"ELIMINA"
+],
+"609": [
+"Backup",
+"Copia de seguridad"
+],
+"610": [
+"Delete everything",
+"Eliminar todo"
+],
+"611": [
+"Type ELIMINA to confirm",
+"Escribe ELIMINA para confirmar"
+],
+"612": [
+"All data has been deleted",
+"Se han eliminado todos los datos"
+],
+"613": [
+"INPUT",
+"INPUT"
+],
+"614": [
+"TEXTAREA",
+"TEXTAREA"
+],
+"615": [
+"SELECT",
+"SELECT"
+],
+"616": [
+"Enter",
+"Enter"
+],
+"617": [
+"Empty. Press and hold a routine and drag it here.",
+"Vacía. Mantén pulsada una rutina y arrástrala aquí."
+],
+"618": [
+"Folder options",
+"Opciones de carpeta"
+],
+"619": [
+"Press and hold a routine or folder to move it",
+"Mantén pulsada una rutina o una carpeta para moverla"
+],
+"620": [
+"Folder image updated",
+"Imagen de la carpeta actualizada"
+],
+"621": [
+"Can't read the image",
+"No puedo leer la imagen"
+],
+"622": [
+"Color",
+"Color"
+],
+"623": [
+"E.g. Bulk 2026, PPL, Old",
+"Ej. Volumen 2026, PPL, Antiguas"
+],
+"624": [
+"Folder name",
+"Nombre de la carpeta"
+],
+"625": [
+"No folder",
+"Sin carpeta"
+],
+"626": [
+"New folder…",
+"Nueva carpeta…"
+],
+"627": [
+"New folder",
+"Nueva carpeta"
+],
+"628": [
+"Folder created",
+"Carpeta creada"
+],
+"629": [
+"Rename and color",
+"Renombrar y color"
+],
+"630": [
+"Edit folder",
+"Editar carpeta"
+],
+"631": [
+"Change image",
+"Cambiar imagen"
+],
+"632": [
+"Add image",
+"Añadir imagen"
+],
+"633": [
+"From gallery or camera",
+"Desde la galería o la cámara"
+],
+"634": [
+"Remove image",
+"Quitar imagen"
+],
+"635": [
+"Duplicate folder",
+"Duplicar carpeta"
+],
+"636": [
+"Also copy all routines",
+"Copiar también todas las rutinas"
+],
+"637": [
+"Folder duplicated",
+"Carpeta duplicada"
+],
+"638": [
+"Delete folder",
+"Eliminar carpeta"
+],
+"639": [
+"Routines stay, outside folders",
+"Las rutinas se quedan, fuera de las carpetas"
+],
+"640": [
+"Delete folder and routines",
+"Eliminar carpeta y rutinas"
+],
+"641": [
+"{0} routines. Workout history stays.",
+"{0} rutinas. El historial de entrenamientos se queda."
+],
+"642": [
+"Delete folder and routines?",
+"¿Eliminar carpeta y rutinas?"
+],
+"643": [
+"“{0}” and its {1} routines will be deleted.",
+"“{0}” y sus {1} rutinas se eliminarán."
+],
+"644": [
+"Relationship",
+"Relationship"
+],
+"645": [
+"Id",
+"Id"
+],
+"646": [
+"Target",
+"Target"
+],
+"647": [
+"bench press",
+"bench press"
+],
+"648": [
+"incline bench press",
+"incline bench press"
+],
+"649": [
+"decline bench press",
+"decline bench press"
+],
+"650": [
+"shoulder press",
+"shoulder press"
+],
+"651": [
+"behind neck press",
+"behind neck press"
+],
+"652": [
+"side lateral raise",
+"side lateral raise"
+],
+"653": [
+"front raise",
+"front raise"
+],
+"654": [
+"rear lateral raise",
+"rear lateral raise"
+],
+"655": [
+"romanian deadlift",
+"romanian deadlift"
+],
+"656": [
+"lat pulldown",
+"lat pulldown"
+],
+"657": [
+"seated cable rows",
+"seated cable rows"
+],
+"658": [
+"leg press",
+"leg press"
+],
+"659": [
+"calf raise",
+"calf raise"
+],
+"660": [
+"ab roller",
+"ab roller"
+],
+"661": [
+"chest supported row",
+"chest supported row"
+],
+"662": [
+"military press",
+"military press"
+],
+"663": [
+"skull crusher",
+"skull crusher"
+],
+"664": [
+"Barbell_Incline_Bench_Press_-_Medium_Grip",
+"Barbell_Incline_Bench_Press_-_Medium_Grip"
+],
+"665": [
+"Barbell_Deadlift",
+"Barbell_Deadlift"
+],
+"666": [
+"Standing_Military_Press",
+"Standing_Military_Press"
+],
+"667": [
+"Dips_-_Chest_Version",
+"Dips_-_Chest_Version"
+],
+"668": [
+"Pushups",
+"Pushups"
+],
+"669": [
+"Triceps_Pushdown",
+"Triceps_Pushdown"
+],
+"670": [
+"Hyperextensions_Back_Extensions",
+"Hyperextensions_Back_Extensions"
+],
+"671": [
+"Dumbbell_Alternate_Bicep_Curl",
+"Dumbbell_Alternate_Bicep_Curl"
+],
+"672": [
+"Dumbbell_Bicep_Curl",
+"Dumbbell_Bicep_Curl"
+],
+"673": [
+"Ab_Roller",
+"Ab_Roller"
+],
+"674": [
+"Reps: max",
+"Repeticiones: máximas"
+],
+"675": [
+"Day 1",
+"Día 1"
+],
+"676": [
+"{0}% of max",
+"{0}% del máximo"
+],
+"677": [
+"Routine imported",
+"Rutina importada"
+],
+"678": [
+"Program imported",
+"Programa importado"
+],
+"679": [
+"Routine:",
+"Rutina:"
+],
+"680": [
+"The routine is in the attached image/file.",
+"La rutina está en la imagen/archivo adjunto."
+],
+"681": [
+"Day",
+"Día"
+],
+"682": [
+"Import routine",
+"Importar rutina"
+],
+"683": [
+"· free by copying for Claude",
+"· gratis copiando para Claude"
+],
+"684": [
+"Paste the routine",
+"Pega la rutina"
+],
+"685": [
+"From Lyfta: open the link, select the routine and copy, or type it yourself. One day per block, with the name on top.",
+"Desde Lyfta: abre el enlace, selecciona la rutina y copia, o escríbela tú. Un día por bloque, con el nombre arriba."
+],
+"686": [
+"Read the routine",
+"Leer la rutina"
+],
+"687": [
+"Photo or PDF of the routine",
+"Foto o PDF de la rutina"
+],
+"688": [
+"Or paste the text below and tap \"Analyze\".",
+"O pega el texto abajo y pulsa \"Analizar\"."
+],
+"689": [
+"No API key: copy the message, paste it into a chat with Claude along with the photo/file of the routine, then paste the reply here.",
+"Sin clave API: copia el mensaje, pégalo en un chat con Claude junto con la foto/el archivo de la rutina y luego pega aquí la respuesta."
+],
+"690": [
+"Routine text (optional if you upload a photo)",
+"Texto de la rutina (opcional si subes una foto)"
+],
+"691": [
+"Routine text (optional)",
+"Texto de la rutina (opcional)"
+],
+"692": [
+"Analyzing…",
+"Analizando…"
+],
+"693": [
+"2 · Paste Claude's reply here (the JSON)",
+"2 · Pega aquí la respuesta de Claude (el JSON)"
+],
+"694": [
+"1 · Copy the message for Claude",
+"1 · Copia el mensaje para Claude"
+],
+"695": [
+"3 · Read the reply",
+"3 · Leer la respuesta"
+],
+"696": [
+"With AI",
+"Con IA"
+],
+"697": [
+"Imported routines go into a",
+"Las rutinas importadas van a una"
+],
+"698": [
+"new folder",
+"carpeta nueva"
+],
+"699": [
+"File",
+"Archivo"
+],
+"700": [
+"Excel or CSV from your PT, or Forgia file (.json)",
+"Excel o CSV del entrenador, o archivo de Forgia (.json)"
+],
+"701": [
+"Paste text",
+"Pegar texto"
+],
+"702": [
+"From Lyfta, notes, WhatsApp: \"Bench press 4x8-10\", \"Squat 5x5\"…",
+"Desde Lyfta, notas, WhatsApp: \"Press banca 4x8-10\", \"Squat 5x5\"…"
+],
+"703": [
+"Photos, PDFs or complex routines{0}",
+"Fotos, PDF o rutinas complicadas{0}"
+],
+"704": [
+"Check",
+"Revisar"
+],
+"705": [
+"{0} to check",
+"{0} por revisar"
+],
+"706": [
+"Not found: tap to choose",
+"No encontrado: toca para elegir"
+],
+"707": [
+"· superset with the next one",
+"· superserie con el siguiente"
+],
+"708": [
+"Remove",
+"Quitar"
+],
+"709": [
+"from \"{0}\" · {1}{2}",
+"de \"{0}\" · {1}{2}"
+],
+"710": [
+"Program notes",
+"Notas del programa"
+],
+"711": [
+"I'll save them as a note in the routines, so you see them during the workout.",
+"Las guardo como nota en las rutinas, así las ves durante el entrenamiento."
+],
+"712": [
+"{0} {1} · {2} exercises",
+"{0} {1} · {2} ejercicios"
+],
+"713": [
+"Import {0} {1}",
+"Importar {0} {1}"
+],
+"714": [
+"No exercises found. Try \"With AI\" or check the format.",
+"No he encontrado ejercicios. Prueba con \"Con IA\" o revisa el formato."
+],
+"715": [
+"To read photos and PDFs in the app you need the API key (Profile → AI Coach). Alternatively, use \"Copy the message for Claude\".",
+"Para leer fotos y PDF dentro de la app necesitas la clave API (Perfil → Coach IA). Si no, usa \"Copia el mensaje para Claude\"."
+],
+"716": [
+"The JSON file doesn't contain a Forgia routine.",
+"El archivo JSON no contiene una rutina de Forgia."
+],
+"717": [
+"The old .xls format isn't supported: in Excel or Numbers save it as .xlsx or .csv.",
+"El antiguo formato .xls no es compatible: en Excel o Numbers guárdalo como .xlsx o .csv."
+],
+"718": [
+"Can't read the file. Try saving it as .xlsx or .csv, or use \"With AI\".",
+"No puedo leer el archivo. Prueba a guardarlo como .xlsx o .csv, o usa \"Con IA\"."
+],
+"719": [
+"Paste the routine first",
+"Pega primero la rutina"
+],
+"720": [
+"Paste the text or upload a photo",
+"Pega el texto o sube una foto"
+],
+"721": [
+"Copied: paste it into Claude with the photo of the routine",
+"Copiado: pégalo en Claude con la foto de la rutina"
+],
+"722": [
+"Copy failed",
+"No se ha podido copiar"
+],
+"723": [
+"Can't read the reply: copy Claude's whole JSON block.",
+"No puedo leer la respuesta: copia todo el bloque JSON de Claude."
+],
+"724": [
+"{0} unmatched exercises: tap to choose them or remove them",
+"{0} ejercicios sin asignar: tócalos para elegirlos o quítalos"
+],
+"725": [
+"routine imported",
+"rutina importada"
+],
+"726": [
+"routines imported",
+"rutinas importadas"
+],
+"727": [
+"{0} {1} in “{2}”",
+"{0} {1} en “{2}”"
+],
+"728": [
+"{0} reps: too easy. Next set",
+"{0} reps: demasiado fácil. Próxima serie"
+],
+"729": [
+"{0} reps: too easy. Slow down the eccentric or add weight.",
+"{0} reps: demasiado fácil. Ralentiza la excéntrica o añade lastre."
+],
+"730": [
+"{0} reps, below {1}: next set",
+"{0} reps, por debajo de {1}: próxima serie"
+],
+"731": [
+"to stay in range.",
+"para mantenerte en el rango."
+],
+"732": [
+"{0} reps, below {1}: rest a bit longer before the next one.",
+"{0} reps, por debajo de {1}: descansa un poco más antes de la próxima."
+],
+"733": [
+"{0} reps at {1} kg: in range.",
+"{0} reps con {1} kg: en el rango."
+],
+"734": [
+"Keep {0} kg",
+"Mantén {0} kg"
+],
+"735": [
+"Exercise order changed",
+"Orden de ejercicios cambiado"
+],
+"736": [
+"Routine “{0}” updated",
+"Rutina “{0}” actualizada"
+],
+"737": [
+":scope > [data-drag-item]",
+":scope > [data-drag-item]"
+],
+"738": [
+"input, textarea, select, .chips",
+"input, textarea, select, .chips"
+],
+"739": [
+"transform .15s ease",
+"transform .15s ease"
+],
+"740": [
+"transform .25s cubic-bezier(.2,.9,.3,1.2)",
+"transform .25s cubic-bezier(.2,.9,.3,1.2)"
+],
+"741": [
+"RIFF",
+"RIFF"
+],
+"742": [
+"WAVE",
+"WAVE"
+],
+"743": [
+"Next: {0}{1}",
+"Siguiente: {0}{1}"
+],
+"744": [
+"Last set done",
+"Última serie hecha"
+],
+"745": [
+"Rest {0}",
+"Descanso {0}"
+],
+"746": [
+"{0} · {1} exercises · {2} sets",
+"{0} · {1} ejercicios · {2} series"
+],
+"747": [
+"Copy",
+"Copiar"
+],
+"748": [
+"Last 7 days",
+"Últimos 7 días"
+],
+"749": [
+"Repeat: redo the same session. Copy: becomes a new routine with the sets and reps you did.",
+"Repetir: rehaces la misma sesión. Copiar: se convierte en una rutina nueva con las series y repeticiones que hiciste."
+],
+"750": [
+"Lock-screen timer on: it pauses music if playing",
+"Temporizador en pantalla de bloqueo activado: si suena música, la pausa"
+],
+"751": [
+"Copied as a new routine in “My routines”",
+"Copiada como rutina nueva en “Mis rutinas”"
+],
+"752": [
+"(prefers-reduced-motion: reduce)",
+"(prefers-reduced-motion: reduce)"
+],
+"753": [
+"input, textarea, select, .switch, [data-drag], [data-hold]",
+"input, textarea, select, .switch, [data-drag], [data-hold]"
+],
+"754": [
+"Drop here to remove from the folder",
+"Suelta aquí para sacarla de la carpeta"
+],
+"755": [
+"Routine removed from folder",
+"Rutina sacada de la carpeta"
+],
+"756": [
+"Moved to “{0}”",
+"Movida a “{0}”"
+],
+"757": [
+"transform .2s cubic-bezier(.3,.7,.4,1)",
+"transform .2s cubic-bezier(.3,.7,.4,1)"
+],
+"758": [
+"transform .22s ease",
+"transform .22s ease"
+],
+"759": [
+"transform .2s ease-in",
+"transform .2s ease-in"
+],
+"760": [
+"transform .22s ease, border-radius .22s",
+"transform .22s ease, border-radius .22s"
+],
+"761": [
+"transform .2s ease",
+"transform .2s ease"
+],
+"762": [
+"transform .18s ease-in",
+"transform .18s ease-in"
+],
+"763": [
+"Set deleted",
+"Serie eliminada"
+],
+"764": [
+"Breakfast",
+"Desayuno"
+],
+"765": [
+"Lunch",
+"Comida"
+],
+"766": [
+"Dinner",
+"Cena"
+],
+"767": [
+"Snack",
+"Tentempié"
+],
+"768": [
+"Supplements",
+"Suplementos"
+],
+"769": [
+"Calories",
+"Calorías"
+],
+"770": [
+"Protein",
+"Proteínas"
+],
+"771": [
+"Carbs",
+"Carbohidratos"
+],
+"772": [
+"Fat",
+"Grasas"
+],
+"773": [
+"Fiber",
+"Fibra"
+],
+"774": [
+"Sugars",
+"Azúcares"
+],
+"775": [
+"Saturated fat",
+"Grasas saturadas"
+],
+"776": [
+"Salt",
+"Sal"
+],
+"777": [
+"Sedentary",
+"Sedentario"
+],
+"778": [
+"Few steps, desk-bound day",
+"Pocos pasos, día sentado"
+],
+"779": [
+"Light",
+"Ligero"
+],
+"780": [
+"~5–7k steps + 2–3 workouts",
+"~5–7k pasos + 2–3 entrenamientos"
+],
+"781": [
+"Moderate",
+"Moderado"
+],
+"782": [
+"~7–10k steps + 3–5 workouts",
+"~7–10k pasos + 3–5 entrenamientos"
+],
+"783": [
+"High",
+"Alto"
+],
+"784": [
+"10k+ steps + 5–6 workouts",
+"10k+ pasos + 5–6 entrenamientos"
+],
+"785": [
+"Fast cut",
+"Definición rápida"
+],
+"786": [
+"−0,75 kg/wk",
+"−0,75 kg/sem."
+],
+"787": [
+"Cut",
+"Definición"
+],
+"788": [
+"−0,5 kg/wk",
+"−0,5 kg/sem."
+],
+"789": [
+"Slow cut",
+"Definición lenta"
+],
+"790": [
+"−0,25 kg/wk",
+"−0,25 kg/sem."
+],
+"791": [
+"Maintenance",
+"Mantenimiento"
+],
+"792": [
+"stable weight",
+"peso estable"
+],
+"793": [
+"Lean bulk",
+"Volumen limpio"
+],
+"794": [
+"+0,25 kg/wk",
+"+0,25 kg/sem."
+],
+"795": [
+"Bulk",
+"Volumen"
+],
+"796": [
+"+0,5 kg/wk",
+"+0,5 kg/sem."
+],
+"797": [
+"Multivitamin",
+"Multivitamínico"
+],
+"798": [
+"1 tablet",
+"1 comprimido"
+],
+"799": [
+"Vitamin D3 1000 IU",
+"Vitamina D3 1000 UI"
+],
+"800": [
+"1 tablet/drop",
+"1 comprimido/gota"
+],
+"801": [
+"Vitamin D3 2000 IU",
+"Vitamina D3 2000 UI"
+],
+"802": [
+"Omega-3 (fish oil 1 g)",
+"Omega-3 (aceite de pescado 1 g)"
+],
+"803": [
+"1 capsule",
+"1 cápsula"
+],
+"804": [
+"Concentrated omega-3 (600 mg EPA+DHA)",
+"Omega-3 concentrado (600 mg EPA+DHA)"
+],
+"805": [
+"Magnesium 300 mg",
+"Magnesio 300 mg"
+],
+"806": [
+"1 dose",
+"1 dosis"
+],
+"807": [
+"Zinc 10 mg",
+"Zinc 10 mg"
+],
+"808": [
+"Iron 14 mg",
+"Hierro 14 mg"
+],
+"809": [
+"Vitamin C 500 mg",
+"Vitamina C 500 mg"
+],
+"810": [
+"Vitamin B12 1000 µg",
+"Vitamina B12 1000 µg"
+],
+"811": [
+"Calcium 500 mg",
+"Calcio 500 mg"
+],
+"812": [
+"Creatine monohydrate",
+"Creatina monohidrato"
+],
+"813": [
+"1 dose (5 g)",
+"1 dosis (5 g)"
+],
+"814": [
+"Creatine monohydrate (3 g)",
+"Creatina monohidrato (3 g)"
+],
+"815": [
+"1 dose (3 g)",
+"1 dosis (3 g)"
+],
+"816": [
+"integratore integratori supplement",
+"integratore integratori supplement"
+],
+"817": [
+"Food removed",
+"Alimento eliminado"
+],
+"818": [
+"Quick add",
+"Añadido rápido"
+],
+"819": [
+"1 serving",
+"1 ración"
+],
+"820": [
+"HTTP",
+"HTTP"
+],
+"821": [
+"manzo pollo maiale",
+"manzo pollo maiale"
+],
+"822": [
+"macinato hamburger",
+"macinato hamburger"
+],
+"823": [
+"patatine chips",
+"patatine chips"
+],
+"824": [
+"pancarre toast",
+"pancarre toast"
+],
+"825": [
+"brioche merendina",
+"brioche merendina"
+],
+"826": [
+"croissant cornetto",
+"croissant cornetto"
+],
+"827": [
+"insalata lattuga",
+"insalata lattuga"
+],
+"828": [
+"frutta macedonia",
+"frutta macedonia"
+],
+"829": [
+"whey proteine",
+"whey proteine"
+],
+"830": [
+"kcal left",
+"kcal restantes"
+],
+"831": [
+"kcal over",
+"kcal de más"
+],
+"832": [
+"Rest",
+"Descanso"
+],
+"833": [
+"Eaten",
+"Consumidas"
+],
+"834": [
+"Goal",
+"Objetivo"
+],
+"835": [
+"Added sugars",
+"Azúcares añad."
+],
+"836": [
+"Saturated",
+"Saturadas"
+],
+"837": [
+"Set up your diet",
+"Configura la dieta"
+],
+"838": [
+"Work out calories and macros in 1 minute",
+"Calcula calorías y macros en 1 minuto"
+],
+"839": [
+"Scanner",
+"Escáner"
+],
+"840": [
+"Today's diet",
+"Dieta de hoy"
+],
+"841": [
+"Open diary",
+"Abrir diario"
+],
+"842": [
+"Add food",
+"Añadir comida"
+],
+"843": [
+"Barcode scanner",
+"Escáner de código de barras"
+],
+"844": [
+"Point at the EAN and find the product on Open Food Facts",
+"Enfoca el EAN y encuentra el producto en Open Food Facts"
+],
+"845": [
+"Millions of products",
+"Millones de productos"
+],
+"846": [
+"Italy and Spain, plus",
+"Italia y España, más"
+],
+"847": [
+"ready-made basic foods",
+"alimentos básicos ya listos"
+],
+"848": [
+"Close your macros",
+"Cierra los macros"
+],
+"849": [
+"At the end of the day it suggests what to eat to hit your targets",
+"Al final del día te sugiere qué comer para llegar a tus objetivos"
+],
+"850": [
+"First step",
+"Primer paso"
+],
+"851": [
+"Calculate your goals",
+"Calcula tus objetivos"
+],
+"852": [
+"Age, height, weight, activity and goal: the app calculates calories and macros, even different ones for training and rest days.",
+"Edad, altura, peso, actividad y objetivo: la app calcula calorías y macros, incluso distintos para días de entrenamiento y de descanso."
+],
+"853": [
+"Start",
+"Empezar"
+],
+"854": [
+"Tomorrow",
+"Mañana"
+],
+"855": [
+"· you eat it often",
+"· lo comes a menudo"
+],
+"856": [
+"+{0} kcal · {1} P · {2} C · {3} F{4}",
+"+{0} kcal · {1} P · {2} C · {3} G{4}"
+],
+"857": [
+"{0} P · {1} C · {2} F to go",
+"faltan {0} P · {1} C · {2} G"
+],
+"858": [
+"Workouts and runs: ~{0} active kcal. They're already included in your goal (activity level), no need to eat them back.",
+"Entrenamiento y carrera: ~{0} kcal activas. Ya están incluidas en tu objetivo (nivel de actividad), no hay que volver a comérselas."
+],
+"859": [
+"kcal ·",
+"kcal ·"
+],
+"860": [
+"Options {0}",
+"Opciones {0}"
+],
+"861": [
+"quick add",
+"añadido rápido"
+],
+"862": [
+"Add supplement",
+"Añadir suplemento"
+],
+"863": [
+"Scan for {0}",
+"Escanear para {0}"
+],
+"864": [
+"Add to \"Other\"",
+"Añadir a \"Otros\""
+],
+"865": [
+"{0} items to buy · {1} days",
+"{0} cosas que comprar · {1} días"
+],
+"866": [
+"From the foods you usually eat, grouped by aisle",
+"De los alimentos que sueles comer, por secciones"
+],
+"867": [
+"Goals",
+"Objetivos"
+],
+"868": [
+"Previous day",
+"Día anterior"
+],
+"869": [
+"Next day",
+"Día siguiente"
+],
+"870": [
+"Search for a food to add…",
+"Busca un alimento para añadir…"
+],
+"871": [
+"Nutrition analysis",
+"Análisis de alimentación"
+],
+"872": [
+"Most frequent foods and combinations, meal split, averages",
+"Alimentos y combinaciones más frecuentes, reparto de comidas, medias"
+],
+"873": [
+"Shopping list",
+"Lista de la compra"
+],
+"874": [
+"Saved foods, recipes and meals",
+"Alimentos, recetas y comidas guardadas"
+],
+"875": [
+"Create a food or a recipe with per-serving calculation",
+"Crea un alimento o una receta con cálculo por ración"
+],
+"876": [
+"Search",
+"Buscar"
+],
+"877": [
+"Mine",
+"Míos"
+],
+"878": [
+"Saved meals",
+"Comidas guardadas"
+],
+"879": [
+"Ingredient",
+"Ingrediente"
+],
+"880": [
+"Add to",
+"Añadir a"
+],
+"881": [
+"Estimate with AI",
+"Estimar con IA"
+],
+"882": [
+"Search: Greek yogurt, Mulino Bianco…",
+"Buscar: yogur griego, Mulino Bianco…"
+],
+"883": [
+"· last: {0} g",
+"· última: {0} g"
+],
+"884": [
+"Tap the star next to a food to always have it here, one tap away.",
+"Toca la estrella junto a un alimento para tenerlo siempre aquí, a un toque."
+],
+"885": [
+"No recent foods",
+"No hay alimentos recientes"
+],
+"886": [
+"Foods you log show up here so you can add them again quickly.",
+"Los alimentos que registras aparecen aquí para volver a añadirlos al momento."
+],
+"887": [
+"New food",
+"Nuevo alimento"
+],
+"888": [
+"New recipe",
+"Nueva receta"
+],
+"889": [
+"Here you'll find the foods and recipes you create.",
+"Aquí encuentras los alimentos y recetas que creas tú."
+],
+"890": [
+"Supplements update the day's micronutrients. If yours has different doses, create it from \"Mine\" → New food, type \"Supplement\", with the values for 1 serving.",
+"Los suplementos actualizan los micronutrientes del día. Si el tuyo tiene dosis distintas, créalo desde \"Míos\" → Nuevo alimento, tipo \"Suplemento\", con los valores para 1 ración."
+],
+"891": [
+"Create supplement",
+"Crear suplemento"
+],
+"892": [
+"No saved meals",
+"No hay comidas guardadas"
+],
+"893": [
+"From the diary: ⋯ menu of a meal → \"Save as meal\". Then add it back with one tap.",
+"Desde el diario: menú ⋯ de una comida → \"Guardar como comida\". Luego la vuelves a añadir con un toque."
+],
+"894": [
+"Searching Open Food Facts…",
+"Buscando en Open Food Facts…"
+],
+"895": [
+"No online products for \"{0}\".",
+"No hay productos online para \"{0}\"."
+],
+"896": [
+"Search \"{0}\" on Open Food Facts",
+"Buscar \"{0}\" en Open Food Facts"
+],
+"897": [
+"Favorites",
+"Favoritos"
+],
+"898": [
+"Your most-used foods and basic foods",
+"Tus alimentos más usados y alimentos básicos"
+],
+"899": [
+"Basic foods",
+"Alimentos básicos"
+],
+"900": [
+"Packaged products",
+"Productos envasados"
+],
+"901": [
+"Can't find what you're looking for?",
+"¿No encuentras lo que buscas?"
+],
+"902": [
+"Create food",
+"Crear alimento"
+],
+"903": [
+"no micronutrients",
+"sin micronutrientes"
+],
+"904": [
+"You're offline: packaged products need internet. Basic foods work offline too.",
+"Estás sin conexión: para los productos envasados hace falta internet. Los alimentos básicos funcionan también sin conexión."
+],
+"905": [
+"Open Food Facts isn't responding right now. Try again shortly or use the scanner.",
+"Open Food Facts no responde ahora. Vuelve a intentarlo en un rato o usa el escáner."
+],
+"906": [
+"Online search works in the installed app (GitHub Pages). In this preview use basic foods or create a food.",
+"La búsqueda online funciona en la app instalada (GitHub Pages). En esta vista previa usa los alimentos básicos o crea un alimento."
+],
+"907": [
+"· average values",
+"· valores medios"
+],
+"908": [
+"· Open Food Facts",
+"· Open Food Facts"
+],
+"909": [
+"· AI estimate",
+"· estimación IA"
+],
+"910": [
+"· ultra-processed (NOVA 4)",
+"· ultraprocesado (NOVA 4)"
+],
+"911": [
+"· some estimated",
+"· algunos estimados"
+],
+"912": [
+"Micronutrients",
+"Micronutrientes"
+],
+"913": [
+"{0} of {1} known{2}",
+"{0} de {1} conocidos{2}"
+],
+"914": [
+"Goes in the day's Supplements section.",
+"Va en la sección Suplementos del día."
+],
+"915": [
+"Add to recipe",
+"Añadir a la receta"
+],
+"916": [
+"{0}{1} kcal / 100 g{2}{3}",
+"{0}{1} kcal / 100 g{2}{3}"
+],
+"917": [
+"This product has no micronutrients: common with Open Food Facts packaged products, which only list the mandatory label values. Basic foods and those from the CIQUAL database almost always have them.",
+"Este producto no tiene micronutrientes: pasa a menudo con los envasados de Open Food Facts, que solo indican los valores obligatorios de la etiqueta. Los alimentos básicos y los de la base de datos CIQUAL casi siempre los tienen."
+],
+"918": [
+"not available",
+"no disponible"
+],
+"919": [
+"Prot.",
+"Prot."
+],
+"920": [
+"Carb.",
+"Carb."
+],
+"921": [
+"Fiber {0} · Sugars {1} · Saturated {2} · Salt {3} g",
+"Fibra {0} · Azúcares {1} · Saturadas {2} · Sal {3} g"
+],
+"922": [
+"E.g. Restaurant lunch",
+"Ej. Comida en el restaurante"
+],
+"923": [
+"Description",
+"Descripción"
+],
+"924": [
+"Prot. g",
+"Prot. g"
+],
+"925": [
+"Carb. g",
+"Carb. g"
+],
+"926": [
+"Fat g",
+"Grasas g"
+],
+"927": [
+"If you leave kcal empty I'll calculate them from macros (4/4/9).",
+"Si dejas las kcal vacías, las calculo a partir de los macros (4/4/9)."
+],
+"928": [
+"Add to {0}",
+"Añadir a {0}"
+],
+"929": [
+"New supplement",
+"Nuevo suplemento"
+],
+"930": [
+"Edit food",
+"Editar alimento"
+],
+"931": [
+"E.g. Vitamin D3 Prozis",
+"Ej. Vitamina D3 Prozis"
+],
+"932": [
+"E.g. Lidl Greek yogurt",
+"Ej. Yogur griego Lidl"
+],
+"933": [
+"1 pot",
+"1 tarrina"
+],
+"934": [
+"enter the serving weight",
+"introduce el peso de la ración"
+],
+"935": [
+"Values per 100 g (see the table on the package)",
+"Valores por 100 g (los encuentras en la tabla del envase)"
+],
+"936": [
+"of which sugars",
+"de los cuales azúcares"
+],
+"937": [
+"of which saturated",
+"de las cuales saturadas"
+],
+"938": [
+"Values per 1 serving.",
+"Valores por 1 ración."
+],
+"939": [
+"Values per 100 g.",
+"Valores por 100 g."
+],
+"940": [
+"Fill in only those on the label. {0}",
+"Rellena solo los que aparecen en la etiqueta. {0}"
+],
+"941": [
+"Delete food",
+"Eliminar alimento"
+],
+"942": [
+"Brand",
+"Marca"
+],
+"943": [
+"Barcode",
+"Código de barras"
+],
+"944": [
+"Serving (g)",
+"Ración (g)"
+],
+"945": [
+"Serving name",
+"Nombre de la ración"
+],
+"946": [
+"The values you enter are per",
+"Los valores que introduces son por"
+],
+"947": [
+"(optional)",
+"(opcional)"
+],
+"948": [
+"Food type",
+"Tipo de alimento"
+],
+"949": [
+"Used to separate fruit and milk sugars from added ones, and to estimate quality.",
+"Sirve para separar los azúcares de la fruta y la leche de los añadidos, y para estimar la calidad."
+],
+"950": [
+"Check with AI",
+"Revisar con IA"
+],
+"951": [
+"Fruit",
+"Fruta"
+],
+"952": [
+"Vegetables",
+"Verdura"
+],
+"953": [
+"Dairy",
+"Lácteos"
+],
+"954": [
+"Meat",
+"Carne"
+],
+"955": [
+"Fish",
+"Pescado"
+],
+"956": [
+"Eggs",
+"Huevos"
+],
+"957": [
+"Grains/bread",
+"Cereales/pan"
+],
+"958": [
+"Legumes",
+"Legumbres"
+],
+"959": [
+"Nuts",
+"Frutos secos"
+],
+"960": [
+"Sweets/snacks",
+"Dulces/snacks"
+],
+"961": [
+"Drinks",
+"Bebidas"
+],
+"962": [
+"Fats/oils",
+"Grasas/aceites"
+],
+"963": [
+"Sauces",
+"Salsas"
+],
+"964": [
+"Ready meal",
+"Plato preparado"
+],
+"965": [
+"Supplement",
+"Suplemento"
+],
+"966": [
+"Enter the serving weight in grams to convert the values.",
+"Introduce el peso de la ración en gramos para convertir los valores."
+],
+"967": [
+"Estimated quality (similar to Nutri-Score)",
+"Calidad estimada (similar al Nutri-Score)"
+],
+"968": [
+"One serving ({0} g)",
+"Una ración ({0} g)"
+],
+"969": [
+"Edit recipe",
+"Editar receta"
+],
+"970": [
+"{0} g · {1} kcal",
+"{0} g · {1} kcal"
+],
+"971": [
+"E.g. Protein porridge",
+"Ej. Porridge proteico"
+],
+"972": [
+"Recipe name",
+"Nombre de la receta"
+],
+"973": [
+"Servings",
+"Raciones"
+],
+"974": [
+"Cooked weight (g, optional)",
+"Peso cocinado (g, opcional)"
+],
+"975": [
+"Ingredients",
+"Ingredientes"
+],
+"976": [
+"Add ingredient",
+"Añadir ingrediente"
+],
+"977": [
+"My foods",
+"Mis alimentos"
+],
+"978": [
+"Recipe ·",
+"Receta ·"
+],
+"979": [
+"g per serving",
+"g por ración"
+],
+"980": [
+"Personal",
+"Personal"
+],
+"981": [
+"{0} · {1} kcal/100 g",
+"{0} · {1} kcal/100 g"
+],
+"982": [
+"No personal foods.",
+"No hay alimentos personales."
+],
+"983": [
+"{0} foods",
+"{0} alimentos"
+],
+"984": [
+"Save a meal from the diary (⋯ menu) to add it back with one tap.",
+"Guarda una comida desde el diario (menú ⋯) para volver a añadirla con un toque."
+],
+"985": [
+"Food",
+"Alimento"
+],
+"986": [
+"Recipe",
+"Receta"
+],
+"987": [
+"Foods and recipes",
+"Alimentos y recetas"
+],
+"988": [
+"Targets you entered. On the right, estimated maintenance for comparison.",
+"Objetivos introducidos por ti. A la derecha, el mantenimiento estimado, para comparar."
+],
+"989": [
+"Real maintenance: calculated from {0} days of diary and your weight (updates every Monday).",
+"Mantenimiento real: calculado a partir de {0} días de diario y de tu peso (se actualiza cada lunes)."
+],
+"990": [
+"Estimate using the Mifflin-St Jeor formula × activity.",
+"Estimación con la fórmula Mifflin-St Jeor × actividad."
+],
+"991": [
+"Real maintenance starts as soon as there's enough data (Progress → Body).",
+"El mantenimiento real empieza en cuanto haya datos suficientes (Progreso → Cuerpo)."
+],
+"992": [
+"You can turn on real maintenance below.",
+"Puedes activar el mantenimiento real aquí abajo."
+],
+"993": [
+"Weight: 7-day average from the body log.",
+"Peso: media de 7 días del registro corporal."
+],
+"994": [
+"Daily average",
+"Media diaria"
+],
+"995": [
+"Estimated maintenance",
+"Mantenimiento estimado"
+],
+"996": [
+"{0} kcal",
+"{0} kcal"
+],
+"997": [
+"Protein g",
+"Proteínas g"
+],
+"998": [
+"Carbs g",
+"Carbohidratos g"
+],
+"999": [
+"kcal training / rest",
+"kcal entreno / descanso"
+],
+"1000": [
+"Diet goals",
+"Objetivos de dieta"
+],
+"1001": [
+"Your targets (daily average)",
+"Tus objetivos (media diaria)"
+],
+"1002": [
+"Carbs are calculated from the remaining calories. For the maintenance comparison I still use the data below.",
+"Los carbohidratos se calculan con las calorías que quedan. Para comparar con el mantenimiento uso igualmente los datos de abajo."
+],
+"1003": [
+"Age",
+"Edad"
+],
+"1004": [
+"Height",
+"Altura"
+],
+"1005": [
+"last weigh-in",
+"último pesaje"
+],
+"1006": [
+"7-day avg",
+"media 7 d"
+],
+"1007": [
+"kg · {0}",
+"kg · {0}"
+],
+"1008": [
+"Weight used for calculations",
+"Peso usado para los cálculos"
+],
+"1009": [
+"7-day average · {0}",
+"Media 7 días · {0}"
+],
+"1010": [
+"Last weigh-in · {0}",
+"Último pesaje · {0}"
+],
+"1011": [
+"Weight comes from Progress → Body and updates on its own. I recommend the average: a single weigh-in swings 1–2 kg with water, salt and carbs, and would change your targets every day. Last weigh-in {0}.",
+"El peso viene de Progreso → Cuerpo y se actualiza solo. Te recomiendo la media: un solo pesaje oscila 1–2 kg por agua, sal y carbohidratos, y cambiaría los objetivos cada día. Último pesaje {0}."
+],
+"1012": [
+"Macros",
+"Macros"
+],
+"1013": [
+"1,6–2,2 g/kg is the best-supported range for lean mass",
+"1,6–2,2 g/kg es el rango con más evidencia para la masa magra"
+],
+"1014": [
+"Don't go below 0,6 g/kg",
+"No bajes de 0,6 g/kg"
+],
+"1015": [
+"Carbs are the rest of the calories.",
+"Los carbohidratos son el resto de las calorías."
+],
+"1016": [
+"Real maintenance",
+"Mantenimiento real"
+],
+"1017": [
+"Every Monday it recalculates maintenance from your diary and weight over the last 4 weeks. More accurate than the formula.",
+"Cada lunes recalcula el mantenimiento con el diario y el peso de las últimas 4 semanas. Más preciso que la fórmula."
+],
+"1018": [
+"Difference",
+"Diferencia"
+],
+"1019": [
+"Different targets",
+"Objetivos distintos"
+],
+"1020": [
+"Auto calculation",
+"Cálculo automático"
+],
+"1021": [
+"I'll enter them",
+"Los introduzco yo"
+],
+"1022": [
+"Ask AI for advice",
+"Pide consejo a la IA"
+],
+"1023": [
+"Male",
+"Hombre"
+],
+"1024": [
+"Female",
+"Mujer"
+],
+"1025": [
+"Activity",
+"Actividad"
+],
+"1026": [
+"Training and rest",
+"Entrenamiento y descanso"
+],
+"1027": [
+"More carbs on training days, fewer on rest days. The weekly average stays the same.",
+"Más carbohidratos los días de entrenamiento, menos en descanso. La media semanal no cambia."
+],
+"1028": [
+"Usual training days",
+"Días de entrenamiento habituales"
+],
+"1029": [
+"If you log a workout, that day automatically becomes \"training\". You can change it manually from the diary.",
+"Si registras un entrenamiento, ese día pasa automáticamente a \"entrenamiento\". Puedes cambiarlo a mano desde el diario."
+],
+"1030": [
+"7 days",
+"7 días"
+],
+"1031": [
+"30 days",
+"30 días"
+],
+"1032": [
+"90 days",
+"90 días"
+],
+"1033": [
+"Deficit",
+"Déficit"
+],
+"1034": [
+"Surplus",
+"Superávit"
+],
+"1035": [
+"lost",
+"de menos"
+],
+"1036": [
+"gained",
+"de más"
+],
+"1037": [
+"full day",
+"día completo"
+],
+"1038": [
+"full days",
+"días completos"
+],
+"1039": [
+"Today is excluded until it's over.",
+"Hoy queda excluido hasta que termine."
+],
+"1040": [
+"Real weight (7-day average) is moving at {0} kg a week.",
+"El peso real (media 7 días) va a {0} kg por semana."
+],
+"1041": [
+"It's an estimate: real weight (Progress → Body) will show how accurate it is.",
+"Es una estimación: el peso real (Progreso → Cuerpo) dirá lo preciso que es."
+],
+"1042": [
+"{0} in the period",
+"{0} en el periodo"
+],
+"1043": [
+"{0}{1} kcal",
+"{0}{1} kcal"
+],
+"1044": [
+"≈ {0} kg of fat {1} (7700 kcal/kg) · avg {2}{3} kcal/day",
+"≈ {0} kg de grasa {1} (7700 kcal/kg) · media {2}{3} kcal/día"
+],
+"1045": [
+"Calculated over {0} {1} against your targets. {2}{3}",
+"Calculado sobre {0} {1} respecto a tus objetivos. {2}{3}"
+],
+"1046": [
+"No days logged in this period",
+"No hay días registrados en este periodo"
+],
+"1047": [
+"day logged",
+"día registrado"
+],
+"1048": [
+"days logged",
+"días registrados"
+],
+"1049": [
+"{0} times · {1} kcal/day on average",
+"{0} veces · {1} kcal/día de media"
+],
+"1050": [
+"Where the calories come from",
+"De dónde vienen las calorías"
+],
+"1051": [
+"· mostly at",
+"· sobre todo en"
+],
+"1052": [
+"· strong pairing",
+"· combinación fuerte"
+],
+"1053": [
+"{0} times{1}{2}",
+"{0} veces{1}{2}"
+],
+"1054": [
+"Meal analysis (market basket): counts which foods end up together in the same meal.",
+"Análisis de comidas (market basket): cuenta qué alimentos acaban juntos en la misma comida."
+],
+"1055": [
+"You need at least two meals with the same foods to find combinations.",
+"Hacen falta al menos dos comidas con los mismos alimentos para encontrar combinaciones."
+],
+"1056": [
+"Frequent combinations",
+"Combinaciones frecuentes"
+],
+"1057": [
+"kcal {0}",
+"kcal {0}"
+],
+"1058": [
+"Protein {0}",
+"Proteínas {0}"
+],
+"1059": [
+"Days within ±10%",
+"Días a ±10%"
+],
+"1060": [
+"AI analysis",
+"Análisis IA"
+],
+"1061": [
+"Copy for Claude",
+"Copiar para Claude"
+],
+"1062": [
+"Food quality",
+"Calidad de los alimentos"
+],
+"1063": [
+"Good (A–B)",
+"Buena (A–B)"
+],
+"1064": [
+"Average (C)",
+"Media (C)"
+],
+"1065": [
+"Low (D–E)",
+"Baja (D–E)"
+],
+"1066": [
+"Daily average. The WHO limit only applies to added sugars (orange): those from whole fruit and milk don't count.",
+"Media diaria. El límite de la OMS solo afecta a los azúcares añadidos (naranja): los de la fruta entera y la leche no cuentan."
+],
+"1067": [
+"Meal split",
+"Reparto de comidas"
+],
+"1068": [
+"Most eaten foods",
+"Alimentos más consumidos"
+],
+"1069": [
+"Or type the code (EAN)",
+"O escribe el código (EAN)"
+],
+"1070": [
+"Scan",
+"Escanear"
+],
+"1071": [
+"Point at the barcode on the package",
+"Enfoca el código de barras del envase"
+],
+"1072": [
+"Starting camera…",
+"Iniciando cámara…"
+],
+"1073": [
+"Camera unavailable: allow access in Settings → Safari → Camera, or type the code below.",
+"Cámara no disponible: permite el acceso en Ajustes → Safari → Cámara, o escribe el código abajo."
+],
+"1074": [
+"The scanner works in the installed app. Here you can type the code manually.",
+"El escáner funciona en la app instalada. Aquí puedes escribir el código a mano."
+],
+"1075": [
+"Looking up the product",
+"Buscando el producto"
+],
+"1076": [
+"Product not found: enter the values from the package",
+"Producto no encontrado: introduce los valores del envase"
+],
+"1077": [
+"You're offline: internet is needed to look up the product.",
+"Estás sin conexión: hace falta internet para buscar el producto."
+],
+"1078": [
+"Open Food Facts isn't responding. Try again.",
+"Open Food Facts no responde. Vuelve a intentarlo."
+],
+"1079": [
+"Barcode lookup works in the installed app.",
+"La búsqueda por código funciona en la app instalada."
+],
+"1080": [
+"Check age, height and weight",
+"Revisa edad, altura y peso"
+],
+"1081": [
+"Goals saved",
+"Objetivos guardados"
+],
+"1082": [
+"Enter an amount",
+"Introduce una cantidad"
+],
+"1083": [
+"Saved",
+"Guardado"
+],
+"1084": [
+"{0} added to supplements",
+"{0} añadido a los suplementos"
+],
+"1085": [
+"{0} · {1} kcal added to {2}",
+"{0} · {1} kcal añadidas a {2}"
+],
+"1086": [
+"{0} kcal · {1} P · {2} C · {3} F",
+"{0} kcal · {1} P · {2} C · {3} G"
+],
+"1087": [
+"Deleted",
+"Eliminado"
+],
+"1088": [
+"Enter at least the calories",
+"Introduce al menos las calorías"
+],
+"1089": [
+"Added",
+"Añadido"
+],
+"1090": [
+"Copy from yesterday",
+"Copiar de ayer"
+],
+"1091": [
+"Meal copied",
+"Comida copiada"
+],
+"1092": [
+"Save as meal",
+"Guardar como comida"
+],
+"1093": [
+"Add it back with one tap from \"Saved meals\"",
+"La vuelves a añadir con un toque desde \"Comidas guardadas\""
+],
+"1094": [
+"Meal saved as \"",
+"Comida guardada como \""
+],
+"1095": [
+"Clear meal",
+"Vaciar comida"
+],
+"1096": [
+"\"{0}\" added",
+"\"{0}\" añadido"
+],
+"1097": [
+"Saved in \"Saved meals\"",
+"Guardada en \"Comidas guardadas\""
+],
+"1098": [
+"Enter the serving weight first",
+"Primero introduce el peso de la ración"
+],
+"1099": [
+"Name the food",
+"Ponle nombre al alimento"
+],
+"1100": [
+"Enter the serving weight",
+"Introduce el peso de la ración"
+],
+"1101": [
+"Check the values",
+"Revisa los valores"
+],
+"1102": [
+"Save it anyway?",
+"¿Quieres guardarlo igualmente?"
+],
+"1103": [
+"Save anyway",
+"Guardar igualmente"
+],
+"1104": [
+"Food saved",
+"Alimento guardado"
+],
+"1105": [
+"Food deleted",
+"Alimento eliminado"
+],
+"1106": [
+"Name the recipe",
+"Ponle nombre a la receta"
+],
+"1107": [
+"Add at least one ingredient",
+"Añade al menos un ingrediente"
+],
+"1108": [
+"Recipe saved",
+"Receta guardada"
+],
+"1109": [
+"The code has at least 8 digits",
+"El código tiene al menos 8 cifras"
+],
+"1110": [
+"Waist",
+"Cintura"
+],
+"1111": [
+"Hips",
+"Caderas"
+],
+"1112": [
+"Arm",
+"Brazo"
+],
+"1113": [
+"Thigh",
+"Muslo"
+],
+"1114": [
+"Calf",
+"Gemelo"
+],
+"1115": [
+"Body fat",
+"Grasa corporal"
+],
+"1116": [
+"Muscle mass",
+"Masa muscular"
+],
+"1117": [
+"Water",
+"Agua"
+],
+"1118": [
+"Steps",
+"Pasos"
+],
+"1119": [
+"Sleep",
+"Sueño"
+],
+"1120": [
+"HRV",
+"HRV"
+],
+"1121": [
+"Resting HR",
+"FC en reposo"
+],
+"1122": [
+"Active calories",
+"Calorías activas"
+],
+"1123": [
+"You're losing {0}% a week: too fast. Above 1% you risk losing muscle and strength. Add ~150–200 kcal.",
+"Bajas un {0}% por semana: demasiado rápido. Por encima del 1% te arriesgas a perder músculo y fuerza. Añade ~150–200 kcal."
+],
+"1124": [
+"Weight stalled in recent weeks. If your diary is accurate, cut 150–200 kcal or add 2–3 thousand steps a day.",
+"Peso estancado en las últimas semanas. Si el diario es preciso, quita 150–200 kcal o añade 2–3 mil pasos al día."
+],
+"1125": [
+"Good pace: {0} kg a week ({1}%). Between 0,5 and 1% a week you keep your muscle.",
+"Buen ritmo: {0} kg por semana ({1}%). Entre 0,5 y 1% por semana mantienes el músculo."
+],
+"1126": [
+"You're gaining {0}% a week: too fast, you're mostly adding fat. Cut ~150 kcal.",
+"Subes un {0}% por semana: demasiado rápido, acumulas sobre todo grasa. Quita ~150 kcal."
+],
+"1127": [
+"Weight isn't going up. To build muscle add ~150 kcal, ideally from carbs around your workout.",
+"El peso no sube. Para ganar músculo añade ~150 kcal, mejor de carbohidratos alrededor del entrenamiento."
+],
+"1128": [
+"Lean bulk: +{0} kg a week ({1}%). Ideal range 0,25–0,5%.",
+"Volumen limpio: +{0} kg por semana ({1}%). Rango ideal 0,25–0,5%."
+],
+"1129": [
+"Goal is maintenance but your weight {0} by {1} kg a week. {2} ~150 kcal.",
+"Objetivo mantenimiento pero el peso {0} {1} kg por semana. {2} ~150 kcal."
+],
+"1130": [
+"Stable weight, in line with maintenance.",
+"Peso estable, en línea con el mantenimiento."
+],
+"1131": [
+"Weigh yourself 3–4 times a week, in the morning on an empty stomach after the bathroom. After 7 days you'll see the average and real pace.",
+"Pésate 3–4 veces por semana, por la mañana en ayunas después de ir al baño. A los 7 días verás la media y el ritmo real."
+],
+"1132": [
+"Navy estimate (measurements)",
+"estimación Navy (medidas)"
+],
+"1133": [
+"below average",
+"por debajo de la media"
+],
+"1134": [
+"average",
+"en la media"
+],
+"1135": [
+"above average",
+"por encima de la media"
+],
+"1136": [
+"very rare without drugs",
+"muy raro sin fármacos"
+],
+"1137": [
+"You need at least two values for the chart.",
+"Hacen falta al menos dos valores para el gráfico."
+],
+"1138": [
+"{0} trend",
+"Evolución {0}"
+],
+"1139": [
+"1 year",
+"1 año"
+],
+"1140": [
+"All",
+"Todo"
+],
+"1141": [
+"kg a week",
+"kg por semana"
+],
+"1142": [
+"Goal {0} kg · change",
+"Objetivo {0} kg · cambiar"
+],
+"1143": [
+"Set a goal weight",
+"Fija un peso objetivo"
+],
+"1144": [
+"Weight · 7-day average",
+"Peso · media 7 días"
+],
+"1145": [
+"Last weigh-in {0} kg · {1}",
+"Último pesaje {0} kg · {1}"
+],
+"1146": [
+"Log",
+"Registrar"
+],
+"1147": [
+"Log your first weight",
+"Registra tu primer peso"
+],
+"1148": [
+"Weigh yourself in the morning, on an empty stomach, after the bathroom. The app averages 7 days: water and salt swings won't fool you anymore.",
+"Pésate por la mañana, en ayunas, después de ir al baño. La app hace la media de 7 días: las oscilaciones de agua y sal ya no te engañan."
+],
+"1149": [
+"Log weight",
+"Registrar peso"
+],
+"1150": [
+"Weight trend",
+"Evolución del peso"
+],
+"1151": [
+"Gray dots: single weigh-ins. Line: average of the last 7 days.",
+"Puntos grises: pesajes individuales. Línea: media de los últimos 7 días."
+],
+"1152": [
+"Day history",
+"Historial de días"
+],
+"1153": [
+"{0} days logged",
+"{0} días registrados"
+]
+}

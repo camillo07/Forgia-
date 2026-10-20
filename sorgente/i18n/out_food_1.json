@@ -1,0 +1,1766 @@
+{
+"q12729": [
+"Edam",
+"Edam"
+],
+"q12736": [
+"Gouda",
+"Gouda"
+],
+"q12747": [
+"Pyrenees sheep's cheese",
+"Queso de oveja de los Pirineos"
+],
+"q12827": [
+"Sheep's cheese (pressed)",
+"Queso de oveja (pasta prensada)"
+],
+"q12749": [
+"Raclette",
+"Raclette"
+],
+"q12758": [
+"Toma",
+"Toma"
+],
+"q12760": [
+"Light cheese (pressed)",
+"Queso light (pasta prensada)"
+],
+"q12761": [
+"Asiago",
+"Asiago"
+],
+"q12300": [
+"Processed cheese slices",
+"Lonchas de queso fundido"
+],
+"q12310": [
+"Processed cheese portions",
+"Quesitos"
+],
+"q12061": [
+"Feta",
+"Feta"
+],
+"q12060": [
+"Feta-style cheese (cow's milk)",
+"Queso tipo feta (de vaca)"
+],
+"q12315": [
+"Cream cheese (Philadelphia type)",
+"Queso crema (tipo Philadelphia)"
+],
+"q12340": [
+"Light cream cheese",
+"Queso crema light"
+],
+"q19584": [
+"Mascarpone",
+"Mascarpone"
+],
+"q22010": [
+"Hard-boiled egg",
+"Huevo duro"
+],
+"q22011": [
+"Poached egg",
+"Huevo escalfado"
+],
+"q22502": [
+"Scrambled eggs",
+"Huevos revueltos"
+],
+"q22505": [
+"Fried egg",
+"Huevo frito"
+],
+"q22002": [
+"Egg yolk",
+"Yema de huevo"
+],
+"q22050": [
+"Quail eggs",
+"Huevos de codorniz"
+],
+"q22506": [
+"Cheese omelette",
+"Tortilla francesa con queso"
+],
+"q22508": [
+"Mushroom omelette",
+"Tortilla francesa con champiñones"
+],
+"q6103": [
+"Beef, rib-eye steak (raw)",
+"Ternera, entrecot (crudo)"
+],
+"q6111": [
+"Beef, sirloin (raw)",
+"Ternera, lomo bajo (crudo)"
+],
+"q6206": [
+"Beef, rump (raw)",
+"Ternera, cadera (cruda)"
+],
+"q6212": [
+"Beef, flank steak (raw)",
+"Ternera, falda (cruda)"
+],
+"q6252": [
+"Beef burger 10% fat (raw)",
+"Hamburguesa de ternera 10% (cruda)"
+],
+"q6256": [
+"Beef burger 20% fat (raw)",
+"Hamburguesa de ternera 20% (cruda)"
+],
+"q6231": [
+"Stewing beef (raw)",
+"Ternera para guisar (cruda)"
+],
+"q6521": [
+"Veal, topside/escalope (raw)",
+"Ternera blanca, tapa/escalope (cruda)"
+],
+"q6530": [
+"Veal, tenderloin (raw)",
+"Ternera blanca, solomillo (crudo)"
+],
+"q28100": [
+"Pork chop (raw)",
+"Chuleta de cerdo (cruda)"
+],
+"q28204": [
+"Pork tenderloin (raw)",
+"Solomillo de cerdo (crudo)"
+],
+"q28400": [
+"Pork ribs (raw)",
+"Costillas de cerdo (crudas)"
+],
+"q28475": [
+"Minced pork 10% fat",
+"Carne picada de cerdo 10%"
+],
+"q36002": [
+"Chicken, leg with skin (raw)",
+"Pollo, muslo con piel (crudo)"
+],
+"q36003": [
+"Chicken, meat (raw)",
+"Pollo, carne (cruda)"
+],
+"q36019": [
+"Chicken, skinless thigh (raw)",
+"Pollo, contramuslo sin piel (crudo)"
+],
+"q36022": [
+"Chicken, drumstick (raw)",
+"Pollo, jamoncito (crudo)"
+],
+"q36023": [
+"Chicken, wings with skin (raw)",
+"Pollo, alitas con piel (crudas)"
+],
+"q36301": [
+"Turkey, meat (raw)",
+"Pavo, carne (cruda)"
+],
+"q21500": [
+"Lamb, chops (raw)",
+"Cordero, chuletas (crudas)"
+],
+"q21502": [
+"Lamb, leg (raw)",
+"Cordero, pierna (cruda)"
+],
+"q6901": [
+"Horse steak (raw)",
+"Filete de caballo (crudo)"
+],
+"q34001": [
+"Rabbit (raw)",
+"Conejo (crudo)"
+],
+"q36206": [
+"Duck breast (raw)",
+"Magret de pato (crudo)"
+],
+"q14002": [
+"Wild boar (raw)",
+"Jabalí (crudo)"
+],
+"q14005": [
+"Roe deer (raw)",
+"Corzo (crudo)"
+],
+"q40106": [
+"Calf's liver (raw)",
+"Hígado de ternera (crudo)"
+],
+"q40111": [
+"Chicken liver (raw)",
+"Hígado de pollo (crudo)"
+],
+"q6100": [
+"Grilled beef rib-eye steak",
+"Entrecot de ternera a la plancha"
+],
+"q6110": [
+"Grilled beef sirloin",
+"Lomo bajo de ternera a la plancha"
+],
+"q6200": [
+"Grilled beef steak",
+"Filete de ternera a la plancha"
+],
+"q6210": [
+"Roast beef",
+"Rosbif"
+],
+"q6101": [
+"Braised beef",
+"Ternera estofada"
+],
+"q6253": [
+"Beef burger 10% fat (cooked)",
+"Hamburguesa de ternera 10% (cocida)"
+],
+"q6257": [
+"Beef burger 20% fat (cooked)",
+"Hamburguesa de ternera 20% (cocida)"
+],
+"q6520": [
+"Veal escalope (cooked)",
+"Escalope de ternera (cocido)"
+],
+"q28007": [
+"Pork loin (cooked)",
+"Lomo de cerdo (cocido)"
+],
+"q28101": [
+"Grilled pork chop",
+"Chuleta de cerdo a la plancha"
+],
+"q28203": [
+"Pork tenderloin (cooked)",
+"Solomillo de cerdo (cocido)"
+],
+"q28401": [
+"Pork ribs (cooked)",
+"Costillas de cerdo (cocidas)"
+],
+"q36005": [
+"Roast chicken with skin",
+"Pollo asado con piel"
+],
+"q36004": [
+"Roast chicken leg",
+"Muslo de pollo asado"
+],
+"q36033": [
+"Roast chicken wings",
+"Alitas de pollo asadas"
+],
+"q36302": [
+"Roast turkey",
+"Pavo asado"
+],
+"q36306": [
+"Pan-fried turkey breast",
+"Pechuga de pavo a la sartén"
+],
+"q21501": [
+"Grilled lamb chops",
+"Chuletas de cordero a la plancha"
+],
+"q21503": [
+"Roast leg of lamb",
+"Pierna de cordero asada"
+],
+"q34002": [
+"Cooked rabbit",
+"Conejo cocinado"
+],
+"q36205": [
+"Grilled duck breast",
+"Magret de pato a la plancha"
+],
+"q6907": [
+"Grilled horse meat",
+"Carne de caballo a la plancha"
+],
+"q40116": [
+"Cooked chicken liver",
+"Hígado de pollo cocinado"
+],
+"q40107": [
+"Cooked calf's liver",
+"Hígado de ternera cocinado"
+],
+"q25163": [
+"Beef meatballs",
+"Albóndigas de ternera"
+],
+"q25089": [
+"Chicken cordon bleu",
+"Cordon bleu de pollo"
+],
+"q36027": [
+"Chicken nuggets",
+"Nuggets de pollo"
+],
+"q36036": [
+"Breaded chicken cutlet",
+"Escalope de pollo empanado"
+],
+"q25504": [
+"Chicken skewers",
+"Brochetas de pollo"
+],
+"q25505": [
+"Beef skewers",
+"Brochetas de ternera"
+],
+"q25566": [
+"Pork skewers",
+"Brochetas de cerdo"
+],
+"q20914": [
+"Veggie burger",
+"Hamburguesa vegetal"
+],
+"q20917": [
+"Tempeh",
+"Tempeh"
+],
+"q20916": [
+"Miso",
+"Miso"
+],
+"q28963": [
+"Sliced chicken breast (cold cut)",
+"Pechuga de pollo en lonchas (fiambre)"
+],
+"q28964": [
+"Sliced turkey breast (cold cut)",
+"Pechuga de pavo en lonchas (fiambre)"
+],
+"q28900": [
+"Premium cooked ham",
+"Jamón cocido extra"
+],
+"q28802": [
+"Lean cured ham",
+"Jamón curado sin grasa"
+],
+"q28844": [
+"Prosciutto di Parma",
+"Prosciutto di Parma"
+],
+"q28850": [
+"Coppa",
+"Coppa"
+],
+"q28858": [
+"Rolled pancetta",
+"Panceta enrollada"
+],
+"q28501": [
+"Diced pancetta (raw)",
+"Taquitos de panceta (crudos)"
+],
+"q28725": [
+"Cooked smoked bacon",
+"Bacon ahumado cocinado"
+],
+"q28727": [
+"Back bacon",
+"Bacon de lomo"
+],
+"q28860": [
+"Air-dried beef (Bündnerfleisch type)",
+"Cecina de ternera (tipo carne de los Grisones)"
+],
+"q30300": [
+"Salami",
+"Salami"
+],
+"q30350": [
+"Milano-style salami",
+"Salami tipo Milano"
+],
+"q30789": [
+"Mortadella",
+"Mortadela"
+],
+"q30134": [
+"Frankfurters",
+"Salchichas Frankfurt"
+],
+"q30131": [
+"Chicken frankfurters",
+"Salchichas de pollo"
+],
+"q30110": [
+"Pork sausage (raw)",
+"Salchicha de cerdo (cruda)"
+],
+"q30011": [
+"Pork sausage (cooked)",
+"Salchicha de cerdo (cocida)"
+],
+"q30150": [
+"Merguez",
+"Merguez"
+],
+"q30317": [
+"Spicy chorizo",
+"Chorizo picante"
+],
+"q8211": [
+"Country pâté",
+"Paté de campaña"
+],
+"q8316": [
+"Chicken liver pâté",
+"Paté de hígado de pollo"
+],
+"q8321": [
+"Foie gras",
+"Foie gras"
+],
+"q8111": [
+"Smoked duck breast",
+"Magret de pato ahumado"
+],
+"q28505": [
+"Corned beef",
+"Corned beef"
+],
+"q8703": [
+"Black pudding",
+"Morcilla"
+],
+"q26006": [
+"Alaska pollock (raw)",
+"Abadejo de Alaska (crudo)"
+],
+"q26009": [
+"Halibut (raw)",
+"Fletán (crudo)"
+],
+"q26011": [
+"Herring (raw)",
+"Arenque (crudo)"
+],
+"q26018": [
+"Monkfish (raw)",
+"Rape (crudo)"
+],
+"q26044": [
+"Hake (raw)",
+"Merluza (cruda)"
+],
+"q26051": [
+"Mackerel (raw)",
+"Caballa (cruda)"
+],
+"q26052": [
+"Skate (raw)",
+"Raya (cruda)"
+],
+"q26053": [
+"Fresh tuna (raw)",
+"Atún fresco (crudo)"
+],
+"q26058": [
+"Sole (raw)",
+"Lenguado (crudo)"
+],
+"q26065": [
+"Sardines (raw)",
+"Sardinas (crudas)"
+],
+"q26069": [
+"Bluefin tuna (raw)",
+"Atún rojo (crudo)"
+],
+"q26072": [
+"Sea bass (raw)",
+"Lubina (cruda)"
+],
+"q26079": [
+"Anchovies (raw)",
+"Boquerones (crudos)"
+],
+"q26080": [
+"Sea bream (raw)",
+"Dorada (cruda)"
+],
+"q26082": [
+"Swordfish (raw)",
+"Pez espada (crudo)"
+],
+"q26085": [
+"Red mullet (raw)",
+"Salmonete (crudo)"
+],
+"q26095": [
+"Whiting (raw)",
+"Merlán (crudo)"
+],
+"q26098": [
+"Dried salt cod",
+"Bacalao seco salado"
+],
+"q26104": [
+"John Dory (raw)",
+"Pez de San Pedro (crudo)"
+],
+"q26122": [
+"Haddock (raw)",
+"Eglefino (crudo)"
+],
+"q26161": [
+"Wild salmon (raw)",
+"Salmón salvaje (crudo)"
+],
+"q26178": [
+"Grouper (raw)",
+"Mero (crudo)"
+],
+"q26174": [
+"Turbot (raw)",
+"Rodaballo (crudo)"
+],
+"q26213": [
+"Hoki (raw)",
+"Hoki (crudo)"
+],
+"q27008": [
+"Farmed trout (raw)",
+"Trucha de piscifactoría (cruda)"
+],
+"q27011": [
+"Pike (raw)",
+"Lucio (crudo)"
+],
+"q27017": [
+"Pangasius (raw)",
+"Panga (cruda)"
+],
+"q27019": [
+"Tilapia (raw)",
+"Tilapia (cruda)"
+],
+"q27021": [
+"Salmon trout (raw)",
+"Trucha asalmonada (cruda)"
+],
+"q27024": [
+"Zander (raw)",
+"Lucioperca (cruda)"
+],
+"q27003": [
+"Carp (raw)",
+"Carpa (cruda)"
+],
+"q25996": [
+"Cooked salmon",
+"Salmón cocinado"
+],
+"q25997": [
+"Cooked cod",
+"Bacalao cocinado"
+],
+"q26023": [
+"Baked cod",
+"Bacalao al horno"
+],
+"q26038": [
+"Steamed salmon",
+"Salmón al vapor"
+],
+"q26229": [
+"Pan-fried salmon",
+"Salmón a la sartén"
+],
+"q26041": [
+"Baked tuna",
+"Atún al horno"
+],
+"q26019": [
+"Baked mackerel",
+"Caballa al horno"
+],
+"q26136": [
+"Grilled sardines",
+"Sardinas a la plancha"
+],
+"q26060": [
+"Baked sole",
+"Lenguado al horno"
+],
+"q26062": [
+"Fried sole",
+"Lenguado frito"
+],
+"q26093": [
+"Baked swordfish",
+"Pez espada al horno"
+],
+"q27006": [
+"Baked trout",
+"Trucha al horno"
+],
+"q27030": [
+"Baked sea bass",
+"Lubina al horno"
+],
+"q26222": [
+"Baked sea bream",
+"Dorada al horno"
+],
+"q27018": [
+"Cooked pangasius",
+"Panga cocinada"
+],
+"q26090": [
+"Smoked haddock",
+"Eglefino ahumado"
+],
+"q26087": [
+"Smoked mackerel",
+"Caballa ahumada"
+],
+"q27029": [
+"Smoked trout",
+"Trucha ahumada"
+],
+"q26034": [
+"Sardines in oil (drained)",
+"Sardinas en aceite (escurridas)"
+],
+"q26035": [
+"Sardines in tomato sauce",
+"Sardinas en tomate"
+],
+"q26123": [
+"Mackerel in brine (canned)",
+"Caballa al natural (en conserva)"
+],
+"q26086": [
+"Mackerel in tomato sauce (canned)",
+"Caballa en tomate (en conserva)"
+],
+"q26119": [
+"Canned salmon",
+"Salmón en conserva"
+],
+"q26000": [
+"Anchovy fillets in oil",
+"Filetes de anchoa en aceite"
+],
+"q26187": [
+"Marinated anchovies",
+"Boquerones en vinagre"
+],
+"q26010": [
+"Marinated herring",
+"Arenque marinado"
+],
+"q26046": [
+"Surimi (sticks)",
+"Surimi (palitos)"
+],
+"q26029": [
+"Fish fingers (raw, frozen)",
+"Palitos de pescado (crudos, congelados)"
+],
+"q26030": [
+"Fried breaded fish",
+"Pescado empanado frito"
+],
+"q26028": [
+"Fish croquettes",
+"Croquetas de pescado"
+],
+"q26005": [
+"Caviar",
+"Caviar"
+],
+"q26275": [
+"Salmon roe",
+"Huevas de salmón"
+],
+"q8293": [
+"Taramasalata",
+"Taramasalata"
+],
+"q10001": [
+"Squid (raw)",
+"Calamares (crudos)"
+],
+"q10003": [
+"Scallops (raw)",
+"Vieiras (crudas)"
+],
+"q10010": [
+"Lobster (raw)",
+"Bogavante (crudo)"
+],
+"q10011": [
+"Oysters",
+"Ostras"
+],
+"q10014": [
+"Mussels (raw)",
+"Mejillones (crudos)"
+],
+"q10016": [
+"Cuttlefish (raw)",
+"Sepia (cruda)"
+],
+"q10017": [
+"Clams (raw)",
+"Almejas (crudas)"
+],
+"q10018": [
+"Octopus (raw)",
+"Pulpo (crudo)"
+],
+"q10024": [
+"Langoustines (raw)",
+"Cigalas (crudas)"
+],
+"q10039": [
+"Crab (raw)",
+"Cangrejo (crudo)"
+],
+"q10007": [
+"Cooked prawns",
+"Gambas cocidas"
+],
+"q10013": [
+"Cooked mussels",
+"Mejillones cocidos"
+],
+"q10027": [
+"Cooked clams",
+"Almejas cocidas"
+],
+"q10037": [
+"Boiled squid",
+"Calamares hervidos"
+],
+"q10084": [
+"Fried squid",
+"Calamares fritos"
+],
+"q10079": [
+"Cooked octopus",
+"Pulpo cocido"
+],
+"q10043": [
+"Mixed seafood",
+"Marisco variado"
+],
+"q10080": [
+"Frozen cooked seafood",
+"Marisco congelado cocido"
+],
+"q10012": [
+"Fried breaded langoustines",
+"Cigalas empanadas fritas"
+],
+"q10023": [
+"Prawn fritters",
+"Buñuelos de gambas"
+],
+"q10005": [
+"Crab meat",
+"Carne de cangrejo"
+],
+"q10009": [
+"Boiled lobster",
+"Bogavante hervido"
+],
+"q16402": [
+"Salted butter",
+"Mantequilla con sal"
+],
+"q16412": [
+"Light butter",
+"Mantequilla light"
+],
+"q16614": [
+"Margarine",
+"Margarina"
+],
+"q16520": [
+"Lard",
+"Manteca de cerdo"
+],
+"q17040": [
+"Peanut oil",
+"Aceite de cacahuete"
+],
+"q17130": [
+"Rapeseed oil",
+"Aceite de colza"
+],
+"q17180": [
+"Linseed oil",
+"Aceite de linaza"
+],
+"q17190": [
+"Corn oil",
+"Aceite de maíz"
+],
+"q17400": [
+"Sesame oil",
+"Aceite de sésamo"
+],
+"q17440": [
+"Sunflower oil",
+"Aceite de girasol"
+],
+"q18041": [
+"Coconut milk",
+"Leche de coco"
+],
+"q11079": [
+"Light mayonnaise",
+"Mayonesa light"
+],
+"q11100": [
+"Barbecue sauce",
+"Salsa barbacoa"
+],
+"q11104": [
+"Soy sauce",
+"Salsa de soja"
+],
+"q11110": [
+"Vinaigrette",
+"Vinagreta"
+],
+"q11109": [
+"Light vinaigrette",
+"Vinagreta light"
+],
+"q11013": [
+"Mustard",
+"Mostaza"
+],
+"q11018": [
+"Vinegar",
+"Vinagre"
+],
+"q11043": [
+"Tapenade (olive paste)",
+"Tapenade (paté de aceitunas)"
+],
+"q11112": [
+"Harissa",
+"Harissa"
+],
+"q11166": [
+"Yogurt sauce",
+"Salsa de yogur"
+],
+"q11168": [
+"Aioli",
+"Alioli"
+],
+"q11196": [
+"Burger sauce",
+"Salsa para hamburguesas"
+],
+"q11203": [
+"Kebab sauce",
+"Salsa kebab"
+],
+"q11301": [
+"Teriyaki sauce",
+"Salsa teriyaki"
+],
+"q11163": [
+"Sweet and sour sauce",
+"Salsa agridulce"
+],
+"q11101": [
+"Béchamel sauce",
+"Bechamel"
+],
+"q11143": [
+"Homemade béchamel sauce",
+"Bechamel casera"
+],
+"q11114": [
+"Bolognese sauce",
+"Salsa boloñesa"
+],
+"q11107": [
+"Tomato and onion sauce",
+"Salsa de tomate con cebolla"
+],
+"q11178": [
+"Olive sauce",
+"Salsa de aceitunas"
+],
+"q11210": [
+"Red pesto",
+"Pesto rojo"
+],
+"q11128": [
+"Carbonara sauce (ready-made)",
+"Salsa carbonara (preparada)"
+],
+"q11132": [
+"Curry sauce",
+"Salsa de curry"
+],
+"q11202": [
+"Tikka masala sauce",
+"Salsa tikka masala"
+],
+"q11189": [
+"Cheese sauce",
+"Salsa de quesos"
+],
+"q25620": [
+"Guacamole",
+"Guacamole"
+],
+"q25621": [
+"Hummus",
+"Hummus"
+],
+"q11009": [
+"Nutritional yeast flakes",
+"Levadura nutricional en copos"
+],
+"q11001": [
+"Stock cube / granulated stock",
+"Pastilla de caldo / caldo granulado"
+],
+"q31017": [
+"Brown sugar",
+"Azúcar moreno"
+],
+"q31034": [
+"Maple syrup",
+"Sirope de arce"
+],
+"q31089": [
+"Agave syrup",
+"Sirope de agave"
+],
+"q31087": [
+"Stevia sweetener",
+"Edulcorante de stevia"
+],
+"q31037": [
+"Apricot jam",
+"Mermelada de albaricoque"
+],
+"q31039": [
+"Orange marmalade",
+"Mermelada de naranja"
+],
+"q31110": [
+"Light jam",
+"Mermelada light"
+],
+"q31040": [
+"Dulce de leche",
+"Dulce de leche"
+],
+"q31004": [
+"Milk chocolate",
+"Chocolate con leche"
+],
+"q31005": [
+"Dark chocolate (<70%)",
+"Chocolate negro (<70%)"
+],
+"q31010": [
+"White chocolate",
+"Chocolate blanco"
+],
+"q31000": [
+"Chocolate biscuit bar",
+"Barrita de chocolate con galleta"
+],
+"q31001": [
+"Chocolate caramel bar",
+"Barrita de chocolate y caramelo"
+],
+"q31012": [
+"Chocolate eggs/pralines",
+"Huevitos/bombones de chocolate"
+],
+"q31066": [
+"Rocher (pralines)",
+"Rocher (bombones)"
+],
+"q31003": [
+"Hard candy",
+"Caramelos"
+],
+"q31060": [
+"Gummy sweets",
+"Gominolas"
+],
+"q31050": [
+"Marshmallows",
+"Nubes (marshmallows)"
+],
+"q31033": [
+"Nougat",
+"Turrón"
+],
+"q31014": [
+"Fruit jellies",
+"Gominolas de fruta"
+],
+"q24000": [
+"Plain biscuits",
+"Galletas María"
+],
+"q24009": [
+"Speculoos",
+"Speculoos"
+],
+"q24015": [
+"Butter biscuits (petit beurre)",
+"Galletas de mantequilla (petit beurre)"
+],
+"q24034": [
+"Breakfast biscuits",
+"Galletas de desayuno"
+],
+"q24036": [
+"Chocolate biscuits",
+"Galletas de chocolate"
+],
+"q24225": [
+"Sandwich cookies (Oreo type)",
+"Galletas rellenas (tipo Oreo)"
+],
+"q24311": [
+"Chocolate wafers",
+"Barquillos de chocolate"
+],
+"q24313": [
+"Vanilla wafers",
+"Barquillos de vainilla"
+],
+"q24684": [
+"Chocolate chip cookie",
+"Cookie con pepitas de chocolate"
+],
+"q24520": [
+"Meringue",
+"Merengue"
+],
+"q24630": [
+"Madeleine",
+"Magdalena"
+],
+"q23032": [
+"Brownie",
+"Brownie"
+],
+"q23050": [
+"Sponge cake",
+"Bizcocho"
+],
+"q23081": [
+"Loaf cake",
+"Plum cake"
+],
+"q23200": [
+"Gingerbread",
+"Pan de jengibre"
+],
+"q23300": [
+"Baklava",
+"Baklava"
+],
+"q23477": [
+"Éclair",
+"Éclair"
+],
+"q23479": [
+"Fruit tart with custard",
+"Tarta de frutas con crema"
+],
+"q23485": [
+"Lemon tart",
+"Tarta de limón"
+],
+"q23490": [
+"Apple pie",
+"Tarta de manzana"
+],
+"q23493": [
+"Apple crumble",
+"Crumble de manzana"
+],
+"q23497": [
+"Chocolate tart",
+"Tarta de chocolate"
+],
+"q23585": [
+"Chocolate cake",
+"Bizcocho de chocolate"
+],
+"q23588": [
+"Yogurt cake",
+"Bizcocho de yogur"
+],
+"q23594": [
+"Plain sponge cake",
+"Bizcocho sencillo"
+],
+"q23799": [
+"Plain crêpe",
+"Crep sencilla"
+],
+"q23821": [
+"Nutella crêpe",
+"Crep de Nutella"
+],
+"q23851": [
+"Soft waffle",
+"Gofre blando"
+],
+"q23880": [
+"Doughnut",
+"Berlina/dónut"
+],
+"q23881": [
+"Jam doughnut",
+"Berlina de mermelada"
+],
+"q23950": [
+"Muffin",
+"Muffin"
+],
+"q24666": [
+"Mille-feuille",
+"Milhojas"
+],
+"q23022": [
+"Canelé",
+"Canelé"
+],
+"q9231": [
+"Popcorn (air-popped)",
+"Palomitas (sin aceite)"
+],
+"q9230": [
+"Popcorn with oil",
+"Palomitas con aceite"
+],
+"q9232": [
+"Caramel popcorn",
+"Palomitas de caramelo"
+],
+"q38105": [
+"Tortilla chips / nachos",
+"Totopos / nachos"
+],
+"q38107": [
+"Crackers / mini pretzels",
+"Snacks salados / mini pretzels"
+],
+"q38406": [
+"Coated peanuts (snack)",
+"Cacahuetes recubiertos (snack)"
+],
+"q39509": [
+"Ice cream cone",
+"Cucurucho de helado"
+],
+"q39503": [
+"Chocolate-coated ice cream bar",
+"Helado de palo bañado"
+],
+"q39517": [
+"Frozen yogurt",
+"Yogur helado"
+],
+"q39524": [
+"Sorbet",
+"Sorbete"
+],
+"q39526": [
+"Ice lolly",
+"Polo de hielo"
+],
+"q2013": [
+"Freshly squeezed orange juice",
+"Zumo de naranja natural"
+],
+"q2074": [
+"Apple juice",
+"Zumo de manzana"
+],
+"q2073": [
+"Pineapple juice",
+"Zumo de piña"
+],
+"q2016": [
+"Grape juice",
+"Zumo de uva"
+],
+"q2072": [
+"Fruit juice (100%)",
+"Zumo de fruta (100%)"
+],
+"q2077": [
+"Fruit juice from concentrate",
+"Zumo de fruta a base de concentrado"
+],
+"q2370": [
+"Mango nectar",
+"Néctar de mango"
+],
+"q2371": [
+"Peach nectar",
+"Néctar de melocotón"
+],
+"q2043": [
+"Apricot nectar",
+"Néctar de albaricoque"
+],
+"q2500": [
+"Smoothie",
+"Smoothie"
+],
+"q2053": [
+"Tomato juice",
+"Zumo de tomate"
+],
+"q2028": [
+"Lemon juice",
+"Zumo de limón"
+],
+"q18010": [
+"Lemonade / lemon soda",
+"Limonada / gaseosa"
+],
+"q18060": [
+"Cola zero",
+"Cola zero"
+],
+"q18019": [
+"Fruit-flavoured soft drink",
+"Refresco de frutas con gas"
+],
+"q18075": [
+"Iced tea",
+"Té frío"
+],
+"q18065": [
+"Unsweetened iced tea",
+"Té frío sin azúcar"
+],
+"q18344": [
+"Tonic water",
+"Tónica"
+],
+"q18352": [
+"Energy drink",
+"Bebida energética"
+],
+"q18353": [
+"Energy drink zero",
+"Bebida energética zero"
+],
+"q18350": [
+"Isotonic drink",
+"Bebida isotónica"
+],
+"q18011": [
+"Coconut water",
+"Agua de coco"
+],
+"q19122": [
+"Chocolate milk",
+"Batido de cacao"
+],
+"q18107": [
+"Almond drink",
+"Bebida de almendra"
+],
+"q18004": [
+"Americano coffee",
+"Café americano"
+],
+"q18151": [
+"Cappuccino",
+"Capuchino"
+],
+"q18020": [
+"Tea",
+"Té"
+],
+"q18155": [
+"Green tea",
+"Té verde"
+],
+"q18022": [
+"Herbal tea",
+"Infusión"
+],
+"q18100": [
+"Unsweetened cocoa powder",
+"Cacao puro en polvo"
+],
+"q18101": [
+"Sweetened cocoa powder",
+"Cacao azucarado en polvo"
+],
+"q5010": [
+"Specialty beer",
+"Cerveza especial"
+],
+"q5002": [
+"Strong beer",
+"Cerveza doble malta"
+],
+"q5030": [
+"Alcohol-free beer",
+"Cerveza sin alcohol"
+],
+"q5211": [
+"Dry white wine",
+"Vino blanco seco"
+],
+"q5206": [
+"Rosé wine",
+"Vino rosado"
+],
+"q5201": [
+"Sparkling wine",
+"Vino espumoso"
+],
+"q5207": [
+"Champagne",
+"Champán"
+],
+"q1004": [
+"Rum",
+"Ron"
+],
+"q1005": [
+"Whisky",
+"Whisky"
+],
+"q1008": [
+"Vodka",
+"Vodka"
+],
+"q1002": [
+"Gin",
+"Ginebra"
+],
+"q1003": [
+"Liqueur",
+"Licor"
+],
+"q1017": [
+"Sangria",
+"Sangría"
+],
+"q1012": [
+"Rum cocktail",
+"Cóctel con ron"
+],
+"q1026": [
+"Sake",
+"Sake"
+],
+"q5006": [
+"Cider",
+"Sidra"
+],
+"q25435": [
+"Ham and cheese pizza",
+"Pizza de jamón y queso"
+],
+"q25462": [
+"Salami / diavola pizza",
+"Pizza de salami / diavola"
+],
+"q25478": [
+"Four cheese pizza",
+"Pizza cuatro quesos"
+],
+"q25472": [
+"Vegetable / four seasons pizza",
+"Pizza de verduras / cuatro estaciones"
+],
+"q25477": [
+"Mushroom and cheese pizza",
+"Pizza de champiñones y queso"
+],
+"q26270": [
+"Tuna pizza",
+"Pizza de atún"
+],
+"q26272": [
+"Chicken pizza",
+"Pizza de pollo"
+],
+"q26274": [
+"Prosciutto / speck pizza",
+"Pizza de jamón curado / speck"
+],
+"q26271": [
+"Kebab pizza",
+"Pizza kebab"
+],
+"q25463": [
+"Seafood pizza",
+"Pizza de marisco"
+],
+"q25405": [
+"Quiche lorraine",
+"Quiche lorraine"
+],
+"q25573": [
+"Savoury pie",
+"Tarta salada"
+],
+"q25417": [
+"Vegetable savoury pie",
+"Tarta salada de verduras"
+],
+"q25459": [
+"Burrito",
+"Burrito"
+],
+"q25460": [
+"Fajitas",
+"Fajitas"
+],
+"q25562": [
+"Savoury crêpe (egg, ham, cheese)",
+"Crep salada completa (huevo, jamón, queso)"
+],
+"q25400": [
+"Ham and cheese toastie",
+"Sándwich mixto"
+],
+"q25403": [
+"Hot dog",
+"Perrito caliente"
+],
+"q25413": [
+"Hamburger (fast food)",
+"Hamburguesa (comida rápida)"
+],
+"q25414": [
+"Cheeseburger (fast food)",
+"Hamburguesa con queso (comida rápida)"
+],
+"q25415": [
+"Double cheeseburger",
+"Hamburguesa doble con queso"
+],
+"q25502": [
+"Chicken burger",
+"Hamburguesa de pollo"
+],
+"q25416": [
+"Fish burger",
+"Hamburguesa de pescado"
+],
+"q25428": [
+"Kebab in pita",
+"Kebab en pan de pita"
+],
+"q25434": [
+"Mozzarella and prosciutto sandwich",
+"Bocadillo de mozzarella y jamón curado"
+],
+"q25476": [
+"Chicken and vegetable sandwich",
+"Bocadillo de pollo y verduras"
+],
+"q25485": [
+"Ham and cheese sandwich",
+"Bocadillo de jamón y queso"
+],
+"q25431": [
+"Tuna and vegetable sandwich",
+"Bocadillo de atún y verduras"
+],
+"q25513": [
+"Pan bagnat (tuna, egg and vegetable sandwich)",
+"Pan bagnat (bocadillo de atún, huevo y verduras)"
+],
+"q25544": [
+"Tramezzino (sandwich)",
+"Sándwich (tramezzino)"
+],
+"q7811": [
+"Filled focaccia",
+"Focaccia rellena"
+],
+"q25542": [
+"Toast with egg (croque madame)",
+"Sándwich con huevo (croque madame)"
+],
+"q25019": [
+"Meat ravioli in tomato sauce",
+"Ravioli de carne con tomate"
+],
+"q25085": [
+"Pasta bolognese",
+"Pasta boloñesa"
+],
+"q25131": [
+"Vegetable lasagne",
+"Lasaña de verduras"
+],
+"q25198": [
+"Pasta with cheese sauce",
+"Pasta con queso"
+],
+"q25149": [
+"Ricotta and spinach ravioli",
+"Ravioli de ricotta y espinacas"
+],
+"q25122": [
+"Baked pasta gratin",
+"Pasta gratinada al horno"
+],
+"q25187": [
+"Vegetable risotto",
+"Risotto de verduras"
+],
+"q25188": [
+"Seafood risotto",
+"Risotto de marisco"
+],
+"q25189": [
+"Cheese risotto",
+"Risotto de quesos"
+],
+"q25088": [
+"Cantonese fried rice",
+"Arroz tres delicias"
+],
+"q25183": [
+"Stir-fried noodles with prawns",
+"Fideos salteados con gambas"
+],
+"q25184": [
+"Rice with chicken",
+"Arroz con pollo"
+],
+"q25456": [
+"Sushi / maki",
+"Sushi / maki"
+],
+"q25110": [
+"Steamed Chinese dumplings",
+"Dumplings chinos al vapor"
+],
+"q25419": [
+"Spring roll",
+"Rollito de primavera"
+],
+"q25420": [
+"Fried spring roll (nem)",
+"Rollito frito (nem)"
+],
+"q25108": [
+"Samosa",
+"Samosa"
+],
+"q25571": [
+"Falafel",
+"Falafel"
+],
+"q25174": [
+"Chicken curry with coconut milk",
+"Pollo al curry con leche de coco"
+],
+"q25111": [
+"Chili con carne",
+"Chili con carne"
+],
+"q25123": [
+"Moussaka",
+"Musaka"
+],
+"q25164": [
+"Ossobuco",
+"Ossobuco"
+],
+"q25033": [
+"Beef stew in wine",
+"Estofado de ternera al vino"
+],
+"q25001": [
+"Veal blanquette",
+"Guiso de ternera en salsa blanca"
+],
+"q25121": [
+"Coq au vin",
+"Pollo al vino"
+],
+"q25190": [
+"Basque-style chicken (peppers and tomato)",
+"Pollo a la vasca (pimientos y tomate)"
+],
+"q25204": [
+"Chicken tagine",
+"Tajín de pollo"
+],
+"q25211": [
+"Meatballs in tomato sauce",
+"Albóndigas en salsa de tomate"
+],
+"q25009": [
+"Hachis parmentier (meat and mash)",
+"Hachis parmentier (carne y puré)"
+],
+"q25138": [
+"Chicken couscous",
+"Cuscús con pollo"
+],
+"q25150": [
+"Vegetable couscous",
+"Cuscús de verduras"
+],
+"q25127": [
+"Couscous royal",
+"Cuscús royal"
+],
+"q25107": [
+"Fish couscous",
+"Cuscús de pescado"
+],
+"q25018": [
+"Ratatouille",
+"Ratatouille"
+],
+"q25056": [
+"Gratin dauphinois (potatoes)",
+"Gratin dauphinois (patatas)"
+],
+"q25052": [
+"Aubergine parmigiana/gratin",
+"Berenjenas a la parmesana/gratinadas"
+],
+"q25162": [
+"Vegetable gratin",
+"Verduras gratinadas"
+],
+"q25026": [
+"Creamed spinach",
+"Espinacas a la crema"
+],
+"q25137": [
+"Tartiflette",
+"Tartiflette"
+],
+"q25103": [
+"Stuffed tomatoes",
+"Tomates rellenos"
+],
+"q20194": [
+"Baked beans in tomato sauce",
+"Alubias con tomate (baked beans)"
+],
+"q25602": [
+"Large salad with meat or fish",
+"Ensalada completa con carne o pescado"
+],
+"q25628": [
+"Chicken Caesar salad",
+"Ensalada César con pollo"
+],
+"q25606": [
+"Potato salad",
+"Ensalada de patatas"
+],
+"q25608": [
+"Tabbouleh",
+"Tabulé"
+],
+"q25614": [
+"Rice salad",
+"Ensalada de arroz"
+],
+"q25615": [
+"Pasta salad",
+"Ensalada de pasta"
+],
+"q26259": [
+"Coleslaw",
+"Ensalada coleslaw"
+],
+"q25903": [
+"Vegetable soup",
+"Sopa de verduras"
+],
+"q25900": [
+"Lentil soup",
+"Sopa de lentejas"
+],
+"q25916": [
+"Minestrone",
+"Minestrone"
+],
+"q25904": [
+"Fish soup",
+"Sopa de pescado"
+],
+"q25907": [
+"Leek and potato soup",
+"Crema de puerros y patatas"
+],
+"q25910": [
+"Onion soup",
+"Sopa de cebolla"
+],
+"q25914": [
+"Cream of tomato soup",
+"Crema de tomate"
+],
+"q25945": [
+"Cream of pumpkin soup",
+"Crema de calabaza"
+],
+"q25972": [
+"Miso soup",
+"Sopa de miso"
+],
+"q10082": [
+"Moules marinières",
+"Mejillones a la marinera"
+],
+"q25540": [
+"Prawn skewers",
+"Brochetas de gambas"
+],
+"q25539": [
+"Fish skewers",
+"Brochetas de pescado"
+],
+"q39001": [
+"Milkshake (fast food)",
+"Batido (comida rápida)"
+]
+}

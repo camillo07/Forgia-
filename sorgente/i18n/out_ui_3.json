@@ -1,0 +1,2298 @@
+{
+"1731": [
+"Strength + hypertrophy",
+"Fuerza + hipertrofia"
+],
+"1732": [
+"Full body A",
+"Full body A"
+],
+"1733": [
+"Full body B",
+"Full body B"
+],
+"1734": [
+"Full body C",
+"Full body C"
+],
+"1735": [
+"Upper A",
+"Upper A"
+],
+"1736": [
+"Upper B",
+"Upper B"
+],
+"1737": [
+"Lower A",
+"Lower A"
+],
+"1738": [
+"Lower B",
+"Lower B"
+],
+"1739": [
+"Full body",
+"Full body"
+],
+"1740": [
+"Upper / Lower + PPL",
+"Upper / Lower + PPL"
+],
+"1741": [
+"Push / Pull / Legs ×2",
+"Push / Pull / Legs ×2"
+],
+"1742": [
+"Mind the discomfort: moderate loads, stop if it hurts",
+"Ojo con las molestias: cargas moderadas, para si duele"
+],
+"1743": [
+"Sets per week:",
+"Series por semana:"
+],
+"1744": [
+"Exercises that load these areas are excluded or limited: {0}. This isn't medical advice: if the pain persists, see a professional.",
+"Se excluyen o limitan los ejercicios que cargan: {0}. No es un consejo médico: si el dolor persiste, consulta a un profesional."
+],
+"1745": [
+"Top set + back-off: do the heavy set, the back-offs are calculated automatically as a percentage.",
+"Top set + back-off: haz la serie pesada, los back-off se calculan solos en porcentaje."
+],
+"1746": [
+"Linear progression on the main lifts: if you complete all sets, next time +2,5/5 kg.",
+"Progresión lineal en los básicos: si completas todas las series, la próxima vez +2,5/5 kg."
+],
+"1747": [
+"{0} {1} days",
+"{0} {1} días"
+],
+"1748": [
+"full body trains every muscle 2–3 times a week: it's the most efficient choice",
+"el full body entrena cada músculo 2–3 veces por semana: es la opción más eficiente"
+],
+"1749": [
+"upper/lower trains every muscle twice a week with manageable sessions",
+"upper/lower entrena cada músculo 2 veces por semana con sesiones llevaderas"
+],
+"1750": [
+"you can split muscle groups and increase volume",
+"puedes dividir los músculos y aumentar el volumen"
+],
+"1751": [
+"Split:",
+"División:"
+],
+"1752": [
+"with {0} days {1}.",
+"con {0} días {1}."
+],
+"1753": [
+"main lifts 3 to 6, accessories 6–8",
+"básicos entre 3 y 6, accesorios 6–8"
+],
+"1754": [
+"like bulking but with fewer sets: in a cut you need to keep your loads, not do more volume",
+"como en volumen pero con menos series: en definición hay que mantener las cargas, no hacer más volumen"
+],
+"1755": [
+"main lifts 6–10, accessories 8–12, isolation 10–15",
+"básicos 6–10, accesorios 8–12, aislamiento 10–15"
+],
+"1756": [
+"Reps:",
+"Repeticiones:"
+],
+"1757": [
+"placed at the start of the session, when you're freshest",
+"al inicio de la sesión, cuando estás más fresco"
+],
+"1758": [
+"add the priority principle or specialization to give them more room",
+"añade el principio de prioridad o la especialización para darles más espacio"
+],
+"1759": [
+"Weak points",
+"Puntos débiles"
+],
+"1760": [
+"Strength on",
+"Fuerza en"
+],
+"1761": [
+"{0}: they become the main exercise of the session, with automatic warm-up.",
+"{0}: pasan a ser el ejercicio principal de la sesión, con calentamiento automático."
+],
+"1762": [
+"Methods",
+"Métodos"
+],
+"1763": [
+"Availability",
+"Disponibilidad"
+],
+"1764": [
+"Priorities",
+"Prioridades"
+],
+"1765": [
+"Preferences and discomfort",
+"Preferencias y molestias"
+],
+"1766": [
+"Summary",
+"Resumen"
+],
+"1767": [
+"I'll create the complete routines: you review and edit them before saving.",
+"Creo yo las rutinas completas: las revisas y las modificas antes de guardarlas."
+],
+"1768": [
+"I'll give you the proposal with explanations and create empty routines: you choose the exercises, with tips at hand.",
+"Te doy la propuesta con las explicaciones y creo las rutinas vacías: los ejercicios los eliges tú, con los consejos a mano."
+],
+"1769": [
+"How do you want to create it?",
+"¿Cómo quieres crearla?"
+],
+"1770": [
+"Automatic",
+"Automática"
+],
+"1771": [
+"Manual with tips",
+"Manual con consejos"
+],
+"1772": [
+"Choose one or more methods (optional). They're explained in Train → Methods & techniques.",
+"Elige uno o más métodos (opcional). Los tienes explicados en Entrenar → Métodos y técnicas."
+],
+"1773": [
+"Beginner (< 1 year)",
+"Principiante (< 1 año)"
+],
+"1774": [
+"Advanced (3+ years)",
+"Avanzado (3+ años)"
+],
+"1775": [
+"Full gym",
+"Gimnasio completo"
+],
+"1776": [
+"Dumbbells and bench",
+"Mancuernas y banco"
+],
+"1777": [
+"Bodyweight / bands",
+"Peso corporal / gomas"
+],
+"1778": [
+"Days per week",
+"Días por semana"
+],
+"1779": [
+"Minutes per session",
+"Minutos por sesión"
+],
+"1780": [
+"Level",
+"Nivel"
+],
+"1781": [
+"Equipment",
+"Material"
+],
+"1782": [
+"Want to increase strength on…",
+"¿Quieres aumentar la fuerza en…"
+],
+"1783": [
+"Weak muscles to improve",
+"Músculos débiles a mejorar"
+],
+"1784": [
+"(max 2)",
+"(máx. 2)"
+],
+"1785": [
+"With the priority principle or specialization (step 2) I put them at the start of the session with more sets.",
+"Con el principio de prioridad o la especialización (paso 2) los pongo al inicio de la sesión y con más series."
+],
+"1786": [
+"Machines and cables",
+"Máquinas y poleas"
+],
+"1787": [
+"E.g. L5 hernia, I prefer training in the morning",
+"Ej. hernia L5, prefiero entrenar por la mañana"
+],
+"1788": [
+"I prefer",
+"Prefiero"
+],
+"1789": [
+"Exercises to avoid",
+"Ejercicios a evitar"
+],
+"1790": [
+"Pain or discomfort",
+"Dolores o molestias"
+],
+"1791": [
+"Anything else",
+"Algo más"
+],
+"1792": [
+"(used by the AI)",
+"(lo usa la IA)"
+],
+"1793": [
+"For discomfort I remove the exercises that usually load that area. It doesn't replace a doctor or physiotherapist.",
+"Con las molestias quito los ejercicios que suelen cargar esa zona. No sustituye a un médico o fisioterapeuta."
+],
+"1794": [
+"{0} · {1} exercises · ~{2} min",
+"{0} · {1} ejercicios · ~{2} min"
+],
+"1795": [
+"Create the routines",
+"Crear las rutinas"
+],
+"1796": [
+"Create empty routines with tips",
+"Crear rutinas vacías con consejos"
+],
+"1797": [
+"Use this complete proposal",
+"Usar esta propuesta completa"
+],
+"1798": [
+"The AI is working on it…",
+"La IA está en ello…"
+],
+"1799": [
+"Improve with AI",
+"Mejorar con IA"
+],
+"1800": [
+"Ask Claude to improve it (copy)",
+"Pide a Claude que la mejore (copiar)"
+],
+"1801": [
+"Proposal",
+"Propuesta"
+],
+"1802": [
+"Why this way",
+"Por qué así"
+],
+"1803": [
+"Next",
+"Siguiente"
+],
+"1804": [
+"{0} of {1} · {2}",
+"{0} de {1} · {2}"
+],
+"1805": [
+"(top set + back-off)",
+"(top set + back-off)"
+],
+"1806": [
+"You are a strength and conditioning coach. Improve this program proposal for the Forgia app taking the user's answers into account. Keep the same days, change exercises, sets and reps only if needed. Reply ONLY with the JSON. User: goal {0}, level {1}, {2} days of {3} minutes, equipment {4}, chosen methods: {5}, strength on: {6}, weak muscles: {7}, prefers: {8}, to avoid: {9}, discomfort: {10}. Other: {11}. Current proposal: {12} Use standard English exercise names (e.g. \"Barbell Bench Press\", \"Seated Cable Rows\"). Schema: {13}",
+"Eres un preparador físico. Mejora esta propuesta de programa para la app Forgia teniendo en cuenta las respuestas del usuario. Mantén los mismos días, cambia ejercicios, series y repeticiones solo si hace falta. Responde SOLO con el JSON. Usuario: objetivo {0}, nivel {1}, {2} días de {3} minutos, material {4}, métodos elegidos: {5}, fuerza en: {6}, músculos débiles: {7}, prefiere: {8}, a evitar: {9}, molestias: {10}. Otros: {11}. Propuesta actual: {12} Usa nombres de ejercicios en inglés estándar (p. ej. \"Barbell Bench Press\", \"Seated Cable Rows\"). Esquema: {13}"
+],
+"1807": [
+"TIPS",
+"CONSEJOS"
+],
+"1808": [
+"Proposal for this session:",
+"Propuesta para esta sesión:"
+],
+"1809": [
+"{0} empty routines created: the tips are in each routine's note",
+"{0} rutinas vacías creadas: los consejos están en la nota de cada rutina"
+],
+"1810": [
+"Copied: paste it into Claude, then Import → With AI → paste the reply",
+"Copiado: pégalo en Claude, luego Importar → Con IA → pega la respuesta"
+],
+"1811": [
+"Deload week active for 7 days",
+"Semana de descarga activa durante 7 días"
+],
+"1812": [
+"Deload finished",
+"Descarga terminada"
+],
+"1813": [
+"Free run",
+"Carrera libre"
+],
+"1814": [
+"Easy",
+"Fácil"
+],
+"1815": [
+"Comfortable pace: you can talk",
+"Ritmo cómodo: puedes hablar"
+],
+"1816": [
+"Long run",
+"Tirada larga"
+],
+"1817": [
+"The longest of the week, easy",
+"La más larga de la semana, suave"
+],
+"1818": [
+"Tempo",
+"Tempo"
+],
+"1819": [
+"Steady and even, near threshold",
+"Sostenido y regular, cerca del umbral"
+],
+"1820": [
+"Intervals",
+"Intervalos"
+],
+"1821": [
+"Fast reps and recoveries",
+"Tramos rápidos y recuperaciones"
+],
+"1822": [
+"Race",
+"Competición"
+],
+"1823": [
+"Race or all-out time trial",
+"Competición o prueba a tope"
+],
+"1824": [
+"Walk",
+"Caminata"
+],
+"1825": [
+"Brisk walk or hike",
+"Caminata rápida o excursión"
+],
+"1826": [
+"you can talk, most of your km",
+"puedes hablar, la mayoría de los km"
+],
+"1827": [
+"Marathon",
+"Maratón"
+],
+"1828": [
+"steady but even",
+"sostenido pero regular"
+],
+"1829": [
+"Threshold",
+"Umbral"
+],
+"1830": [
+"hard but controlled, 20–40 min in total",
+"exigente pero controlado, 20–40 min en total"
+],
+"1831": [
+"hard, 2–5 min reps",
+"fuerte, tramos de 2–5 min"
+],
+"1832": [
+"Repetition",
+"Repeticiones"
+],
+"1833": [
+"very fast, short 200–400 m reps",
+"muy rápido, tramos cortos de 200–400 m"
+],
+"1834": [
+"Run",
+"Corre"
+],
+"1835": [
+"Walk",
+"Camina"
+],
+"1836": [
+"Fast",
+"Rápido"
+],
+"1837": [
+"Cool-down",
+"Vuelta a la calma"
+],
+"1838": [
+"1 km",
+"1 km"
+],
+"1839": [
+"5 km",
+"5 km"
+],
+"1840": [
+"10 km",
+"10 km"
+],
+"1841": [
+"Half",
+"Media"
+],
+"1842": [
+"From 0 to 5 km",
+"De 0 a 5 km"
+],
+"1843": [
+"8 weeks, 3 runs a week. Alternate running and walking until you can run 25–30 minutes straight.",
+"8 semanas, 3 salidas por semana. Alternas carrera y caminata hasta correr 25–30 minutos seguidos."
+],
+"1844": [
+"For total beginners or those returning after a long break.",
+"Para quien empieza de cero o vuelve tras mucho tiempo."
+],
+"1845": [
+"8 weeks, 3 runs: one easy, one quality (repeats or tempo), one long run.",
+"8 semanas, 3 salidas: una suave, una de calidad (series o tempo), una tirada larga."
+],
+"1846": [
+"You need to already run 30 minutes without stopping.",
+"Hay que correr ya 30 minutos sin parar."
+],
+"1847": [
+"Half marathon",
+"Media maratón"
+],
+"1848": [
+"10 weeks, 3 runs: easy, quality and long run up to 17 km.",
+"10 semanas, 3 salidas: suave, calidad y tirada larga de hasta 17 km."
+],
+"1849": [
+"You need to already run 8–10 km.",
+"Hay que correr ya 8–10 km."
+],
+"1850": [
+"{0} × {1} fast · rec {2}",
+"{0} × {1} rápido · rec {2}"
+],
+"1851": [
+"{0} × {1} at {2} pace · rec {3}",
+"{0} × {1} a ritmo {2} · rec {3}"
+],
+"1852": [
+"{0} at {1} pace",
+"{0} a ritmo {1}"
+],
+"1853": [
+"{0} × {1} run · {2} walk",
+"{0} × {1} correr · {2} caminar"
+],
+"1854": [
+"{0} of continuous running",
+"{0} de carrera continua"
+],
+"1855": [
+"Test: 5 km run",
+"Prueba: 5 km de carrera"
+],
+"1856": [
+"{0} km easy",
+"{0} km suaves"
+],
+"1857": [
+"Race or 10 km time trial",
+"Competición o prueba de 10 km"
+],
+"1858": [
+"Long run {0} km",
+"Tirada larga {0} km"
+],
+"1859": [
+"~{0} min{1}",
+"~{0} min{1}"
+],
+"1860": [
+"All out, managing your pace",
+"A tope, gestionando el ritmo"
+],
+"1861": [
+"{0} net",
+"{0} netos"
+],
+"1862": [
+"{0} seconds",
+"{0} segundos"
+],
+"1863": [
+"0 seconds",
+"0 segundos"
+],
+"1864": [
+"This device doesn't provide location",
+"Este dispositivo no da la ubicación"
+],
+"1865": [
+"Location unavailable",
+"Ubicación no disponible"
+],
+"1866": [
+"Location denied: enable it in Settings › Privacy › Location Services",
+"Ubicación denegada: actívala en Ajustes › Privacidad › Localización"
+],
+"1867": [
+"No GPS signal",
+"Sin señal GPS"
+],
+"1868": [
+"No GPS",
+"Sin GPS"
+],
+"1869": [
+"GPS: searching for signal…",
+"GPS: buscando señal…"
+],
+"1870": [
+"GPS excellent",
+"GPS excelente"
+],
+"1871": [
+"GPS good",
+"GPS bueno"
+],
+"1872": [
+"Weak GPS (±{0} m)",
+"GPS débil (±{0} m)"
+],
+"1873": [
+"{0} {1}. Last in {2}. Average {3}.",
+"{0} {1}. Último en {2}. Media {3}."
+],
+"1874": [
+"Workout finished, great job. You can keep going easy or press Finish.",
+"Entrenamiento terminado, buen trabajo. Puedes seguir suave o pulsar Fin."
+],
+"1875": [
+", pace {0}",
+", ritmo {0}"
+],
+"1876": [
+"{0} of {1}",
+"{0} de {1}"
+],
+"1877": [
+"Go!",
+"¡Vamos!"
+],
+"1878": [
+"Goal reached: {0} kilometers. Time {1}.",
+"Objetivo alcanzado: {0} kilómetros. Tiempo {1}."
+],
+"1879": [
+"Run too short: not saved",
+"Carrera demasiado corta: no guardada"
+],
+"1880": [
+"New PR {0} · {1}",
+"Nuevo récord {0} · {1}"
+],
+"1881": [
+"Longest run ever · {0} km",
+"Carrera más larga de siempre · {0} km"
+],
+"1882": [
+"Forgia · run",
+"Forgia · carrera"
+],
+"1883": [
+"GPX file without a valid route",
+"Archivo GPX sin un recorrido válido"
+],
+"1884": [
+"I can't read the file",
+"No puedo leer el archivo"
+],
+"1885": [
+"Route",
+"Recorrido"
+],
+"1886": [
+"Km",
+"Km"
+],
+"1887": [
+"Gym",
+"Gimnasio"
+],
+"1888": [
+"{0} km · {1}",
+"{0} km · {1}"
+],
+"1889": [
+"Start run",
+"Empezar carrera"
+],
+"1890": [
+"Km per week",
+"Km por semana"
+],
+"1891": [
+"{0} · {1} · {2}/km",
+"{0} · {1} · {2}/km"
+],
+"1892": [
+"No runs",
+"Sin carreras"
+],
+"1893": [
+"Start a run with GPS, log one manually or import a GPX file from Strava, Garmin or the app you use.",
+"Empieza una carrera con GPS, regístrala a mano o importa un archivo GPX de Strava, Garmin o la app que uses."
+],
+"1894": [
+"Voice guidance",
+"Guía por voz"
+],
+"1895": [
+"Map",
+"Mapa"
+],
+"1896": [
+"Beeps with screen locked",
+"Pitidos con pantalla bloqueada"
+],
+"1897": [
+"Past run",
+"Carrera pasada"
+],
+"1898": [
+"Import GPX",
+"Importar GPX"
+],
+"1899": [
+"Your runs",
+"Tus carreras"
+],
+"1900": [
+"Run settings",
+"Ajustes de carrera"
+],
+"1901": [
+"Announces every km, interval changes and pace",
+"Anuncia cada km, los cambios de intervalo y el ritmo"
+],
+"1902": [
+"Map (OpenStreetMap)",
+"Mapa (OpenStreetMap)"
+],
+"1903": [
+"Streets under your route, during and after the run. Needs internet: offline you only see the route",
+"Calles bajo el recorrido, durante y después de la carrera. Necesita internet: sin conexión solo ves el recorrido"
+],
+"1904": [
+"Interval beeps with screen locked",
+"Pitidos de intervalos con pantalla bloqueada"
+],
+"1905": [
+"Uses an audio track like the rest timer: works with the phone locked but pauses your music",
+"Usa una pista de audio como el temporizador de descanso: funciona con el móvil bloqueado pero pausa la música"
+],
+"1906": [
+"Start this plan",
+"Empezar este plan"
+],
+"1907": [
+"Training plans",
+"Planes de entrenamiento"
+],
+"1908": [
+"Plan completed",
+"Plan completado"
+],
+"1909": [
+"Week {0} of {1}",
+"Semana {0} de {1}"
+],
+"1910": [
+"Next week",
+"Próxima semana"
+],
+"1911": [
+"Next run",
+"Próxima salida"
+],
+"1912": [
+"You've completed all the runs. Choose a new plan whenever you like.",
+"Has completado todas las salidas. Elige un nuevo plan cuando quieras."
+],
+"1913": [
+"Plan: {0}",
+"Plan: {0}"
+],
+"1914": [
+"See all",
+"Ver todo"
+],
+"1915": [
+"Your paces",
+"Tus ritmos"
+],
+"1916": [
+"Do a run of at least 3 km at a good pace, or enter a recent race time: I'll calculate predicted times and the right paces for each workout.",
+"Haz una carrera de al menos 3 km a buen ritmo, o introduce el tiempo de una competición reciente: calculo los tiempos previstos y los ritmos adecuados para cada entrenamiento."
+],
+"1917": [
+"Enter a time",
+"Introduce un tiempo"
+],
+"1918": [
+"time entered: {0} km in {1}",
+"tiempo introducido: {0} km en {1}"
+],
+"1919": [
+"run on {0}: {1} km in {2}",
+"carrera del {0}: {1} km en {2}"
+],
+"1920": [
+"Fitness index (VDOT)",
+"Índice de forma (VDOT)"
+],
+"1921": [
+"From {0}",
+"Desde {0}"
+],
+"1922": [
+"Predicted times using Jack Daniels' tables. They apply if you're trained for that distance. If you've only done easy runs the value is underestimated: enter a race or time trial result.",
+"Tiempos previstos con las tablas de Jack Daniels. Valen si estás entrenado para esa distancia. Si solo has hecho carreras suaves el valor está subestimado: introduce un tiempo de competición o de una prueba."
+],
+"1923": [
+"Longest run",
+"Carrera más larga"
+],
+"1924": [
+"1, 5 and 10 km records use the per-km splits from GPS runs.",
+"Los récords en 1, 5 y 10 km usan los parciales por km de las carreras con GPS."
+],
+"1925": [
+"Aerobic base: easy and long runs",
+"Base aeróbica: carreras suaves y tiradas largas"
+],
+"1926": [
+"Moderate aerobic",
+"Aeróbico medio"
+],
+"1927": [
+"Threshold: tempo runs",
+"Umbral: carreras a ritmo"
+],
+"1928": [
+"Max: short intervals",
+"Máximo: intervalos cortos"
+],
+"1929": [
+"Entered by you",
+"Introducida por ti"
+],
+"1930": [
+"Estimated from age (208 − 0,7 × age). If you know it, enter it",
+"Estimada por la edad (208 − 0,7 × edad). Si la conoces, escríbela"
+],
+"1931": [
+"Enter it or add your age in the diet goals",
+"Escríbela o introduce la edad en los objetivos de dieta"
+],
+"1932": [
+"80% of km in Z1–Z2 and the rest in Z4–Z5 is the distribution that works best for most runners.",
+"El 80% de los km en Z1–Z2 y el resto en Z4–Z5 es la distribución que mejor funciona para la mayoría de los corredores."
+],
+"1933": [
+"Max heart rate",
+"Frecuencia máxima"
+],
+"1934": [
+"Heart rate zones",
+"Zonas cardíacas"
+],
+"1935": [
+"Workout completed",
+"Entrenamiento completado"
+],
+"1936": [
+"Keep going easy to cool down or press Finish.",
+"Sigue suave para soltar o pulsa Fin."
+],
+"1937": [
+"Then:",
+"Luego:"
+],
+"1938": [
+"Last segment",
+"Último tramo"
+],
+"1939": [
+"No run in progress",
+"Ninguna carrera en curso"
+],
+"1940": [
+"Paused",
+"En pausa"
+],
+"1941": [
+"Center",
+"Centrar"
+],
+"1942": [
+"Data only",
+"Solo datos"
+],
+"1943": [
+"Goal {0} km",
+"Objetivo {0} km"
+],
+"1944": [
+"The screen stays on by itself: use \"Lock\" to avoid pocket taps. On iPhone, if you lock the phone the GPS stops and the segment is estimated in a straight line.",
+"La pantalla se queda encendida sola: usa \"Bloquear\" para evitar toques en el bolsillo. En iPhone, si bloqueas el móvil el GPS se detiene y el tramo se estima en línea recta."
+],
+"1945": [
+"No GPS: at the end of the run enter the distance shown on the treadmill.",
+"Sin GPS: al terminar la carrera introduce la distancia que marca la cinta."
+],
+"1946": [
+"Pause",
+"Pausa"
+],
+"1947": [
+"Press and hold to unlock",
+"Mantén pulsado para desbloquear"
+],
+"1948": [
+"Avg pace",
+"Ritmo medio"
+],
+"1949": [
+"Current pace",
+"Ritmo actual"
+],
+"1950": [
+"Lock",
+"Bloquear"
+],
+"1951": [
+"Pace /km",
+"Ritmo /km"
+],
+"1952": [
+"How did it go?",
+"¿Qué tal ha ido?"
+],
+"1953": [
+"Log run",
+"Registrar carrera"
+],
+"1954": [
+"Edit run",
+"Editar carrera"
+],
+"1955": [
+"· ~{0} active kcal",
+"· ~{0} kcal activas"
+],
+"1956": [
+"Enter distance and duration",
+"Introduce distancia y duración"
+],
+"1957": [
+"Counts toward the plan",
+"Cuenta para el plan"
+],
+"1958": [
+"E.g. 5,2",
+"Ej. 5,2"
+],
+"1959": [
+"Hours",
+"Horas"
+],
+"1960": [
+"Route, feelings, shoes…",
+"Recorrido, sensaciones, zapatillas…"
+],
+"1961": [
+"Time",
+"Hora"
+],
+"1962": [
+"Distance (km)",
+"Distancia (km)"
+],
+"1963": [
+"Avg HR",
+"FC media"
+],
+"1964": [
+"Elevation +",
+"Desnivel +"
+],
+"1965": [
+"Perceived effort",
+"Esfuerzo percibido"
+],
+"1966": [
+"1–3 easy · 4–6 moderate · 7–8 hard · 9–10 all out",
+"1–3 fácil · 4–6 exigente · 7–8 duro · 9–10 al máximo"
+],
+"1967": [
+"Notes",
+"Notas"
+],
+"1968": [
+"Run deleted",
+"Carrera eliminada"
+],
+"1969": [
+"Elevation",
+"Desnivel"
+],
+"1970": [
+"Effort",
+"Esfuerzo"
+],
+"1971": [
+"Best times in this run",
+"Mejores tiempos en esta carrera"
+],
+"1972": [
+"(slow run: it's normal for it to be lower)",
+"(carrera lenta: es normal que sea más bajo)"
+],
+"1973": [
+"Fitness index (VDOT) for this run:",
+"Índice de forma (VDOT) de esta carrera:"
+],
+"1974": [
+"Plan",
+"Plan"
+],
+"1975": [
+"No active plan",
+"Ningún plan activo"
+],
+"1976": [
+"Mark as done",
+"Marcar como hecha"
+],
+"1977": [
+"Week {0}{1}",
+"Semana {0}{1}"
+],
+"1978": [
+"{0} Paces update automatically with your fitness index. Tap the circle to mark a run as done without logging it.",
+"{0} Los ritmos se actualizan solos con tu índice de forma. Toca el círculo para marcar una salida como hecha sin registrarla."
+],
+"1979": [
+"End the plan",
+"Terminar el plan"
+],
+"1980": [
+"Which workout?",
+"¿Qué entrenamiento?"
+],
+"1981": [
+"{0} exercises · ~{1} min",
+"{0} ejercicios · ~{1} min"
+],
+"1982": [
+"What run are you doing?",
+"¿Qué carrera vas a hacer?"
+],
+"1983": [
+"GPS: distance, pace and per-km splits",
+"GPS: distancia, ritmo y parciales por km"
+],
+"1984": [
+"Intervals…",
+"Intervalos…"
+],
+"1985": [
+"Choose reps, fast segments and recoveries",
+"Elige repeticiones, tramos rápidos y recuperaciones"
+],
+"1986": [
+"Treadmill",
+"Cinta"
+],
+"1987": [
+"No GPS: time and voice, you enter the distance at the end",
+"Sin GPS: tiempo y voz, la distancia la escribes al final"
+],
+"1988": [
+"No",
+"No"
+],
+"1989": [
+"Fast pace",
+"Ritmo rápido"
+],
+"1990": [
+"Use GPS",
+"Usar el GPS"
+],
+"1991": [
+"turn off for the treadmill",
+"desactívalo para la cinta"
+],
+"1992": [
+"· rec",
+"· rec"
+],
+"1993": [
+"Resuming",
+"Reanudamos"
+],
+"1994": [
+"Finish the run?",
+"¿Terminar la carrera?"
+],
+"1995": [
+"Save the run",
+"Guardar la carrera"
+],
+"1996": [
+"Keep running",
+"Seguir corriendo"
+],
+"1997": [
+"Discard the run",
+"Descartar la carrera"
+],
+"1998": [
+"Discard the run?",
+"¿Descartar la carrera?"
+],
+"1999": [
+"Distance and route will be lost.",
+"Se perderán la distancia y el recorrido."
+],
+"2000": [
+"Discard",
+"Descartar"
+],
+"2001": [
+"Voice on",
+"Voz activada"
+],
+"2002": [
+"Delete run",
+"Eliminar carrera"
+],
+"2003": [
+"Delete the run?",
+"¿Eliminar la carrera?"
+],
+"2004": [
+"Enter the distance",
+"Introduce la distancia"
+],
+"2005": [
+"Pace under 1:40/km: check distance and duration",
+"Ritmo por debajo de 1:40/km: revisa distancia y duración"
+],
+"2006": [
+"The date is in the future",
+"La fecha está en el futuro"
+],
+"2007": [
+"Run saved",
+"Carrera guardada"
+],
+"2008": [
+"Run updated",
+"Carrera actualizada"
+],
+"2009": [
+"Reference time",
+"Tiempo de referencia"
+],
+"2010": [
+"A race or all-out time trial from the last few months. Used to calculate the right paces.",
+"Una competición o una prueba a tope de los últimos meses. Sirve para calcular los ritmos adecuados."
+],
+"2011": [
+"Enter km and time",
+"Introduce km y tiempo"
+],
+"2012": [
+"Unrealistic time for this distance",
+"Tiempo poco realista para esta distancia"
+],
+"2013": [
+"Paces updated",
+"Ritmos actualizados"
+],
+"2014": [
+"Start “{0}”?",
+"¿Empezar “{0}”?"
+],
+"2015": [
+"{0} {1} Runs have no fixed day: do them in order, leaving at least one day between the hard ones.",
+"{0} {1} Las salidas no tienen un día fijo: hazlas en orden, dejando al menos un día entre las exigentes."
+],
+"2016": [
+"Plan started: the first run is in Run",
+"Plan iniciado: la primera salida está en Carrera"
+],
+"2017": [
+"With GPS",
+"Con GPS"
+],
+"2018": [
+"End the plan?",
+"¿Terminar el plan?"
+],
+"2019": [
+"Logged runs are kept.",
+"Las carreras registradas se conservan."
+],
+"2020": [
+"olympic weightlifting",
+"olympic weightlifting"
+],
+"2021": [
+"also calculated from average heart rate",
+"calculadas también a partir de la FC media"
+],
+"2022": [
+"estimated from",
+"estimación a partir de"
+],
+"2023": [
+"speed, elevation and weight",
+"velocidad, desnivel y peso"
+],
+"2024": [
+"exercises, sets, loads, time and weight",
+"ejercicios, series, cargas, tiempo y peso"
+],
+"2025": [
+"· enter your weight for a better estimate",
+"· introduce tu peso para una mejor estimación"
+],
+"2026": [
+"~{0} active kcal",
+"~{0} kcal activas"
+],
+"2027": [
+"Total incl. resting metabolism: ~{0} kcal · {1}{2}",
+"Totales con el metabolismo en reposo: ~{0} kcal · {1}{2}"
+],
+"2028": [
+"Finish the open past workout first",
+"Termina primero el entrenamiento pasado abierto"
+],
+"2029": [
+"You have a workout in progress: finish it first",
+"Tienes un entrenamiento en curso: termínalo primero"
+],
+"2030": [
+"Close the open workout first",
+"Cierra primero el entrenamiento abierto"
+],
+"2031": [
+"Edit workout",
+"Editar entrenamiento"
+],
+"2032": [
+"Past workout",
+"Entrenamiento pasado"
+],
+"2033": [
+"Duration (min)",
+"Duración (min)"
+],
+"2034": [
+"Enter kg and reps: filled-in sets are saved even without a tick, and the tick copies the suggested values. Average heart rate (from Apple Watch) makes the calorie estimate more accurate.",
+"Escribe kg y repeticiones: las series rellenadas se guardan aunque no las marques, y la marca copia los valores sugeridos. La FC media (del Apple Watch) hace más precisa la estimación de calorías."
+],
+"2035": [
+"January",
+"Enero"
+],
+"2036": [
+"February",
+"Febrero"
+],
+"2037": [
+"March",
+"Marzo"
+],
+"2038": [
+"April",
+"Abril"
+],
+"2039": [
+"May",
+"Mayo"
+],
+"2040": [
+"June",
+"Junio"
+],
+"2041": [
+"July",
+"Julio"
+],
+"2042": [
+"August",
+"Agosto"
+],
+"2043": [
+"September",
+"Septiembre"
+],
+"2044": [
+"October",
+"Octubre"
+],
+"2045": [
+"November",
+"Noviembre"
+],
+"2046": [
+"December",
+"Diciembre"
+],
+"2047": [
+"Previous month",
+"Mes anterior"
+],
+"2048": [
+"Next month",
+"Mes siguiente"
+],
+"2049": [
+"Gym {0}",
+"Gimnasio {0}"
+],
+"2050": [
+"Run {0}",
+"Carrera {0}"
+],
+"2051": [
+"Tap a day",
+"Toca un día"
+],
+"2052": [
+"Rest week.",
+"Semana de descanso."
+],
+"2053": [
+"Goal hit: {0} workouts out of {1}.",
+"Objetivo cumplido: {0} entrenamientos de {1}."
+],
+"2054": [
+"{0} workouts out of a {1} goal.",
+"{0} entrenamientos de un objetivo de {1}."
+],
+"2055": [
+"· {0} km",
+"· {0} km"
+],
+"2056": [
+"PR ·",
+"PR ·"
+],
+"2057": [
+"Your last week",
+"Tu semana pasada"
+],
+"2058": [
+"{0} workouts{1} · ~{2} kcal",
+"{0} entrenamientos{1} · ~{2} kcal"
+],
+"2059": [
+"{0}volume {1} {2}",
+"{0}volumen {1} {2}"
+],
+"2060": [
+"Week",
+"Semana"
+],
+"2061": [
+"{0} {1} broken.",
+"{0} {1} batidos."
+],
+"2062": [
+"active day",
+"día activo"
+],
+"2063": [
+"active days",
+"días activos"
+],
+"2064": [
+"Compared with last week up to the same day and time.",
+"Comparado con la semana pasada hasta el mismo día y hora."
+],
+"2065": [
+"Previous week",
+"Semana anterior"
+],
+"2066": [
+"Next week",
+"Semana siguiente"
+],
+"2067": [
+"workouts {0}",
+"entrenamientos {0}"
+],
+"2068": [
+"volume {0}",
+"volumen {0}"
+],
+"2069": [
+"sets {0}",
+"series {0}"
+],
+"2070": [
+"running km {0}",
+"km de carrera {0}"
+],
+"2071": [
+"active kcal {0}",
+"kcal activas {0}"
+],
+"2072": [
+"Active calories from workouts and runs",
+"Calorías activas de entrenamiento y carrera"
+],
+"2073": [
+"AI analysis of the week",
+"Análisis IA de la semana"
+],
+"2074": [
+"Calories are an estimate: they're for comparing weeks. Your diet goal already includes them (activity level), so don't eat them back.",
+"Las calorías son una estimación: sirven para comparar semanas. El objetivo de la dieta ya las incluye (nivel de actividad), así que no hay que volver a comerlas."
+],
+"2075": [
+"{0} exercises",
+"{0} ejercicios"
+],
+"2076": [
+"Choose the day and what you did: then enter your sets as usual.",
+"Elige el día y lo que hiciste: luego introduce las series como siempre."
+],
+"2077": [
+"Choose a past day",
+"Elige un día pasado"
+],
+"2078": [
+"~{0} active kcal from workouts and runs",
+"~{0} kcal activas de entrenamiento y carrera"
+],
+"2079": [
+"Future day.",
+"Día futuro."
+],
+"2080": [
+"No workout logged.",
+"Ningún entrenamiento registrado."
+],
+"2081": [
+"{0} · {1} sets · {2}",
+"{0} · {1} series · {2}"
+],
+"2082": [
+"{0} · {1}/km",
+"{0} · {1}/km"
+],
+"2083": [
+"Add gym workout",
+"Añadir entrenamiento de gimnasio"
+],
+"2084": [
+"Add run",
+"Añadir carrera"
+],
+"2085": [
+"{0}: {1} sets",
+"{0}: {1} series"
+],
+"2086": [
+"Muscle map {0}",
+"Mapa muscular {0}"
+],
+"2087": [
+"Under 10 sets:",
+"Menos de 10 series:"
+],
+"2088": [
+"All muscles in range.",
+"Todos los músculos en rango."
+],
+"2089": [
+"Over 20: {0}.",
+"Más de 20: {0}."
+],
+"2090": [
+"Front",
+"Delante"
+],
+"2091": [
+"Back",
+"Detrás"
+],
+"2092": [
+"over 20",
+"más de 20"
+],
+"2093": [
+"nights of 7 h or more",
+"noches de 7 h o más"
+],
+"2094": [
+"less than 7 h",
+"menos de 7 h"
+],
+"2095": [
+"recovery 60 or more",
+"recuperación 60 o más"
+],
+"2096": [
+"under 60",
+"menos de 60"
+],
+"2097": [
+"Previous day's calories",
+"Calorías del día anterior"
+],
+"2098": [
+"under goal",
+"por debajo del objetivo"
+],
+"2099": [
+"Previous day's protein",
+"Proteínas del día anterior"
+],
+"2100": [
+"on target",
+"en el objetivo"
+],
+"2101": [
+"under target",
+"por debajo del objetivo"
+],
+"2102": [
+"Rest days before",
+"Días de descanso antes"
+],
+"2103": [
+"after at least 1 rest day",
+"tras al menos 1 día de descanso"
+],
+"2104": [
+"the day after a workout",
+"el día después de un entrenamiento"
+],
+"2105": [
+"Time of day",
+"Horario"
+],
+"2106": [
+"· {0}: strength",
+"· {0}: fuerza"
+],
+"2107": [
+"compared to {0}. It's the biggest difference in your data.",
+"frente a {0}. Es la mayor diferencia en tus datos."
+],
+"2108": [
+"≈ same",
+"≈ igual"
+],
+"2109": [
+"{0} vs {1} sessions,",
+"{0} vs {1} sesiones,"
+],
+"2110": [
+"3 needed per side",
+"se necesitan 3 por lado"
+],
+"2111": [
+"{0} vs {1}",
+"{0} vs {1}"
+],
+"2112": [
+", over {0} sessions",
+", en {0} sesiones"
+],
+"2113": [
+"What affects your strength",
+"Qué influye en tu fuerza"
+],
+"2114": [
+"Compares your strength (estimated 1RM vs your average for the same period) across different sessions{0}. Needs sleep and recovery from Apple Health and the diary for calories. It's a correlation, not proof: with few sessions it can change a lot.",
+"Compara tu fuerza (1RM estimado frente a tu media del mismo periodo) entre sesiones distintas{0}. Necesita sueño y recuperación de Apple Salud y el diario para las calorías. Es una correlación, no una prueba: con pocas sesiones puede cambiar mucho."
+],
+"2115": [
+"SMTWTFS",
+"DLMXJVS"
+],
+"2116": [
+"Average",
+"Media"
+],
+"2117": [
+"· min {0} · max {1} · {2}/7 weigh-ins",
+"· mín {0} · máx {1} · {2}/7 pesajes"
+],
+"2118": [
+"No weigh-ins in the last 7 days",
+"Ningún pesaje en los últimos 7 días"
+],
+"2119": [
+"Last time RIR {0}, too close to failure:",
+"La última vez RIR {0}, demasiado cerca del fallo:"
+],
+"2120": [
+"and get back to RIR {0}.",
+"y vuelve a RIR {0}."
+],
+"2121": [
+"RIR {0} as planned:",
+"RIR {0} según lo previsto:"
+],
+"2122": [
+"and try 1 more rep at the same RIR.",
+"e intenta hacer 1 repetición más al mismo RIR."
+],
+"2123": [
+"· last time {0}",
+"· la última vez {0}"
+],
+"2124": [
+"Below usual",
+"Por debajo de lo habitual"
+],
+"2125": [
+"Normal",
+"Normal"
+],
+"2126": [
+"Increasing",
+"En aumento"
+],
+"2127": [
+"Too fast",
+"Demasiado rápido"
+],
+"2128": [
+"Last 7 days vs 4-week average",
+"Últimos 7 días frente a la media de 4 semanas"
+],
+"2129": [
+"You need 3 weeks of data to compare your load with your usual.",
+"Hacen falta 3 semanas de datos para comparar la carga con lo habitual."
+],
+"2130": [
+"Weekly load",
+"Carga semanal"
+],
+"2131": [
+"300 g Greek yogurt + 1 scoop of whey + 150 g chicken",
+"300 g de yogur griego + 1 scoop de whey + 150 g de pollo"
+],
+"2132": [
+"150 g chicken or turkey, or Greek yogurt + whey",
+"150 g de pollo o pavo, o yogur griego + whey"
+],
+"2133": [
+"1 scoop of whey or 250 g egg whites",
+"1 scoop de whey o 250 g de claras"
+],
+"2134": [
+"Light version today: one fewer set per exercise and 1 extra rep in reserve. Aim for 8 hours of sleep tonight.",
+"Hoy versión ligera: una serie menos por ejercicio y 1 repetición más de margen. Esta noche intenta dormir 8 horas."
+],
+"2135": [
+"A good day to push: go for a PR on the first exercise.",
+"Buen día para apretar: intenta un récord en el primer ejercicio."
+],
+"2136": [
+"Follow the routine and leave 2 reps in reserve.",
+"Sigue la rutina y deja 2 repeticiones de margen."
+],
+"2137": [
+"You slept {0} h",
+"Has dormido {0} h"
+],
+"2138": [
+"With little sleep strength drops: don't chase PRs today, and go to bed earlier tonight.",
+"Con poco sueño la fuerza baja: no busques récords hoy y esta noche acuéstate antes."
+],
+"2139": [
+"Workout done",
+"Entrenamiento hecho"
+],
+"2140": [
+"{0}: {1} sets{2}. Now protein and recovery.",
+"{0}: {1} series{2}. Ahora proteínas y recuperación."
+],
+"2141": [
+"Today: {0}",
+"Hoy: {0}"
+],
+"2142": [
+"{0} exercises, about {1} minutes.",
+"{0} ejercicios, unos {1} minutos."
+],
+"2143": [
+"Rest day",
+"Día de descanso"
+],
+"2144": [
+"Walk, eat your protein and sleep well: muscles grow today.",
+"Camina, come tus proteínas y duerme bien: los músculos crecen hoy."
+],
+"2145": [
+"Load rising sharply",
+"Carga en fuerte aumento"
+],
+"2146": [
+"Last 7 days: {0}% above your average. Don't add sets or kilometers today and keep 2 reps in reserve.",
+"Últimos 7 días: {0}% por encima de tu media. Hoy no añadas series ni kilómetros y deja 2 repeticiones de margen."
+],
+"2147": [
+"Load rising",
+"Carga en aumento"
+],
+"2148": [
+"{0}% above your 4-week average: that's fine, but don't go higher this week.",
+"{0}% por encima de tu media de 4 semanas: está bien, pero no subas más esta semana."
+],
+"2149": [
+"Empty diary",
+"Diario vacío"
+],
+"2150": [
+"Log today's meals: without a diary I can't check calories and protein.",
+"Registra las comidas de hoy: sin diario no puedo controlar calorías y proteínas."
+],
+"2151": [
+"Protein: {0} g to go",
+"Proteínas: faltan {0} g"
+],
+"2152": [
+"You're at {0} of {1} g. For example: {2}.",
+"Llevas {0} de {1} g. Por ejemplo: {2}."
+],
+"2153": [
+"Over by {0} kcal",
+"{0} kcal de más"
+],
+"2154": [
+"No big deal: the weekly average is what counts. Stay on target tomorrow, without compensating.",
+"Sin dramas: cuenta la media de la semana. Mañana mantente en el objetivo, sin compensar."
+],
+"2155": [
+"In the morning, fasted, after the bathroom: it feeds the 7-day average.",
+"Por la mañana, en ayunas, después de ir al baño: sirve para la media de 7 días."
+],
+"2156": [
+"Weight stalled",
+"Peso estancado"
+],
+"2157": [
+"7-day average: {0} kg per week. If it stays like this another week: −150 kcal or +2.000 steps a day.",
+"Media de 7 días: {0} kg por semana. Si sigue así otra semana: −150 kcal o +2.000 pasos al día."
+],
+"2158": [
+"You're dropping fast",
+"Estás bajando rápido"
+],
+"2159": [
+"{0} kg per week: add about 150 kcal so you don't lose muscle.",
+"{0} kg por semana: añade unas 150 kcal para no perder músculo."
+],
+"2160": [
+"Weight on track",
+"Peso en línea"
+],
+"2161": [
+"{0} kg per week on the 7-day average: keep it up.",
+"{0} kg por semana en la media de 7 días: sigue así."
+],
+"2162": [
+"Steps: {0} of {1}",
+"Pasos: {0} de {1}"
+],
+"2163": [
+"{0} steps to go, about {1} minutes of walking.",
+"Faltan {0} pasos, unos {1} minutos caminando."
+],
+"2164": [
+"Today's coach",
+"Coach de hoy"
+],
+"2165": [
+"All good. Log workouts, meals and weight: the more data you have, the more precise the advice.",
+"Todo en orden. Registra entrenamientos, comidas y peso: cuantos más datos tengas, más precisos serán los consejos."
+],
+"2166": [
+"{0} more",
+"{0} más"
+],
+"2167": [
+"Today's 3 most important things",
+"Las 3 cosas más importantes de hoy"
+],
+"2168": [
+"Today's routine and the start button",
+"La rutina de hoy y el botón para empezar"
+],
+"2169": [
+"Quick actions",
+"Acciones rápidas"
+],
+"2170": [
+"Free, run, weight, meal",
+"Libre, carrera, peso, comida"
+],
+"2171": [
+"Workouts, volume, km, calories",
+"Entrenamientos, volumen, km, calorías"
+],
+"2172": [
+"Recovery, strain and sleep (Apple Health)",
+"Recuperación, esfuerzo y sueño (Apple Salud)"
+],
+"2173": [
+"Calories and macros",
+"Calorías y macros"
+],
+"2174": [
+"Weight and water",
+"Peso y agua"
+],
+"2175": [
+"Today's weight and average",
+"Peso de hoy y media"
+],
+"2176": [
+"Gym + running vs usual",
+"Gimnasio + carrera frente a lo habitual"
+],
+"2177": [
+"Sets per muscle this week",
+"Series por músculo de la semana"
+],
+"2178": [
+"Last workout",
+"Último entrenamiento"
+],
+"2179": [
+"Up",
+"Subir"
+],
+"2180": [
+"Down",
+"Bajar"
+],
+"2181": [
+"Show {0}",
+"Mostrar {0}"
+],
+"2182": [
+"Choose what to see in Today and in what order. Last week's summary appears automatically on Monday and Tuesday.",
+"Elige qué ver en Hoy y en qué orden. El resumen de la semana pasada aparece solo el lunes y el martes."
+],
+"2183": [
+"Reset",
+"Restablecer"
+],
+"2184": [
+"Low recovery today.",
+"Recuperación baja hoy."
+],
+"2185": [
+"Want the light version? One fewer set per exercise and 1 extra rep in reserve.",
+"¿Quieres la versión ligera? Una serie menos por ejercicio y 1 repetición más de margen."
+],
+"2186": [
+"Yes",
+"Sí"
+],
+"2187": [
+"Light version on",
+"Versión ligera activada"
+],
+"2188": [
+"© OpenStreetMap",
+"© OpenStreetMap"
+],
+"2189": [
+"Bread, pasta & cereals",
+"Pan, pasta y cereales"
+],
+"2190": [
+"Nuts & seeds",
+"Frutos secos y semillas"
+],
+"2191": [
+"Oils & fats",
+"Aceites y grasas"
+],
+"2192": [
+"Sauces & condiments",
+"Salsas y condimentos"
+],
+"2193": [
+"Sweets & snacks",
+"Dulces y snacks"
+],
+"2194": [
+"Ready meals",
+"Platos preparados"
+],
+"2195": [
+"estimated raw weight",
+"peso en crudo estimado"
+],
+"2196": [
+"Shopping list · {0} days",
+"Lista de la compra · {0} días"
+],
+"2197": [
+"(raw weight)",
+"(peso en crudo)"
+],
+"2198": [
+"OTHER",
+"OTROS"
+],
+"2199": [
+"Share",
+"Compartir"
+],
+"2200": [
+"{0} days",
+"{0} días"
+],
+"2201": [
+"Based on {0} diary days · created {1} · {2} to buy",
+"Basada en {0} días de diario · creada {1} · {2} por comprar"
+],
+"2202": [
+"Choose how many days to cover",
+"Elige cuántos días cubrir"
+],
+"2203": [
+"You need at least 2 days logged in the diary in the last 2 weeks.",
+"Hacen falta al menos 2 días registrados en el diario en las últimas 2 semanas."
+],
+"2204": [
+"E.g. detergent, sponges…",
+"Ej. detergente, estropajos…"
+],
+"2205": [
+"Other things to buy",
+"Otras cosas que comprar"
+],
+"2206": [
+"Remove items already bought",
+"Quitar lo ya comprado"
+],
+"2207": [
+"Calculated from what you usually eat: average of the last days logged in the diary, multiplied by the days to cover. Meat, fish, pasta and rice logged cooked are converted to raw weight.",
+"Calculada a partir de lo que sueles comer: media de los últimos días registrados en el diario, multiplicada por los días a cubrir. La carne, el pescado, la pasta y el arroz registrados cocidos pasan a peso en crudo."
+],
+"2208": [
+"in progress, up to today",
+"en curso, hasta hoy"
+],
+"2209": [
+"Goal weight: {0} kg.",
+"Peso objetivo: {0} kg."
+],
+"2210": [
+"GYM: {0} workouts (goal {1}), {2} sets, volume {3} kg, {4} PRs. Previous week: {5} workouts, {6} sets, volume {7} kg.",
+"GIMNASIO: {0} entrenamientos (objetivo {1}), {2} series, volumen {3} kg, {4} récords. Semana anterior: {5} entrenamientos, {6} series, volumen {7} kg."
+],
+"2211": [
+"(light version)",
+"(versión ligera)"
+],
+"2212": [
+"- {0} {1}: {2} sets, {3} min{4}. {5}",
+"- {0} {1}: {2} series, {3} min{4}. {5}"
+],
+"2213": [
+"Sets per muscle: {0}.",
+"Series por músculo: {0}."
+],
+"2214": [
+"RUNNING: {0} runs, {1} km.",
+"CARRERA: {0} salidas, {1} km."
+],
+"2215": [
+"Load last 7 days / 4-week average: {0}.",
+"Carga últimos 7 días / media 4 semanas: {0}."
+],
+"2216": [
+"Estimated active calories from workouts and runs: {0} kcal for the week.",
+"Calorías activas estimadas de entrenamiento y carrera: {0} kcal en la semana."
+],
+"2217": [
+"DIET: {0} days logged. Average {1} kcal (target {2}), protein {3} g (target {4}).",
+"DIETA: {0} días registrados. Media {1} kcal (objetivo {2}), proteínas {3} g (objetivo {4})."
+],
+"2218": [
+"DIET: no days logged in the diary.",
+"DIETA: ningún día registrado en el diario."
+],
+"2219": [
+", rate {0} kg/week",
+", ritmo {0} kg/semana"
+],
+"2220": [
+"WEIGHT: 7-day average {0} kg{1}, last weigh-in {2}.",
+"PESO: media 7 días {0} kg{1}, último pesaje {2}."
+],
+"2221": [
+"(30-day baseline {0})",
+"(base 30 días {0})"
+],
+"2222": [
+"RECOVERY: avg sleep {0}, avg HRV {1}{2}, resting HR {3}, avg steps {4} (goal {5}).",
+"RECUPERACIÓN: sueño medio {0}, HRV media {1}{2}, FC en reposo {3}, pasos medios {4} (objetivo {5})."
+],
+"2223": [
+"Reply ONLY with valid JSON in this format: {0}",
+"Responde SOLO con JSON válido en este formato: {0}"
+],
+"2224": [
+"Format: score from 1 to 10, 2-sentence summary, what went well, 3 numbered actions, 1 warning. In English.",
+"Formato: nota del 1 al 10, resumen en 2 frases, qué ha ido bien, 3 acciones numeradas, 1 advertencia. En español."
+],
+"2225": [
+"You are the Forgia coach: an expert strength coach and sports nutritionist, direct and practical. Analyze this athlete's week using ONLY the data below. Connect the data (sleep, load, diet, weight, strength) but distinguish correlation from causation. Give exactly 3 concrete actions for next week, with numbers (sets, kg, kcal, grams, hours, steps). No generic phrases, no preambles. {0} DATA {1}",
+"Eres el coach de Forgia: entrenador y nutricionista deportivo experto, directo y práctico. Analiza la semana de este atleta usando SOLO los datos de abajo. Relaciona los datos entre sí (sueño, carga, dieta, peso, fuerza) pero distingue correlación y causa. Da exactamente 3 acciones concretas para la próxima semana, con números (series, kg, kcal, gramos, horas, pasos). Nada de frases genéricas ni preámbulos. {0} DATOS {1}"
+],
+"2226": [
+"What's going well",
+"Qué va bien"
+],
+"2227": [
+"3 actions for next week",
+"Las 3 acciones para la próxima semana"
+],
+"2228": [
+"Weekly analysis",
+"Análisis de la semana"
+],
+"2229": [
+"Analyzing the week…",
+"Analizando la semana…"
+],
+"2230": [
+"Analysis from {0} at {1}",
+"Análisis del {0} a las {1}"
+],
+"2231": [
+"Redo analysis",
+"Repetir análisis"
+],
+"2232": [
+"Analyze the week",
+"Analizar la semana"
+],
+"2233": [
+"In-app analysis needs the API key (Profile → AI Coach). Free option: copy the message and paste it into a chat with Claude.",
+"Para el análisis dentro de la app hace falta la clave API (Perfil → Coach IA). Gratis: copia el mensaje y pégalo en un chat con Claude."
+],
+"2234": [
+"The AI reads the week's workouts, runs, load, diet, weight, sleep and HRV and gives you a score and 3 concrete actions. Only summarized numbers are sent, no photos.",
+"La IA lee entrenamientos, carreras, carga, dieta, peso, sueño y HRV de la semana y te da una nota y 3 acciones concretas. Solo se envían números resumidos, nada de fotos."
+],
+"2235": [
+"You need at least 2 days logged in the diary",
+"Hacen falta al menos 2 días registrados en el diario"
+],
+"2236": [
+"List for {0} days ready",
+"Lista para {0} días lista"
+],
+"2237": [
+"same movement",
+"mismo movimiento"
+],
+"2238": [
+"same muscles",
+"mismos músculos"
+],
+"2239": [
+"same equipment",
+"mismo material"
+],
+"2240": [
+"different equipment",
+"otro material"
+],
+"2241": [
+"Similar to",
+"Similares a"
+],
+"2242": [
+"No similar exercise found.",
+"No se ha encontrado ningún ejercicio similar."
+],
+"2243": [
+"Sorted by muscles, movement and equipment. Tap \"All\" to search freely.",
+"Ordenados por músculos, movimiento y material. Toca \"Todos\" para buscar libremente."
+],
+"2244": [
+"Remove from favorites",
+"Quitar de favoritos"
+],
+"2245": [
+"Add to favorites",
+"Añadir a favoritos"
+],
+"2246": [
+", same category",
+", misma categoría"
+],
+"2247": [
+"Remove estimate",
+"Quitar estimación"
+],
+"2248": [
+"Values in",
+"Valores en"
+],
+"2249": [
+"estimated from",
+"estimados a partir de"
+],
+"2250": [
+"(CIQUAL database{0}). The label doesn't list them.",
+"(base de datos CIQUAL{0}). La etiqueta no los indica."
+],
+"2251": [
+"Added to favorites",
+"Añadido a favoritos"
+],
+"2252": [
+"Removed from favorites",
+"Quitado de favoritos"
+],
+"2253": [
+"Estimate removed: only the label values remain",
+"Estimación quitada: solo quedan los valores de la etiqueta"
+],
+"2254": [
+"Can't connect.",
+"No consigo conectarme."
+],
+"2255": [
+"You're offline: signing in for the first time needs internet.",
+"Estás sin conexión: para acceder la primera vez hace falta internet."
+],
+"2256": [
+"Retry",
+"Reintentar"
+],
+"2257": [
+"Workouts, diet and body in one app. To use it you need a free account: your data stays saved and you'll find it on your phone and computer.",
+"Entrenamientos, dieta y cuerpo en una sola app. Para usarla necesitas una cuenta gratuita: tus datos quedan guardados y los tienes en el móvil y en el ordenador."
+],
+"2258": [
+"Already used Forgia on this phone without an account? Sign in or sign up: the data you have here gets saved to your account.",
+"¿Ya has usado Forgia en este móvil sin cuenta? Inicia sesión o regístrate: los datos que tienes aquí se guardan en tu cuenta."
+],
+"2259": [
+"PASSWORD_RECOVERY",
+"PASSWORD_RECOVERY"
+],
+"2260": [
+"Session expired: sign in again",
+"Sesión caducada: vuelve a iniciar sesión"
+],
+"2261": [
+"Sync library not loaded (are you offline?)",
+"Biblioteca de sincronización no cargada (¿estás sin conexión?)"
+],
+"2262": [
+"Sync error",
+"Error de sincronización"
+],
+"2263": [
+"Syncing…",
+"Sincronizando…"
+],
+"2264": [
+"Synced at {0}",
+"Sincronizado a las {0}"
+],
+"2265": [
+"Account and sync work in the installed app (GitHub Pages), not in this preview.",
+"La cuenta y la sincronización funcionan en la app instalada (GitHub Pages), no en esta vista previa."
+],
+"2266": [
+"Loading sync…",
+"Cargando la sincronización…"
+],
+"2267": [
+"Your data is saved online and synced across all devices where you sign in with this account. Only you can see it.",
+"Tus datos se guardan online y se sincronizan en todos los dispositivos donde inicies sesión con esta cuenta. Solo tú puedes verlos."
+],
+"2268": [
+"Sync now",
+"Sincronizar ahora"
+],
+"2269": [
+"Sign out",
+"Cerrar sesión"
+],
+"2270": [
+"Sign in or create an account",
+"Inicia sesión o crea una cuenta"
+],
+"2271": [
+"If you sign up now you'll get a confirmation email: open it, then come back here and tap \"Sign in\".",
+"Si te registras ahora te llegará un correo de confirmación: ábrelo, luego vuelve aquí y pulsa \"Iniciar sesión\"."
+],
+"2272": [
+"Save your data online",
+"Guarda tus datos online"
+],
+"2273": [
+"Create an account so you don't lose anything and can use the app on your phone and computer.",
+"Crea una cuenta para no perder nada y usar la app en el móvil y en el ordenador."
+],
+"2274": [
+"At least 8 characters",
+"Al menos 8 caracteres"
+],
+"2275": [
+"Email",
+"Email"
+],
+"2276": [
+"Password",
+"Contraseña"
+],
+"2277": [
+"Sign in",
+"Iniciar sesión"
+],
+"2278": [
+"Create account",
+"Crear cuenta"
+],
+"2279": [
+"Forgot password?",
+"¿Has olvidado la contraseña?"
+],
+"2280": [
+"New password",
+"Nueva contraseña"
+],
+"2281": [
+"Save password",
+"Guardar contraseña"
+],
+"2282": [
+"invalid login",
+"invalid login"
+],
+"2283": [
+"Wrong email or password.",
+"Email o contraseña incorrectos."
+],
+"2284": [
+"not confirmed",
+"not confirmed"
+],
+"2285": [
+"You need to confirm your email first: open the link you received.",
+"Primero tienes que confirmar el email: abre el enlace que te ha llegado."
+],
+"2286": [
+"already registered",
+"already registered"
+],
+"2287": [
+"An account with this email already exists: use \"Sign in\".",
+"Ya existe una cuenta con este email: usa \"Iniciar sesión\"."
+],
+"2288": [
+"Password too weak: use at least 8 characters.",
+"Contraseña demasiado débil: usa al menos 8 caracteres."
+],
+"2289": [
+"rate limit",
+"rate limit"
+],
+"2290": [
+"Too many attempts: try again in a few minutes.",
+"Demasiados intentos: vuelve a intentarlo en unos minutos."
+],
+"2291": [
+"Error, try again.",
+"Error, inténtalo de nuevo."
+],
+"2292": [
+"Enter email and password",
+"Introduce email y contraseña"
+],
+"2293": [
+"Signing in…",
+"Iniciando sesión…"
+],
+"2294": [
+"Signed in: syncing your data",
+"Sesión iniciada: sincronizando los datos"
+],
+"2295": [
+"Enter your email and a password of at least 8 characters",
+"Introduce el email y una contraseña de al menos 8 caracteres"
+],
+"2296": [
+"Creating account…",
+"Creando la cuenta…"
+],
+"2297": [
+"I've sent you an email: open the link to confirm, then come back here and tap \"Sign in\".",
+"Te he enviado un correo: abre el enlace para confirmar, luego vuelve aquí y pulsa \"Iniciar sesión\"."
+],
+"2298": [
+"Account created: syncing your data",
+"Cuenta creada: sincronizando los datos"
+],
+"2299": [
+"Enter your email first",
+"Escribe primero tu email"
+],
+"2300": [
+"I've sent you an email with the link to change your password.",
+"Te he enviado un correo con el enlace para cambiar la contraseña."
+],
+"2301": [
+"Password updated",
+"Contraseña actualizada"
+],
+"2302": [
+"Sign out of your account?",
+"¿Cerrar sesión?"
+],
+"2303": [
+"Your data stays saved online. To use the app again you'll need to sign in.",
+"Tus datos siguen guardados online. Para volver a usar la app tendrás que iniciar sesión."
+],
+"2304": [
+"You're signed out",
+"Has cerrado sesión"
+]
+}

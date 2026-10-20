@@ -1,0 +1,65 @@
+import asyncio
+from playwright.async_api import async_playwright
+from testlib import setup_fake
+async def main():
+    async with async_playwright() as p:
+        b = await p.chromium.launch()
+        ctx = await b.new_context(viewport={'width': 390, 'height': 844}, device_scale_factor=2, is_mobile=True, has_touch=True)
+        await setup_fake(ctx)
+        pg = await ctx.new_page(); errs = []; pg.on('pageerror', lambda e: errs.append(str(e)))
+        await pg.goto('http://localhost:8765/index.html'); await pg.wait_for_timeout(700)
+        await pg.fill('#ob-name', 'Mattia'); await pg.click('input[value="ppl"]'); await pg.check('#ob-demo')
+        await pg.click('[data-a="finishOnboard"]'); await pg.wait_for_timeout(800)
+        print('kcal model', await pg.evaluate("""() => { S.nutri = Object.assign(S.nutri || {}, { weight: 75, age: 22, sex: 'm', height: 178 });
+          const w = [...S.workouts].sort((a,b)=>b.start-a.start)[0];
+          const r10 = kcalRun({ km: 10, sec: 3000, type: 'free', src: 'gps' }), walk = kcalRun({ km: 5, sec: 3600, type: 'walk' }), hill = kcalRun({ km: 10, sec: 3000, elev: 300, type: 'free' }), hr = kcalRun({ km: 10, sec: 3000, hr: 160, type: 'free' });
+          const kw = kcalWorkout(w), kwh = kcalWorkout({ ...w, hr: 125 });
+          return { gym: [w.name, Math.round((w.end-w.start)/60000), wSetCount(w), kw.net, kw.gross, kw.lo, kw.hi, kw.met.toFixed(1), kwh.net], run10: [r10.net, r10.gross], walk5: [walk.net, walk.gross], hill: hill.net, hr: hr.net } }"""))
+        await pg.click('[data-a="tab"][data-k="train"]'); await pg.wait_for_timeout(300)
+        n0 = await pg.evaluate("() => S.workouts.length")
+        await pg.click('[data-a="pastOpen"]'); await pg.wait_for_timeout(300)
+        k = await pg.evaluate("() => dkey(Date.now() - 3 * DAY)")
+        await pg.fill('#pa-d', k); await pg.fill('#pa-t', '07:30')
+        await pg.click('[data-a="pastGo"] >> nth=1'); await pg.wait_for_timeout(500)
+        await pg.screenshot(path='shots/p1-past.png')
+        await pg.fill('[data-in="woDur"]', '50'); await pg.fill('[data-in="woHr"]', '128')
+        await pg.fill('input[data-in="set"][data-ei="0"][data-si="0"][data-f="kg"]', '80'); await pg.fill('input[data-in="set"][data-ei="0"][data-si="0"][data-f="r"]', '8')
+        await pg.fill('input[data-in="set"][data-ei="0"][data-si="1"][data-f="kg"]', '80'); await pg.fill('input[data-in="set"][data-ei="0"][data-si="1"][data-f="r"]', '7')
+        print('rest not started', await pg.evaluate("() => !S.active.restEnd"))
+        await pg.click('[data-a="finishWorkout"]'); await pg.wait_for_timeout(500)
+        await pg.screenshot(path='shots/p2-summary.png')
+        w = await pg.evaluate("() => { const w = S.workouts[S.workouts.length-1]; return [dkey(w.start), hhmm(w.start), (w.end-w.start)/60000, w.hr, w.ex.length, w.ex[0].sets, !!document.querySelector('.kcal-line'), S.active] }")
+        print('past saved', w, 'count', n0, '->', await pg.evaluate("() => S.workouts.length"), 'date ok', w[0] == k)
+        wid = await pg.evaluate("() => S.workouts[S.workouts.length-1].id")
+        await pg.click('[data-a="closeAll"]'); await pg.wait_for_timeout(300)
+        # edit it
+        await pg.evaluate(f"() => pushLayer({{ type: 'history', id: '{wid}' }})"); await pg.wait_for_timeout(300)
+        await pg.click('[data-a="editHist"]'); await pg.wait_for_timeout(400)
+        await pg.fill('input[data-in="set"][data-ei="0"][data-si="1"][data-f="kg"]', '82,5')
+        await pg.fill('[data-in="woTime"]', '08:15')
+        await pg.click('[data-a="finishWorkout"]'); await pg.wait_for_timeout(400)
+        print('edited', await pg.evaluate(f"() => {{ const w = S.workouts.find(x => x.id === '{wid}'); return [S.workouts.length, hhmm(w.start), w.ex[0].sets.map(s => s.kg), topLayer()?.type, S.active] }}"))
+        # edit + cancel
+        await pg.click('[data-a="editHist"]'); await pg.wait_for_timeout(300)
+        await pg.fill('input[data-in="set"][data-ei="0"][data-si="1"][data-f="kg"]', '200')
+        await pg.click('[data-a="cancelWorkout"]'); await pg.wait_for_timeout(300)
+        print('cancel kept', await pg.evaluate(f"() => S.workouts.find(x => x.id === '{wid}').ex[0].sets.map(s => s.kg)"))
+        await pg.screenshot(path='shots/p3-hist.png', full_page=True)
+        # calendar + recap in Progressi
+        await pg.evaluate("() => { UI.layers = []; render(); }")
+        await pg.click('[data-a="tab"][data-k="progress"]'); await pg.wait_for_timeout(400)
+        await pg.screenshot(path='shots/p4-progress.png', full_page=True)
+        await pg.click(f'[data-a="calDay"][data-k="{k}"]'); await pg.wait_for_timeout(300)
+        print('day sheet', (await pg.inner_text('.sheet')).replace('\n', ' | ')[:200])
+        await pg.click('.sheet .opt >> text=Aggiungi corsa'); await pg.wait_for_timeout(300)
+        print('run draft day', await pg.evaluate("() => dkey(topLayer().draft.start)"))
+        await pg.fill('#re-km', '6'); await pg.fill('[data-in="reDur"][data-f="m"]', '33'); await pg.click('[data-a="runSave"]'); await pg.wait_for_timeout(300)
+        await pg.click('[data-a="recapNav"][data-d="1"]'); await pg.wait_for_timeout(200)
+        print('recap last week', await pg.evaluate("() => { const s = weekStats(startOfWeek(Date.now()) - 7*DAY); return [s.n, s.runs, Math.round(s.km), Math.round(s.kcal), s.prs, s.days] }"))
+        await pg.click('[data-a="calNav"][data-d="-1"]'); await pg.wait_for_timeout(200)
+        await pg.click('[data-a="tab"][data-k="home"]'); await pg.wait_for_timeout(400)
+        await pg.screenshot(path='shots/p5-home.png', full_page=True)
+        await pg.evaluate("() => { S.nutri = S.nutri; }")
+        print('hoverflow', await pg.evaluate("() => document.documentElement.scrollWidth > innerWidth"), 'ERR', errs)
+        await b.close()
+asyncio.run(main())

@@ -1,0 +1,829 @@
+# codice CIQUAL | nome italiano | categoria | porzione g | nome porzione | alias ricerca
+# ---- FRUTTA FRESCA
+13000|Albicocca|fr|40|1 albicocca|
+13002|Ananas|fr|150|1 porzione|
+13005|Banana|fr|120|1 banana media|
+13007|Ribes nero|fr|100|1 porzione|cassis
+13008|Ciliegie|fr|150|1 porzione|ciliegia cherry cerezas
+13009|Limone|fr|60|1 limone|
+13012|Fichi freschi|fr|50|1 fico|fico
+13014|Fragole|fr|150|1 porzione|fragola fresas
+13015|Lamponi|fr|100|1 porzione|lampone
+13016|Frutto della passione|fr|20|1 frutto|maracuja passion
+13018|Melograno|fr|100|1 porzione|granada
+13019|Ribes rosso|fr|100|1 porzione|
+13021|Kiwi|fr|75|1 kiwi|
+13023|Litchi|fr|100|1 porzione|lychee
+13025|Mango|fr|150|1 porzione|mango
+13026|Melone|fr|200|1 fetta|melone cantalupo
+13028|Mirtilli|fr|100|1 porzione|mirtillo blueberries arandanos
+13029|More|fr|100|1 porzione|mora
+13030|Nettarina|fr|150|1 nettarina|pesca noce
+13034|Arancia|fr|150|1 arancia|naranja
+13035|Papaya|fr|150|1 porzione|
+13036|Anguria|fr|300|1 fetta|cocomero sandia
+13037|Pera|fr|170|1 pera|
+13039|Mela|fr|180|1 mela|manzana apple
+13040|Pompelmo|fr|200|1/2 pompelmo|pomelo
+13041|Prugna Regina Claudia|fr|40|1 prugna|
+13043|Pesca|fr|150|1 pesca|melocoton
+13045|Uva nera|fr|150|1 grappolo|
+13047|Rabarbaro|fr|100|1 porzione|
+13054|Carambola|fr|100|1 frutto|
+13063|Fico d'India|fr|100|1 frutto|
+13066|Cachi|fr|200|1 caco|kaki caco
+13067|Lime|fr|50|1 lime|
+13082|Clementine|fr|80|1 clementina|clementina mandarancio
+13083|Guava|fr|100|1 frutto|guayaba
+13090|Mandarino|fr|80|1 mandarino|mandarini
+13100|Prugne|fr|50|1 prugna|susine susina ciruela
+13110|Amarene|fr|100|1 porzione|visciole
+13112|Uva|fr|150|1 grappolo|uva bianca
+13113|Mirtilli rossi|fr|100|1 porzione|cranberry
+13132|Mirtilli surgelati|fr|100|1 porzione|
+13134|Macedonia di frutta|fr|150|1 coppetta|
+13136|Lamponi surgelati|fr|100|1 porzione|
+13549|Kumquat|fr|20|1 frutto|
+13742|Melone giallo (honeydew)|fr|200|1 fetta|
+13997|Frutti di bosco|fr|100|1 porzione|frutti rossi
+13038|Composta di mela|fr|100|1 vasetto|
+13109|Composta di frutta senza zuccheri aggiunti|fr|100|1 vasetto|
+13176|Mela cotta|fr|150|1 porzione|
+# ---- FRUTTA SECCA ZUCCHERINA
+13001|Albicocche secche|fd|30|1 porzione|
+13013|Fichi secchi|fd|30|2 fichi|
+13042|Prugne secche|fd|30|3 prugne|
+13089|Banana essiccata|fd|30|1 porzione|
+13111|Mela essiccata|fd|30|1 porzione|
+# ---- FRUTTA A GUSCIO E SEMI
+15001|Arachidi|nut|30|1 manciata|cacahuete
+15002|Arachidi tostate salate|nut|30|1 manciata|
+15004|Nocciole|nut|30|1 manciata|
+15006|Cocco fresco|nut|50|1 porzione|
+15007|Cocco essiccato (rapè)|nut|15|1 cucchiaio|cocco grattugiato
+15008|Noci del Brasile|nut|20|4 noci|
+15009|Pistacchi tostati salati|nut|30|1 manciata|
+15010|Semi di sesamo|nut|10|1 cucchiaio|
+15011|Semi di girasole|nut|15|1 cucchiaio|
+15019|Anacardi tostati salati|nut|30|1 manciata|
+15020|Castagne lesse|nut|100|1 porzione|caldarroste
+15021|Castagne arrosto|nut|100|1 porzione|caldarroste
+15025|Pinoli|nut|10|1 cucchiaio|
+15026|Noci pecan|nut|30|1 manciata|
+15027|Noci macadamia|nut|30|1 manciata|
+15028|Semi di zucca|nut|15|1 cucchiaio|
+15034|Semi di lino|nut|10|1 cucchiaio|
+15044|Pistacchi tostati|nut|30|1 manciata|
+15203|Tahina (crema di sesamo)|nut|15|1 cucchiaio|
+20901|Soia (semi secchi)|leg|50|1 porzione|
+# ---- LEGUMI
+20500|Fave cotte|leg|150|1 porzione|
+20502|Fagioli bianchi cotti|leg|150|1 porzione|cannellini
+20503|Fagioli rossi cotti|leg|150|1 porzione|kidney
+20506|Piselli secchi spezzati cotti|leg|150|1 porzione|
+20510|Lenticchie in scatola|leg|150|1 porzione|
+20511|Fagioli bianchi in scatola|leg|150|1 porzione|cannellini
+20524|Fagioli rossi in scatola|leg|150|1 porzione|
+20531|Fagioli mung cotti|leg|150|1 porzione|
+20532|Ceci in scatola|leg|150|1 porzione|garbanzos
+20587|Lenticchie verdi cotte|leg|150|1 porzione|
+20589|Lenticchie rosse cotte|leg|150|1 porzione|decorticate
+20534|Lupini|leg|50|1 porzione|
+20504|Lenticchie secche|leg|70|1 porzione|
+20516|Ceci secchi|leg|70|1 porzione|
+20501|Fagioli bianchi secchi|leg|70|1 porzione|
+20525|Fagioli rossi secchi|leg|70|1 porzione|
+20535|Lenticchie rosse secche|leg|70|1 porzione|
+20515|Piselli secchi|leg|70|1 porzione|
+20518|Fave secche|leg|70|1 porzione|
+# ---- PATATE E TUBERI
+4000|Tapioca|cer|30|1 porzione|
+4002|Patate al forno (senza buccia)|tub|200|1 porzione|
+4003|Patate lesse|tub|200|1 porzione|
+4004|Patatine chips|sweet|25|1 busta piccola|chips
+4015|Patate saltate in padella|tub|200|1 porzione|
+4017|Purè di patate (fiocchi)|tub|200|1 porzione|pure
+4018|Purè di patate (latte e burro)|tub|200|1 porzione|pure
+4023|Patate novelle|tub|200|1 porzione|
+4025|Patate spicchi (wedges)|tub|150|1 porzione|
+4026|Patate arrosto|tub|200|1 porzione|
+4030|Patatine fritte al forno (surgelate)|tub|150|1 porzione|french fries
+4032|Patatine fritte (friggitrice)|tub|150|1 porzione|french fries frite
+4039|Rösti di patate|tub|100|1 rösti|
+4102|Patate dolci cotte|tub|200|1 porzione|batata
+53101|Platano cotto|tub|150|1 porzione|platano macho
+54034|Manioca cotta|tub|150|1 porzione|yuca
+# ---- VERDURE
+20004|Bietola|veg|200|1 porzione|bieta
+20012|Indivia riccia|veg|80|1 porzione|
+20014|Cavolo rosso|veg|150|1 porzione|cavolo cappuccio rosso
+20016|Cavolfiore|veg|200|1 porzione|
+20022|Crescione|veg|50|1 porzione|
+20023|Sedano|veg|100|1 gambo|
+20026|Indivia belga|veg|100|1 cespo|endive
+20028|Finocchio|veg|200|1 finocchio|
+20031|Lattuga|veg|80|1 porzione|insalata
+20034|Cipolla|veg|50|1/2 cipolla|cebolla
+20039|Porro|veg|100|1 porzione|porri
+20041|Peperoni|veg|150|1 porzione|peperone pimiento
+20044|Zucca|veg|200|1 porzione|
+20045|Ravanelli|veg|50|1 porzione|ravanello
+20047|Pomodori|veg|150|1 porzione|pomodoro tomate
+20052|Carciofo|veg|150|1 carciofo|carciofi alcachofa
+20053|Melanzane|veg|200|1 porzione|melanzana berenjena
+20055|Sedano rapa|veg|100|1 porzione|
+20056|Funghi champignon|veg|150|1 porzione|fungo champinones
+20057|Broccoli|veg|200|1 porzione|broccolo
+20058|Cavolini di Bruxelles|veg|150|1 porzione|
+20059|Spinaci|veg|200|1 porzione|espinacas
+20061|Fagiolini|veg|200|1 porzione|cornetti judias verdes
+20064|Rape|veg|150|1 porzione|rapa
+20069|Cavolo verza|veg|150|1 porzione|verza cavolo
+20072|Piselli freschi|veg|150|1 porzione|pisello guisantes
+20073|Asparagi|veg|150|1 porzione|asparago esparragos
+20084|Piselli surgelati|veg|150|1 porzione|pisello
+20091|Barbabietola|veg|100|1 porzione|
+20097|Scalogno|veg|20|1 scalogno|
+20099|Valeriana|veg|50|1 porzione|songino
+20101|Verdure miste surgelate|veg|200|1 porzione|minestrone
+20108|Mais dolce (pannocchia)|veg|150|1 pannocchia|
+20114|Funghi pleurotus|veg|150|1 porzione|
+20116|Cavolo cappuccio|veg|150|1 porzione|
+20138|Zucca butternut|veg|200|1 porzione|
+20151|Peperoncino|veg|5|1 peperoncino|
+20160|Funghi porcini|veg|150|1 porzione|porcino
+20162|Radicchio rosso|veg|80|1 porzione|radicchio
+20163|Cicoria|veg|150|1 porzione|
+20167|Cavolo cinese (pak choi)|veg|150|1 porzione|bok choy
+20171|Lattuga romana|veg|80|1 porzione|
+20172|Pomodorini|veg|150|1 porzione|ciliegino datterino
+20173|Taccole|veg|150|1 porzione|
+20181|Pastinaca|veg|150|1 porzione|
+20183|Germogli di soia|veg|50|1 porzione|
+20200|Lattuga iceberg|veg|80|1 porzione|
+20217|Rucola|veg|50|1 porzione|rucola
+20218|Cavolo riccio (kale)|veg|100|1 porzione|kale cavolo nero
+20210|Cetriolo|veg|150|1 porzione|cetrioli pepino
+20020|Zucchine|veg|200|1 porzione|zucchina calabacin
+20009|Carote|veg|100|1 carota|carota zanahoria
+20270|Spinacino novello|veg|50|1 porzione|
+20272|Misticanza|veg|80|1 porzione|insalata mista
+20279|Asparagi verdi|veg|150|1 porzione|
+20280|Cavolo romanesco|veg|200|1 porzione|
+20233|Mais dolce surgelato|veg|80|1 porzione|
+20266|Verdure per ratatouille (surgelate)|veg|200|1 porzione|
+20006|Broccoli cotti|veg|200|1 porzione|
+20008|Carote cotte|veg|150|1 porzione|
+20013|Cavolini di Bruxelles cotti|veg|150|1 porzione|
+20017|Cavolfiore cotto|veg|200|1 porzione|
+20021|Zucchine cotte|veg|200|1 porzione|
+20027|Spinaci cotti|veg|200|1 porzione|
+20030|Fagiolini cotti|veg|200|1 porzione|
+20002|Melanzane cotte|veg|200|1 porzione|
+20000|Carciofi cotti|veg|150|1 porzione|
+20001|Asparagi lessi|veg|150|1 porzione|
+20003|Barbabietola cotta|veg|100|1 porzione|
+20037|Piselli cotti|veg|150|1 porzione|
+20066|Mais in scatola|veg|80|1 scatoletta piccola|mais dolce
+20048|Pomodori pelati|veg|200|1/2 barattolo|pelati
+20068|Concentrato di pomodoro|sauce|20|1 cucchiaio|
+20170|Polpa di pomodoro|veg|100|1 porzione|
+20260|Passata di pomodoro|veg|100|1 porzione|salsa tomate
+20067|Carciofi in scatola|veg|100|1 porzione|
+20155|Cuori di carciofo|veg|100|1 porzione|
+20018|Cuori di palma|veg|100|1 porzione|
+20079|Funghi champignon in scatola|veg|100|1 porzione|
+20096|Zucca cotta|veg|200|1 porzione|
+20275|Peperoni arrostiti in barattolo|veg|100|1 porzione|
+20189|Pomodori secchi|veg|20|1 porzione|
+20256|Pomodori secchi sott'olio|veg|30|1 porzione|
+20212|Funghi shiitake|veg|100|1 porzione|
+11004|Cetriolini sott'aceto|veg|30|1 porzione|
+13032|Olive nere|veg|30|10 olive|aceitunas
+13033|Olive verdi|veg|30|10 olive|aceitunas
+11040|Capperi|veg|10|1 cucchiaio|
+# ---- CEREALI, PASTA, RISO
+9103|Riso integrale cotto|cer|200|1 piatto|
+9105|Riso parboiled cotto|cer|200|1 piatto|
+9111|Riso selvaggio cotto|cer|150|1 porzione|
+9322|Orzo perlato cotto|cer|200|1 piatto|
+9341|Quinoa cotta|cer|150|1 porzione|
+9615|Polenta cotta|cer|250|1 porzione|
+9683|Cous cous cotto|cer|200|1 porzione|
+9691|Bulgur cotto|cer|200|1 porzione|
+9816|Pasta fresca all'uovo cotta|cer|200|1 piatto|tagliatelle fettuccine
+9871|Pasta integrale cotta|cer|200|1 piatto|
+9824|Pasta senza glutine cotta|cer|200|1 piatto|
+9086|Noodles cotti|cer|200|1 porzione|
+9901|Spaghetti di riso cotti|cer|200|1 porzione|vermicelli di riso
+25510|Gnocchi di patate cotti|cer|200|1 piatto|
+9001|Farro|cer|80|1 porzione|
+9119|Riso basmati / thai|cer|80|1 porzione|
+9109|Riso rosso|cer|80|1 porzione|
+9108|Riso selvaggio|cer|80|1 porzione|
+9200|Mais (chicchi secchi)|cer|50|1 porzione|
+9321|Orzo perlato|cer|80|1 porzione|
+9345|Amaranto|cer|60|1 porzione|
+9380|Grano saraceno|cer|80|1 porzione|
+9610|Semola di grano duro|cer|60|1 porzione|
+9614|Farina di mais per polenta|cer|80|1 porzione|
+9690|Bulgur|cer|80|1 porzione|
+9815|Pasta fresca all'uovo|cer|125|1 porzione|
+9821|Pasta secca all'uovo|cer|80|1 porzione|
+9874|Pasta senza glutine|cer|80|1 porzione|
+9900|Spaghetti di riso|cer|60|1 porzione|
+26264|Gnocchi di patate (crudi)|cer|200|1 porzione|
+9313|Porridge (avena cotta in acqua)|cer|250|1 ciotola|
+9311|Fiocchi d'avena (classici)|cer|40|1 porzione|
+32004|Muesli|cer|40|1 porzione|
+32005|Corn flakes (arricchiti)|cer|30|1 porzione|
+32006|Riso soffiato|cer|30|1 porzione|
+32013|Cereali al cioccolato|cer|30|1 porzione|
+32128|Muesli tradizionale|cer|40|1 porzione|
+32108|Granola croccante alla frutta|cer|40|1 porzione|
+32109|Granola croccante al cioccolato|cer|40|1 porzione|
+32135|Cereali multicereali soffiati|cer|30|1 porzione|
+32140|Fiocchi d'avena istantanei|cer|40|1 porzione|
+31100|Barretta ai cereali|sweet|25|1 barretta|
+31106|Barretta ai cereali al cioccolato|sweet|25|1 barretta|
+31114|Barretta ai cereali con frutta secca|sweet|25|1 barretta|
+9621|Crusca di frumento|cer|10|1 cucchiaio|
+9640|Crusca d'avena|cer|20|1 cucchiaio|
+9660|Germe di grano|cer|10|1 cucchiaio|
+9520|Farina di riso|cer|50|1 porzione|
+9540|Farina di grano saraceno|cer|50|1 porzione|
+9580|Farina di ceci|cer|50|1 porzione|
+9410|Farina integrale|cer|50|1 porzione|
+9510|Amido di mais (maizena)|cer|10|1 cucchiaio|
+# ---- PANE E PRODOTTI DA FORNO
+7001|Baguette|cer|60|1 pezzo|
+7100|Pane casereccio|cer|50|1 fetta|pane di campagna
+7110|Pane integrale (100%)|cer|50|1 fetta|
+7111|Pancarrè integrale|cer|25|1 fetta|pane in cassetta
+7113|Pancarrè ai cereali|cer|25|1 fetta|
+7125|Pane di segale|cer|40|1 fetta|
+7130|Pane senza glutine|cer|40|1 fetta|
+7170|Panino (tipo panini)|cer|80|1 panino|
+7180|Pane pita|cer|60|1 pita|
+7255|Pane ai cereali|cer|50|1 fetta|
+7258|Bagel|cer|90|1 bagel|
+7259|Panino per hamburger|cer|60|1 panino|bun
+7815|Tortilla di frumento|cer|40|1 tortilla|wrap
+7813|Tortilla di mais|cer|40|1 tortilla|
+7004|Pane tostato|cer|30|1 fetta|
+7340|Fette biscottate integrali|cer|10|1 fetta|
+7352|Gallette di riso integrale|cer|8|1 galletta|
+7353|Gallette multicereali|cer|8|1 galletta|
+7400|Fette di pane tostato confezionato|cer|10|1 fetta|
+7407|Crackers svedesi (knäckebröd)|cer|10|1 fetta|wasa
+7525|Grissini|cer|10|2 grissini|
+7430|Crostini di pane|cer|10|1 porzione|
+7500|Pangrattato|cer|10|1 cucchiaio|
+7225|Pan brioche|cer|35|1 fetta|
+7602|Croissant|cer|60|1 croissant|cornetto
+7620|Croissant al burro|cer|60|1 croissant|cornetto
+7650|Croissant alle mandorle|cer|90|1 croissant|
+7711|Panino al latte|cer|35|1 panino|
+7733|Saccottino al cioccolato|cer|70|1 pezzo|pain au chocolat
+7720|Girella all'uvetta|cer|90|1 pezzo|
+7737|Brioche ripiena al cioccolato|cer|50|1 merendina|merendina
+7739|Brioche ripiena alla crema|cer|50|1 merendina|merendina
+23480|Sfogliatina alle mele|cer|90|1 pezzo|
+37001|Impasto per pizza (crudo)|cer|100|1 porzione|
+96778|Base pizza cotta|cer|100|1 porzione|
+23421|Pasta sfoglia|cer|50|1 porzione|
+23410|Pasta brisée|cer|50|1 porzione|
+23445|Pasta fillo|cer|30|1 foglio|
+# ---- LATTE E LATTICINI
+19060|Latte ad alta digeribilità (senza lattosio)|dairy|200|1 bicchiere|zymil accadi
+19200|Latte di capra|dairy|200|1 bicchiere|
+19021|Latte in polvere intero|dairy|25|1 porzione|
+19054|Latte in polvere scremato|dairy|25|1 porzione|
+19027|Latte condensato zuccherato|sweet|20|1 cucchiaio|
+19860|Yogurt greco bianco|dairy|150|1 vasetto|
+19556|Yogurt di capra|dairy|125|1 vasetto|
+19593|Yogurt bianco magro|dairy|125|1 vasetto|0.1 0%
+19600|Yogurt bianco|dairy|125|1 vasetto|
+19624|Yogurt alla frutta|dairy|125|1 vasetto|
+19865|Kefir|dairy|200|1 bicchiere|
+19801|Latte fermentato da bere magro|dairy|200|1 bottiglietta|
+19644|Formaggio fresco spalmabile 0% (fromage blanc)|dairy|100|1 porzione|quark
+19646|Quark 3%|dairy|100|1 porzione|fromage blanc
+19663|Petit suisse 0%|dairy|60|1 vasetto|
+19669|Snack proteico al latte (budino/yogurt)|dairy|200|1 vasetto|high protein proteico
+19685|Panna cotta|sweet|100|1 porzione|
+19698|Tiramisù|sweet|100|1 porzione|
+19689|Cheesecake|sweet|100|1 fetta|
+39200|Budino al cioccolato|sweet|125|1 vasetto|
+39229|Budino alla vaniglia|sweet|125|1 vasetto|
+39209|Crème caramel|sweet|100|1 vasetto|
+39213|Crema catalana|sweet|100|1 porzione|creme brulee
+39206|Mousse al cioccolato|sweet|60|1 vasetto|
+39212|Riso al latte|sweet|125|1 vasetto|arroz con leche
+19692|Dessert di soia alla frutta|dairy|125|1 vasetto|
+19693|Yogurt di soia bianco|dairy|125|1 vasetto|alpro
+39710|Crema pasticcera|sweet|50|1 porzione|
+19410|Panna densa 30%|fat|20|1 cucchiaio|
+19430|Panna da cucina 15-20%|fat|20|1 cucchiaio|
+19420|Panna spray|fat|15|1 spruzzo|
+19433|Panna light 8%|fat|20|1 cucchiaio|
+# ---- FORMAGGI
+12001|Camembert|dairy|30|1 porzione|
+12020|Brie|dairy|30|1 porzione|
+12039|Munster|dairy|30|1 porzione|
+12045|Reblochon|dairy|30|1 porzione|
+12810|Formaggio di capra semistagionato|dairy|30|1 porzione|caprino
+12812|Formaggio di capra a tronchetto|dairy|30|1 porzione|caprino
+12815|Formaggio di capra stagionato|dairy|30|1 porzione|caprino
+12800|Caprino fresco|dairy|50|1 porzione|
+12500|Roquefort|dairy|30|1 porzione|
+12524|Gorgonzola|dairy|30|1 porzione|
+12105|Beaufort|dairy|30|1 porzione|
+12110|Comté|dairy|30|1 porzione|
+12114|Groviera|dairy|30|1 porzione|gruyere
+12115|Emmental|dairy|30|1 porzione|emmenthal
+12118|Emmental grattugiato|dairy|15|1 cucchiaio|
+12121|Fontina|dairy|30|1 porzione|
+12716|Provolone|dairy|30|1 porzione|
+12726|Cheddar|dairy|30|1 porzione|
+12729|Edam|dairy|30|1 porzione|
+12736|Gouda|dairy|30|1 porzione|
+12747|Pecorino dei Pirenei|dairy|30|1 porzione|formaggio di pecora
+12827|Pecorino (pasta pressata)|dairy|30|1 porzione|formaggio di pecora queso oveja
+12749|Raclette|dairy|30|1 porzione|
+12758|Toma|dairy|30|1 porzione|tomme
+12760|Formaggio light (pasta pressata)|dairy|30|1 porzione|
+12761|Asiago|dairy|30|1 porzione|
+12300|Sottilette|dairy|20|1 fetta|formaggio fuso fette
+12310|Formaggini|dairy|20|1 formaggino|
+12061|Feta|dairy|30|1 porzione|
+12060|Formaggio tipo feta (vaccino)|dairy|30|1 porzione|
+12315|Formaggio spalmabile (Philadelphia tipo)|dairy|20|1 porzione|philadelphia spalmabile
+12340|Formaggio spalmabile light|dairy|20|1 porzione|philadelphia light
+19584|Mascarpone|dairy|30|1 cucchiaio|
+19585|Ricotta|dairy|100|1 porzione|
+19590|Mozzarella vaccina|dairy|125|1 mozzarella|fior di latte
+# ---- UOVA
+22010|Uovo sodo|egg|50|1 uovo|huevo duro
+22011|Uovo in camicia|egg|50|1 uovo|
+22502|Uova strapazzate|egg|100|2 uova|scrambled revuelto
+22505|Uovo all'occhio di bue|egg|50|1 uovo|fritto senza grassi
+22002|Tuorlo d'uovo|egg|17|1 tuorlo|rosso
+22050|Uova di quaglia|egg|10|1 uovo|
+22506|Omelette al formaggio|egg|150|1 omelette|frittata
+22508|Omelette ai funghi|egg|150|1 omelette|frittata
+# ---- CARNE CRUDA
+6103|Manzo, entrecôte (cruda)|meat|200|1 porzione|costata ribeye
+6111|Manzo, controfiletto (crudo)|meat|200|1 porzione|roastbeef lombata
+6201|Manzo, bistecca (cruda)|meat|150|1 bistecca|
+6206|Manzo, scamone (crudo)|meat|150|1 porzione|
+6212|Manzo, bavetta (cruda)|meat|150|1 porzione|
+6252|Hamburger di manzo 10% (crudo)|meat|125|1 hamburger|macinato
+6256|Hamburger di manzo 20% (crudo)|meat|125|1 hamburger|macinato
+6231|Manzo da brodo/spezzatino (crudo)|meat|150|1 porzione|
+6521|Vitello, fesa/scaloppina (cruda)|meat|150|1 porzione|scaloppine
+6530|Vitello, filetto (crudo)|meat|150|1 porzione|
+28003|Maiale, lombo (crudo)|meat|150|1 porzione|
+28100|Maiale, braciola (cruda)|meat|150|1 braciola|costoletta
+28204|Maiale, filetto (crudo)|meat|150|1 porzione|solomillo
+28400|Maiale, costine (crude)|meat|200|1 porzione|ribs
+28475|Macinato di maiale 10%|meat|125|1 porzione|
+36002|Pollo, coscia con pelle (cruda)|meat|150|1 coscia|
+36003|Pollo, carne (cruda)|meat|150|1 porzione|
+36019|Pollo, sovracoscia senza pelle (cruda)|meat|120|1 sovracoscia|
+36022|Pollo, fusello (crudo)|meat|100|1 fusello|
+36023|Pollo, ali con pelle (crude)|meat|100|1 porzione|alette
+36301|Tacchino, carne (cruda)|meat|150|1 porzione|
+36304|Tacchino, fesa (cruda)|meat|150|1 porzione|scaloppine petto tacchino
+21500|Agnello, costolette (crude)|meat|150|1 porzione|cordero
+21502|Agnello, cosciotto (crudo)|meat|150|1 porzione|
+6901|Cavallo, bistecca (cruda)|meat|150|1 porzione|equina
+34001|Coniglio (crudo)|meat|150|1 porzione|conejo
+36206|Petto d'anatra (crudo)|meat|150|1 porzione|magret
+14002|Cinghiale (crudo)|meat|150|1 porzione|
+14005|Capriolo (crudo)|meat|150|1 porzione|cervo selvaggina
+40106|Fegato di vitello (crudo)|meat|100|1 porzione|
+40111|Fegato di pollo (crudo)|meat|100|1 porzione|
+# ---- CARNE COTTA
+6100|Manzo, entrecôte alla griglia|meat|150|1 porzione|costata
+6110|Manzo, controfiletto alla griglia|meat|150|1 porzione|tagliata
+6200|Manzo, bistecca alla griglia|meat|150|1 bistecca|
+6210|Roast beef|meat|100|1 porzione|
+6101|Manzo brasato|meat|150|1 porzione|
+6253|Hamburger di manzo 10% (cotto)|meat|100|1 hamburger|
+6257|Hamburger di manzo 20% (cotto)|meat|100|1 hamburger|
+6520|Scaloppina di vitello (cotta)|meat|120|1 porzione|
+28007|Lombo di maiale (cotto)|meat|120|1 porzione|
+28101|Braciola di maiale alla griglia|meat|120|1 braciola|
+28203|Filetto di maiale (cotto)|meat|120|1 porzione|
+28401|Costine di maiale (cotte)|meat|200|1 porzione|ribs
+36005|Pollo arrosto con pelle|meat|150|1 porzione|pollo asado
+36004|Coscia di pollo arrosto|meat|150|1 coscia|
+36033|Ali di pollo arrosto|meat|100|1 porzione|alette
+36302|Tacchino arrosto|meat|120|1 porzione|
+36306|Fesa di tacchino in padella|meat|120|1 porzione|scaloppina
+21501|Costolette d'agnello alla griglia|meat|150|1 porzione|
+21503|Cosciotto d'agnello arrosto|meat|150|1 porzione|
+34002|Coniglio cotto|meat|150|1 porzione|
+36205|Petto d'anatra alla griglia|meat|150|1 porzione|magret
+6907|Cavallo alla griglia|meat|150|1 porzione|
+40116|Fegato di pollo cotto|meat|100|1 porzione|
+40107|Fegato di vitello cotto|meat|100|1 porzione|
+25163|Polpette di manzo|meat|150|1 porzione|albondigas
+25089|Cordon bleu di pollo|meat|100|1 cordon bleu|
+36027|Nuggets di pollo|meat|100|1 porzione|crocchette pollo
+36036|Cotoletta di pollo impanata|meat|120|1 cotoletta|
+6311|Cotoletta alla milanese (vitello)|meat|150|1 cotoletta|
+25504|Spiedini di pollo|meat|150|1 porzione|
+25505|Spiedini di manzo|meat|150|1 porzione|
+25566|Spiedini di maiale|meat|150|1 porzione|pinchos morunos
+20914|Burger vegetale|meat|100|1 burger|veggie
+20917|Tempeh|leg|100|1 porzione|
+20916|Miso|sauce|15|1 cucchiaio|
+# ---- SALUMI
+28963|Petto di pollo a fette (affettato)|meat|50|1 porzione|fesa di pollo
+28964|Fesa di tacchino a fette (affettato)|meat|50|1 porzione|affettato tacchino
+28900|Prosciutto cotto alta qualità|meat|50|2 fette|
+28802|Prosciutto crudo sgrassato|meat|30|2 fette|
+28844|Prosciutto di Parma|meat|30|2 fette|crudo
+28850|Coppa|meat|30|1 porzione|capocollo
+28858|Pancetta arrotolata|meat|30|1 porzione|
+28501|Pancetta a cubetti (cruda)|meat|50|1 porzione|lardons bacon
+28725|Pancetta affumicata cotta|meat|30|1 porzione|bacon
+28727|Bacon (filetto)|meat|30|2 fette|
+28860|Carne secca (tipo bresaola dei Grigioni)|meat|30|1 porzione|
+30300|Salame|meat|30|1 porzione|salchichon
+30350|Salame tipo milano|meat|30|1 porzione|
+30789|Mortadella|meat|30|2 fette|
+30134|Würstel|meat|50|1 würstel|wurstel frankfurter
+30131|Würstel di pollo|meat|50|1 würstel|
+30110|Salsiccia di maiale (cruda)|meat|100|1 salsiccia|salchicha
+30011|Salsiccia di maiale (cotta)|meat|100|1 salsiccia|
+30150|Merguez|meat|100|1 porzione|
+30317|Chorizo piccante|meat|30|1 porzione|
+8211|Patè di campagna|meat|30|1 porzione|
+8316|Patè di fegato di pollo|meat|30|1 porzione|
+8321|Foie gras|meat|40|1 porzione|
+8111|Petto d'anatra affumicato|meat|30|1 porzione|
+28505|Corned beef|meat|50|1 porzione|carne in scatola simmenthal
+8703|Sanguinaccio|meat|100|1 porzione|morcilla
+# ---- PESCE CRUDO
+26006|Merluzzo d'Alaska (crudo)|fish|150|1 filetto|colin pollock
+26009|Halibut (crudo)|fish|150|1 filetto|
+26011|Aringa (cruda)|fish|150|1 porzione|
+26018|Rana pescatrice (cruda)|fish|150|1 porzione|coda di rospo
+26036|Salmone d'allevamento (crudo)|fish|150|1 trancio|salmon sushi
+26044|Nasello (crudo)|fish|150|1 filetto|merluza
+26051|Sgombro (crudo)|fish|150|1 porzione|caballa
+26052|Razza (cruda)|fish|150|1 porzione|
+26053|Tonno fresco (crudo)|fish|150|1 trancio|atun
+26058|Sogliola (cruda)|fish|150|1 sogliola|lenguado
+26065|Sardine (crude)|fish|100|1 porzione|sardinas
+26069|Tonno rosso (crudo)|fish|150|1 trancio|
+26072|Branzino (crudo)|fish|200|1 branzino|spigola lubina
+26079|Acciughe (crude)|fish|100|1 porzione|alici boquerones
+26080|Orata (cruda)|fish|200|1 orata|dorada
+26082|Pesce spada (crudo)|fish|150|1 trancio|pez espada
+26085|Triglia (cruda)|fish|150|1 porzione|salmonete
+26095|Merlano (crudo)|fish|150|1 porzione|
+26098|Baccalà secco salato|fish|50|1 porzione|bacalao
+26104|Pesce San Pietro (crudo)|fish|150|1 porzione|
+26122|Eglefino (crudo)|fish|150|1 filetto|
+26161|Salmone selvaggio (crudo)|fish|150|1 trancio|
+26178|Cernia (cruda)|fish|150|1 porzione|mero
+26174|Rombo (crudo)|fish|150|1 porzione|
+26213|Hoki (crudo)|fish|150|1 filetto|
+27008|Trota d'allevamento (cruda)|fish|150|1 trota|
+27011|Luccio (crudo)|fish|150|1 porzione|
+27017|Pangasio (crudo)|fish|150|1 filetto|panga
+27019|Tilapia (cruda)|fish|150|1 filetto|
+27021|Trota salmonata (cruda)|fish|150|1 filetto|
+27024|Lucioperca (crudo)|fish|150|1 filetto|
+27003|Carpa (cruda)|fish|150|1 porzione|
+# ---- PESCE COTTO / CONSERVE
+25996|Salmone cotto|fish|150|1 trancio|
+25997|Merluzzo cotto|fish|150|1 filetto|
+26023|Merluzzo al forno|fish|150|1 filetto|
+26038|Salmone al vapore|fish|150|1 trancio|
+26229|Salmone in padella|fish|150|1 trancio|
+26041|Tonno al forno|fish|150|1 trancio|
+26019|Sgombro al forno|fish|150|1 porzione|
+26136|Sardine alla griglia|fish|150|1 porzione|
+26060|Sogliola al forno|fish|150|1 porzione|
+26062|Sogliola fritta|fish|150|1 porzione|
+26093|Pesce spada al forno|fish|150|1 trancio|
+27006|Trota al forno|fish|150|1 trota|
+27030|Branzino al forno|fish|150|1 porzione|spigola
+26222|Orata al forno|fish|150|1 porzione|
+27018|Pangasio cotto|fish|150|1 filetto|
+26090|Eglefino affumicato (haddock)|fish|100|1 porzione|
+26087|Sgombro affumicato|fish|100|1 porzione|
+27029|Trota affumicata|fish|50|1 porzione|
+26034|Sardine sott'olio (sgocciolate)|fish|80|1 scatoletta|
+26035|Sardine al pomodoro|fish|100|1 scatoletta|
+26123|Sgombro al naturale (scatola)|fish|90|1 scatoletta|
+26086|Sgombro al pomodoro (scatola)|fish|100|1 scatoletta|
+26119|Salmone in scatola|fish|100|1 scatoletta|
+26000|Filetti di acciughe sott'olio|fish|20|1 porzione|alici
+26187|Acciughe marinate|fish|50|1 porzione|boquerones en vinagre
+26010|Aringa marinata|fish|50|1 porzione|
+26046|Surimi (bastoncini)|fish|60|4 bastoncini|
+26029|Bastoncini di pesce (crudi, surgelati)|fish|100|4 bastoncini|findus
+26030|Pesce impanato fritto|fish|120|1 porzione|
+26028|Crocchette di pesce|fish|100|1 porzione|
+26005|Caviale|fish|10|1 cucchiaino|
+26275|Uova di salmone|fish|10|1 cucchiaino|
+8293|Tarama|fish|20|1 cucchiaio|
+# ---- MOLLUSCHI E CROSTACEI
+10001|Calamari (crudi)|fish|150|1 porzione|calamar
+10003|Capesante (crude)|fish|100|1 porzione|vieiras
+10010|Astice (crudo)|fish|200|1 porzione|
+10011|Ostriche|fish|100|6 ostriche|ostras
+10014|Cozze (crude)|fish|150|1 porzione|mejillones
+10016|Seppia (cruda)|fish|150|1 porzione|sepia
+10017|Vongole (crude)|fish|100|1 porzione|almejas
+10018|Polpo (crudo)|fish|150|1 porzione|pulpo
+10024|Scampi (crudi)|fish|150|1 porzione|cigala
+10039|Granchio (crudo)|fish|150|1 porzione|
+10007|Gamberi cotti|fish|100|1 porzione|gambas
+10013|Cozze cotte|fish|150|1 porzione|mejillones
+10027|Vongole cotte|fish|100|1 porzione|
+10037|Calamari lessi|fish|150|1 porzione|
+10084|Calamari fritti|fish|150|1 porzione|frittura calamares fritos rabas
+10079|Polpo cotto|fish|150|1 porzione|
+10043|Frutti di mare misti|fish|150|1 porzione|
+10080|Frutti di mare surgelati cotti|fish|150|1 porzione|
+10012|Scampi impanati fritti|fish|150|1 porzione|
+10023|Frittelle di gamberi|fish|100|1 porzione|
+10005|Polpa di granchio|fish|100|1 porzione|
+10009|Astice lesso|fish|200|1 porzione|langosta
+# ---- GRASSI E CONDIMENTI
+16402|Burro salato|fat|10|1 noce|
+16412|Burro light|fat|10|1 noce|
+16614|Margarina|fat|10|1 noce|
+16520|Strutto|fat|10|1 cucchiaio|manteca
+17040|Olio di arachidi|fat|10|1 cucchiaio|
+17130|Olio di colza|fat|10|1 cucchiaio|
+17180|Olio di lino|fat|10|1 cucchiaio|
+17190|Olio di mais|fat|10|1 cucchiaio|
+17400|Olio di sesamo|fat|10|1 cucchiaio|
+17440|Olio di semi di girasole|fat|10|1 cucchiaio|
+18041|Latte di cocco|fat|50|1 porzione|
+11008|Ketchup|sauce|15|1 cucchiaio|
+11054|Maionese|sauce|15|1 cucchiaio|
+11079|Maionese light|sauce|15|1 cucchiaio|
+11100|Salsa barbecue|sauce|15|1 cucchiaio|bbq
+11104|Salsa di soia|sauce|10|1 cucchiaio|
+11110|Vinaigrette|sauce|15|1 cucchiaio|condimento insalata
+11109|Vinaigrette light|sauce|15|1 cucchiaio|
+11013|Senape|sauce|10|1 cucchiaino|mostaza
+11018|Aceto|sauce|10|1 cucchiaio|vinagre
+11043|Tapenade (patè di olive)|sauce|15|1 cucchiaio|
+11112|Harissa|sauce|5|1 cucchiaino|
+11166|Salsa allo yogurt|sauce|30|1 porzione|tzatziki
+11168|Aioli|sauce|15|1 cucchiaio|alioli
+11196|Salsa burger|sauce|15|1 cucchiaio|
+11203|Salsa kebab|sauce|30|1 porzione|
+11301|Salsa teriyaki|sauce|15|1 cucchiaio|
+11163|Salsa agrodolce|sauce|20|1 porzione|
+11101|Besciamella|sauce|50|1 porzione|
+11143|Besciamella fatta in casa|sauce|50|1 porzione|
+11114|Ragù alla bolognese|sauce|100|1 porzione|sugo di carne
+11107|Sugo al pomodoro con cipolla|sauce|100|1 porzione|
+11178|Sugo alle olive|sauce|100|1 porzione|
+11179|Pesto (confezionato)|sauce|30|1 porzione|
+11210|Pesto rosso|sauce|30|1 porzione|
+11128|Salsa carbonara (confezionata)|sauce|60|1 porzione|
+11132|Salsa al curry|sauce|60|1 porzione|
+11202|Salsa tikka masala|sauce|60|1 porzione|
+11189|Salsa ai formaggi|sauce|60|1 porzione|
+25620|Guacamole|sauce|50|1 porzione|
+25621|Hummus|sauce|50|1 porzione|houmous humus
+11009|Lievito alimentare in scaglie|other|5|1 cucchiaio|
+11001|Dado / brodo granulare|other|5|1 dado|
+# ---- DOLCI E ZUCCHERI
+31008|Miele|sweet|10|1 cucchiaino|
+31017|Zucchero di canna|sweet|5|1 cucchiaino|
+31034|Sciroppo d'acero|sweet|15|1 cucchiaio|
+31089|Sciroppo d'agave|sweet|15|1 cucchiaio|
+31087|Dolcificante alla stevia|sweet|1|1 bustina|
+31024|Marmellata di fragole|sweet|20|1 cucchiaio|confettura
+31037|Marmellata di albicocche|sweet|20|1 cucchiaio|confettura
+31039|Marmellata d'arance|sweet|20|1 cucchiaio|
+31110|Marmellata light|sweet|20|1 cucchiaio|
+31040|Dulce de leche|sweet|20|1 cucchiaio|
+31004|Cioccolato al latte|sweet|20|4 quadretti|
+31005|Cioccolato fondente (<70%)|sweet|20|4 quadretti|
+31010|Cioccolato bianco|sweet|20|4 quadretti|
+31074|Cioccolato fondente 70%+|sweet|20|4 quadretti|
+31000|Barretta di cioccolato con biscotto|sweet|45|1 barretta|twix kitkat
+31001|Barretta al cioccolato e caramello|sweet|50|1 barretta|mars snickers
+31012|Ovetti/praline al cioccolato|sweet|20|1 porzione|
+31066|Rocher (praline)|sweet|12|1 pralina|ferrero
+31003|Caramelle|sweet|10|2 caramelle|
+31060|Caramelle gommose|sweet|25|1 porzione|gommose haribo
+31050|Marshmallow|sweet|10|1 porzione|
+31033|Torrone|sweet|30|1 porzione|turron
+31014|Gelatina di frutta|sweet|20|1 porzione|
+24000|Biscotti secchi|sweet|10|1 biscotto|galletas
+24009|Speculoos|sweet|8|1 biscotto|
+24015|Biscotti al burro (petit beurre)|sweet|8|1 biscotto|
+24034|Biscotti da colazione|sweet|25|1 porzione|
+24036|Biscotti al cioccolato|sweet|10|1 biscotto|
+24049|Frollini al burro|sweet|10|1 biscotto|
+24225|Biscotti farciti (tipo Oreo)|sweet|12|1 biscotto|oreo
+24311|Wafer al cioccolato|sweet|20|1 porzione|
+24313|Wafer alla vaniglia|sweet|20|1 porzione|
+24684|Cookie con gocce di cioccolato|sweet|25|1 cookie|
+24520|Meringa|sweet|10|1 meringa|
+24630|Madeleine|sweet|25|1 madeleine|
+23032|Brownie|sweet|50|1 pezzo|
+23050|Pan di Spagna|sweet|50|1 fetta|bizcocho
+23081|Plumcake|sweet|35|1 fetta|quatre quarts
+23200|Pan di zenzero|sweet|30|1 fetta|
+23300|Baklava|sweet|40|1 pezzo|
+23477|Éclair|sweet|80|1 éclair|
+23479|Crostata alla frutta con crema|sweet|120|1 fetta|
+23485|Crostata al limone|sweet|120|1 fetta|
+23490|Torta di mele|sweet|120|1 fetta|
+23493|Crumble di mele|sweet|120|1 porzione|
+23497|Crostata al cioccolato|sweet|100|1 fetta|
+23585|Torta al cioccolato|sweet|80|1 fetta|
+23588|Torta allo yogurt|sweet|80|1 fetta|
+23594|Torta margherita|sweet|60|1 fetta|bizcocho
+23799|Crêpe semplice|sweet|50|1 crêpe|crepe
+23821|Crêpe alla nutella|sweet|90|1 crêpe|crepe
+23851|Waffle morbido|sweet|60|1 waffle|gofre
+23880|Bombolone/ciambella|sweet|60|1 pezzo|donut
+23881|Bombolone alla marmellata|sweet|70|1 pezzo|
+23950|Muffin|sweet|80|1 muffin|magdalena
+24666|Millefoglie|sweet|100|1 pezzo|milhojas
+23022|Canelé|sweet|50|1 pezzo|
+9231|Popcorn (ad aria)|sweet|20|1 porzione|palomitas
+9230|Popcorn all'olio|sweet|30|1 porzione|
+9232|Popcorn al caramello|sweet|30|1 porzione|
+38105|Tortilla chips / nachos|sweet|30|1 porzione|nachos
+38107|Salatini / mini pretzel|sweet|30|1 porzione|
+38402|Crackers salati|sweet|25|1 porzione|
+38406|Arachidi ricoperte (snack)|sweet|30|1 porzione|
+39515|Gelato confezionato (vaschetta)|sweet|100|1 porzione|helado
+39509|Cono gelato|sweet|90|1 cono|cornetto algida
+39503|Gelato stecco ricoperto|sweet|70|1 stecco|magnum
+39517|Frozen yogurt|sweet|100|1 porzione|
+39524|Sorbetto|sweet|100|1 porzione|
+39526|Ghiacciolo|sweet|60|1 ghiacciolo|
+# ---- BEVANDE
+2070|Spremuta d'arancia (100% succo)|fj|200|1 bicchiere|zumo naranja
+2013|Spremuta d'arancia fresca|fj|200|1 bicchiere|
+2074|Succo di mela|fj|200|1 bicchiere|
+2073|Succo d'ananas|fj|200|1 bicchiere|
+2016|Succo d'uva|fj|200|1 bicchiere|
+2072|Succo di frutta (100%)|fj|200|1 bicchiere|
+2077|Succo di frutta da concentrato|fj|200|1 bicchiere|
+2370|Nettare di mango|fj|200|1 bicchiere|
+2371|Nettare di pesca|fj|200|1 bicchiere|
+2043|Nettare di albicocca|fj|200|1 bicchiere|
+2500|Smoothie|fj|250|1 bottiglietta|frullato
+2053|Succo di pomodoro|drink|200|1 bicchiere|
+2028|Succo di limone|drink|15|1 cucchiaio|
+18010|Limonata / gassosa|drink|330|1 lattina|sprite
+18018|Cola|drink|330|1 lattina|coca cola
+18060|Cola zero|drink|330|1 lattina|coca zero light
+18019|Bibita gassata alla frutta|drink|330|1 lattina|fanta aranciata
+18075|Tè freddo|drink|330|1 bottiglia|estathe
+18065|Tè freddo senza zucchero|drink|330|1 bottiglia|
+18344|Acqua tonica|drink|200|1 bicchiere|tonica
+18352|Energy drink|drink|250|1 lattina|red bull monster
+18353|Energy drink zero|drink|250|1 lattina|
+18350|Bevanda isotonica|drink|500|1 bottiglia|gatorade powerade
+18011|Acqua di cocco|drink|330|1 brick|
+19122|Latte al cacao|dairy|250|1 brick|cacaolat
+18107|Bevanda di mandorla|drink|200|1 bicchiere|latte di mandorla
+18900|Bevanda di soia|drink|200|1 bicchiere|latte di soia
+18905|Bevanda d'avena|drink|200|1 bicchiere|latte d'avena
+18071|Caffè espresso|drink|30|1 tazzina|
+18004|Caffè americano|drink|200|1 tazza|caffe lungo
+18151|Cappuccino|drink|150|1 tazza|cafe con leche latte macchiato
+18020|Tè|drink|250|1 tazza|te infuso
+18155|Tè verde|drink|250|1 tazza|
+18022|Tisana|drink|250|1 tazza|
+18100|Cacao amaro in polvere|other|5|1 cucchiaino|
+18101|Cacao zuccherato in polvere|sweet|15|1 cucchiaio|nesquik
+5001|Birra chiara|alc|330|1 bottiglia|cerveza caña
+5010|Birra speciale|alc|330|1 bottiglia|
+5002|Birra doppio malto|alc|330|1 bottiglia|
+5030|Birra analcolica|alc|330|1 bottiglia|sin alcohol
+5205|Vino rosso 12°|alc|125|1 bicchiere|vino tinto
+5211|Vino bianco secco|alc|125|1 bicchiere|vino blanco
+5206|Vino rosato|alc|125|1 bicchiere|
+5201|Spumante|alc|125|1 flûte|prosecco cava
+5207|Champagne|alc|125|1 flûte|
+1004|Rum|alc|40|1 shot|ron
+1005|Whisky|alc|40|1 shot|
+1008|Vodka|alc|40|1 shot|
+1002|Gin|alc|40|1 shot|
+1003|Liquore|alc|40|1 bicchierino|amaro limoncello
+1017|Sangria|alc|200|1 bicchiere|
+1012|Cocktail a base di rum|alc|200|1 cocktail|mojito
+1026|Sakè|alc|100|1 porzione|
+5006|Sidro|alc|250|1 bicchiere|
+# ---- PIATTI PRONTI E FUORI CASA
+25404|Pizza margherita|dish|330|1 pizza|
+25435|Pizza prosciutto e formaggio|dish|330|1 pizza|prosciutto cotto
+25462|Pizza al salame / diavola|dish|330|1 pizza|diavola salamino
+25478|Pizza 4 formaggi|dish|330|1 pizza|
+25472|Pizza alle verdure / 4 stagioni|dish|330|1 pizza|vegetariana
+25477|Pizza funghi e formaggio|dish|330|1 pizza|
+25270|Pizza al tonno|dish|330|1 pizza|
+26270|Pizza al tonno|dish|330|1 pizza|
+26272|Pizza al pollo|dish|330|1 pizza|
+26274|Pizza al crudo / speck|dish|330|1 pizza|
+26271|Pizza kebab|dish|330|1 pizza|
+25463|Pizza ai frutti di mare|dish|330|1 pizza|
+25405|Quiche lorraine|dish|150|1 fetta|torta salata
+25573|Torta salata|dish|150|1 fetta|
+25417|Torta salata alle verdure|dish|150|1 fetta|
+25459|Burrito|dish|250|1 burrito|
+25460|Fajitas|dish|250|1 porzione|
+25562|Crêpe salata completa (uovo, prosciutto, formaggio)|dish|200|1 crêpe|galette
+25400|Toast prosciutto e formaggio|dish|130|1 toast|croque monsieur
+25403|Hot dog|dish|150|1 hot dog|
+25413|Hamburger (fast food)|dish|110|1 hamburger|mcdonald
+25414|Cheeseburger (fast food)|dish|120|1 cheeseburger|
+25415|Doppio cheeseburger|dish|170|1 panino|
+25502|Burger di pollo|dish|170|1 panino|mcchicken
+25416|Burger di pesce|dish|140|1 panino|filet o fish
+25428|Kebab nella pita|dish|300|1 kebab|piadina kebab doner
+25434|Panino mozzarella e crudo|dish|200|1 panino|panini
+25476|Panino pollo e verdure|dish|250|1 panino|
+25485|Panino prosciutto e formaggio|dish|200|1 panino|bocadillo jamon queso
+25431|Panino tonno e verdure|dish|250|1 panino|
+25513|Pan bagnat (panino tonno, uova, verdure)|dish|250|1 panino|
+25544|Tramezzino|dish|130|1 tramezzino|sandwich
+7811|Focaccia farcita|dish|150|1 porzione|
+25542|Toast con uovo (croque madame)|dish|160|1 toast|
+25019|Ravioli di carne al pomodoro|dish|300|1 piatto|
+25081|Lasagne/cannelloni alla carne|dish|300|1 porzione|
+25085|Pasta alla bolognese|dish|300|1 piatto|spaghetti ragu
+25135|Pasta alla carbonara|dish|300|1 piatto|
+25131|Lasagne alle verdure|dish|300|1 porzione|
+25198|Pasta ai formaggi|dish|300|1 piatto|mac and cheese
+25149|Ravioli ricotta e spinaci|dish|250|1 piatto|tortelloni
+25122|Pasta gratinata al forno|dish|300|1 porzione|pasta al forno
+25187|Risotto alle verdure|dish|300|1 piatto|
+25188|Risotto ai frutti di mare|dish|300|1 piatto|
+25189|Risotto ai formaggi|dish|300|1 piatto|
+25088|Riso alla cantonese|dish|300|1 piatto|arroz tres delicias
+25183|Noodles saltati con gamberi|dish|300|1 piatto|pad thai
+25184|Riso con pollo|dish|300|1 piatto|
+25456|Sushi / maki|dish|150|6 pezzi|
+25110|Ravioli cinesi al vapore|dish|150|6 pezzi|dim sum gyoza
+25419|Involtino primavera|dish|80|1 involtino|
+25420|Involtino fritto (nem)|dish|80|1 involtino|
+25108|Samosa|dish|60|1 samosa|
+25571|Falafel|dish|100|4 falafel|
+25174|Pollo al curry e latte di cocco|dish|300|1 porzione|
+25111|Chili con carne|dish|300|1 porzione|
+25123|Moussaka|dish|300|1 porzione|
+25164|Ossobuco|dish|300|1 porzione|
+25033|Spezzatino di manzo al vino|dish|300|1 porzione|bourguignon estofado
+25001|Spezzatino di vitello in bianco|dish|300|1 porzione|
+25121|Pollo al vino|dish|300|1 porzione|coq au vin
+25190|Pollo alla basca (peperoni e pomodoro)|dish|300|1 porzione|
+25204|Tajine di pollo|dish|300|1 porzione|
+25211|Polpette al sugo|dish|250|1 porzione|albondigas en salsa
+25009|Hachis parmentier (carne e purè)|dish|300|1 porzione|
+25138|Cous cous con pollo|dish|350|1 piatto|
+25150|Cous cous di verdure|dish|300|1 piatto|
+25127|Cous cous royal|dish|400|1 piatto|
+25031|Paella (fuori casa)|dish|350|1 piatto|paella mixta
+25107|Cous cous di pesce|dish|350|1 piatto|
+25018|Ratatouille|dish|200|1 porzione|pisto
+25056|Gratin dauphinois (patate)|dish|200|1 porzione|patate gratinate
+25052|Parmigiana/gratin di melanzane|dish|250|1 porzione|parmigiana
+25162|Verdure gratinate|dish|200|1 porzione|
+25026|Spinaci alla crema|dish|200|1 porzione|
+25137|Tartiflette|dish|300|1 porzione|
+25103|Pomodori ripieni|dish|250|1 porzione|
+20194|Fagioli al pomodoro (baked beans)|dish|200|1 porzione|
+25602|Insalatona con carne o pesce|dish|350|1 insalatona|ensalada mixta
+25628|Insalata Caesar con pollo|dish|350|1 porzione|cesar
+25606|Insalata di patate|dish|200|1 porzione|ensaladilla rusa
+25608|Tabulè|dish|200|1 porzione|cous cous freddo
+25614|Insalata di riso|dish|250|1 porzione|
+25615|Insalata di pasta|dish|250|1 porzione|
+26259|Coleslaw|dish|100|1 porzione|
+25903|Zuppa di verdure|dish|300|1 piatto|minestra vellutata
+25900|Zuppa di lenticchie|dish|300|1 piatto|
+25916|Minestrone|dish|300|1 piatto|
+25904|Zuppa di pesce|dish|300|1 piatto|
+25907|Vellutata porri e patate|dish|300|1 piatto|
+25910|Zuppa di cipolle|dish|300|1 piatto|
+25914|Vellutata di pomodoro|dish|300|1 piatto|
+25945|Vellutata di zucca|dish|300|1 piatto|
+25972|Zuppa di miso|dish|250|1 ciotola|
+25967|Gazpacho (confezionato)|dish|250|1 bicchiere|
+10082|Cozze alla marinara|dish|400|1 porzione|
+25540|Spiedini di gamberi|fish|150|1 porzione|
+25539|Spiedini di pesce|fish|150|1 porzione|
+39001|Milkshake (fast food)|sweet|300|1 bicchiere|frappè batido

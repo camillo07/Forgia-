@@ -1,0 +1,1770 @@
+{
+"b_pollo_crudo": [
+"Chicken breast (raw)",
+"Pechuga de pollo (cruda)"
+],
+"b_pollo_cotto": [
+"Chicken breast (cooked, grilled)",
+"Pechuga de pollo (cocida, a la plancha)"
+],
+"b_tacchino": [
+"Turkey breast (raw)",
+"Pechuga de pavo (cruda)"
+],
+"b_manzo5": [
+"Ground beef 5% (raw)",
+"Carne picada de ternera 5% (cruda)"
+],
+"b_manzo15": [
+"Ground beef 15% (raw)",
+"Carne picada de ternera 15% (cruda)"
+],
+"b_bistecca": [
+"Beef steak (raw)",
+"Filete de ternera (crudo)"
+],
+"b_lonza": [
+"Pork loin (raw)",
+"Lomo de cerdo (crudo)"
+],
+"b_crudo": [
+"Prosciutto (cured ham)",
+"Jamón curado"
+],
+"b_cotto": [
+"Cooked ham",
+"Jamón cocido"
+],
+"b_bresaola": [
+"Bresaola",
+"Bresaola"
+],
+"b_tonno_nat": [
+"Tuna in water (drained)",
+"Atún al natural (escurrido)"
+],
+"b_tonno_olio": [
+"Tuna in oil (drained)",
+"Atún en aceite (escurrido)"
+],
+"b_salmone": [
+"Salmon (raw)",
+"Salmón (crudo)"
+],
+"b_salmone_aff": [
+"Smoked salmon",
+"Salmón ahumado"
+],
+"b_merluzzo": [
+"Cod (raw)",
+"Bacalao (crudo)"
+],
+"b_gamberi": [
+"Shrimp (raw)",
+"Gambas (crudas)"
+],
+"b_uovo": [
+"Whole egg",
+"Huevo entero"
+],
+"b_albume": [
+"Egg white",
+"Clara de huevo"
+],
+"b_latte_int": [
+"Whole milk",
+"Leche entera"
+],
+"b_latte_ps": [
+"Semi-skimmed milk",
+"Leche semidesnatada"
+],
+"b_latte_scr": [
+"Skimmed milk",
+"Leche desnatada"
+],
+"b_greco0": [
+"Greek yogurt 0%",
+"Yogur griego 0%"
+],
+"b_greco5": [
+"Whole Greek yogurt",
+"Yogur griego entero"
+],
+"b_yogurt": [
+"Plain whole yogurt",
+"Yogur natural entero"
+],
+"b_skyr": [
+"Skyr",
+"Skyr"
+],
+"b_fiocchi": [
+"Cottage cheese",
+"Queso cottage"
+],
+"b_ricotta": [
+"Cow's milk ricotta",
+"Ricotta de vaca"
+],
+"b_mozzarella": [
+"Mozzarella",
+"Mozzarella"
+],
+"b_mozz_light": [
+"Light mozzarella",
+"Mozzarella light"
+],
+"b_parmigiano": [
+"Parmigiano Reggiano",
+"Parmigiano Reggiano"
+],
+"b_grana": [
+"Grana Padano",
+"Grana Padano"
+],
+"b_burro": [
+"Butter",
+"Mantequilla"
+],
+"b_whey": [
+"Whey protein (generic)",
+"Proteína whey (genérica)"
+],
+"b_caseina": [
+"Casein (generic)",
+"Caseína (genérica)"
+],
+"b_tofu": [
+"Tofu",
+"Tofu"
+],
+"b_pasta": [
+"Durum wheat pasta (dry)",
+"Pasta de sémola (seca)"
+],
+"b_pasta_int": [
+"Wholewheat pasta (dry)",
+"Pasta integral (seca)"
+],
+"b_pasta_cotta": [
+"Pasta (cooked)",
+"Pasta (cocida)"
+],
+"b_riso": [
+"White rice (raw)",
+"Arroz blanco (crudo)"
+],
+"b_basmati": [
+"Basmati rice (raw)",
+"Arroz basmati (crudo)"
+],
+"b_riso_cotto": [
+"Rice (cooked)",
+"Arroz (cocido)"
+],
+"b_riso_int": [
+"Brown rice (raw)",
+"Arroz integral (crudo)"
+],
+"b_avena": [
+"Rolled oats",
+"Copos de avena"
+],
+"b_pane": [
+"White bread",
+"Pan común"
+],
+"b_pane_int": [
+"Wholemeal bread",
+"Pan integral"
+],
+"b_pancarre": [
+"Sandwich bread",
+"Pan de molde"
+],
+"b_fette": [
+"Rusks",
+"Biscotes"
+],
+"b_gallette": [
+"Rice cakes",
+"Tortitas de arroz"
+],
+"b_cornflakes": [
+"Cornflakes",
+"Copos de maíz"
+],
+"b_muesli": [
+"Muesli",
+"Muesli"
+],
+"b_couscous": [
+"Couscous (dry)",
+"Cuscús (seco)"
+],
+"b_quinoa": [
+"Quinoa (raw)",
+"Quinoa (cruda)"
+],
+"b_patate": [
+"Potatoes (raw)",
+"Patatas (crudas)"
+],
+"b_patate_dolci": [
+"Sweet potatoes (raw)",
+"Boniatos (crudos)"
+],
+"b_farina": [
+"Plain flour (type 00)",
+"Harina de trigo (tipo 00)"
+],
+"b_piadina": [
+"Piadina flatbread",
+"Piadina"
+],
+"b_pizza": [
+"Pizza margherita",
+"Pizza margarita"
+],
+"b_wrap": [
+"Tortilla wrap",
+"Tortilla de trigo (wrap)"
+],
+"b_ceci": [
+"Chickpeas (boiled / canned)",
+"Garbanzos (cocidos / en conserva)"
+],
+"b_lenticchie": [
+"Lentils (boiled)",
+"Lentejas (hervidas)"
+],
+"b_fagioli": [
+"Borlotti beans (boiled)",
+"Alubias borlotti (hervidas)"
+],
+"b_piselli": [
+"Frozen peas",
+"Guisantes congelados"
+],
+"b_edamame": [
+"Edamame",
+"Edamame"
+],
+"b_zucchine": [
+"Zucchini",
+"Calabacín"
+],
+"b_pomodori": [
+"Tomatoes",
+"Tomates"
+],
+"b_insalata": [
+"Salad / lettuce",
+"Ensalada / lechuga"
+],
+"b_spinaci": [
+"Spinach",
+"Espinacas"
+],
+"b_broccoli": [
+"Broccoli",
+"Brócoli"
+],
+"b_carote": [
+"Carrots",
+"Zanahorias"
+],
+"b_peperoni": [
+"Bell peppers",
+"Pimientos"
+],
+"b_melanzane": [
+"Eggplant",
+"Berenjena"
+],
+"b_cipolla": [
+"Onion",
+"Cebolla"
+],
+"b_funghi": [
+"Button mushrooms",
+"Champiñones"
+],
+"b_fagiolini": [
+"Green beans",
+"Judías verdes"
+],
+"b_cavolfiore": [
+"Cauliflower",
+"Coliflor"
+],
+"b_cetrioli": [
+"Cucumbers",
+"Pepinos"
+],
+"b_asparagi": [
+"Asparagus",
+"Espárragos"
+],
+"b_rucola": [
+"Rocket",
+"Rúcula"
+],
+"b_verdure_mix": [
+"Mixed grilled vegetables",
+"Verduras variadas a la plancha"
+],
+"b_banana": [
+"Banana",
+"Plátano"
+],
+"b_mela": [
+"Apple",
+"Manzana"
+],
+"b_pera": [
+"Pear",
+"Pera"
+],
+"b_arancia": [
+"Orange",
+"Naranja"
+],
+"b_kiwi": [
+"Kiwi",
+"Kiwi"
+],
+"b_fragole": [
+"Strawberries",
+"Fresas"
+],
+"b_mirtilli": [
+"Blueberries",
+"Arándanos"
+],
+"b_uva": [
+"Grapes",
+"Uvas"
+],
+"b_ananas": [
+"Pineapple",
+"Piña"
+],
+"b_mandarini": [
+"Mandarins",
+"Mandarinas"
+],
+"b_pesca": [
+"Peach",
+"Melocotón"
+],
+"b_anguria": [
+"Watermelon",
+"Sandía"
+],
+"b_melone": [
+"Melon",
+"Melón"
+],
+"b_datteri": [
+"Dried dates",
+"Dátiles secos"
+],
+"b_uvetta": [
+"Raisins",
+"Pasas"
+],
+"b_avocado": [
+"Avocado",
+"Aguacate"
+],
+"b_olio": [
+"Extra virgin olive oil",
+"Aceite de oliva virgen extra"
+],
+"b_mandorle": [
+"Almonds",
+"Almendras"
+],
+"b_noci": [
+"Walnuts",
+"Nueces"
+],
+"b_anacardi": [
+"Cashews",
+"Anacardos"
+],
+"b_nocciole": [
+"Hazelnuts",
+"Avellanas"
+],
+"b_arachidi": [
+"Roasted peanuts",
+"Cacahuetes tostados"
+],
+"b_pb": [
+"Peanut butter",
+"Crema de cacahuete"
+],
+"b_chia": [
+"Chia seeds",
+"Semillas de chía"
+],
+"b_fondente": [
+"Dark chocolate 70%",
+"Chocolate negro 70%"
+],
+"b_frollini": [
+"Shortbread biscuits",
+"Galletas de mantequilla"
+],
+"b_crackers": [
+"Crackers",
+"Crackers"
+],
+"b_taralli": [
+"Taralli",
+"Taralli"
+],
+"b_nutella": [
+"Hazelnut cocoa spread",
+"Crema de cacao y avellanas"
+],
+"b_marmellata": [
+"Jam",
+"Mermelada"
+],
+"b_miele": [
+"Honey",
+"Miel"
+],
+"b_zucchero": [
+"Sugar",
+"Azúcar"
+],
+"b_gelato": [
+"Ice cream (fior di latte)",
+"Helado (fior di latte)"
+],
+"b_cornetto": [
+"Plain croissant",
+"Cruasán sin relleno"
+],
+"b_barretta": [
+"Protein bar (generic)",
+"Barrita de proteínas (genérica)"
+],
+"b_patatine": [
+"Potato chips",
+"Patatas fritas de bolsa"
+],
+"b_caffe": [
+"Espresso coffee",
+"Café espresso"
+],
+"b_cola": [
+"Cola",
+"Refresco de cola"
+],
+"b_birra": [
+"Beer",
+"Cerveza"
+],
+"b_vino": [
+"Red wine",
+"Vino tinto"
+],
+"b_succo": [
+"Orange juice",
+"Zumo de naranja"
+],
+"b_soia": [
+"Unsweetened soy drink",
+"Bebida de soja sin azúcar"
+],
+"b_avena_drink": [
+"Oat drink",
+"Bebida de avena"
+],
+"b_passata": [
+"Tomato passata",
+"Tomate triturado"
+],
+"b_pesto": [
+"Pesto alla genovese",
+"Pesto genovés"
+],
+"b_maionese": [
+"Mayonnaise",
+"Mayonesa"
+],
+"b_ketchup": [
+"Ketchup",
+"Kétchup"
+],
+"b_balsamico": [
+"Balsamic vinegar",
+"Vinagre balsámico"
+],
+"b_lasagne": [
+"Lasagne alla bolognese",
+"Lasaña boloñesa"
+],
+"b_pasta_pom": [
+"Pasta with tomato sauce",
+"Pasta con tomate"
+],
+"b_carbonara": [
+"Spaghetti alla carbonara",
+"Espaguetis a la carbonara"
+],
+"b_es_tortilla": [
+"Spanish omelette (tortilla)",
+"Tortilla de patatas"
+],
+"b_es_salmorejo": [
+"Salmorejo (cold tomato cream)",
+"Salmorejo"
+],
+"b_es_gazpacho": [
+"Gazpacho (cold tomato soup)",
+"Gazpacho"
+],
+"b_es_flamenquin": [
+"Flamenquín (breaded ham and pork roll)",
+"Flamenquín"
+],
+"b_es_serrano": [
+"Serrano ham",
+"Jamón serrano"
+],
+"b_es_iberico": [
+"Iberian ham",
+"Jamón ibérico"
+],
+"b_es_croqueta": [
+"Ham croquettes",
+"Croquetas de jamón"
+],
+"b_es_paella": [
+"Paella",
+"Paella"
+],
+"b_es_pantomate": [
+"Bread with tomato (and oil)",
+"Pan con tomate (y aceite)"
+],
+"b_es_bravas": [
+"Patatas bravas (spicy potatoes)",
+"Patatas bravas"
+],
+"b_es_churros": [
+"Churros",
+"Churros"
+],
+"b_es_manchego": [
+"Aged Manchego cheese",
+"Queso manchego curado"
+],
+"b_es_chorizo": [
+"Chorizo",
+"Chorizo"
+],
+"b_es_pulpo": [
+"Galician-style octopus",
+"Pulpo a la gallega"
+],
+"b_es_berenjenas": [
+"Fried eggplant with honey",
+"Berenjenas con miel"
+],
+"b_es_rabo": [
+"Oxtail stew (rabo de toro)",
+"Rabo de toro"
+],
+"b_es_pisto": [
+"Pisto (Spanish ratatouille)",
+"Pisto"
+],
+"b_es_bocadillo": [
+"Ham sandwich (bocadillo)",
+"Bocadillo de jamón"
+],
+"q13000": [
+"Apricot",
+"Albaricoque"
+],
+"q13007": [
+"Blackcurrant",
+"Grosella negra"
+],
+"q13008": [
+"Cherries",
+"Cerezas"
+],
+"q13009": [
+"Lemon",
+"Limón"
+],
+"q13012": [
+"Fresh figs",
+"Higos frescos"
+],
+"q13015": [
+"Raspberries",
+"Frambuesas"
+],
+"q13016": [
+"Passion fruit",
+"Maracuyá"
+],
+"q13018": [
+"Pomegranate",
+"Granada"
+],
+"q13019": [
+"Redcurrant",
+"Grosella roja"
+],
+"q13023": [
+"Lychee",
+"Lichi"
+],
+"q13025": [
+"Mango",
+"Mango"
+],
+"q13029": [
+"Blackberries",
+"Moras"
+],
+"q13030": [
+"Nectarine",
+"Nectarina"
+],
+"q13035": [
+"Papaya",
+"Papaya"
+],
+"q13040": [
+"Grapefruit",
+"Pomelo"
+],
+"q13041": [
+"Greengage plum",
+"Ciruela claudia"
+],
+"q13045": [
+"Black grapes",
+"Uva negra"
+],
+"q13047": [
+"Rhubarb",
+"Ruibarbo"
+],
+"q13054": [
+"Star fruit",
+"Carambola"
+],
+"q13063": [
+"Prickly pear",
+"Higo chumbo"
+],
+"q13066": [
+"Persimmon",
+"Caqui"
+],
+"q13067": [
+"Lime",
+"Lima"
+],
+"q13082": [
+"Clementines",
+"Clementinas"
+],
+"q13083": [
+"Guava",
+"Guayaba"
+],
+"q13100": [
+"Plums",
+"Ciruelas"
+],
+"q13110": [
+"Sour cherries",
+"Guindas"
+],
+"q13113": [
+"Cranberries",
+"Arándanos rojos"
+],
+"q13132": [
+"Frozen blueberries",
+"Arándanos congelados"
+],
+"q13134": [
+"Fruit salad",
+"Macedonia de frutas"
+],
+"q13136": [
+"Frozen raspberries",
+"Frambuesas congeladas"
+],
+"q13549": [
+"Kumquat",
+"Kumquat"
+],
+"q13742": [
+"Honeydew melon",
+"Melón amarillo"
+],
+"q13997": [
+"Mixed berries",
+"Frutos rojos"
+],
+"q13038": [
+"Apple compote",
+"Compota de manzana"
+],
+"q13109": [
+"Fruit compote, no added sugar",
+"Compota de fruta sin azúcar añadido"
+],
+"q13176": [
+"Baked apple",
+"Manzana asada"
+],
+"q13001": [
+"Dried apricots",
+"Orejones de albaricoque"
+],
+"q13013": [
+"Dried figs",
+"Higos secos"
+],
+"q13042": [
+"Prunes",
+"Ciruelas pasas"
+],
+"q13089": [
+"Dried banana",
+"Plátano deshidratado"
+],
+"q13111": [
+"Dried apple",
+"Manzana deshidratada"
+],
+"q15001": [
+"Peanuts",
+"Cacahuetes"
+],
+"q15002": [
+"Salted roasted peanuts",
+"Cacahuetes tostados salados"
+],
+"q15006": [
+"Fresh coconut",
+"Coco fresco"
+],
+"q15007": [
+"Desiccated coconut",
+"Coco rallado"
+],
+"q15008": [
+"Brazil nuts",
+"Nueces de Brasil"
+],
+"q15009": [
+"Salted roasted pistachios",
+"Pistachos tostados salados"
+],
+"q15010": [
+"Sesame seeds",
+"Semillas de sésamo"
+],
+"q15011": [
+"Sunflower seeds",
+"Pipas de girasol"
+],
+"q15020": [
+"Boiled chestnuts",
+"Castañas cocidas"
+],
+"q15021": [
+"Roasted chestnuts",
+"Castañas asadas"
+],
+"q15025": [
+"Pine nuts",
+"Piñones"
+],
+"q15026": [
+"Pecan nuts",
+"Nueces pecanas"
+],
+"q15027": [
+"Macadamia nuts",
+"Nueces de macadamia"
+],
+"q15028": [
+"Pumpkin seeds",
+"Pipas de calabaza"
+],
+"q15034": [
+"Flaxseeds",
+"Semillas de lino"
+],
+"q15044": [
+"Roasted pistachios",
+"Pistachos tostados"
+],
+"q15203": [
+"Tahini (sesame paste)",
+"Tahini (pasta de sésamo)"
+],
+"q20901": [
+"Soybeans (dry)",
+"Soja (semillas secas)"
+],
+"q20500": [
+"Cooked broad beans",
+"Habas cocidas"
+],
+"q20502": [
+"Cooked white beans",
+"Alubias blancas cocidas"
+],
+"q20503": [
+"Cooked red kidney beans",
+"Alubias rojas cocidas"
+],
+"q20506": [
+"Cooked split peas",
+"Guisantes secos partidos cocidos"
+],
+"q20510": [
+"Canned lentils",
+"Lentejas en conserva"
+],
+"q20511": [
+"Canned white beans",
+"Alubias blancas en conserva"
+],
+"q20524": [
+"Canned red kidney beans",
+"Alubias rojas en conserva"
+],
+"q20531": [
+"Cooked mung beans",
+"Judías mungo cocidas"
+],
+"q20587": [
+"Cooked green lentils",
+"Lentejas verdes cocidas"
+],
+"q20589": [
+"Cooked red lentils",
+"Lentejas rojas cocidas"
+],
+"q20534": [
+"Lupini beans",
+"Altramuces"
+],
+"q20504": [
+"Dry lentils",
+"Lentejas secas"
+],
+"q20516": [
+"Dry chickpeas",
+"Garbanzos secos"
+],
+"q20501": [
+"Dry white beans",
+"Alubias blancas secas"
+],
+"q20525": [
+"Dry red kidney beans",
+"Alubias rojas secas"
+],
+"q20535": [
+"Dry red lentils",
+"Lentejas rojas secas"
+],
+"q20515": [
+"Dried peas",
+"Guisantes secos"
+],
+"q20518": [
+"Dried broad beans",
+"Habas secas"
+],
+"q4000": [
+"Tapioca",
+"Tapioca"
+],
+"q4002": [
+"Baked potatoes (peeled)",
+"Patatas al horno (sin piel)"
+],
+"q4003": [
+"Boiled potatoes",
+"Patatas hervidas"
+],
+"q4015": [
+"Pan-fried potatoes",
+"Patatas salteadas"
+],
+"q4017": [
+"Mashed potatoes (flakes)",
+"Puré de patatas (copos)"
+],
+"q4018": [
+"Mashed potatoes (milk and butter)",
+"Puré de patatas (con leche y mantequilla)"
+],
+"q4023": [
+"New potatoes",
+"Patatas nuevas"
+],
+"q4025": [
+"Potato wedges",
+"Patatas gajo"
+],
+"q4026": [
+"Roast potatoes",
+"Patatas asadas"
+],
+"q4030": [
+"Oven fries (frozen)",
+"Patatas fritas al horno (congeladas)"
+],
+"q4032": [
+"French fries (deep-fried)",
+"Patatas fritas (freidora)"
+],
+"q4039": [
+"Potato rösti",
+"Rösti de patata"
+],
+"q4102": [
+"Cooked sweet potatoes",
+"Boniato cocido"
+],
+"q53101": [
+"Cooked plantain",
+"Plátano macho cocido"
+],
+"q54034": [
+"Cooked cassava",
+"Yuca cocida"
+],
+"q20004": [
+"Swiss chard",
+"Acelgas"
+],
+"q20012": [
+"Curly endive",
+"Escarola"
+],
+"q20014": [
+"Red cabbage",
+"Col lombarda"
+],
+"q20022": [
+"Watercress",
+"Berros"
+],
+"q20023": [
+"Celery",
+"Apio"
+],
+"q20026": [
+"Belgian endive",
+"Endibia"
+],
+"q20028": [
+"Fennel",
+"Hinojo"
+],
+"q20039": [
+"Leek",
+"Puerro"
+],
+"q20044": [
+"Pumpkin",
+"Calabaza"
+],
+"q20045": [
+"Radishes",
+"Rábanos"
+],
+"q20052": [
+"Artichoke",
+"Alcachofa"
+],
+"q20055": [
+"Celeriac",
+"Apionabo"
+],
+"q20058": [
+"Brussels sprouts",
+"Coles de Bruselas"
+],
+"q20064": [
+"Turnips",
+"Nabos"
+],
+"q20069": [
+"Savoy cabbage",
+"Col rizada"
+],
+"q20072": [
+"Fresh peas",
+"Guisantes frescos"
+],
+"q20091": [
+"Beetroot",
+"Remolacha"
+],
+"q20097": [
+"Shallot",
+"Chalota"
+],
+"q20099": [
+"Lamb's lettuce",
+"Canónigos"
+],
+"q20101": [
+"Frozen mixed vegetables",
+"Verduras variadas congeladas"
+],
+"q20108": [
+"Sweet corn (on the cob)",
+"Maíz dulce (mazorca)"
+],
+"q20114": [
+"Oyster mushrooms",
+"Setas de ostra"
+],
+"q20116": [
+"White cabbage",
+"Repollo"
+],
+"q20138": [
+"Butternut squash",
+"Calabaza butternut"
+],
+"q20151": [
+"Chili pepper",
+"Guindilla"
+],
+"q20160": [
+"Porcini mushrooms",
+"Boletus"
+],
+"q20162": [
+"Radicchio",
+"Radicchio"
+],
+"q20163": [
+"Chicory",
+"Achicoria"
+],
+"q20167": [
+"Bok choy",
+"Pak choi"
+],
+"q20171": [
+"Romaine lettuce",
+"Lechuga romana"
+],
+"q20172": [
+"Cherry tomatoes",
+"Tomates cherry"
+],
+"q20173": [
+"Snow peas",
+"Tirabeques"
+],
+"q20181": [
+"Parsnip",
+"Chirivía"
+],
+"q20183": [
+"Bean sprouts",
+"Brotes de soja"
+],
+"q20200": [
+"Iceberg lettuce",
+"Lechuga iceberg"
+],
+"q20218": [
+"Kale",
+"Kale"
+],
+"q20270": [
+"Baby spinach",
+"Brotes de espinaca"
+],
+"q20272": [
+"Mixed salad greens",
+"Mezclum de lechugas"
+],
+"q20279": [
+"Green asparagus",
+"Espárragos verdes"
+],
+"q20280": [
+"Romanesco broccoli",
+"Romanesco"
+],
+"q20233": [
+"Frozen sweet corn",
+"Maíz dulce congelado"
+],
+"q20266": [
+"Ratatouille vegetables (frozen)",
+"Verduras para ratatouille (congeladas)"
+],
+"q20006": [
+"Cooked broccoli",
+"Brócoli cocido"
+],
+"q20008": [
+"Cooked carrots",
+"Zanahorias cocidas"
+],
+"q20013": [
+"Cooked Brussels sprouts",
+"Coles de Bruselas cocidas"
+],
+"q20017": [
+"Cooked cauliflower",
+"Coliflor cocida"
+],
+"q20021": [
+"Cooked zucchini",
+"Calabacín cocido"
+],
+"q20027": [
+"Cooked spinach",
+"Espinacas cocidas"
+],
+"q20030": [
+"Cooked green beans",
+"Judías verdes cocidas"
+],
+"q20002": [
+"Cooked eggplant",
+"Berenjena cocida"
+],
+"q20000": [
+"Cooked artichokes",
+"Alcachofas cocidas"
+],
+"q20001": [
+"Boiled asparagus",
+"Espárragos hervidos"
+],
+"q20003": [
+"Cooked beetroot",
+"Remolacha cocida"
+],
+"q20037": [
+"Cooked peas",
+"Guisantes cocidos"
+],
+"q20066": [
+"Canned corn",
+"Maíz en conserva"
+],
+"q20048": [
+"Peeled tomatoes",
+"Tomates pelados"
+],
+"q20068": [
+"Tomato paste",
+"Concentrado de tomate"
+],
+"q20170": [
+"Chopped tomatoes",
+"Tomate troceado"
+],
+"q20067": [
+"Canned artichokes",
+"Alcachofas en conserva"
+],
+"q20155": [
+"Artichoke hearts",
+"Corazones de alcachofa"
+],
+"q20018": [
+"Hearts of palm",
+"Palmitos"
+],
+"q20079": [
+"Canned button mushrooms",
+"Champiñones en conserva"
+],
+"q20096": [
+"Cooked pumpkin",
+"Calabaza cocida"
+],
+"q20275": [
+"Roasted peppers (jarred)",
+"Pimientos asados en conserva"
+],
+"q20189": [
+"Sun-dried tomatoes",
+"Tomates secos"
+],
+"q20256": [
+"Sun-dried tomatoes in oil",
+"Tomates secos en aceite"
+],
+"q20212": [
+"Shiitake mushrooms",
+"Setas shiitake"
+],
+"q11004": [
+"Pickled gherkins",
+"Pepinillos en vinagre"
+],
+"q13032": [
+"Black olives",
+"Aceitunas negras"
+],
+"q13033": [
+"Green olives",
+"Aceitunas verdes"
+],
+"q11040": [
+"Capers",
+"Alcaparras"
+],
+"q9103": [
+"Cooked brown rice",
+"Arroz integral cocido"
+],
+"q9105": [
+"Cooked parboiled rice",
+"Arroz vaporizado cocido"
+],
+"q9111": [
+"Cooked wild rice",
+"Arroz salvaje cocido"
+],
+"q9322": [
+"Cooked pearl barley",
+"Cebada perlada cocida"
+],
+"q9341": [
+"Cooked quinoa",
+"Quinoa cocida"
+],
+"q9615": [
+"Cooked polenta",
+"Polenta cocida"
+],
+"q9683": [
+"Cooked couscous",
+"Cuscús cocido"
+],
+"q9691": [
+"Cooked bulgur",
+"Bulgur cocido"
+],
+"q9816": [
+"Cooked fresh egg pasta",
+"Pasta fresca al huevo cocida"
+],
+"q9871": [
+"Cooked wholewheat pasta",
+"Pasta integral cocida"
+],
+"q9824": [
+"Cooked gluten-free pasta",
+"Pasta sin gluten cocida"
+],
+"q9086": [
+"Cooked noodles",
+"Fideos orientales cocidos"
+],
+"q9901": [
+"Cooked rice noodles",
+"Fideos de arroz cocidos"
+],
+"q25510": [
+"Cooked potato gnocchi",
+"Ñoquis de patata cocidos"
+],
+"q9001": [
+"Spelt",
+"Espelta"
+],
+"q9109": [
+"Red rice",
+"Arroz rojo"
+],
+"q9108": [
+"Wild rice",
+"Arroz salvaje"
+],
+"q9200": [
+"Corn (dry kernels)",
+"Maíz (granos secos)"
+],
+"q9321": [
+"Pearl barley",
+"Cebada perlada"
+],
+"q9345": [
+"Amaranth",
+"Amaranto"
+],
+"q9380": [
+"Buckwheat",
+"Trigo sarraceno"
+],
+"q9610": [
+"Durum wheat semolina",
+"Sémola de trigo duro"
+],
+"q9614": [
+"Cornmeal for polenta",
+"Harina de maíz para polenta"
+],
+"q9690": [
+"Bulgur",
+"Bulgur"
+],
+"q9815": [
+"Fresh egg pasta",
+"Pasta fresca al huevo"
+],
+"q9821": [
+"Dry egg pasta",
+"Pasta seca al huevo"
+],
+"q9874": [
+"Gluten-free pasta",
+"Pasta sin gluten"
+],
+"q9900": [
+"Rice noodles",
+"Fideos de arroz"
+],
+"q26264": [
+"Potato gnocchi (uncooked)",
+"Ñoquis de patata (crudos)"
+],
+"q9313": [
+"Porridge (oats cooked in water)",
+"Porridge (avena cocida en agua)"
+],
+"q32005": [
+"Corn flakes (fortified)",
+"Copos de maíz (enriquecidos)"
+],
+"q32006": [
+"Puffed rice",
+"Arroz inflado"
+],
+"q32013": [
+"Chocolate cereal",
+"Cereales de chocolate"
+],
+"q32128": [
+"Traditional muesli",
+"Muesli tradicional"
+],
+"q32108": [
+"Crunchy fruit granola",
+"Granola crujiente con frutas"
+],
+"q32109": [
+"Crunchy chocolate granola",
+"Granola crujiente con chocolate"
+],
+"q32135": [
+"Puffed multigrain cereal",
+"Cereales multicereales inflados"
+],
+"q32140": [
+"Instant oat flakes",
+"Copos de avena instantáneos"
+],
+"q31100": [
+"Cereal bar",
+"Barrita de cereales"
+],
+"q31106": [
+"Chocolate cereal bar",
+"Barrita de cereales con chocolate"
+],
+"q31114": [
+"Cereal bar with nuts",
+"Barrita de cereales con frutos secos"
+],
+"q9621": [
+"Wheat bran",
+"Salvado de trigo"
+],
+"q9640": [
+"Oat bran",
+"Salvado de avena"
+],
+"q9660": [
+"Wheat germ",
+"Germen de trigo"
+],
+"q9520": [
+"Rice flour",
+"Harina de arroz"
+],
+"q9540": [
+"Buckwheat flour",
+"Harina de trigo sarraceno"
+],
+"q9580": [
+"Chickpea flour",
+"Harina de garbanzo"
+],
+"q9410": [
+"Wholemeal flour",
+"Harina integral"
+],
+"q9510": [
+"Cornstarch",
+"Maicena"
+],
+"q7001": [
+"Baguette",
+"Baguette"
+],
+"q7100": [
+"Country bread",
+"Pan de pueblo"
+],
+"q7111": [
+"Wholemeal sandwich bread",
+"Pan de molde integral"
+],
+"q7113": [
+"Multigrain sandwich bread",
+"Pan de molde de cereales"
+],
+"q7125": [
+"Rye bread",
+"Pan de centeno"
+],
+"q7130": [
+"Gluten-free bread",
+"Pan sin gluten"
+],
+"q7170": [
+"Bread roll",
+"Panecillo"
+],
+"q7180": [
+"Pita bread",
+"Pan de pita"
+],
+"q7255": [
+"Multigrain bread",
+"Pan de cereales"
+],
+"q7258": [
+"Bagel",
+"Bagel"
+],
+"q7259": [
+"Hamburger bun",
+"Pan de hamburguesa"
+],
+"q7813": [
+"Corn tortilla",
+"Tortilla de maíz"
+],
+"q7004": [
+"Toasted bread",
+"Pan tostado"
+],
+"q7340": [
+"Wholemeal rusks",
+"Biscotes integrales"
+],
+"q7353": [
+"Multigrain crispbreads",
+"Tortitas multicereales"
+],
+"q7400": [
+"Packaged toast slices",
+"Pan tostado envasado"
+],
+"q7407": [
+"Swedish crispbread (knäckebröd)",
+"Pan crujiente sueco (knäckebröd)"
+],
+"q7525": [
+"Breadsticks (grissini)",
+"Picos de pan (grissini)"
+],
+"q7430": [
+"Croutons",
+"Picatostes"
+],
+"q7500": [
+"Breadcrumbs",
+"Pan rallado"
+],
+"q7225": [
+"Brioche bread",
+"Pan brioche"
+],
+"q7620": [
+"Butter croissant",
+"Cruasán de mantequilla"
+],
+"q7650": [
+"Almond croissant",
+"Cruasán de almendras"
+],
+"q7711": [
+"Milk bread roll",
+"Bollo de leche"
+],
+"q7733": [
+"Pain au chocolat",
+"Napolitana de chocolate"
+],
+"q7720": [
+"Raisin swirl",
+"Caracola de pasas"
+],
+"q7737": [
+"Chocolate-filled brioche",
+"Bollo relleno de chocolate"
+],
+"q7739": [
+"Custard-filled brioche",
+"Bollo relleno de crema"
+],
+"q23480": [
+"Apple turnover",
+"Hojaldre de manzana"
+],
+"q37001": [
+"Pizza dough (raw)",
+"Masa de pizza (cruda)"
+],
+"q96778": [
+"Baked pizza base",
+"Base de pizza horneada"
+],
+"q23421": [
+"Puff pastry",
+"Hojaldre"
+],
+"q23410": [
+"Shortcrust pastry",
+"Masa quebrada"
+],
+"q23445": [
+"Filo pastry",
+"Pasta filo"
+],
+"q19060": [
+"Lactose-free milk",
+"Leche sin lactosa"
+],
+"q19200": [
+"Goat's milk",
+"Leche de cabra"
+],
+"q19021": [
+"Whole milk powder",
+"Leche entera en polvo"
+],
+"q19054": [
+"Skimmed milk powder",
+"Leche desnatada en polvo"
+],
+"q19027": [
+"Sweetened condensed milk",
+"Leche condensada"
+],
+"q19556": [
+"Goat's milk yogurt",
+"Yogur de cabra"
+],
+"q19593": [
+"Low-fat plain yogurt",
+"Yogur natural desnatado"
+],
+"q19624": [
+"Fruit yogurt",
+"Yogur de frutas"
+],
+"q19865": [
+"Kefir",
+"Kéfir"
+],
+"q19801": [
+"Low-fat drinking yogurt",
+"Leche fermentada desnatada para beber"
+],
+"q19644": [
+"Fat-free soft cheese 0% (fromage blanc)",
+"Queso fresco batido 0%"
+],
+"q19646": [
+"Quark 3%",
+"Quark 3%"
+],
+"q19663": [
+"Petit suisse 0%",
+"Petit suisse 0%"
+],
+"q19669": [
+"Protein dairy snack (pudding/yogurt)",
+"Snack lácteo proteico (natillas/yogur)"
+],
+"q19685": [
+"Panna cotta",
+"Panna cotta"
+],
+"q19698": [
+"Tiramisù",
+"Tiramisú"
+],
+"q19689": [
+"Cheesecake",
+"Tarta de queso"
+],
+"q39200": [
+"Chocolate pudding",
+"Natillas de chocolate"
+],
+"q39229": [
+"Vanilla pudding",
+"Natillas de vainilla"
+],
+"q39209": [
+"Crème caramel",
+"Flan"
+],
+"q39213": [
+"Crema catalana",
+"Crema catalana"
+],
+"q39206": [
+"Chocolate mousse",
+"Mousse de chocolate"
+],
+"q39212": [
+"Rice pudding",
+"Arroz con leche"
+],
+"q19692": [
+"Soy fruit dessert",
+"Postre de soja con frutas"
+],
+"q19693": [
+"Plain soy yogurt",
+"Yogur de soja natural"
+],
+"q39710": [
+"Pastry cream",
+"Crema pastelera"
+],
+"q19410": [
+"Heavy cream 30%",
+"Nata para montar 30%"
+],
+"q19430": [
+"Cooking cream 15-20%",
+"Nata para cocinar 15-20%"
+],
+"q19420": [
+"Whipped cream (spray)",
+"Nata montada en spray"
+],
+"q19433": [
+"Light cream 8%",
+"Nata light 8%"
+],
+"q12001": [
+"Camembert",
+"Camembert"
+],
+"q12020": [
+"Brie",
+"Brie"
+],
+"q12039": [
+"Munster",
+"Munster"
+],
+"q12045": [
+"Reblochon",
+"Reblochon"
+],
+"q12810": [
+"Semi-aged goat cheese",
+"Queso de cabra semicurado"
+],
+"q12812": [
+"Goat cheese log",
+"Rulo de queso de cabra"
+],
+"q12815": [
+"Aged goat cheese",
+"Queso de cabra curado"
+],
+"q12800": [
+"Fresh goat cheese",
+"Queso fresco de cabra"
+],
+"q12500": [
+"Roquefort",
+"Roquefort"
+],
+"q12524": [
+"Gorgonzola",
+"Gorgonzola"
+],
+"q12105": [
+"Beaufort",
+"Beaufort"
+],
+"q12110": [
+"Comté",
+"Comté"
+],
+"q12114": [
+"Gruyère",
+"Gruyère"
+],
+"q12115": [
+"Emmental",
+"Emmental"
+],
+"q12118": [
+"Grated Emmental",
+"Emmental rallado"
+],
+"q12121": [
+"Fontina",
+"Fontina"
+],
+"q12716": [
+"Provolone",
+"Provolone"
+],
+"q12726": [
+"Cheddar",
+"Cheddar"
+]
+}

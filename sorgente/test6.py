@@ -1,0 +1,63 @@
+from testlib import setup_fake
+import asyncio, json, datetime
+from playwright.async_api import async_playwright
+async def main():
+    async with async_playwright() as p:
+        b = await p.chromium.launch()
+        ctx = await b.new_context(viewport={'width':390,'height':844}, device_scale_factor=2, is_mobile=True, has_touch=True)
+        await setup_fake(ctx)
+        pg = await ctx.new_page(); errs=[]
+        pg.on('pageerror', lambda e: errs.append(str(e)))
+        await pg.route('**/search.openfoodfacts.org/**', lambda r: r.fulfill(status=200, content_type='application/json', body='{"hits":[]}', headers={'access-control-allow-origin':'*'}))
+        await pg.goto('http://localhost:8765/index.html'); await pg.wait_for_timeout(500)
+        await pg.fill('#ob-name','Mattia'); await pg.click('input[value="ppl"]'); await pg.check('#ob-demo')
+        await pg.click('[data-a="finishOnboard"]'); await pg.wait_for_timeout(300)
+        await pg.evaluate("() => { S.nutri = defaultNutri(); S.nutri.weight=76; save(); render(); }")
+        await pg.screenshot(path='shots/g1-home.png', full_page=True)
+        # exercise language
+        await pg.click('[data-a="tab"][data-k="me"]'); await pg.click('[data-a="exLang"][data-v="it"]'); await pg.wait_for_timeout(200)
+        await pg.screenshot(path='shots/g2-profile.png', full_page=True)
+        await pg.click('[data-a="tab"][data-k="train"]'); await pg.wait_for_timeout(200)
+        await pg.screenshot(path='shots/g3-train-it.png')
+        names = await pg.evaluate("searchLocal ? filterExercises({q:'bench press',g:'',eq:''}).slice(0,3).map(x=>x.n) : []")
+        print('search EN in IT mode:', names)
+        names2 = await pg.evaluate("filterExercises({q:'rematore',g:'',eq:''}).slice(0,4).map(x=>x.n)"); print('rematore:', names2)
+        # supplements & micros
+        await pg.click('[data-a="tab"][data-k="diet"]'); await pg.wait_for_timeout(200)
+        await pg.click('.meal [data-a="foodAdd"][data-m="b"]'); await pg.click('[data-a="foodTab"][data-t="supp"]'); await pg.wait_for_timeout(200)
+        await pg.screenshot(path='shots/g4-supp.png')
+        await pg.click('[data-a="foodPick"][data-id="s_d2000"]'); await pg.wait_for_timeout(200)
+        await pg.click('[data-a="amSave"]'); await pg.wait_for_timeout(200)
+        vd = await pg.evaluate("Math.round(dayTotals(todayKey()).tot.vitd)"); print('vitD today', vd)
+        await pg.click('[data-a="toggleMicro"]'); await pg.wait_for_timeout(100)
+        await pg.click('[data-a="microInfo"][data-k="mg"]'); await pg.wait_for_timeout(200)
+        await pg.screenshot(path='shots/g5-microserv.png')
+        await pg.click('[data-a="microBy"][data-v="100"]'); await pg.wait_for_timeout(200)
+        await pg.screenshot(path='shots/g6-micro100.png')
+        await pg.evaluate("UI.layers=[]; renderLayers()")
+        # custom supplement per portion
+        await pg.click('[data-a="myFoods"]'); await pg.click('[data-a="foodNew"]'); await pg.fill('#fe-n','Proteine test')
+        await pg.fill('[data-in="feServ"][data-k="g"]','30')
+        await pg.click('[data-a="feBasis"][data-v="serv"]'); await pg.wait_for_timeout(100)
+        for k,v in [('kcal','120'),('p','24'),('c','3'),('f','1.5')]: await pg.fill(f'[data-in="feNut"][data-k="{k}"]', v)
+        await pg.click('[data-a="feMicro"]'); await pg.wait_for_timeout(100)
+        await pg.fill('[data-in="feNut"][data-k="ca"]','150')
+        # number limit
+        await pg.fill('[data-in="feNut"][data-k="p"]','')
+        await pg.type('[data-in="feNut"][data-k="p"]','99999999')
+        pv = await pg.input_value('[data-in="feNut"][data-k="p"]'); print('limited p value:', pv)
+        await pg.fill('[data-in="feNut"][data-k="p"]','24')
+        await pg.screenshot(path='shots/g7-editor.png')
+        await pg.click('[data-a="foodSave"]'); await pg.wait_for_timeout(300)
+        f = await pg.evaluate("(() => { const f = Object.values(S.foods).find(x=>x.n==='Proteine test'); return [f.per.kcal, f.per.p, f.per.ca, f.serv] })()"); print('saved per100:', f)
+        # reset flow
+        await pg.evaluate("UI.layers=[]; renderLayers()")
+        await pg.click('[data-a="tab"][data-k="me"]'); await pg.click('[data-a="resetAll"]'); await pg.wait_for_timeout(100)
+        await pg.click('[data-a="resetConfirm"]'); await pg.wait_for_timeout(100)
+        still = await pg.evaluate("S.workouts.length"); print('after wrong confirm workouts:', still)
+        await pg.fill('#del-confirm','elimina'); await pg.click('[data-a="resetConfirm"]'); await pg.wait_for_timeout(200)
+        print('after reset:', await pg.evaluate("[S.workouts.length, Object.keys(S.diary).length, S.profile.onboarded]"))
+        print('hoverflow', await pg.evaluate("document.documentElement.scrollWidth > innerWidth"))
+        print('ERR', errs)
+        await b.close()
+asyncio.run(main())

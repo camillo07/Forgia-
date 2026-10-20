@@ -1,0 +1,2310 @@
+{
+"0": [
+"use strict",
+"use strict"
+],
+"1": [
+"Chest",
+"Pecho"
+],
+"2": [
+"Lats",
+"Dorsales"
+],
+"3": [
+"Middle back",
+"Espalda media"
+],
+"4": [
+"Lower back",
+"Lumbares"
+],
+"5": [
+"Traps",
+"Trapecios"
+],
+"6": [
+"Shoulders",
+"Hombros"
+],
+"7": [
+"Biceps",
+"Bíceps"
+],
+"8": [
+"Triceps",
+"Tríceps"
+],
+"9": [
+"Forearms",
+"Antebrazos"
+],
+"10": [
+"Quads",
+"Cuádriceps"
+],
+"11": [
+"Hamstrings",
+"Isquios"
+],
+"12": [
+"Glutes",
+"Glúteos"
+],
+"13": [
+"Calves",
+"Gemelos"
+],
+"14": [
+"Adductors",
+"Aductores"
+],
+"15": [
+"Abductors",
+"Abductores"
+],
+"16": [
+"Abs",
+"Abdominales"
+],
+"17": [
+"Neck",
+"Cuello"
+],
+"18": [
+"Barbell",
+"Barra"
+],
+"19": [
+"Dumbbells",
+"Mancuernas"
+],
+"20": [
+"Cables",
+"Poleas"
+],
+"21": [
+"Machine",
+"Máquina"
+],
+"22": [
+"Bodyweight",
+"Peso corporal"
+],
+"23": [
+"Kettlebell",
+"Kettlebell"
+],
+"24": [
+"Bands",
+"Gomas"
+],
+"25": [
+"Medicine ball",
+"Balón medicinal"
+],
+"26": [
+"Fitball",
+"Fitball"
+],
+"27": [
+"Foam roller",
+"Foam roller"
+],
+"28": [
+"EZ bar",
+"Barra Z"
+],
+"29": [
+"Other",
+"Otro"
+],
+"30": [
+"Strength",
+"Fuerza"
+],
+"31": [
+"Stretching",
+"Estiramientos"
+],
+"32": [
+"Plyometrics",
+"Pliometría"
+],
+"33": [
+"Powerlifting",
+"Powerlifting"
+],
+"34": [
+"Olympic weightlifting",
+"Halterofilia"
+],
+"35": [
+"Strongman",
+"Strongman"
+],
+"36": [
+"Cardio",
+"Cardio"
+],
+"37": [
+"Beginner",
+"Principiante"
+],
+"38": [
+"Intermediate",
+"Intermedio"
+],
+"39": [
+"Advanced",
+"Avanzado"
+],
+"40": [
+"Back",
+"Espalda"
+],
+"41": [
+"middle back",
+"middle back"
+],
+"42": [
+"lower back",
+"lower back"
+],
+"43": [
+"Core",
+"Core"
+],
+"44": [
+"Normal set",
+"Serie normal"
+],
+"45": [
+"Standard working set",
+"Serie efectiva clásica"
+],
+"46": [
+"Warm-up",
+"Calentamiento"
+],
+"47": [
+"Doesn't count for volume and records",
+"No cuenta para volumen ni récords"
+],
+"48": [
+"Top set",
+"Top set"
+],
+"49": [
+"The heaviest set of the day, few reps",
+"La serie más pesada del día, pocas repeticiones"
+],
+"50": [
+"Back-off",
+"Back-off"
+],
+"51": [
+"After the top set: reduced load (−10/20%) and more reps",
+"Tras el top set: menos peso (−10/20%) y más repeticiones"
+],
+"52": [
+"Drop set",
+"Drop set"
+],
+"53": [
+"Drop the weight right after the previous set",
+"Bajas el peso justo después de la serie anterior"
+],
+"54": [
+"Failure",
+"Fallo"
+],
+"55": [
+"Set taken to muscular failure",
+"Serie llevada al fallo muscular"
+],
+"56": [
+"Rest-pause",
+"Rest-pause"
+],
+"57": [
+"RP",
+"RP"
+],
+"58": [
+"10–20 s pauses and more reps",
+"Pausas de 10–20 s y más repeticiones"
+],
+"59": [
+"Myo-reps",
+"Myo-reps"
+],
+"60": [
+"Activation set + mini-sets with 3–5 breaths",
+"Serie de activación + miniseries con 3–5 respiraciones"
+],
+"61": [
+"Partials",
+"Parciales"
+],
+"62": [
+"Partial reps, usually in the stretch",
+"Repeticiones parciales, normalmente en estiramiento"
+],
+"63": [
+"Right side",
+"Lado derecho"
+],
+"64": [
+"R",
+"D"
+],
+"65": [
+"Unilateral exercise: right arm or leg",
+"Ejercicio unilateral: brazo o pierna derecha"
+],
+"66": [
+"Left side",
+"Lado izquierdo"
+],
+"67": [
+"L",
+"I"
+],
+"68": [
+"Unilateral exercise: left arm or leg",
+"Ejercicio unilateral: brazo o pierna izquierda"
+],
+"69": [
+"Exercise removed",
+"Ejercicio eliminado"
+],
+"70": [
+"Sun",
+"Dom"
+],
+"71": [
+"Mon",
+"Lun"
+],
+"72": [
+"Tue",
+"Mar"
+],
+"73": [
+"Wed",
+"Mié"
+],
+"74": [
+"Thu",
+"Jue"
+],
+"75": [
+"Fri",
+"Vie"
+],
+"76": [
+"Sat",
+"Sáb"
+],
+"77": [
+"monday",
+"lunes"
+],
+"78": [
+"tuesday",
+"martes"
+],
+"79": [
+"wednesday",
+"miércoles"
+],
+"80": [
+"thursday",
+"jueves"
+],
+"81": [
+"friday",
+"viernes"
+],
+"82": [
+"Today",
+"Hoy"
+],
+"83": [
+"Yesterday",
+"Ayer"
+],
+"84": [
+"Weight × reps",
+"Peso × reps"
+],
+"85": [
+"Barbell, dumbbells, machines, cables",
+"Barra, mancuernas, máquinas, poleas"
+],
+"86": [
+"Reps",
+"Reps"
+],
+"87": [
+"RIR",
+"RIR"
+],
+"88": [
+"Bodyweight (+ added weight)",
+"Peso corporal (+ lastre)"
+],
+"89": [
+"Time",
+"Tiempo"
+],
+"90": [
+"Plank, isometrics, stretching, rope",
+"Plancha, isométricos, estiramientos, comba"
+],
+"91": [
+"Sec",
+"Seg"
+],
+"92": [
+"Distance and time",
+"Distancia y tiempo"
+],
+"93": [
+"Running, exercise bike, rower, walking",
+"Carrera, bici estática, remo, caminar"
+],
+"94": [
+"Min",
+"Min"
+],
+"95": [
+"body only",
+"body only"
+],
+"96": [
+"{0} sets",
+"{0} series"
+],
+"97": [
+"+ {0} warm-up",
+"+ {0} calent."
+],
+"98": [
+"kg ·",
+"kg ·"
+],
+"99": [
+"Titanium",
+"Titanio"
+],
+"100": [
+"Platinum",
+"Platino"
+],
+"101": [
+"Gold",
+"Oro"
+],
+"102": [
+"Silver",
+"Plata"
+],
+"103": [
+"Bronze",
+"Bronce"
+],
+"104": [
+"Steel",
+"Acero"
+],
+"105": [
+"Iron",
+"Hierro"
+],
+"106": [
+"Apprentice",
+"Aprendiz"
+],
+"107": [
+"First spark",
+"Primera chispa"
+],
+"108": [
+"First workout",
+"Primer entrenamiento"
+],
+"109": [
+"In the forge",
+"En la forja"
+],
+"110": [
+"10 workouts",
+"10 entrenamientos"
+],
+"111": [
+"Habit",
+"Hábito"
+],
+"112": [
+"25 workouts",
+"25 entrenamientos"
+],
+"113": [
+"Wrought iron",
+"Hierro forjado"
+],
+"114": [
+"50 workouts",
+"50 entrenamientos"
+],
+"115": [
+"Centurion",
+"Centurión"
+],
+"116": [
+"100 workouts",
+"100 entrenamientos"
+],
+"117": [
+"Veteran",
+"Veterano"
+],
+"118": [
+"250 workouts",
+"250 entrenamientos"
+],
+"119": [
+"First record",
+"Primer récord"
+],
+"120": [
+"1 PR",
+"1 PR"
+],
+"121": [
+"PR hunter",
+"Cazador de PR"
+],
+"122": [
+"25 PR",
+"25 PR"
+],
+"123": [
+"PR machine",
+"Máquina de PR"
+],
+"124": [
+"100 PR",
+"100 PR"
+],
+"125": [
+"10 tonnes",
+"10 toneladas"
+],
+"126": [
+"Total volume 10 t",
+"Volumen total 10 t"
+],
+"127": [
+"100 tonnes",
+"100 toneladas"
+],
+"128": [
+"Total volume 100 t",
+"Volumen total 100 t"
+],
+"129": [
+"A thousand tonnes",
+"Mil toneladas"
+],
+"130": [
+"Total volume 1000 t",
+"Volumen total 1000 t"
+],
+"131": [
+"Consistent",
+"Constante"
+],
+"132": [
+"4 weeks in a row on target",
+"4 semanas seguidas cumpliendo el objetivo"
+],
+"133": [
+"Unstoppable",
+"Imparable"
+],
+"134": [
+"12 weeks in a row",
+"12 semanas seguidas"
+],
+"135": [
+"Half a year",
+"Medio año"
+],
+"136": [
+"26 weeks in a row",
+"26 semanas seguidas"
+],
+"137": [
+"A thousand sets",
+"Mil series"
+],
+"138": [
+"1000 working sets",
+"1000 series efectivas"
+],
+"139": [
+"Iron dawn",
+"Amanecer de hierro"
+],
+"140": [
+"Workout before 7:00",
+"Entrenamiento antes de las 7"
+],
+"141": [
+"Night shift",
+"Turno de noche"
+],
+"142": [
+"Workout after 21:00",
+"Entrenamiento después de las 21"
+],
+"143": [
+"Marathoner",
+"Maratoniano"
+],
+"144": [
+"Session over 90 min",
+"Sesión de más de 90 min"
+],
+"145": [
+"Explorer",
+"Explorador"
+],
+"146": [
+"30 different exercises",
+"30 ejercicios distintos"
+],
+"147": [
+"Push Pull Legs",
+"Push Pull Legs"
+],
+"148": [
+"3 or 6 days",
+"3 o 6 días"
+],
+"149": [
+"Push, pull and legs on separate days. At 6 days you train each muscle 2 times a week: great for hypertrophy if you recover well.",
+"Empuje, tirón y pierna en días separados. Con 6 días entrenas cada músculo 2 veces por semana: ideal para hipertrofia si te recuperas bien."
+],
+"150": [
+"Push",
+"Push"
+],
+"151": [
+"Barbell_Bench_Press_-_Medium_Grip",
+"Barbell_Bench_Press_-_Medium_Grip"
+],
+"152": [
+"Incline_Dumbbell_Press",
+"Incline_Dumbbell_Press"
+],
+"153": [
+"Dumbbell_Shoulder_Press",
+"Dumbbell_Shoulder_Press"
+],
+"154": [
+"Side_Lateral_Raise",
+"Side_Lateral_Raise"
+],
+"155": [
+"Triceps_Pushdown_-_Rope_Attachment",
+"Triceps_Pushdown_-_Rope_Attachment"
+],
+"156": [
+"Cable_Rope_Overhead_Triceps_Extension",
+"Cable_Rope_Overhead_Triceps_Extension"
+],
+"157": [
+"Pull",
+"Pull"
+],
+"158": [
+"Pullups",
+"Pullups"
+],
+"159": [
+"Bent_Over_Barbell_Row",
+"Bent_Over_Barbell_Row"
+],
+"160": [
+"Seated_Cable_Rows",
+"Seated_Cable_Rows"
+],
+"161": [
+"Face_Pull",
+"Face_Pull"
+],
+"162": [
+"Barbell_Curl",
+"Barbell_Curl"
+],
+"163": [
+"Hammer_Curls",
+"Hammer_Curls"
+],
+"164": [
+"Legs",
+"Legs"
+],
+"165": [
+"Barbell_Squat",
+"Barbell_Squat"
+],
+"166": [
+"Romanian_Deadlift",
+"Romanian_Deadlift"
+],
+"167": [
+"Leg_Press",
+"Leg_Press"
+],
+"168": [
+"Lying_Leg_Curls",
+"Lying_Leg_Curls"
+],
+"169": [
+"Leg_Extensions",
+"Leg_Extensions"
+],
+"170": [
+"Standing_Calf_Raises",
+"Standing_Calf_Raises"
+],
+"171": [
+"Upper / Lower",
+"Upper / Lower"
+],
+"172": [
+"4 days",
+"4 días"
+],
+"173": [
+"Beginner–Intermediate",
+"Principiante–Intermedio"
+],
+"174": [
+"Two upper days and two lower. One more strength-focused session (A) and one more volume-focused (B): a balance of loads and hypertrophy.",
+"Dos días de tren superior y dos de inferior. Una sesión más de fuerza (A) y otra más de volumen (B): equilibrio entre cargas e hipertrofia."
+],
+"175": [
+"Upper A — Strength",
+"Upper A — Fuerza"
+],
+"176": [
+"Barbell_Shoulder_Press",
+"Barbell_Shoulder_Press"
+],
+"177": [
+"Wide-Grip_Lat_Pulldown",
+"Wide-Grip_Lat_Pulldown"
+],
+"178": [
+"EZ-Bar_Skullcrusher",
+"EZ-Bar_Skullcrusher"
+],
+"179": [
+"Lower A — Strength",
+"Lower A — Fuerza"
+],
+"180": [
+"Seated_Leg_Curl",
+"Seated_Leg_Curl"
+],
+"181": [
+"Upper B — Volume",
+"Upper B — Volumen"
+],
+"182": [
+"Butterfly",
+"Butterfly"
+],
+"183": [
+"Close-Grip_Front_Lat_Pulldown",
+"Close-Grip_Front_Lat_Pulldown"
+],
+"184": [
+"Incline_Dumbbell_Curl",
+"Incline_Dumbbell_Curl"
+],
+"185": [
+"Lower B — Volume",
+"Lower B — Volumen"
+],
+"186": [
+"Barbell_Hip_Thrust",
+"Barbell_Hip_Thrust"
+],
+"187": [
+"Hack_Squat",
+"Hack_Squat"
+],
+"188": [
+"Seated_Calf_Raise",
+"Seated_Calf_Raise"
+],
+"189": [
+"Cable_Crunch",
+"Cable_Crunch"
+],
+"190": [
+"Full Body",
+"Full Body"
+],
+"191": [
+"3 days",
+"3 días"
+],
+"192": [
+"Whole body every session, alternating A and B. High frequency and little time in the gym: ideal if you train 3 times a week or have a busy week.",
+"Todo el cuerpo en cada sesión, alternando A y B. Alta frecuencia y poco tiempo en el gimnasio: ideal si entrenas 3 veces o tienes una semana llena."
+],
+"193": [
+"Full Body A",
+"Full Body A"
+],
+"194": [
+"Full Body B",
+"Full Body B"
+],
+"195": [
+"Last time",
+"La última vez"
+],
+"196": [
+": try to match",
+": intenta mantener"
+],
+"197": [
+"Loads based on your 1RM:",
+"Pesos calculados sobre tu máximo:"
+],
+"198": [
+"{0} kg",
+"{0} kg"
+],
+"199": [
+"Fixed weight:",
+"Peso fijo:"
+],
+"200": [
+"Fixed weight: pick a load and keep it the same every session.",
+"Peso fijo: elige un peso y mantenlo igual en cada sesión."
+],
+"201": [
+"{0} reps",
+"{0} reps"
+],
+"202": [
+"the top of the rep range",
+"el máximo de reps"
+],
+"203": [
+"the {0} reps",
+"las {0} reps"
+],
+"204": [
+"the minimum reps",
+"el mínimo de reps"
+],
+"205": [
+"First time: pick a load that gets you to",
+"Primera vez: elige un peso con el que llegues a"
+],
+"206": [
+"reps leaving",
+"repeticiones dejando"
+],
+"207": [
+"in reserve.",
+"en reserva."
+],
+"208": [
+"You hit {0} on every set:",
+"Has completado {0} en todas las series:"
+],
+"209": [
+"add weight",
+"añade lastre"
+],
+"210": [
+"or slow down the eccentric.",
+"o ralentiza la excéntrica."
+],
+"211": [
+"Aim for",
+"Apunta a"
+],
+"212": [
+"+1 rep",
+"+1 repetición"
+],
+"213": [
+"per set vs. last time.",
+"por serie respecto a la última vez."
+],
+"214": [
+"with reps to spare",
+"con margen"
+],
+"215": [
+"from each set's minimum",
+"desde el mínimo de cada serie"
+],
+"216": [
+"You hit {0} on every set{1}:",
+"Has completado {0} en todas las series{1}:"
+],
+"217": [
+"go up to {0} kg",
+"sube a {0} kg"
+],
+"218": [
+"and start again {0}.",
+"y vuelve a empezar {0}."
+],
+"219": [
+"Below {0} for two sessions:",
+"Por debajo de {0} dos sesiones:"
+],
+"220": [
+"drop to {0} kg",
+"baja a {0} kg"
+],
+"221": [
+"and build back up.",
+"y vuelve a subir."
+],
+"222": [
+"Last time below {0}:",
+"La última vez por debajo de {0}:"
+],
+"223": [
+"stay at {0} kg",
+"quédate en {0} kg"
+],
+"224": [
+"and consolidate.",
+"y consolida."
+],
+"225": [
+": aim for +1 rep per set before increasing the load.",
+": apunta a +1 repetición por serie antes de subir el peso."
+],
+"226": [
+": aim for {0} reps (+1) before increasing the load.",
+": apunta a {0} reps (+1) antes de subir el peso."
+],
+"227": [
+"Train",
+"Entrenar"
+],
+"228": [
+"Diet",
+"Dieta"
+],
+"229": [
+"Progress",
+"Progreso"
+],
+"230": [
+"Profile",
+"Perfil"
+],
+"231": [
+"Name",
+"Nombre"
+],
+"232": [
+"Less",
+"Menos"
+],
+"233": [
+"More",
+"Más"
+],
+"234": [
+"Welcome to",
+"Bienvenido a"
+],
+"235": [
+"Forgia",
+"Forgia"
+],
+"236": [
+"Workouts, diet and body in one app. Every set you log becomes records, stats and tips. Let's start with the basics.",
+"Entrenamientos, dieta y cuerpo en una sola app. Cada serie que registras se convierte en récords, estadísticas y consejos. Empecemos por lo básico."
+],
+"237": [
+"What's your name?",
+"¿Cómo te llamas?"
+],
+"238": [
+"Workouts per week",
+"Entrenamientos por semana"
+],
+"239": [
+"Your goal for the weekly streak",
+"Tu objetivo para la racha semanal"
+],
+"240": [
+"Choose a program",
+"Elige un programa"
+],
+"241": [
+"I'll create my own routines",
+"Crearé mis propias rutinas"
+],
+"242": [
+"Add 6 weeks of sample data",
+"Añadir 6 semanas de datos de ejemplo"
+],
+"243": [
+"To see charts and records right away. Delete them anytime from Profile.",
+"Para ver gráficos y récords al momento. Los borras cuando quieras desde el Perfil."
+],
+"244": [
+"Start training",
+"Empieza a entrenar"
+],
+"245": [
+"this week",
+"esta semana"
+],
+"246": [
+"Sets per muscle",
+"Series por músculo"
+],
+"247": [
+"This week",
+"Esta semana"
+],
+"248": [
+"Last week",
+"Semana pasada"
+],
+"249": [
+"Dashed area: 10–20 sets per week, a rough range for hypertrophy. Sets on secondary muscles count 0,5.",
+"Zona discontinua: 10–20 series por semana, rango orientativo para hipertrofia. Las series en músculos secundarios cuentan 0,5."
+],
+"250": [
+"Good night",
+"Buenas noches"
+],
+"251": [
+"Good morning",
+"Buenos días"
+],
+"252": [
+"Good afternoon",
+"Buenas tardes"
+],
+"253": [
+"Good evening",
+"Buenas tardes"
+],
+"254": [
+"Run in progress",
+"Carrera en curso"
+],
+"255": [
+"{0} km",
+"{0} km"
+],
+"256": [
+"{0} of running",
+"{0} de carrera"
+],
+"257": [
+"Resume",
+"Reanudar"
+],
+"258": [
+"Unsaved edit",
+"Edición sin guardar"
+],
+"259": [
+"Past workout to save",
+"Entrenamiento pasado sin guardar"
+],
+"260": [
+"Workout in progress",
+"Entrenamiento en curso"
+],
+"261": [
+"Change",
+"Cambiar"
+],
+"262": [
+"Today's workout",
+"Entrenamiento de hoy"
+],
+"263": [
+"Start workout",
+"Empezar entrenamiento"
+],
+"264": [
+"Ready?",
+"¿Listo?"
+],
+"265": [
+"Your first workout",
+"Tu primer entrenamiento"
+],
+"266": [
+"Create a guided routine or start a free workout: add exercises as you train.",
+"Crea una rutina guiada o empieza un entrenamiento libre: añade los ejercicios mientras entrenas."
+],
+"267": [
+"Create your routine",
+"Crea tu rutina"
+],
+"268": [
+"Free",
+"Libre"
+],
+"269": [
+"Run",
+"Carrera"
+],
+"270": [
+"Weight",
+"Peso"
+],
+"271": [
+"Meal",
+"Comida"
+],
+"272": [
+"Goal reached, great job!",
+"¡Objetivo cumplido, genial!"
+],
+"273": [
+"{0} more {1} to reach your goal",
+"Faltan {0} {1} para el objetivo"
+],
+"274": [
+"Your week",
+"Tu semana"
+],
+"275": [
+"km run",
+"km corridos"
+],
+"276": [
+"active kcal",
+"kcal activas"
+],
+"277": [
+"Muscles trained",
+"Músculos entrenados"
+],
+"278": [
+"sets this week",
+"series esta semana"
+],
+"279": [
+"Last workout · {0}",
+"Último entrenamiento · {0}"
+],
+"280": [
+"Latest records",
+"Últimos récords"
+],
+"281": [
+"All",
+"Todos"
+],
+"282": [
+"Weeks in a row",
+"Semanas seguidas"
+],
+"283": [
+"Customize Today",
+"Personalizar Hoy"
+],
+"284": [
+"No exercises",
+"Sin ejercicios"
+],
+"285": [
+"Routine options",
+"Opciones de rutina"
+],
+"286": [
+"{0} exercises · {1} sets · ~{2} min",
+"{0} ejercicios · {1} series · ~{2} min"
+],
+"287": [
+"Start",
+"Iniciar"
+],
+"288": [
+"In progress",
+"En curso"
+],
+"289": [
+"No routines",
+"Sin rutinas"
+],
+"290": [
+"Create one or add a program below.",
+"Crea una o añade un programa abajo."
+],
+"291": [
+"{0} routines",
+"{0} rutinas"
+],
+"292": [
+"Add to my routines",
+"Añadir a mis rutinas"
+],
+"293": [
+"Workout",
+"Entrenamiento"
+],
+"294": [
+"Free workout",
+"Entrenamiento libre"
+],
+"295": [
+"Routine",
+"Rutina"
+],
+"296": [
+"Log a past workout",
+"Registrar un entrenamiento pasado"
+],
+"297": [
+"Create guided routine",
+"Crear rutina guiada"
+],
+"298": [
+"Goal, methods, weak points, preferences and niggles",
+"Objetivo, métodos, puntos débiles, preferencias y molestias"
+],
+"299": [
+"My routines",
+"Mis rutinas"
+],
+"300": [
+"Import",
+"Importar"
+],
+"301": [
+"Folder",
+"Carpeta"
+],
+"302": [
+"Exercise library",
+"Biblioteca de ejercicios"
+],
+"303": [
+"{0} exercises with images and instructions",
+"{0} ejercicios con imágenes e instrucciones"
+],
+"304": [
+"Ready-made programs",
+"Programas listos"
+],
+"305": [
+"{0} programs",
+"{0} programas"
+],
+"306": [
+"last week",
+"semana pasada"
+],
+"307": [
+"Max",
+"Máx."
+],
+"308": [
+"max time",
+"tiempo máx."
+],
+"309": [
+"max distance",
+"distancia máx."
+],
+"310": [
+"Est. 1RM",
+"1RM est."
+],
+"311": [
+"max reps",
+"reps máx."
+],
+"312": [
+"{0}{1} sessions",
+"{0}{1} sesiones"
+],
+"313": [
+"Complete a workout to see your records.",
+"Completa un entrenamiento para ver tus récords."
+],
+"314": [
+"No workouts yet.",
+"Aún no hay entrenamientos."
+],
+"315": [
+"Workouts",
+"Entrenamientos"
+],
+"316": [
+"Total volume",
+"Volumen total"
+],
+"317": [
+"Records",
+"Récords"
+],
+"318": [
+"Consistency",
+"Constancia"
+],
+"319": [
+"last 18 weeks",
+"últimas 18 semanas"
+],
+"320": [
+"Weekly volume",
+"Volumen semanal"
+],
+"321": [
+"Records by exercise",
+"Récords por ejercicio"
+],
+"322": [
+"History",
+"Historial"
+],
+"323": [
+"Body",
+"Cuerpo"
+],
+"324": [
+"Athlete",
+"Atleta"
+],
+"325": [
+"Account",
+"Cuenta"
+],
+"326": [
+"In this Claude preview the AI uses your Claude account: no key needed.",
+"En esta vista previa en Claude la IA usa tu cuenta de Claude: no hace falta clave."
+],
+"327": [
+"Latest data",
+"Últimos datos"
+],
+"328": [
+"HRV, sleep, steps, calories from Apple Watch",
+"HRV, sueño, pasos, calorías del Apple Watch"
+],
+"329": [
+"Remove sample data",
+"Eliminar datos de ejemplo"
+],
+"330": [
+"Keeps only your real data",
+"Conserva solo tus datos reales"
+],
+"331": [
+"Load sample data",
+"Cargar datos de ejemplo"
+],
+"332": [
+"6 weeks of workouts and runs, 2 of diary and weight",
+"6 semanas de entrenamientos y carreras, 2 de diario y el peso"
+],
+"333": [
+"Data is saved on this device and synced with your account.",
+"Los datos se guardan en este dispositivo y se sincronizan con tu cuenta."
+],
+"334": [
+"Data is saved only on this device. Sign in with an account to save it online, or make a backup now and then.",
+"Los datos solo se guardan en este dispositivo. Inicia sesión con una cuenta para guardarlos online, o haz una copia de seguridad de vez en cuando."
+],
+"335": [
+"Sound",
+"Sonido"
+],
+"336": [
+"Rest timer on lock screen",
+"Descanso en la pantalla de bloqueo"
+],
+"337": [
+"Step goal",
+"Objetivo de pasos"
+],
+"338": [
+"End of day",
+"Fin del día"
+],
+"339": [
+"In Forgia since {0}",
+"En Forgia desde {0}"
+],
+"340": [
+"Achievements",
+"Logros"
+],
+"341": [
+"Settings",
+"Ajustes"
+],
+"342": [
+"Exercise names",
+"Nombres de los ejercicios"
+],
+"343": [
+"Search works in both languages",
+"La búsqueda funciona en ambos idiomas"
+],
+"344": [
+"English",
+"Inglés"
+],
+"345": [
+"Italian",
+"Italiano"
+],
+"346": [
+"Weekly goal",
+"Objetivo semanal"
+],
+"347": [
+"How many workouts you want to do per week",
+"Cuántos entrenamientos quieres hacer por semana"
+],
+"348": [
+"Default rest",
+"Descanso predeterminado"
+],
+"349": [
+"For free workouts",
+"Para entrenamientos libres"
+],
+"350": [
+"Rest end sound",
+"Sonido de fin de descanso"
+],
+"351": [
+"The timer stays visible and rings even with the phone locked. Note: iPhone treats it as a song, so",
+"El temporizador sigue visible y suena incluso con el móvil bloqueado. Ojo: el iPhone lo trata como una canción, así que"
+],
+"352": [
+"pause Spotify or Apple Music",
+"pausa Spotify o Apple Music"
+],
+"353": [
+"Per day",
+"Al día"
+],
+"354": [
+"The diary day ends at",
+"El día del diario termina a las"
+],
+"355": [
+"A snack at 1 a.m. counts for the night before",
+"Un tentempié a la una de la madrugada cuenta para la noche anterior"
+],
+"356": [
+"AI Coach",
+"Coach IA"
+],
+"357": [
+"Used to estimate dishes eaten out and foods not in the database, and for day and goal analyses. The coach's basic tips work without it too.",
+"Sirve para estimar platos fuera de casa y alimentos que no están, y para los análisis del día y de los objetivos. Los consejos básicos del coach funcionan también sin ella."
+],
+"358": [
+"Anthropic API key",
+"Clave API de Anthropic"
+],
+"359": [
+"Model",
+"Modelo"
+],
+"360": [
+"Test connection",
+"Probar conexión"
+],
+"361": [
+"Create the key at console.anthropic.com (API keys); it's pay-as-you-go: with Haiku an analysis costs less than 1 cent. It's stored only on this phone and never goes into backups.",
+"La clave se crea en console.anthropic.com (API keys) y se paga por uso: con Haiku un análisis cuesta menos de 1 céntimo. Se guarda solo en este móvil y no va en las copias de seguridad."
+],
+"362": [
+"Connections",
+"Conexiones"
+],
+"363": [
+"Apple Health",
+"Apple Salud"
+],
+"364": [
+"Data",
+"Datos"
+],
+"365": [
+"Export backup",
+"Exportar copia de seguridad"
+],
+"366": [
+"JSON file with all your data",
+"Archivo JSON con todos tus datos"
+],
+"367": [
+"Import backup",
+"Importar copia de seguridad"
+],
+"368": [
+"Replaces current data",
+"Sustituye los datos actuales"
+],
+"369": [
+"Danger zone",
+"Zona de peligro"
+],
+"370": [
+"Delete all data",
+"Borrar todos los datos"
+],
+"371": [
+"Deletes workouts, routines, diary, custom foods, goals and settings from this device. Can't be undone.",
+"Borra entrenamientos, rutinas, diario, alimentos creados, objetivos y ajustes de este dispositivo. No se puede deshacer."
+],
+"372": [
+"Sources: exercises free-exercise-db (public domain) · foods CIQUAL 2017 (ANSES) and Open Food Facts (ODbL).",
+"Fuentes: ejercicios free-exercise-db (dominio público) · alimentos CIQUAL 2017 (ANSES) y Open Food Facts (ODbL)."
+],
+"373": [
+"At least two sessions are needed for the chart.",
+"Hacen falta al menos dos sesiones para el gráfico."
+],
+"374": [
+"{0} sets · {1} sessions",
+"{0} series · {1} sesiones"
+],
+"375": [
+"Most frequent",
+"Los más frecuentes"
+],
+"376": [
+"Rep record:",
+"Récord de reps:"
+],
+"377": [
+"Record time:",
+"Tiempo récord:"
+],
+"378": [
+"Record distance:",
+"Distancia récord:"
+],
+"379": [
+"Max weight:",
+"Peso máximo:"
+],
+"380": [
+"Estimated 1RM",
+"1RM estimado"
+],
+"381": [
+"Minimize",
+"Minimizar"
+],
+"382": [
+"Back",
+"Atrás"
+],
+"383": [
+"You have a workout in progress",
+"Tienes un entrenamiento en curso"
+],
+"384": [
+"Resume the current one",
+"Reanudar el actual"
+],
+"385": [
+"Discard it and start the new one",
+"Descartarlo y empezar el nuevo"
+],
+"386": [
+"Edit",
+"Editar"
+],
+"387": [
+"Past",
+"Pasado"
+],
+"388": [
+"Save",
+"Guardar"
+],
+"389": [
+"Finish",
+"Terminar"
+],
+"390": [
+"Light version",
+"Versión ligera"
+],
+"391": [
+"· low recovery: one set fewer per exercise and 1 more rep in reserve than usual. The routine doesn't change.",
+"· recuperación baja: una serie menos por ejercicio y 1 repetición más de margen de lo habitual. La rutina no cambia."
+],
+"392": [
+"Add the first exercise to get started.",
+"Añade el primer ejercicio para empezar."
+],
+"393": [
+"Discard changes",
+"Descartar cambios"
+],
+"394": [
+"Cancel workout",
+"Cancelar entrenamiento"
+],
+"395": [
+"Workout name",
+"Nombre del entrenamiento"
+],
+"396": [
+"Sets done",
+"Series hechas"
+],
+"397": [
+"Volume",
+"Volumen"
+],
+"398": [
+"Exercises",
+"Ejercicios"
+],
+"399": [
+"Add exercise",
+"Añadir ejercicio"
+],
+"400": [
+"RIR 0 (failure)",
+"RIR 0 (fallo)"
+],
+"401": [
+"RIR 1",
+"RIR 1"
+],
+"402": [
+"RIR 2",
+"RIR 2"
+],
+"403": [
+"RIR 3",
+"RIR 3"
+],
+"404": [
+"Eccentric 3 s",
+"Excéntrica 3 s"
+],
+"405": [
+"Eccentric 4–5 s",
+"Excéntrica 4–5 s"
+],
+"406": [
+"Pause 1–2 s",
+"Pausa 1–2 s"
+],
+"407": [
+"Explosive concentric",
+"Explosivo en la subida"
+],
+"408": [
+"Lengthened partials",
+"Parciales en estiramiento"
+],
+"409": [
+"Full ROM",
+"ROM completo"
+],
+"410": [
+"Unilateral",
+"Unilateral"
+],
+"411": [
+"Wide grip",
+"Agarre ancho"
+],
+"412": [
+"Close grip",
+"Agarre cerrado"
+],
+"413": [
+"With belt",
+"Con cinturón"
+],
+"414": [
+"With straps",
+"Con straps"
+],
+"415": [
+"Execution",
+"Ejecución"
+],
+"416": [
+"Kilos",
+"Kilos"
+],
+"417": [
+"Reps",
+"Repeticiones"
+],
+"418": [
+"Seconds",
+"Segundos"
+],
+"419": [
+"Kilometers",
+"Kilómetros"
+],
+"420": [
+"Minutes",
+"Minutos"
+],
+"421": [
+"Set type",
+"Tipo de serie"
+],
+"422": [
+"Set completed",
+"Serie completada"
+],
+"423": [
+"reps ·",
+"reps ·"
+],
+"424": [
+"reps per set ·",
+"reps por serie ·"
+],
+"425": [
+"{0} reps ·",
+"{0} reps ·"
+],
+"426": [
+"{0}rest {1}",
+"{0}desc. {1}"
+],
+"427": [
+"Open",
+"Abrir"
+],
+"428": [
+"Close",
+"Cerrar"
+],
+"429": [
+"Drag to move",
+"Arrastra para mover"
+],
+"430": [
+"Exercise options",
+"Opciones del ejercicio"
+],
+"431": [
+"Superset {0}",
+"Superserie {0}"
+],
+"432": [
+"Note for this session…",
+"Nota para esta sesión…"
+],
+"433": [
+"Apply",
+"Aplicar"
+],
+"434": [
+"Set",
+"Serie"
+],
+"435": [
+"Prev.",
+"Ant."
+],
+"436": [
+"Suggest similar",
+"Sugerir similar"
+],
+"437": [
+"Other, e.g. Tempo 4-0-1-0",
+"Otro, ej. Tempo 4-0-1-0"
+],
+"438": [
+"How you perform this exercise today. It's saved in the session, so you compare loads with the same execution.",
+"Cómo haces este ejercicio hoy. Se guarda en la sesión: así comparas pesos con la misma ejecución."
+],
+"439": [
+"Add",
+"Añadir"
+],
+"440": [
+"Done",
+"Hecho"
+],
+"441": [
+"Enter the duration",
+"Introduce la duración"
+],
+"442": [
+"No sets completed",
+"Ninguna serie completada"
+],
+"443": [
+"Check off at least one set, or cancel the workout.",
+"Marca al menos una serie, o cancela el entrenamiento."
+],
+"444": [
+"Finish the workout?",
+"¿Terminar el entrenamiento?"
+],
+"445": [
+"unfinished set will be discarded",
+"serie no completada se descartará"
+],
+"446": [
+"unfinished sets will be discarded",
+"series no completadas se descartarán"
+],
+"447": [
+"{0} {1} from history (they stay in the routine).",
+"{0} {1} del historial (en la rutina se mantienen)."
+],
+"448": [
+"Finish",
+"Terminar"
+],
+"449": [
+"Update the routine?",
+"¿Actualizar la rutina?"
+],
+"450": [
+"Today you changed something compared to “{0}”. Loads are saved to history anyway.",
+"Hoy has cambiado algo respecto a “{0}”. Los pesos se guardan igualmente en el historial."
+],
+"451": [
+"Update sets and exercises",
+"Actualizar series y ejercicios"
+],
+"452": [
+"Target reps stay as in the routine",
+"Las repeticiones objetivo siguen siendo las de la rutina"
+],
+"453": [
+"Also update reps",
+"Actualizar también las repeticiones"
+],
+"454": [
+"Update reps",
+"Actualizar repeticiones"
+],
+"455": [
+"Reps done outside the range become the new target",
+"Las reps hechas fuera del rango pasan a ser el nuevo objetivo"
+],
+"456": [
+"Keep the routine as it was",
+"Mantener la rutina como estaba"
+],
+"457": [
+"Change just for today",
+"Cambiar solo por hoy"
+],
+"458": [
+"Workout updated",
+"Entrenamiento actualizado"
+],
+"459": [
+"Changes discarded",
+"Cambios descartados"
+],
+"460": [
+"Workout canceled",
+"Entrenamiento cancelado"
+],
+"461": [
+"New record!",
+"¡Nuevo récord!"
+],
+"462": [
+"new records!",
+"nuevos récords!"
+],
+"463": [
+"Completed",
+"Completado"
+],
+"464": [
+"New records",
+"Nuevos récords"
+],
+"465": [
+"Achievements unlocked",
+"Logros desbloqueados"
+],
+"466": [
+"Duration",
+"Duración"
+],
+"467": [
+"NFD",
+"NFD"
+],
+"468": [
+"No favorites",
+"Sin favoritos"
+],
+"469": [
+"Tap the star next to an exercise to always have it here.",
+"Toca la estrella junto a un ejercicio para tenerlo siempre aquí."
+],
+"470": [
+"{0} more results: refine your search.",
+"{0} resultados más: afina la búsqueda."
+],
+"471": [
+"new exercise",
+"nuevo ejercicio"
+],
+"472": [
+"No exercises found",
+"No se han encontrado ejercicios"
+],
+"473": [
+"Create “{0}”",
+"Crear “{0}”"
+],
+"474": [
+"Replace",
+"Sustituir"
+],
+"475": [
+"Add exercises",
+"Añadir ejercicios"
+],
+"476": [
+"Create",
+"Crear"
+],
+"477": [
+"Similar",
+"Similares"
+],
+"478": [
+"Recent",
+"Recientes"
+],
+"479": [
+"Add {0}",
+"Añadir {0}"
+],
+"480": [
+"Search: bench press, lat pulldown, squat…",
+"Buscar: press banca, jalón al pecho, sentadilla…"
+],
+"481": [
+"Equipment",
+"Material"
+],
+"482": [
+"All equipment",
+"Todo el material"
+],
+"483": [
+"New exercise",
+"Nuevo ejercicio"
+],
+"484": [
+"E.g. Technogym incline bench press",
+"Ej. Press inclinado Technogym"
+],
+"485": [
+"Primary muscle",
+"Músculo principal"
+],
+"486": [
+"Type",
+"Tipo"
+],
+"487": [
+"Strength / hypertrophy",
+"Fuerza / hipertrofia"
+],
+"488": [
+"Create exercise",
+"Crear ejercicio"
+],
+"489": [
+"Max time",
+"Tiempo máximo"
+],
+"490": [
+"Max distance",
+"Distancia máxima"
+],
+"491": [
+"Best time",
+"Mejor tiempo"
+],
+"492": [
+"Distance",
+"Distancia"
+],
+"493": [
+"Sessions",
+"Sesiones"
+],
+"494": [
+"Max reps",
+"Repeticiones máximas"
+],
+"495": [
+"Best reps",
+"Mejores repeticiones"
+],
+"496": [
+"Estimated 1RM (kg)",
+"1RM estimado (kg)"
+],
+"497": [
+"Max weight (kg)",
+"Peso máximo (kg)"
+],
+"498": [
+"Best set (kg×reps)",
+"Mejor serie (kg×reps)"
+],
+"499": [
+"Epley formula on the best set of each session (warm-up excluded).",
+"Fórmula de Epley sobre la mejor serie de cada sesión (sin calentamiento)."
+],
+"500": [
+"No sessions with this exercise yet. After your first workout you'll see records and a chart here.",
+"Aún no hay sesiones con este ejercicio. Tras el primer entrenamiento verás aquí récords y gráfico."
+],
+"501": [
+"Max (1RM) for % sets",
+"Máximo (1RM) para series en %"
+],
+"502": [
+"Leave it empty to use the 1RM estimated from your workouts.",
+"Si lo dejas vacío uso el 1RM estimado de tus entrenamientos."
+],
+"503": [
+"Recent sessions",
+"Últimas sesiones"
+],
+"504": [
+"in English",
+"en inglés"
+],
+"505": [
+"Similar exercises",
+"Ejercicios similares"
+],
+"506": [
+"Delete custom exercise",
+"Eliminar ejercicio personalizado"
+],
+"507": [
+"Logging type",
+"Tipo de registro"
+],
+"508": [
+"E.g. seat 4, wide grip",
+"Ej. asiento 4, agarre ancho"
+],
+"509": [
+"How you log it",
+"Cómo lo registras"
+],
+"510": [
+"Fixed note (setup, machine settings…)",
+"Nota fija (ajustes, regulación de la máquina…)"
+],
+"511": [
+"New routine",
+"Nueva rutina"
+],
+"512": [
+"Edit routine",
+"Editar rutina"
+],
+"513": [
+"Routine notes",
+"Notas de la rutina"
+],
+"514": [
+"{0}%RM",
+"{0}%RM"
+],
+"515": [
+"Reps (min)",
+"Repeticiones (mín.)"
+],
+"516": [
+"Delete set",
+"Eliminar serie"
+],
+"517": [
+"Superset",
+"Superserie"
+],
+"518": [
+"Superset with next",
+"Superserie con el siguiente"
+],
+"519": [
+"See technique and muscles",
+"Ver ejecución y músculos"
+],
+"520": [
+"Move up",
+"Subir"
+],
+"521": [
+"Move down",
+"Bajar"
+],
+"522": [
+"Remove",
+"Quitar"
+],
+"523": [
+"Routine note (e.g. 80% of 1RM, jump set)",
+"Nota de la rutina (ej. 80% del máximo, jump set)"
+],
+"524": [
+"Auto warm-up",
+"Calentamiento automático"
+],
+"525": [
+"Technique and muscles",
+"Ejecución y músculos"
+],
+"526": [
+"Progression",
+"Progresión"
+],
+"527": [
+"Adds ramp-up sets based on working weight",
+"Añade series de aproximación según el peso de trabajo"
+],
+"528": [
+"Rest",
+"Descanso"
+],
+"529": [
+"E.g. Push A",
+"Ej. Push A"
+],
+"530": [
+"Routine name",
+"Nombre de la rutina"
+],
+"531": [
+"Each row is a set: enter a range (8 – 10) or just fixed reps (8, max empty). Changing a row also updates the ones below, not those above. Tap the set number to change its type (warm-up, drop, failure…). You'll find RIR under Execution.",
+"Cada fila es una serie: escribe un rango (8 – 10) o solo las reps fijas (8, máx. vacío). Si cambias una fila se actualizan también las de abajo, no las de arriba. Toca el número de la serie para cambiar su tipo (calentamiento, drop, fallo…). El RIR lo encuentras en Ejecución."
+],
+"532": [
+"Options",
+"Opciones"
+],
+"533": [
+"Avg HR {0} bpm",
+"FC media {0} bpm"
+],
+"534": [
+"PR",
+"PR"
+],
+"535": [
+"kg ×",
+"kg ×"
+],
+"536": [
+"RIR {0}",
+"RIR {0}"
+],
+"537": [
+"Edit date, sets and weights",
+"Editar fecha, series y pesos"
+],
+"538": [
+"Repeat",
+"Repetir"
+],
+"539": [
+"Save as routine",
+"Guardar como rutina"
+],
+"540": [
+"Confirm",
+"Confirmar"
+],
+"541": [
+"Rest over: go for the next set",
+"Descanso terminado: a por la siguiente serie"
+],
+"542": [
+"calc(var(--tab-h) + env(safe-area-inset-bottom, 0px) + 18px)",
+"calc(var(--tab-h) + env(safe-area-inset-bottom, 0px) + 18px)"
+],
+"543": [
+"Skip",
+"Saltar"
+],
+"544": [
+"Backup saved",
+"Copia de seguridad guardada"
+],
+"545": [
+"Forgia backup",
+"Copia de seguridad Forgia"
+],
+"546": [
+"AbortError",
+"AbortError"
+],
+"547": [
+"Backup downloaded",
+"Copia de seguridad descargada"
+],
+"548": [
+"Backup copied to clipboard",
+"Copia de seguridad copiada al portapapeles"
+],
+"549": [
+"Export failed on this device",
+"La exportación ha fallado en este dispositivo"
+],
+"550": [
+"Import the backup?",
+"¿Importar la copia de seguridad?"
+],
+"551": [
+"It contains {0} workouts and {1} routines. Current data will be replaced.",
+"Contiene {0} entrenamientos y {1} rutinas. Los datos actuales se sustituirán."
+],
+"552": [
+"Backup imported",
+"Copia de seguridad importada"
+],
+"553": [
+"Invalid file: choose a backup exported from Forgia",
+"Archivo no válido: elige una copia exportada desde Forgia"
+],
+"554": [
+"Cancel the workout?",
+"¿Cancelar el entrenamiento?"
+],
+"555": [
+"Sets logged in this session will be lost.",
+"Las series registradas en esta sesión se perderán."
+],
+"556": [
+"Enter the seconds",
+"Introduce los segundos"
+],
+"557": [
+"Enter km or minutes",
+"Introduce km o minutos"
+],
+"558": [
+"Enter kg and reps",
+"Introduce kg y repeticiones"
+],
+"559": [
+"New record · {0} · {1} s",
+"Nuevo récord · {0} · {1} s"
+],
+"560": [
+"New record · {0} · {1} km",
+"Nuevo récord · {0} · {1} km"
+],
+"561": [
+"New record · {0} · {1} reps",
+"Nuevo récord · {0} · {1} reps"
+],
+"562": [
+"New record · {0} · 1RM {1} kg",
+"Nuevo récord · {0} · 1RM {1} kg"
+],
+"563": [
+"Add note",
+"Añadir nota"
+],
+"564": [
+"Ramp-up sets from working weight",
+"Series de aproximación desde el peso de trabajo"
+],
+"565": [
+"Enter the working weight of the 1st set first",
+"Escribe primero el peso de trabajo de la 1ª serie"
+],
+"566": [
+"Execution / tempo",
+"Ejecución / tempo"
+],
+"567": [
+"E.g. eccentric 3 s, pause, partials",
+"Ej. excéntrica 3 s, pausa, parciales"
+],
+"568": [
+"Don't log RIR",
+"No registrar RIR"
+],
+"569": [
+"Log RIR",
+"Registrar RIR"
+],
+"570": [
+"RIR column for each set (reps left in reserve)",
+"Columna RIR en cada serie (repeticiones en reserva)"
+],
+"571": [
+"Rest time",
+"Tiempo de descanso"
+],
+"572": [
+"Split superset",
+"Deshacer superserie"
+],
+"573": [
+"Exercises with the same muscles and movement",
+"Ejercicios con los mismos músculos y movimiento"
+],
+"574": [
+"Replace exercise",
+"Sustituir ejercicio"
+],
+"575": [
+"Remove exercise",
+"Quitar ejercicio"
+],
+"576": [
+"Next sets: {0} kg",
+"Próximas series: {0} kg"
+]
+}

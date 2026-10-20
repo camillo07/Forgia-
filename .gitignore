@@ -1,0 +1,8 @@
+.DS_Store
+sorgente/__pycache__/
+sorgente/dist/
+sorgente/shots/
+sorgente/node_modules/
+sorgente/fixtures/*.y4m
+sorgente/i18n/miss_*.json
+*.whl

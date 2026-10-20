@@ -1,0 +1,2310 @@
+{
+"1154": [
+"held steady",
+"se ha mantenido estable"
+],
+"1155": [
+"{0} kg a week",
+"{0} kg por semana"
+],
+"1156": [
+"formula: {0} kcal · {1}{2}",
+"fórmula: {0} kcal · {1}{2}"
+],
+"1157": [
+"reliability {0}",
+"fiabilidad {0}"
+],
+"1158": [
+"Over the last 4 weeks you ate an average of",
+"En las últimas 4 semanas has comido de media"
+],
+"1159": [
+"and your weight",
+"y el peso"
+],
+"1160": [
+"To calculate it, over the last 4 weeks you need at least",
+"Para calcularlo necesitas, en las últimas 4 semanas, al menos"
+],
+"1161": [
+"10 complete diary days",
+"10 días de diario completos"
+],
+"1162": [
+"6 weigh-ins over 2 weeks",
+"6 pesajes en 2 semanas"
+],
+"1163": [
+"Now: {0}/10 days · {1}/6 weigh-ins · {2}/14 days of weigh-ins.",
+"Ahora: {0}/10 días · {1}/6 pesajes · {2}/14 días de pesajes."
+],
+"1164": [
+"Adaptive maintenance",
+"Mantenimiento adaptativo"
+],
+"1165": [
+"Use it for my targets",
+"Úsalo para mis objetivos"
+],
+"1166": [
+"Updates every Monday. If data is missing, the formula is used.",
+"Se actualiza cada lunes. Si faltan datos, usa la fórmula."
+],
+"1167": [
+"and hips",
+"y cadera"
+],
+"1168": [
+"Composition",
+"Composición"
+],
+"1169": [
+"Add body fat % (smart scale, calipers, DEXA) or waist and neck{0}: I'll estimate fat, lean mass and FFMI.",
+"Añade el % de grasa (báscula de bioimpedancia, plicómetro, DEXA) o cintura y cuello{0}: estimo grasa, masa magra y FFMI."
+],
+"1170": [
+"FFMI {0}",
+"FFMI {0}"
+],
+"1171": [
+"Lean mass relative to height: {0}.",
+"Masa magra respecto a la altura: {0}."
+],
+"1172": [
+"Fat",
+"Grasa"
+],
+"1173": [
+"Lean mass",
+"Masa magra"
+],
+"1174": [
+"Fat mass",
+"Masa grasa"
+],
+"1175": [
+"Smart scales can be off by 3–5 points: watch the trend, not the single reading. Always weigh yourself in the same conditions.",
+"Las básculas de bioimpedancia fallan hasta 3–5 puntos: mira la tendencia, no el valor suelto. Pésate siempre en las mismas condiciones."
+],
+"1176": [
+"Steps and sleep come from Apple Health.",
+"Los pasos y el sueño llegan de Apple Salud."
+],
+"1177": [
+"Connect Apple Health (Profile) and steps and sleep come in automatically.",
+"Conecta Apple Salud (Perfil) y los pasos y el sueño llegan solos."
+],
+"1178": [
+"Sleep (last night)",
+"Sueño (anoche)"
+],
+"1179": [
+"7-day average: water {0} · steps {1} · sleep {2}. {3}",
+"Media 7 días: agua {0} · pasos {1} · sueño {2}. {3}"
+],
+"1180": [
+"· since",
+"· desde"
+],
+"1181": [
+"{0} cm",
+"{0} cm"
+],
+"1182": [
+"Waist, hips, chest, arm, thigh, calf, neck. Measure every 2–4 weeks, in the morning, at the same spot.",
+"Cintura, cadera, pecho, brazo, muslo, gemelo, cuello. Mide cada 2–4 semanas, por la mañana, en el mismo punto."
+],
+"1183": [
+"Measurements",
+"Medidas"
+],
+"1184": [
+"Fat %",
+"Grasa %"
+],
+"1185": [
+"Muscle kg",
+"Músculo kg"
+],
+"1186": [
+"Sleep hours",
+"Horas de sueño"
+],
+"1187": [
+"HRV ms",
+"HRV ms"
+],
+"1188": [
+"Resting HR bpm",
+"FC reposo bpm"
+],
+"1189": [
+"Grey values come from Apple Health: only type if you want to correct them.",
+"Los valores en gris llegan de Apple Salud: escribe solo si quieres corregirlos."
+],
+"1190": [
+"You'll find HRV and resting HR in Health (Apple Watch). They're used for the recovery score.",
+"La HRV y la FC en reposo las encuentras en Salud (Apple Watch). Sirven para la puntuación de recuperación."
+],
+"1191": [
+"Body fat estimate (Navy method):",
+"Estimación de grasa (método Navy):"
+],
+"1192": [
+"With waist and neck",
+"Con cintura y cuello"
+],
+"1193": [
+"I estimate your body fat % (needs your height in diet goals).",
+"estimo el % de grasa (necesita la altura en los objetivos de dieta)."
+],
+"1194": [
+"Delete day",
+"Eliminar el día"
+],
+"1195": [
+"e.g. after eating out, period, little sleep",
+"p. ej. tras cenar fuera, regla, poco sueño"
+],
+"1196": [
+"Weight and composition",
+"Peso y composición"
+],
+"1197": [
+"Only weight matters. Fat and muscle if your scale measures them.",
+"Solo importa el peso. Grasa y músculo si tienes una báscula que los mida."
+],
+"1198": [
+"Habits",
+"Hábitos"
+],
+"1199": [
+"(cm, optional)",
+"(cm, opcionales)"
+],
+"1200": [
+"Note",
+"Nota"
+],
+"1201": [
+"% fat",
+"% grasa"
+],
+"1202": [
+"h sleep",
+"h sueño"
+],
+"1203": [
+"Body history",
+"Historial corporal"
+],
+"1204": [
+"No data yet.",
+"Aún no hay datos."
+],
+"1205": [
+"Front",
+"Frente"
+],
+"1206": [
+"Side",
+"Lado"
+],
+"1207": [
+"Back",
+"Espalda"
+],
+"1208": [
+"Saving photo…",
+"Guardando la foto…"
+],
+"1209": [
+"Photo saved on this phone",
+"Foto guardada en este móvil"
+],
+"1210": [
+"Couldn't save the photo",
+"No se ha podido guardar la foto"
+],
+"1211": [
+"Loading photos…",
+"Cargando fotos…"
+],
+"1212": [
+"Compare",
+"Comparar"
+],
+"1213": [
+"Photo {0}",
+"Foto {0}"
+],
+"1214": [
+"Same light, same pose, same time: a photo every 2–4 weeks shows changes the scale can't see. They stay on this phone only, never online.",
+"Misma luz, misma pose, misma hora: una foto cada 2–4 semanas muestra cambios que la báscula no ve. Se quedan solo en este móvil, no van a internet."
+],
+"1215": [
+"Progress photos",
+"Fotos de progreso"
+],
+"1216": [
+"Photos",
+"Fotos"
+],
+"1217": [
+"kg that day",
+"kg ese día"
+],
+"1218": [
+"No photo",
+"Sin foto"
+],
+"1219": [
+"Gap: {0} days",
+"Distancia: {0} días"
+],
+"1220": [
+"kg today",
+"kg hoy"
+],
+"1221": [
+"Weigh in",
+"Pésate"
+],
+"1222": [
+"7-day avg",
+"Media 7 d"
+],
+"1223": [
+"in 7 d",
+"en 7 d"
+],
+"1224": [
+"In the morning, fasted",
+"Por la mañana, en ayunas"
+],
+"1225": [
+"Add 250 ml of water",
+"Añadir 250 ml de agua"
+],
+"1226": [
+"{0} / {1} L water",
+"{0} / {1} L agua"
+],
+"1227": [
+"Check your weight",
+"Revisa el peso"
+],
+"1228": [
+"Day deleted",
+"Día eliminado"
+],
+"1229": [
+"Water {0} L",
+"Agua {0} L"
+],
+"1230": [
+"Targets based on {0} kcal maintenance",
+"Objetivos sobre {0} kcal de mantenimiento"
+],
+"1231": [
+"On: starts as soon as there's enough data",
+"Activo: empieza en cuanto haya datos suficientes"
+],
+"1232": [
+"Back to the formula",
+"Vuelta a la fórmula"
+],
+"1233": [
+"Goal weight",
+"Peso objetivo"
+],
+"1234": [
+"kg (leave empty to remove it)",
+"kg (déjalo vacío para quitarlo)"
+],
+"1235": [
+"New photo",
+"Nueva foto"
+],
+"1236": [
+"Stays on this phone only. Not in backups or online.",
+"Se queda solo en este móvil. No va a la copia de seguridad ni a internet."
+],
+"1237": [
+"Delete the photo?",
+"¿Eliminar la foto?"
+],
+"1238": [
+"It can't be recovered.",
+"No se puede recuperar."
+],
+"1239": [
+"{0} ms",
+"{0} ms"
+],
+"1240": [
+"30-day avg {0}",
+"media 30 d {0}"
+],
+"1241": [
+"{0} bpm",
+"{0} bpm"
+],
+"1242": [
+"score {0}",
+"puntuación {0}"
+],
+"1243": [
+"Ready to push",
+"Listo para apretar"
+],
+"1244": [
+"Good day for a PR or an extra set. Suggested strain 60–80.",
+"Buen día para un récord o una serie más. Esfuerzo recomendado 60–80."
+],
+"1245": [
+"Normal workout",
+"Entrenamiento normal"
+],
+"1246": [
+"Follow your plan and leave 2 reps in reserve (RIR 2). Suggested strain 40–65.",
+"Sigue la rutina y deja 2 repeticiones en reserva (RIR 2). Esfuerzo recomendado 40–65."
+],
+"1247": [
+"Recover",
+"Recupera"
+],
+"1248": [
+"Light session, technique or mobility, or rest. Aim to sleep more tonight. Strain under 40.",
+"Sesión ligera, técnica o movilidad, o descanso. Esta noche intenta dormir más. Esfuerzo por debajo de 40."
+],
+"1249": [
+"calibrating {0}/5",
+"calibrando {0}/5"
+],
+"1250": [
+"Strain",
+"Esfuerzo"
+],
+"1251": [
+"no data",
+"sin datos"
+],
+"1252": [
+"Recovery is compared with your own average: it needs 5 days of HRV or resting HR.",
+"La recuperación se compara con tu media: hacen falta 5 días de HRV o FC en reposo."
+],
+"1253": [
+"Today's readiness",
+"Disposición de hoy"
+],
+"1254": [
+"MTWTFSS",
+"LMXJVSD"
+],
+"1255": [
+"Connect Apple Health",
+"Conectar Apple Salud"
+],
+"1256": [
+"HRV, resting heart rate, sleep, steps and calories from your Apple Watch: recovery, strain and sleep at a glance.",
+"HRV, pulso en reposo, sueño, pasos y calorías del Apple Watch: recuperación, esfuerzo y sueño de un vistazo."
+],
+"1257": [
+"· baseline",
+"· base"
+],
+"1258": [
+"Recovery and sleep",
+"Recuperación y sueño"
+],
+"1259": [
+"Details",
+"Detalles"
+],
+"1260": [
+"HRV 7 d{0}",
+"HRV 7 d{0}"
+],
+"1261": [
+"Resting HR{0}",
+"FC reposo{0}"
+],
+"1262": [
+"Sleep 7 d",
+"Sueño 7 d"
+],
+"1263": [
+"Recovery · 14 days",
+"Recuperación · 14 días"
+],
+"1264": [
+"Sleep · 14 days",
+"Sueño · 14 días"
+],
+"1265": [
+"(line: {0} h)",
+"(línea: {0} h)"
+],
+"1266": [
+"Readiness",
+"Disposición"
+],
+"1267": [
+"Calibrating: {0}/5 days with HRV or resting HR. The score compares today with",
+"Calibrando: {0}/5 días con HRV o FC en reposo. La puntuación compara hoy con"
+],
+"1268": [
+"average, not other people's.",
+"media, no con la de los demás."
+],
+"1269": [
+"No data for today.",
+"No hay datos de hoy."
+],
+"1270": [
+"working sets",
+"series efectivas"
+],
+"1271": [
+"no workout",
+"sin entrenamiento"
+],
+"1272": [
+"km run",
+"km de carrera"
+],
+"1273": [
+"Today: {0}{1}{2}{3}.",
+"Hoy: {0}{1}{2}{3}."
+],
+"1274": [
+"Last night {0} h out of {1} h needed.",
+"Anoche {0} h de {1} h necesarias."
+],
+"1275": [
+"No data for last night.",
+"No hay datos de anoche."
+],
+"1276": [
+"{0} Yesterday: {1}.",
+"{0} Ayer: {1}."
+],
+"1277": [
+"Combines Apple Watch active calories (or steps) with the sets logged in Forgia. 0–33 light, 34–66 moderate, 67+ heavy.",
+"Combina las calorías activas del Apple Watch (o los pasos) y las series registradas en Forgia. 0–33 ligero, 34–66 medio, 67+ duro."
+],
+"1278": [
+"Sleep need",
+"Necesidad de sueño"
+],
+"1279": [
+"7–9 hours if you train",
+"7–9 horas si entrenas"
+],
+"1280": [
+"Scores calculated by Forgia, inspired by apps like Bevel and Whoop. Not medical advice.",
+"Puntuaciones calculadas por Forgia, inspiradas en apps como Bevel y Whoop. No son consejo médico."
+],
+"1281": [
+"Find Health Samples → Type:",
+"Buscar muestras de Salud → Tipo:"
+],
+"1282": [
+"Heart Rate Variability",
+"Variabilidad de la frecuencia cardiaca"
+],
+"1283": [
+", Start Date",
+", Fecha de inicio"
+],
+"1284": [
+"is in the last 12 hours",
+"en las últimas 12 horas"
+],
+"1285": [
+"Get Details of Health Samples → Value",
+"Obtener detalles de muestras de Salud → Valor"
+],
+"1286": [
+", then",
+", luego"
+],
+"1287": [
+"Calculate Statistics → Average",
+"Calcular estadísticas → Media"
+],
+"1288": [
+"Set Variable",
+"Definir variable"
+],
+"1289": [
+"→ name",
+"→ nombre"
+],
+"1290": [
+"Find Samples →",
+"Buscar muestras →"
+],
+"1291": [
+"Resting Heart Rate",
+"Frecuencia cardiaca en reposo"
+],
+"1292": [
+", Sort by",
+", Ordenar por"
+],
+"1293": [
+"Start Date, Latest First",
+"Fecha de inicio, más reciente primero"
+],
+"1294": [
+", Limit",
+", Límite"
+],
+"1295": [
+"Value",
+"Valor"
+],
+"1296": [
+", Set Variable →",
+", Definir variable →"
+],
+"1297": [
+"RHR",
+"RHR"
+],
+"1298": [
+"Sleep Analysis",
+"Análisis del sueño"
+],
+"1299": [
+"is in the last 16 hours",
+"en las últimas 16 horas"
+],
+"1300": [
+", and add the filters Value",
+", y añade los filtros Valor"
+],
+"1301": [
+"is not In Bed",
+"no es En la cama"
+],
+"1302": [
+"and Value",
+"y Valor"
+],
+"1303": [
+"is not Awake",
+"no es Despierto"
+],
+"1304": [
+", Calculate Statistics →",
+", Calcular estadísticas →"
+],
+"1305": [
+"Sum",
+"Suma"
+],
+"1306": [
+"SLEEP",
+"SUEÑO"
+],
+"1307": [
+"is today",
+"es hoy"
+],
+"1308": [
+"STEPS",
+"PASOS"
+],
+"1309": [
+"Same as steps but with",
+"Como los pasos pero con"
+],
+"1310": [
+"Active Energy",
+"Energía activa"
+],
+"1311": [
+"→ variable",
+"→ variable"
+],
+"1312": [
+"KCAL",
+"KCAL"
+],
+"1313": [
+"Weight (optional)",
+"Peso (opcional)"
+],
+"1314": [
+"Only if you have a scale connected to Health: Find Samples →",
+"Solo si tienes una báscula conectada a Salud: Buscar muestras →"
+],
+"1315": [
+", Latest First, Limit 1, in the last 1 days. Value → variable",
+", más reciente primero, Límite 1, en los últimos 1 días. Valor → variable"
+],
+"1316": [
+"WEIGHT",
+"PESO"
+],
+"1317": [
+"Send",
+"Envío"
+],
+"1318": [
+"Action",
+"Acción"
+],
+"1319": [
+"Get Contents of URL",
+"Obtener contenido de URL"
+],
+"1320": [
+": paste the URL below. Tap the arrow: Method",
+": pega la URL de abajo. Toca la flecha: Método"
+],
+"1321": [
+"POST",
+"POST"
+],
+"1322": [
+"JSON",
+"JSON"
+],
+"1323": [
+", add fields of type",
+", añade campos de tipo"
+],
+"1324": [
+"Text",
+"Texto"
+],
+"1325": [
+"Test",
+"Prueba"
+],
+"1326": [
+"Run the shortcut once by hand: iPhone asks permission to read Health data, allow everything. If the last action shows",
+"Ejecuta el atajo una vez a mano: el iPhone pide permiso para leer los datos de Salud, permítelo todo. Si la última acción muestra"
+],
+"1327": [
+"+ the date, it works.",
+"+ la fecha, funciona."
+],
+"1328": [
+"Automation",
+"Automatización"
+],
+"1329": [
+"New Automation",
+"Nueva automatización"
+],
+"1330": [
+"Time of Day",
+"Hora del día"
+],
+"1331": [
+"08:00, every day →",
+"08:00, todos los días →"
+],
+"1332": [
+"Run Immediately",
+"Ejecutar inmediatamente"
+],
+"1333": [
+"→ action",
+"→ acción"
+],
+"1334": [
+"Run Shortcut",
+"Ejecutar atajo"
+],
+"1335": [
+": your shortcut. Repeat it at",
+": tu atajo. Repítela a las"
+],
+"1336": [
+"for complete steps and calories.",
+"para tener pasos y calorías completos."
+],
+"1337": [
+"Latest data: {0}{1}",
+"Últimos datos: {0}{1}"
+],
+"1338": [
+"No data received",
+"No se han recibido datos"
+],
+"1339": [
+"Refresh",
+"Actualizar"
+],
+"1340": [
+"You need an account: go to",
+"Necesitas una cuenta: ve a"
+],
+"1341": [
+"Profile → Account",
+"Perfil → Cuenta"
+],
+"1342": [
+"and sign in. Then come back here.",
+"e inicia sesión. Luego vuelve aquí."
+],
+"1343": [
+"Code (p_token)",
+"Código (p_token)"
+],
+"1344": [
+"One moment…",
+"Un momento…"
+],
+"1345": [
+"Generate code",
+"Generar código"
+],
+"1346": [
+"URL",
+"URL"
+],
+"1347": [
+"Key (apikey)",
+"Clave (apikey)"
+],
+"1348": [
+"Regenerate",
+"Regenerar"
+],
+"1349": [
+"1 · Your personal code",
+"1 · Tu código personal"
+],
+"1350": [
+"The code can only",
+"El código solo permite"
+],
+"1351": [
+"your Health data, not read it. If you lose it or share it by mistake, regenerate it.{0}",
+"tus datos de Salud, no leerlos. Si lo pierdes o lo compartes por error, regéneralo.{0}"
+],
+"1352": [
+"2 · Create the shortcut in Shortcuts",
+"2 · Crea el atajo en Atajos"
+],
+"1353": [
+"New Shortcut → name",
+"Nuevo atajo → nombre"
+],
+"1354": [
+"Forgia Health",
+"Forgia Salud"
+],
+"1355": [
+"If an action or filter name on your iPhone is different, send me a screenshot and we'll fix it.",
+"Si el nombre de una acción o filtro en tu iPhone es distinto, mándame una captura y lo arreglamos."
+],
+"1356": [
+"A web app can't read Health directly: it's done by a",
+"Una app web no puede leer Salud directamente: lo hace un"
+],
+"1357": [
+"Shortcut",
+"Atajo"
+],
+"1358": [
+"on your iPhone, which sends your values to your account every morning and evening. You build it once, ~15 minutes.",
+"en el iPhone, que cada mañana y noche envía los valores a tu cuenta. Lo creas una vez, ~15 minutos."
+],
+"1359": [
+"The table is missing on Supabase: first run the Forgia 3.2 SQL script (SQL Editor).",
+"Falta la tabla en Supabase: ejecuta antes el script SQL de Forgia 3.2 (SQL Editor)."
+],
+"1360": [
+"Error:",
+"Error:"
+],
+"1361": [
+"Regenerate the code?",
+"¿Regenerar el código?"
+],
+"1362": [
+"The old one stops working: you'll have to paste the new one into the Shortcut.",
+"El antiguo deja de funcionar: tendrás que pegar el nuevo en el Atajo."
+],
+"1363": [
+"Copied",
+"Copiado"
+],
+"1364": [
+"Nutri-Score",
+"Nutri-Score"
+],
+"1365": [
+"Quality {0}: {1}",
+"Calidad {0}: {1}"
+],
+"1366": [
+"Potassium",
+"Potasio"
+],
+"1367": [
+"Calcium",
+"Calcio"
+],
+"1368": [
+"Magnesium",
+"Magnesio"
+],
+"1369": [
+"Zinc",
+"Zinc"
+],
+"1370": [
+"Selenium",
+"Selenio"
+],
+"1371": [
+"Vitamin A",
+"Vitamina A"
+],
+"1372": [
+"Vitamin C",
+"Vitamina C"
+],
+"1373": [
+"Vitamin D",
+"Vitamina D"
+],
+"1374": [
+"Vitamin E",
+"Vitamina E"
+],
+"1375": [
+"Vitamin B6",
+"Vitamina B6"
+],
+"1376": [
+"Folate (B9)",
+"Folato (B9)"
+],
+"1377": [
+"Vitamin B12",
+"Vitamina B12"
+],
+"1378": [
+"Omega-3",
+"Omega-3"
+],
+"1379": [
+"Creatine",
+"Creatina"
+],
+"1380": [
+"From your diet you get about 1 g a day (meat and fish, estimate). For strength benefits you need 3–5 g a day from a supplement, every day, rest days included.",
+"Con la dieta tomas alrededor de 1 g al día (carne y pescado, estimación). Para los beneficios en fuerza hacen falta 3–5 g al día de suplemento, todos los días, también los de descanso."
+],
+"1381": [
+"Only found in animal or fortified foods. If you eat little meat, fish, eggs or dairy, consider a supplement.",
+"Solo está en alimentos animales o enriquecidos. Si comes poca carne, pescado, huevos o lácteos, plantéate un suplemento."
+],
+"1382": [
+"Oily fish (salmon, mackerel, sardines) twice a week, or walnuts, flaxseed or chia.",
+"Pescado azul (salmón, caballa, sardinas) 2 veces por semana, o nueces, semillas de lino o chía."
+],
+"1383": [
+"Iron from plants is absorbed better with vitamin C in the same meal (citrus, peppers, kiwi).",
+"El hierro de los vegetales se absorbe mejor con vitamina C en la misma comida (cítricos, pimientos, kiwi)."
+],
+"1384": [
+"serving {0} g · {1} kcal",
+"ración {0} g · {1} kcal"
+],
+"1385": [
+"Sorted by amount relative to the serving's calories, prioritising foods you already eat.",
+"Ordenados por cantidad respecto a las calorías de la ración, dando prioridad a lo que ya comes."
+],
+"1386": [
+"Sorted by content per 100 g.",
+"Ordenados por contenido por 100 g."
+],
+"1387": [
+"Daily reference: {0} {1}. {2}",
+"Referencia diaria: {0} {1}. {2}"
+],
+"1388": [
+"Where to find it",
+"Dónde encontrarlo"
+],
+"1389": [
+"Per serving",
+"Por ración"
+],
+"1390": [
+"Per 100 g",
+"Por 100 g"
+],
+"1391": [
+"Serving",
+"Ración"
+],
+"1392": [
+"A {0} kcal target is below your basal metabolic rate (~{1} kcal). You risk losing muscle and not recovering from workouts. Raise calories or shrink the deficit.",
+"Un objetivo de {0} kcal está por debajo de tu metabolismo basal (~{1} kcal). Te arriesgas a perder músculo y a no recuperarte de los entrenamientos. Sube las calorías o reduce el déficit."
+],
+"1393": [
+"Deficit over 1000 kcal a day: that's aggressive. To keep muscle while training seriously, aim to lose 0,5–1% of body weight a week.",
+"Déficit de más de 1000 kcal al día: es agresivo. Para mantener el músculo mientras entrenas en serio, apunta a perder un 0,5–1% del peso por semana."
+],
+"1394": [
+"The chosen pace exceeds 1% of body weight a week. It's only sustainable for a few weeks.",
+"El ritmo elegido supera el 1% del peso corporal por semana. Solo es sostenible unas pocas semanas."
+],
+"1395": [
+"Your manual calories are {0}% {1} estimated maintenance ({2} kcal). Fine if a professional gave them to you, otherwise double-check.",
+"Las calorías manuales están un {0}% {1} del mantenimiento estimado ({2} kcal). Bien si te las ha dado un profesional; si no, revísalas."
+],
+"1396": [
+"Protein at {0} g/kg: if you lift weights, aim for 1,6 to 2,2 g/kg.",
+"Proteínas a {0} g/kg: si entrenas con pesas conviene estar entre 1,6 y 2,2 g/kg."
+],
+"1397": [
+"Protein at {0} g/kg: above 2,2–2,5 g/kg the benefits are minimal. You can shift calories to carbs to train better.",
+"Proteínas a {0} g/kg: por encima de 2,2–2,5 g/kg los beneficios son mínimos. Puedes pasar calorías a los carbohidratos para entrenar mejor."
+],
+"1398": [
+"Protein at {0} g/kg: in the optimal range for lean mass.",
+"Proteínas a {0} g/kg: en el rango óptimo para la masa magra."
+],
+"1399": [
+"Fat at {0} g/kg: below 0,6 g/kg hormones and vitamin absorption can suffer.",
+"Grasas a {0} g/kg: por debajo de 0,6 g/kg pueden resentirse las hormonas y la absorción de vitaminas."
+],
+"1400": [
+"Low carbs ({0} g/kg) for a bulk: with more carbs you usually perform better in the gym.",
+"Carbohidratos bajos ({0} g/kg) para una fase de volumen: con más carbohidratos sueles rendir mejor en el gimnasio."
+],
+"1401": [
+"Manual mode: the app uses your numbers as they are. In Progress → Body you can see if your weight moves as expected.",
+"Modo manual: la app usa tus números tal cual. En Progreso → Cuerpo ves si el peso se mueve como se esperaba."
+],
+"1402": [
+"You've eaten {0}% of your calories. If something's missing from the diary, add it: otherwise today's deficit is bigger than planned.",
+"Has comido el {0}% de las calorías. Si falta algo en el diario, añádelo: si no, hoy el déficit es mayor de lo previsto."
+],
+"1403": [
+"{0} kcal over target. No big deal: the weekly average is what counts.",
+"{0} kcal por encima del objetivo. Nada grave: lo que cuenta es la media de la semana."
+],
+"1404": [
+"Calories on point: within 10% of target.",
+"Calorías clavadas: dentro del 10% del objetivo."
+],
+"1405": [
+"Protein at {0}% ({1}/{2} g). Try \"Close the macros\" or add a protein source at dinner.",
+"Proteínas al {0}% ({1}/{2} g). Prueba \"Cerrar macros\" o añade una fuente de proteína en la cena."
+],
+"1406": [
+"Added/free sugars: {0} g, over the WHO limit of ~{1} g (10% of calories). Sugars from fruit ({2} g) and milk ({3} g) don't count.",
+"Azúcares añadidos/libres: {0} g, por encima del límite de la OMS de ~{1} g (10% de las calorías). Los de la fruta ({2} g) y la leche ({3} g) no cuentan."
+],
+"1407": [
+"Fiber at {0} g (target ~30 g). Add vegetables, legumes, fruit or whole grains.",
+"Fibra a {0} g (objetivo ~30 g). Añade verdura, legumbres, fruta o cereales integrales."
+],
+"1408": [
+"Salt at {0} g: the recommended limit is 5 g. Watch out for cured meats, aged cheese, bread and ready meals.",
+"Sal a {0} g: el límite recomendado es 5 g. Cuidado con embutidos, quesos curados, pan y platos preparados."
+],
+"1409": [
+"Saturated fat at {0} g (recommended limit ~{1} g).",
+"Grasas saturadas a {0} g (límite recomendado ~{1} g)."
+],
+"1410": [
+"{0}% of calories come from low-quality foods (D/E): {1}. Try swapping one for an A/B alternative.",
+"El {0}% de las calorías viene de alimentos de baja calidad (D/E): {1}. Prueba a cambiar uno por una alternativa A/B."
+],
+"1411": [
+"{0}% of calories come from good-quality foods (A/B).",
+"El {0}% de las calorías viene de alimentos de buena calidad (A/B)."
+],
+"1412": [
+"Fruit and vegetables: {0} g. The target is 400 g a day (about 5 servings).",
+"Fruta y verdura: {0} g. El objetivo es 400 g al día (unas 5 raciones)."
+],
+"1413": [
+"You have {0} kcal left and you're at {1} g of 400 for fruit and veg. Spend those calories there: 200 g of vegetables is 40–60 kcal, a piece of fruit 60–90 kcal. They fill you up and bring fiber and micronutrients.",
+"Te quedan {0} kcal y de fruta y verdura vas por {1} g de 400. Usa esas calorías ahí: 200 g de verdura son 40–60 kcal, una pieza de fruta 60–90 kcal. Sacian y aportan fibra y micronutrientes."
+],
+"1414": [
+"Low micronutrients today: {0}. Tap the Micronutrients tab to see where to find them.",
+"Micronutrientes bajos hoy: {0}. Toca la pestaña Micronutrientes para ver dónde encontrarlos."
+],
+"1415": [
+"Protein + carbs + fat + fiber exceed 100 g per 100 g: check the values.",
+"Proteínas + carbohidratos + grasas + fibra superan 100 g por 100 g: revisa los valores."
+],
+"1416": [
+"With these macros calories should be about {0} kcal, not {1}. Maybe you copied per-serving values instead of per 100 g, or kJ instead of kcal.",
+"Con estos macros las calorías deberían ser unas {0} kcal, no {1}. Quizá copiaste los valores por ración en vez de por 100 g, o los kJ en lugar de las kcal."
+],
+"1417": [
+"Sugars can't be more than carbs.",
+"Los azúcares no pueden ser más que los carbohidratos."
+],
+"1418": [
+"Saturated fat can't be more than total fat.",
+"Las grasas saturadas no pueden ser más que las grasas totales."
+],
+"1419": [
+"Salt over 10 g per 100 g: that's stock cube or soy sauce territory, check it.",
+"Sal por encima de 10 g por 100 g: es un valor de pastilla de caldo o salsa de soja, revísalo."
+],
+"1420": [
+"Show {0} more tips",
+"Mostrar {0} consejos más"
+],
+"1421": [
+"Coach",
+"Coach"
+],
+"1422": [
+"Sugars {0} g",
+"Azúcares {0} g"
+],
+"1423": [
+"fruit {0}",
+"fruta {0}"
+],
+"1424": [
+"milk {0}",
+"leche {0}"
+],
+"1425": [
+"other {0}",
+"otros {0}"
+],
+"1426": [
+"Some packaged products don't list vitamins: the total may be underestimated.",
+"Algunos productos envasados no indican las vitaminas: el total puede estar subestimado."
+],
+"1427": [
+"Daily average over logged days.",
+"Media diaria de los días registrados."
+],
+"1428": [
+"LARN/EFSA reference values for adults. {0} Tap a row to see where to find it.",
+"Valores de referencia LARN/EFSA para adultos. {0} Toca una fila para ver dónde encontrarlo."
+],
+"1429": [
+"Haiku 4.5 · fast and cheap",
+"Haiku 4.5 · rápido y económico"
+],
+"1430": [
+"Sonnet 5.5 · more accurate",
+"Sonnet 5.5 · más preciso"
+],
+"1431": [
+"To use AI, enter your API key in Profile → AI Coach.",
+"Para usar la IA, introduce la clave API en Perfil → Coach IA."
+],
+"1432": [
+"Invalid API key: check it in Profile → AI Coach.",
+"Clave API no válida: revísala en Perfil → Coach IA."
+],
+"1433": [
+"Too many requests: try again in a minute.",
+"Demasiadas solicitudes: inténtalo de nuevo en un minuto."
+],
+"1434": [
+"You denied permission for AI.",
+"Has denegado el permiso para la IA."
+],
+"1435": [
+"Unreadable AI response, try again.",
+"Respuesta de la IA ilegible, inténtalo de nuevo."
+],
+"1436": [
+"AI unreachable right now. Check your connection.",
+"La IA no está disponible ahora. Revisa la conexión."
+],
+"1437": [
+"Profile not set up.",
+"Perfil no configurado."
+],
+"1438": [
+"{0}, {1} years old, {2} cm, {3} kg, activity {4}, goal {5}, lifts weights {6} times a week.",
+"{0}, {1} años, {2} cm, {3} kg, actividad {4}, objetivo {5}, entrena con pesas {6} veces por semana."
+],
+"1439": [
+"Analyzing…",
+"Analizando…"
+],
+"1440": [
+"Reply in English, in the direct, practical tone of an experienced coach (not marketing), at most 6 short bullet points, with concrete numbers. No preamble or greetings. If something's wrong, say it clearly.",
+"Responde en español, con tono directo y práctico de entrenador experto (no de marketing), máximo 6 viñetas breves, con números concretos. Sin preámbulos ni saludos. Si algo no va bien, dilo claramente."
+],
+"1441": [
+"{0} g estimated{1}",
+"{0} g estimados{1}"
+],
+"1442": [
+"Recalculate",
+"Recalcular"
+],
+"1443": [
+"Estimate",
+"Estimar"
+],
+"1444": [
+"E.g. plate of carbonara at a restaurant, large portion",
+"P. ej. plato de carbonara en un restaurante, ración abundante"
+],
+"1445": [
+"Describe what you ate, even when eating out. The more details (quantities, dressings, cooking), the more accurate the estimate.",
+"Describe lo que has comido, también fuera de casa. Cuantos más detalles des (cantidades, aliños, cocción), más precisa será la estimación."
+],
+"1446": [
+"Describe the dish",
+"Describe el plato"
+],
+"1447": [
+"Estimating calories and macros…",
+"Estimando calorías y macros…"
+],
+"1448": [
+"Checking…",
+"Comprobando…"
+],
+"1449": [
+"Evaluate this food entered manually in a diet app. Name: \"{0}\" {1}. Values per 100 g: kcal {2}, protein {3}, carbs {4} (sugars {5}), fat {6} (saturated {7}), fiber {8}, salt {9}. 1) Are the values plausible for this product? If a number looks wrong, say so and suggest the typical value. 2) Rate the nutritional quality (A–E, Nutri-Score style) in one line. 3) One practical tip on when/how to use it for someone who trains. {10}",
+"Evalúa este alimento introducido a mano en una app de dieta. Nombre: \"{0}\" {1}. Valores por 100 g: kcal {2}, proteínas {3}, carbohidratos {4} (azúcares {5}), grasas {6} (saturadas {7}), fibra {8}, sal {9}. 1) ¿Son plausibles los valores para este producto? Si un número parece incorrecto dilo y propón el valor típico. 2) Valora la calidad nutricional (A–E estilo Nutri-Score) en una línea. 3) Un consejo práctico sobre cuándo/cómo usarlo para alguien que entrena. {10}"
+],
+"1450": [
+"Copied: paste it into the chat with Claude",
+"Copiado: pégalo en el chat con Claude"
+],
+"1451": [
+"Copy text",
+"Copiar el texto"
+],
+"1452": [
+"AI estimate",
+"estimación IA"
+],
+"1453": [
+"1 estimated serving",
+"1 ración estimada"
+],
+"1454": [
+"{0} added ({1} kcal)",
+"{0} añadido ({1} kcal)"
+],
+"1455": [
+"Analyze the daily diet of a guy who trains seriously at the gym. {0} {1} The A–E quality of each food is in square brackets. Tell me what's good, what to improve (product quality, protein distribution across meals, fiber, micronutrients) and 1–2 concrete swaps. {2}",
+"Analiza la alimentación del día de un chico que entrena en serio en el gimnasio. {0} {1} Entre corchetes, la calidad A–E de cada alimento. Dime qué está bien, qué mejorar (calidad de los productos, reparto de proteínas en las comidas, fibra, micronutrientes) y 1–2 sustituciones concretas. {2}"
+],
+"1456": [
+"Person:",
+"Persona:"
+],
+"1457": [
+"Evaluate these nutrition targets. {0} Data: {1}, {2} years old, {3} cm, {4} kg, activity factor {5}. Mode {6}. Average target: {7} kcal, protein {8} g, carbs {9} g, fat {10} g. Training/rest cycling: {11}. Is it consistent and sustainable for someone who lifts weights 4 times a week? What would you change? {12}",
+"Evalúa estos objetivos nutricionales. {0} Datos: {1}, {2} años, {3} cm, {4} kg, factor de actividad {5}. Modo {6}. Objetivo medio: {7} kcal, proteínas {8} g, carbohidratos {9} g, grasas {10} g. Ciclado entreno/descanso: {11}. ¿Es coherente y sostenible para alguien que entrena con pesas 4 veces por semana? ¿Qué cambiarías? {12}"
+],
+"1458": [
+"Analyze the diet for this period ({0} days logged). {1} {2} Give me: trend versus targets, recurring habits (good and bad), product quality, 3 concrete actions for next week. {3}",
+"Analiza la alimentación de este periodo ({0} días registrados). {1} {2} Dame: evolución respecto a los objetivos, hábitos recurrentes (buenos y malos), calidad de los productos, 3 acciones concretas para la próxima semana. {3}"
+],
+"1459": [
+"Analyze my diet. {0} {1}",
+"Analiza mi alimentación. {0} {1}"
+],
+"1460": [
+"Testing…",
+"Probando…"
+],
+"1461": [
+"Reply only: OK",
+"Responde solo: OK"
+],
+"1462": [
+"Works ✓ (",
+"Funciona ✓ ("
+],
+"1463": [
+"Hypertrophy",
+"Hipertrofia"
+],
+"1464": [
+"Lagging muscle",
+"Músculo rezagado"
+],
+"1465": [
+"Break the plateau",
+"Romper el estancamiento"
+],
+"1466": [
+"Short on time",
+"Poco tiempo"
+],
+"1467": [
+"Intensity techniques",
+"Técnicas de intensidad"
+],
+"1468": [
+"Strong evidence",
+"Evidencia sólida"
+],
+"1469": [
+"Moderate evidence",
+"Evidencia moderada"
+],
+"1470": [
+"Limited evidence / practical experience",
+"Evidencia limitada / experiencia práctica"
+],
+"1471": [
+"Linear progression (5×5)",
+"Progresión lineal (5×5)"
+],
+"1472": [
+"Add weight every session on compound lifts as long as you complete all sets.",
+"Añade peso en cada sesión en los multiarticulares mientras completes todas las series."
+],
+"1473": [
+"5 sets of 5 on squat, bench, deadlift, row, overhead press",
+"5 series de 5 en sentadilla, press banca, peso muerto, remo, press militar"
+],
+"1474": [
+"+2,5 kg (upper body) or +5 kg (legs) every time you complete 5×5",
+"+2,5 kg (tren superior) o +5 kg (piernas) cada vez que completes 5×5"
+],
+"1475": [
+"If you fail 3 times in a row at the same weight: drop 10% and work back up",
+"Si fallas 3 veces seguidas con el mismo peso: baja un 10% y vuelve a subir"
+],
+"1476": [
+"First 6–12 months of serious training, when loads still go up almost every session.",
+"Primeros 6–12 meses de gimnasio en serio, cuando las cargas aún suben casi cada sesión."
+],
+"1477": [
+"If you're intermediate: progress stalls quickly and fatigue builds up.",
+"Si eres intermedio: el progreso se para pronto y la fatiga se acumula."
+],
+"1478": [
+"Mon: squat 5×5 · bench 5×5 · row 5×5. Wed: squat · overhead press · deadlift 1×5.",
+"Lun: sentadilla 5×5 · press banca 5×5 · remo 5×5. Mié: sentadilla · press militar · peso muerto 1×5."
+],
+"1479": [
+"5/3/1 (Wendler)",
+"5/3/1 (Wendler)"
+],
+"1480": [
+"4-week cycles based on percentages of a \"training max\" (90% of your 1RM) with a final set for max reps.",
+"Ciclos de 4 semanas sobre porcentajes de un \"training max\" (90% del 1RM) con una última serie a repeticiones máximas."
+],
+"1481": [
+"Wk 1: 65–75–85% × 5, 5, 5+",
+"Sem. 1: 65–75–85% × 5, 5, 5+"
+],
+"1482": [
+"Wk 2: 70–80–90% × 3, 3, 3+",
+"Sem. 2: 70–80–90% × 3, 3, 3+"
+],
+"1483": [
+"Wk 3: 75–85–95% × 5, 3, 1+",
+"Sem. 3: 75–85–95% × 5, 3, 1+"
+],
+"1484": [
+"Wk 4: deload (40–60%)",
+"Sem. 4: descarga (40–60%)"
+],
+"1485": [
+"After each cycle: +2,5 kg upper body, +5 kg legs on the training max",
+"Tras cada ciclo: +2,5 kg tren superior, +5 kg piernas en el training max"
+],
+"1486": [
+"When linear progression has stalled and you want to progress for months without plateaus.",
+"Cuando la progresión lineal se ha parado y quieres progresar durante meses sin estancarte."
+],
+"1487": [
+"If you have little time for accessories: the volume alone is low for hypertrophy.",
+"Si tienes poco tiempo para accesorios: el volumen por sí solo es bajo para la hipertrofia."
+],
+"1488": [
+"Bench with a 90 kg TM, week 3: 67,5×5 · 77,5×3 · 85×1+ (push to 1 rep short of failure).",
+"Press banca con TM 90 kg, semana 3: 67,5×5 · 77,5×3 · 85×1+ (llega hasta 1 rep del fallo)."
+],
+"1489": [
+"Top set + back-off",
+"Top set + back-off"
+],
+"1490": [
+"One heavy set at high RPE, then 2–4 lighter sets (−10/15%) for volume.",
+"Una serie pesada a RPE alto, luego 2–4 series más ligeras (−10/15%) para el volumen."
+],
+"1491": [
+"Progressive warm-up",
+"Calentamiento progresivo"
+],
+"1492": [
+"Top set: 3–5 reps at RPE 8–9",
+"Top set: 3–5 reps a RPE 8–9"
+],
+"1493": [
+"Back-off: 3 × 5–8 at 85–90% of the top set",
+"Back-off: 3 × 5–8 al 85–90% del top set"
+],
+"1494": [
+"When the top set goes up 1–2 reps at the same RPE, increase the weight",
+"Cuando el top set sube 1–2 reps al mismo RPE, aumenta el peso"
+],
+"1495": [
+"To keep strength and volume on the same exercise, even during a cut.",
+"Para mantener fuerza y volumen en el mismo ejercicio, también en definición."
+],
+"1496": [
+"On isolation exercises: not needed.",
+"En ejercicios de aislamiento: no hace falta."
+],
+"1497": [
+"Squat: top 140×4 @8, then 3×6 at 120 kg.",
+"Sentadilla: top 140×4 @8, luego 3×6 con 120 kg."
+],
+"1498": [
+"Block periodization",
+"Periodización por bloques"
+],
+"1499": [
+"3–6 week blocks, each with one goal: accumulation (volume), intensification (load), realization (peak).",
+"Bloques de 3–6 semanas con un objetivo cada uno: acumulación (volumen), intensificación (cargas), realización (pico)."
+],
+"1500": [
+"Accumulation: 4–6 × 6–10 at 65–75%",
+"Acumulación: 4–6 × 6–10 al 65–75%"
+],
+"1501": [
+"Intensification: 4–6 × 3–5 at 80–90%",
+"Intensificación: 4–6 × 3–5 al 80–90%"
+],
+"1502": [
+"Realization: 1–3 reps at 90%+, low volume",
+"Realización: 1–3 reps al 90%+, volumen bajo"
+],
+"1503": [
+"1-week deload between cycles",
+"Descarga de 1 semana entre un ciclo y otro"
+],
+"1504": [
+"If you want to test your 1RM or compete, or if you're advanced and progress is hard.",
+"Si quieres hacer un test de 1RM o una competición, o si eres avanzado y progresas con dificultad."
+],
+"1505": [
+"If you're a beginner: too complex for the benefit.",
+"Si eres principiante: demasiado complejo para el beneficio."
+],
+"1506": [
+"Cluster set",
+"Cluster set"
+],
+"1507": [
+"A set split into mini-blocks with 15–30 s of rest: more heavy reps with less fatigue.",
+"Una serie dividida en minibloques con 15–30 s de pausa: más repeticiones pesadas con menos fatiga."
+],
+"1508": [
+"Example: 5 × (2+2+2) at 85% with 20 s between blocks",
+"Ejemplo: 5 × (2+2+2) al 85% con 20 s entre bloques"
+],
+"1509": [
+"Normal rest (3–4 min) between sets",
+"Descanso normal (3–4 min) entre series"
+],
+"1510": [
+"To accumulate heavy work with good technique and bar speed.",
+"Para acumular trabajo pesado con buena técnica y velocidad."
+],
+"1511": [
+"Paused reps",
+"Repeticiones con pausa (pause reps)"
+],
+"1512": [
+"1–3 s pause at the hardest point (chest on bench, bottom of the squat).",
+"Pausa de 1–3 s en el punto más difícil (pecho en press banca, abajo en la sentadilla)."
+],
+"1513": [
+"Load −10/20% compared with normal",
+"Carga −10/20% respecto a lo normal"
+],
+"1514": [
+"3–5 sets of 3–5",
+"3–5 series de 3–5"
+],
+"1515": [
+"A real pause, no bounce",
+"Pausa de verdad, sin rebote"
+],
+"1516": [
+"If you always get stuck at the same point or bounce too much.",
+"Si siempre te atascas en el mismo punto o rebotas demasiado."
+],
+"1517": [
+"Double progression",
+"Doble progresión"
+],
+"1518": [
+"You work in a range (e.g. 8–12): first you add reps, and when you hit the top on all sets you add weight.",
+"Trabajas en un rango (p. ej. 8–12): primero aumentas las reps y, cuando llegas arriba en todas las series, aumentas el peso."
+],
+"1519": [
+"Pick a range (6–10, 8–12, 12–15)",
+"Elige un rango (6–10, 8–12, 12–15)"
+],
+"1520": [
+"Add 1 rep at a time until all sets reach the top",
+"Añade 1 rep cada vez hasta que todas las series lleguen al máximo"
+],
+"1521": [
+"Then +2–5% load and start again from the bottom of the range",
+"Luego +2–5% de carga y vuelve a empezar desde el mínimo del rango"
+],
+"1522": [
+"It's the app's default method: the \"Apply\" suggestions already use it.",
+"Es el método base de la app: las sugerencias \"Aplicar\" ya lo usan."
+],
+"1523": [
+"Lat pulldown 3×8–12: 60×12,11,10 → 60×12,12,12 → 65×8,8,8.",
+"Jalón al pecho 3×8–12: 60×12,11,10 → 60×12,12,12 → 65×8,8,8."
+],
+"1524": [
+"RIR autoregulation",
+"Autorregulación con RIR"
+],
+"1525": [
+"You adjust the load based on how many reps you leave \"in reserve\" instead of fixed numbers.",
+"Ajustas la carga según cuántas repeticiones dejas \"en reserva\" en lugar de números fijos."
+],
+"1526": [
+"Working sets at 0–3 RIR (close to failure)",
+"Series efectivas a 0–3 RIR (cerca del fallo)"
+],
+"1527": [
+"Compound lifts: 1–3 RIR",
+"Multiarticulares: 1–3 RIR"
+],
+"1528": [
+"Isolation and machines: 0–1 RIR",
+"Aislamientos y máquinas: 0–1 RIR"
+],
+"1529": [
+"If reps drop a lot between sets, you went too close to failure",
+"Si las reps bajan mucho entre series, te has acercado demasiado al fallo"
+],
+"1530": [
+"Always: it balances good and bad days (sleep, stress, diet).",
+"Siempre: compensa días buenos y malos (sueño, estrés, dieta)."
+],
+"1531": [
+"Progressive volume (10–20 sets)",
+"Volumen progresivo (10–20 series)"
+],
+"1532": [
+"Growth depends mostly on weekly working sets per muscle. Start low and build up over the mesocycle.",
+"El crecimiento depende sobre todo de las series efectivas semanales por músculo. Empieza bajo y aumenta durante el mesociclo."
+],
+"1533": [
+"Start of mesocycle: ~10 sets/week per muscle",
+"Inicio del mesociclo: ~10 series/semana por músculo"
+],
+"1534": [
+"Add 1–2 sets a week for 4–6 weeks",
+"Añade 1–2 series por semana durante 4–6 semanas"
+],
+"1535": [
+"When recovery is poor or performance drops: deload",
+"Cuando recuperas mal o el rendimiento baja: descarga"
+],
+"1536": [
+"The \"Sets per muscle\" chart in Today shows where you are",
+"El gráfico \"Series por músculo\" en Hoy te dice dónde estás"
+],
+"1537": [
+"To plan hypertrophy over months.",
+"Para planificar la hipertrofia durante meses."
+],
+"1538": [
+"Undulating periodization (DUP)",
+"Periodización ondulante (DUP)"
+],
+"1539": [
+"Same exercise with different rep ranges during the week: heavy, medium and light day.",
+"Mismo ejercicio con rangos distintos en la semana: día pesado, medio y ligero."
+],
+"1540": [
+"Day A: 4×4–6",
+"Día A: 4×4–6"
+],
+"1541": [
+"Day B: 3×8–10",
+"Día B: 3×8–10"
+],
+"1542": [
+"Day C: 3×12–15",
+"Día C: 3×12–15"
+],
+"1543": [
+"Independent progression for each range",
+"Progresión independiente para cada rango"
+],
+"1544": [
+"If you train each muscle 2–3 times a week and want strength and hypertrophy together.",
+"Si entrenas cada músculo 2–3 veces por semana y quieres fuerza e hipertrofia a la vez."
+],
+"1545": [
+"Stretch emphasis",
+"Énfasis en estiramiento"
+],
+"1546": [
+"Exercises and partials that load the muscle when it's stretched seem to give more growth.",
+"Los ejercicios y parciales que cargan el músculo estirado parecen dar más crecimiento."
+],
+"1547": [
+"Choose stretch-biased variations: incline curl, overhead extension, RDL, seated leg curl",
+"Elige variantes en estiramiento: curl en banco inclinado, overhead extension, RDL, curl femoral sentado"
+],
+"1548": [
+"At failure, add 3–5 partials in the bottom half of the movement",
+"Al llegar al fallo, añade 3–5 parciales en la mitad baja del movimiento"
+],
+"1549": [
+"Controlled eccentric (2–3 s)",
+"Excéntrica controlada (2–3 s)"
+],
+"1550": [
+"For muscles that grow poorly or on isolation exercises.",
+"Para músculos que crecen poco o en aislamientos."
+],
+"1551": [
+"Specialization cycle",
+"Ciclo de especialización"
+],
+"1552": [
+"For 4–8 weeks prioritize 1–2 lagging muscles and cut the others to maintenance volume.",
+"Durante 4–8 semanas prioriza 1–2 músculos rezagados y reduce el volumen de los demás a mantenimiento."
+],
+"1553": [
+"Lagging muscle: +4–6 sets/week (up to 16–22) and 3× frequency",
+"Músculo rezagado: +4–6 series/semana (hasta 16–22) y frecuencia 3×"
+],
+"1554": [
+"Other muscles: about 6 sets/week (maintenance)",
+"Resto de músculos: unas 6 series/semana (mantenimiento)"
+],
+"1555": [
+"Train the lagging muscle at the start of the session, when you're fresh",
+"Entrena el músculo rezagado al inicio de la sesión, cuando estás fresco"
+],
+"1556": [
+"After the cycle: a deload week, then back to normal volume",
+"Tras el ciclo: una semana de descarga y luego vuelves al volumen normal"
+],
+"1557": [
+"When a muscle has lagged behind the others for months. The coach flags it from the \"Sets per muscle\" chart.",
+"Cuando un músculo va por detrás de los demás desde hace meses. El coach te lo señala en el gráfico \"Series por músculo\"."
+],
+"1558": [
+"More than 2 muscles at once: recovery can't keep up.",
+"Más de 2 músculos a la vez: la recuperación no aguanta."
+],
+"1559": [
+"Lagging shoulders: lateral raises 4 sets × 3 days + overhead press 3 sets × 2 days.",
+"Hombros rezagados: elevaciones laterales 4 series × 3 días + press militar 3 series × 2 días."
+],
+"1560": [
+"Priority principle",
+"Principio de prioridad"
+],
+"1561": [
+"The exercise for the muscle you want to improve goes first, when you have the most energy.",
+"El ejercicio del músculo que quieres mejorar va primero, cuando tienes más energía."
+],
+"1562": [
+"Make the lagging muscle the first exercise of the session",
+"Pon el músculo rezagado como primer ejercicio de la sesión"
+],
+"1563": [
+"Use the exercise where you feel the muscle best, not the heaviest one",
+"Usa el ejercicio en el que mejor sientes el músculo, no el más pesado"
+],
+"1564": [
+"Move heavy compound lifts later, or to another day",
+"Pasa los multiarticulares pesados después, o a otro día"
+],
+"1565": [
+"Always, at zero cost.",
+"Siempre, a coste cero."
+],
+"1566": [
+"Exercise selection and mind-muscle connection",
+"Elección del ejercicio y conexión mente-músculo"
+],
+"1567": [
+"If a muscle isn't growing it's often the wrong exercise: switch variation and focus the tension.",
+"Si un músculo no crece, a menudo es el ejercicio equivocado: cambia de variante y concentra la tensión."
+],
+"1568": [
+"Prefer stable machines and cables: you can push close to failure safely",
+"Prefiere máquinas y poleas estables: puedes acercarte al fallo con seguridad"
+],
+"1569": [
+"Full ROM and controlled tempo",
+"ROM completo y ritmo controlado"
+],
+"1570": [
+"Focus on the target muscle (reduces the work of compensating muscles)",
+"Concéntrate en el músculo objetivo (reduce el trabajo de los músculos que compensan)"
+],
+"1571": [
+"Try 2–3 variations for 3 weeks and keep the one where you progress best",
+"Prueba 2–3 variantes durante 3 semanas y quédate con la que mejor progreses"
+],
+"1572": [
+"On isolation exercises and small muscles (biceps, delts, calves).",
+"En aislamientos y músculos pequeños (bíceps, deltoides, gemelos)."
+],
+"1573": [
+"Deload",
+"Descarga (deload)"
+],
+"1574": [
+"A lighter week to shed accumulated fatigue: you often come back stronger.",
+"Una semana más ligera para eliminar la fatiga acumulada: a menudo vuelves más fuerte."
+],
+"1575": [
+"Volume −40/50% (half the sets)",
+"Volumen −40/50% (la mitad de series)"
+],
+"1576": [
+"Same loads or −10%",
+"Cargas iguales o −10%"
+],
+"1577": [
+"Stay well away from failure (RIR 3–4)",
+"Mantente lejos del fallo (RIR 3–4)"
+],
+"1578": [
+"Every 4–8 weeks, or when signs of fatigue pile up",
+"Cada 4–8 semanas, o cuando se suman las señales de fatiga"
+],
+"1579": [
+"Performance dropping for 2+ sessions, joint pain, worse sleep, zero motivation.",
+"Rendimiento a la baja durante 2+ sesiones, dolores articulares, peor sueño, cero ganas."
+],
+"1580": [
+"Change of stimulus",
+"Cambio de estímulo"
+],
+"1581": [
+"If an exercise has stalled for weeks, change the rep range or variation for 4–6 weeks.",
+"Si un ejercicio lleva semanas estancado, cambia el rango de repeticiones o la variante durante 4–6 semanas."
+],
+"1582": [
+"Change range: from 8–12 to 4–6 (or vice versa)",
+"Cambia el rango: de 8–12 a 4–6 (o al revés)"
+],
+"1583": [
+"Or variation: flat bench → incline bench or dumbbells",
+"O la variante: press banca plano → inclinado o mancuernas"
+],
+"1584": [
+"Go back to the original exercise after 4–6 weeks and test your new max",
+"Vuelve al ejercicio original tras 4–6 semanas y mide tu nuevo máximo"
+],
+"1585": [
+"Plateau on a single exercise while the others progress.",
+"Estancamiento en un solo ejercicio mientras los demás progresan."
+],
+"1586": [
+"Check recovery and calories",
+"Revisa recuperación y calorías"
+],
+"1587": [
+"Often the plateau isn't the program: it's sleep, calories and protein.",
+"A menudo el estancamiento no es el programa: son el sueño, las calorías y las proteínas."
+],
+"1588": [
+"During a cut it's normal to progress little: aim to maintain your loads",
+"En definición es normal progresar poco: apunta a mantener las cargas"
+],
+"1589": [
+"Protein 1,6–2,2 g/kg every day",
+"Proteínas 1,6–2,2 g/kg cada día"
+],
+"1590": [
+"7–9 hours of sleep",
+"7–9 horas de sueño"
+],
+"1591": [
+"Check in Diet that your weekly average is close to target",
+"Comprueba en Dieta que la media semanal esté cerca del objetivo"
+],
+"1592": [
+"Plateau on all exercises at once.",
+"Estancamiento en todos los ejercicios a la vez."
+],
+"1593": [
+"Antagonist supersets",
+"Superseries antagonistas"
+],
+"1594": [
+"Alternate two exercises for opposing muscles with no rest between them: same result in less time.",
+"Alternas dos ejercicios de músculos opuestos sin descanso entre ellos: mismo resultado en menos tiempo."
+],
+"1595": [
+"Pair: chest + back, biceps + triceps, quads + hamstrings",
+"Combina: pecho + espalda, bíceps + tríceps, cuádriceps + isquios"
+],
+"1596": [
+"Do A, then B right away, then rest 90–120 s",
+"Haz A, luego enseguida B, luego descansa 90–120 s"
+],
+"1597": [
+"In the app: exercise ⋯ menu → \"Superset with next\"",
+"En la app: menú ⋯ del ejercicio → \"Superserie con el siguiente\""
+],
+"1598": [
+"When you have 45 minutes or less. They work well on accessories and machines.",
+"Cuando tienes 45 minutos o menos. Funcionan bien en accesorios y máquinas."
+],
+"1599": [
+"High-density full body",
+"Full body de alta densidad"
+],
+"1600": [
+"3 short sessions a week with a few compound exercises and short rests.",
+"3 sesiones cortas por semana con pocos ejercicios multiarticulares y descansos cortos."
+],
+"1601": [
+"4–5 exercises per session (push, pull, legs, hinge, core)",
+"4–5 ejercicios por sesión (empuje, tirón, piernas, bisagra, core)"
+],
+"1602": [
+"2–3 sets each close to failure",
+"2–3 series de cada uno cerca del fallo"
+],
+"1603": [
+"Rest 60–90 s, supersets where possible",
+"Descansos de 60–90 s, superseries donde se pueda"
+],
+"1604": [
+"Use the Full Body program in \"Ready-made programs\"",
+"Usa el programa Full Body en \"Programas listos\""
+],
+"1605": [
+"Busy weeks, exams, travel, Erasmus with irregular schedules.",
+"Semanas llenas, exámenes, viajes, Erasmus con horarios irregulares."
+],
+"1606": [
+"Reach failure, immediately drop the weight by 20–30% and keep going to failure again.",
+"Llegas al fallo, bajas enseguida el peso un 20–30% y sigues hasta un nuevo fallo."
+],
+"1607": [
+"Only on the last set of an exercise",
+"Solo en la última serie de un ejercicio"
+],
+"1608": [
+"1–2 consecutive drops",
+"1–2 bajadas consecutivas"
+],
+"1609": [
+"Ideal on machines and dumbbells (quick weight change)",
+"Ideal en máquinas y mancuernas (cambio de peso rápido)"
+],
+"1610": [
+"In the app: tap the set number → \"Drop set\"",
+"En la app: toca el número de la serie → \"Drop set\""
+],
+"1611": [
+"To add stimulus quickly on isolation exercises.",
+"Para añadir estímulo en poco tiempo en aislamientos."
+],
+"1612": [
+"On heavy squats and deadlifts, and on every set: it greatly increases fatigue.",
+"En sentadillas y pesos muertos pesados, y en cada serie: aumenta mucho la fatiga."
+],
+"1613": [
+"Set to failure, 10–20 s pause, more reps with the same weight, repeat 2–3 times.",
+"Serie al fallo, 10–20 s de pausa, más repeticiones con el mismo peso, repite 2–3 veces."
+],
+"1614": [
+"Main set at 0–1 RIR (e.g. 10 reps)",
+"Serie principal a 0–1 RIR (p. ej. 10 reps)"
+],
+"1615": [
+"15 s pause → reps to failure (e.g. 4)",
+"15 s de pausa → reps hasta el fallo (p. ej. 4)"
+],
+"1616": [
+"15 s → more reps (e.g. 2)",
+"15 s → más reps (p. ej. 2)"
+],
+"1617": [
+"Counts as about 2 working sets",
+"Cuenta como unas 2 series efectivas"
+],
+"1618": [
+"When you're short on time or want more stimulus on a stable exercise.",
+"Cuando tienes poco tiempo o quieres más estímulo en un ejercicio estable."
+],
+"1619": [
+"Activation set of 12–20 reps, then mini-sets of 3–5 reps with 3–5 breaths of rest.",
+"Serie de activación de 12–20 reps, luego miniseries de 3–5 reps con 3–5 respiraciones de pausa."
+],
+"1620": [
+"Activation: 12–20 reps at 1 RIR",
+"Activación: 12–20 reps a 1 RIR"
+],
+"1621": [
+"3–5 deep breaths",
+"3–5 respiraciones profundas"
+],
+"1622": [
+"Mini-sets of 3–5 reps, repeat until you can't do more than 3",
+"Miniseries de 3–5 reps, repite hasta que no puedas hacer más de 3"
+],
+"1623": [
+"Weight: about 60–70% of your max",
+"Peso: alrededor del 60–70% del máximo"
+],
+"1624": [
+"Isolation, calves, delts, arms. Great on days with little time.",
+"Aislamientos, gemelos, deltoides, brazos. Ideal los días con poco tiempo."
+],
+"1625": [
+"Pre-exhaustion",
+"Preagotamiento"
+],
+"1626": [
+"Isolation before the compound lift to fatigue the target muscle (e.g. flyes before bench).",
+"Aislamiento antes del multiarticular para fatigar el músculo objetivo (p. ej. aperturas antes del press banca)."
+],
+"1627": [
+"1–2 isolation sets at 1–2 RIR",
+"1–2 series de aislamiento a 1–2 RIR"
+],
+"1628": [
+"Straight into the compound lift with reduced load",
+"Justo después, el multiarticular con carga reducida"
+],
+"1629": [
+"Useful if other muscles do more of the work than the target in the compound lift",
+"Útil si en el multiarticular trabajan más otros músculos que el objetivo"
+],
+"1630": [
+"When you \"don't feel\" a muscle in the compound lift. Evidence on growth is mixed: use it in phases.",
+"Cuando un músculo \"no se siente\" en el multiarticular. Las pruebas sobre el crecimiento son contradictorias: úsalo por periodos."
+],
+"1631": [
+"Low stimulus for",
+"Poco estímulo para"
+],
+"1632": [
+"(under 8 sets a week). If they're weak points, try a",
+"(menos de 8 series por semana). Si son puntos débiles, prueba un"
+],
+"1633": [
+"specialization cycle",
+"ciclo de especialización"
+],
+"1634": [
+", or consider a",
+", o plantéate una"
+],
+"1635": [
+": several exercises have stalled",
+": hay varios ejercicios estancados"
+],
+"1636": [
+"Stalled for 4 sessions:",
+"Estancado desde hace 4 sesiones:"
+],
+"1637": [
+"change of stimulus",
+"cambio de estímulo"
+],
+"1638": [
+"You've had 6+ weeks of steady training without light sessions. If you feel fatigue building up, schedule a",
+"Llevas 6+ semanas de entrenamiento constante sin sesiones ligeras. Si notas fatiga acumulada, programa una"
+],
+"1639": [
+"Open →",
+"Abrir →"
+],
+"1640": [
+"Methods and techniques",
+"Métodos y técnicas"
+],
+"1641": [
+"When to avoid it",
+"Cuándo evitarlo"
+],
+"1642": [
+"Example",
+"Ejemplo"
+],
+"1643": [
+"End the current deload",
+"Terminar la descarga en curso"
+],
+"1644": [
+"Start a 7-day deload",
+"Empezar 7 días de descarga"
+],
+"1645": [
+"For 7 days: −10% load and about 40% fewer sets on your routines. Then everything goes back to normal.",
+"Durante 7 días: −10% de carga y alrededor de un 40% menos de series en las rutinas. Luego todo vuelve a la normalidad."
+],
+"1646": [
+"How to do it",
+"Cómo se hace"
+],
+"1647": [
+"When to use it",
+"Cuándo usarlo"
+],
+"1648": [
+"Linear (+weight every session)",
+"Lineal (+peso cada sesión)"
+],
+"1649": [
+"RIR-based",
+"Ajustada por RIR"
+],
+"1650": [
+"Fixed weight",
+"Peso fijo"
+],
+"1651": [
+"Warm-up: {0}",
+"Calentamiento: {0}"
+],
+"1652": [
+"Linear progression: all sets completed,",
+"Progresión lineal: todas las series completadas,"
+],
+"1653": [
+"Two sessions without completing the sets:",
+"Dos sesiones sin completar las series:"
+],
+"1654": [
+"restart from {0} kg",
+"vuelve a {0} kg"
+],
+"1655": [
+"(−10%) and build back up.",
+"(−10%) y vuelve a subir."
+],
+"1656": [
+"Linear progression:",
+"Progresión lineal:"
+],
+"1657": [
+"until you complete all sets.",
+"hasta que completes todas las series."
+],
+"1658": [
+"Deload week:",
+"Semana de descarga:"
+],
+"1659": [
+"(−10%), fewer sets, leave 3–4 reps in reserve.",
+"(−10%), menos series, deja 3–4 repeticiones en reserva."
+],
+"1660": [
+"Low recovery on {0} of the last 5 days",
+"Recuperación baja en {0} de los últimos 5 días"
+],
+"1661": [
+"{0} exercises stalled for 4 sessions",
+"{0} ejercicios estancados desde hace 4 sesiones"
+],
+"1662": [
+"7 weeks in a row without a light week",
+"7 semanas seguidas sin una semana ligera"
+],
+"1663": [
+"Deload week",
+"Semana de descarga"
+],
+"1664": [
+"Until {0}: −10% load and ~40% fewer sets. Then come back stronger.",
+"Hasta el {0}: −10% de carga y ~40% menos de series. Luego vuelves más fuerte."
+],
+"1665": [
+"Maybe it's time to deload",
+"Quizá toca descargar"
+],
+"1666": [
+"What it is",
+"Qué es"
+],
+"1667": [
+"knee lowback",
+"knee lowback"
+],
+"1668": [
+"Goblet_Squat",
+"Goblet_Squat"
+],
+"1669": [
+"Box_Squat",
+"Box_Squat"
+],
+"1670": [
+"Bodyweight_Squat",
+"Bodyweight_Squat"
+],
+"1671": [
+"Stiff-Legged_Dumbbell_Deadlift",
+"Stiff-Legged_Dumbbell_Deadlift"
+],
+"1672": [
+"Glute_Ham_Raise",
+"Glute_Ham_Raise"
+],
+"1673": [
+"knee hip",
+"knee hip"
+],
+"1674": [
+"Dumbbell_Lunges",
+"Dumbbell_Lunges"
+],
+"1675": [
+"Dumbbell_Step_Ups",
+"Dumbbell_Step_Ups"
+],
+"1676": [
+"Split_Squat_with_Dumbbells",
+"Split_Squat_with_Dumbbells"
+],
+"1677": [
+"Bodyweight_Walking_Lunge",
+"Bodyweight_Walking_Lunge"
+],
+"1678": [
+"Single-Leg_Leg_Extension",
+"Single-Leg_Leg_Extension"
+],
+"1679": [
+"Standing_Dumbbell_Calf_Raise",
+"Standing_Dumbbell_Calf_Raise"
+],
+"1680": [
+"Calf_Raise_On_A_Dumbbell",
+"Calf_Raise_On_A_Dumbbell"
+],
+"1681": [
+"shoulder wrist",
+"shoulder wrist"
+],
+"1682": [
+"Dumbbell_Bench_Press",
+"Dumbbell_Bench_Press"
+],
+"1683": [
+"Machine_Bench_Press",
+"Machine_Bench_Press"
+],
+"1684": [
+"Dumbbell_Bench_Press_with_Neutral_Grip",
+"Dumbbell_Bench_Press_with_Neutral_Grip"
+],
+"1685": [
+"Leverage_Chest_Press",
+"Leverage_Chest_Press"
+],
+"1686": [
+"wrist shoulder",
+"wrist shoulder"
+],
+"1687": [
+"shoulder elbow",
+"shoulder elbow"
+],
+"1688": [
+"Leverage_Incline_Chest_Press",
+"Leverage_Incline_Chest_Press"
+],
+"1689": [
+"Push-Ups_With_Feet_Elevated",
+"Push-Ups_With_Feet_Elevated"
+],
+"1690": [
+"shoulder lowback wrist",
+"shoulder lowback wrist"
+],
+"1691": [
+"Machine_Shoulder_Military_Press",
+"Machine_Shoulder_Military_Press"
+],
+"1692": [
+"Arnold_Dumbbell_Press",
+"Arnold_Dumbbell_Press"
+],
+"1693": [
+"Leverage_Shoulder_Press",
+"Leverage_Shoulder_Press"
+],
+"1694": [
+"Decline_Push-Up",
+"Decline_Push-Up"
+],
+"1695": [
+"One-Arm_Dumbbell_Row",
+"One-Arm_Dumbbell_Row"
+],
+"1696": [
+"T-Bar_Row_with_Handle",
+"T-Bar_Row_with_Handle"
+],
+"1697": [
+"Leverage_Iso_Row",
+"Leverage_Iso_Row"
+],
+"1698": [
+"Inverted_Row",
+"Inverted_Row"
+],
+"1699": [
+"elbow shoulder",
+"elbow shoulder"
+],
+"1700": [
+"Chin-Up",
+"Chin-Up"
+],
+"1701": [
+"elbow wrist",
+"elbow wrist"
+],
+"1702": [
+"Band_Assisted_Pull-Up",
+"Band_Assisted_Pull-Up"
+],
+"1703": [
+"Flat_Bench_Cable_Flyes",
+"Flat_Bench_Cable_Flyes"
+],
+"1704": [
+"Dumbbell_Flyes",
+"Dumbbell_Flyes"
+],
+"1705": [
+"Cable_Seated_Lateral_Raise",
+"Cable_Seated_Lateral_Raise"
+],
+"1706": [
+"Lateral_Raise_-_With_Bands",
+"Lateral_Raise_-_With_Bands"
+],
+"1707": [
+"Reverse_Machine_Flyes",
+"Reverse_Machine_Flyes"
+],
+"1708": [
+"Reverse_Flyes",
+"Reverse_Flyes"
+],
+"1709": [
+"Band_Pull_Apart",
+"Band_Pull_Apart"
+],
+"1710": [
+"Standing_Dumbbell_Triceps_Extension",
+"Standing_Dumbbell_Triceps_Extension"
+],
+"1711": [
+"Dips_-_Triceps_Version",
+"Dips_-_Triceps_Version"
+],
+"1712": [
+"Push-Ups_-_Close_Triceps_Position",
+"Push-Ups_-_Close_Triceps_Position"
+],
+"1713": [
+"wrist elbow",
+"wrist elbow"
+],
+"1714": [
+"Hanging_Leg_Raise",
+"Hanging_Leg_Raise"
+],
+"1715": [
+"Plank",
+"Plank"
+],
+"1716": [
+"Dead_Bug",
+"Dead_Bug"
+],
+"1717": [
+"Crunches",
+"Crunches"
+],
+"1718": [
+"Hamstrings and glutes",
+"Isquios y glúteos"
+],
+"1719": [
+"Abs",
+"Abdomen"
+],
+"1720": [
+"Bench press",
+"Press banca"
+],
+"1721": [
+"Squat",
+"Sentadilla"
+],
+"1722": [
+"Deadlift",
+"Peso muerto"
+],
+"1723": [
+"Military press",
+"Press militar"
+],
+"1724": [
+"Pull-ups",
+"Dominadas"
+],
+"1725": [
+"Shoulder",
+"Hombro"
+],
+"1726": [
+"Elbow",
+"Codo"
+],
+"1727": [
+"Wrist",
+"Muñeca"
+],
+"1728": [
+"Lower back",
+"Zona lumbar"
+],
+"1729": [
+"Knee",
+"Rodilla"
+],
+"1730": [
+"Hip",
+"Cadera"
+]
+}
