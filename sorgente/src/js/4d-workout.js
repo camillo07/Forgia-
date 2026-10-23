@@ -72,7 +72,14 @@ let DRAG = null;
 function dragBegin(item, kind, pid, y, capEl) {
   const list = item.parentElement, items = [...list.querySelectorAll(':scope > [data-drag-item]')];
   const rect = item.getBoundingClientRect();
-  DRAG = { kind, item, list, items, from: items.indexOf(item), y0: y, top: rect.top, h: rect.height, to: items.indexOf(item), pid };
+  // geometria misurata una volta sola: offsetTop/offsetHeight non cambiano con le transform,
+  // quindi le animazioni in corso non falsano i calcoli (era il tremolio durante il trascinamento)
+  const geo = items.map(it => ({ off: it.offsetTop, h: it.offsetHeight }));
+  const sc = list.closest('.layer-body');
+  DRAG = {
+    kind, item, list, items, geo, sc, from: items.indexOf(item), y0: y, h: rect.height,
+    to: items.indexOf(item), pid, k: item.offsetTop - rect.top, sc0: sc ? sc.scrollTop : scrollY
+  };
   item.classList.add('dragging'); haptic(15);
   try { (capEl || item).setPointerCapture(pid); } catch (e) { }
 }
@@ -85,13 +92,14 @@ document.addEventListener('pointerdown', ev => {
 document.addEventListener('pointermove', ev => {
   if (!DRAG || ev.pointerId !== DRAG.pid) return;
   ev.preventDefault();
-  const dy = ev.clientY - DRAG.y0; DRAG.item.style.transform = `translateY(${dy}px)`;
-  const py = ev.clientY; let to = DRAG.from;
-  DRAG.items.forEach((it, i) => { if (it === DRAG.item) return; const r = it.getBoundingClientRect(), m = r.top + Math.min(r.height / 2, 60) - (it.style.transform ? parseFloat(it.style.transform.slice(11)) || 0 : 0); if (i > DRAG.from && py > m) to = Math.max(to, i); if (i < DRAG.from && py < m + (r.height > 120 ? r.height - 120 : 0)) to = Math.min(to, i); });
+  const sh = (DRAG.sc ? DRAG.sc.scrollTop : scrollY) - DRAG.sc0;
+  const dy = ev.clientY - DRAG.y0 + sh; DRAG.item.style.transform = `translateY(${dy}px)`;
+  const py = ev.clientY + DRAG.k + sh; let to = DRAG.from;
+  DRAG.geo.forEach((g, i) => { if (i === DRAG.from) return; const m = g.off + Math.min(g.h / 2, 60); if (i > DRAG.from && py > m) to = Math.max(to, i); if (i < DRAG.from && py < m + (g.h > 120 ? g.h - 120 : 0)) to = Math.min(to, i); });
   DRAG.to = to;
   DRAG.items.forEach((it, i) => { if (it === DRAG.item) return; let s = 0; if (DRAG.from < to && i > DRAG.from && i <= to) s = -DRAG.h - 10; if (DRAG.from > to && i < DRAG.from && i >= to) s = DRAG.h + 10; it.style.transform = s ? `translateY(${s}px)` : ''; });
   // autoscroll
-  const sc = DRAG.list.closest('.layer-body'); if (sc) { const r = sc.getBoundingClientRect(); if (ev.clientY < r.top + 60) sc.scrollTop -= 12; else if (ev.clientY > r.bottom - 60) sc.scrollTop += 12; }
+  if (DRAG.sc) { const r = DRAG.sc.getBoundingClientRect(); if (ev.clientY < r.top + 60) DRAG.sc.scrollTop -= 12; else if (ev.clientY > r.bottom - 60) DRAG.sc.scrollTop += 12; }
 }, { passive: false });
 function dragEnd(ev) {
   if (!DRAG || (ev && ev.pointerId !== DRAG.pid)) return;

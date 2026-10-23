@@ -326,11 +326,12 @@ function anPanelSwap(l) {
   p.innerHTML = anPanelHTML(l); p.scrollTop = 0;
   if (motionOK()) { p.classList.remove('swap'); void p.offsetWidth; p.classList.add('swap'); }
 }
-function anFocus(g, r) {
+// noFlip: il lato l'ha scelto l'utente, non girare il corpo per conto nostro
+function anFocus(g, r, noFlip) {
   const l = anLayer(); if (!l) return;
   if (g) {
     const here = anGroupBox(l.side, g), other = anGroupBox(l.side === 'front' ? 'back' : 'front', g);
-    if (!here || (other && other.area > here.area * 2.2)) { anFlip(l.side === 'front' ? 'back' : 'front', () => anFocus(g, r)); return; }
+    if (!here || (!noFlip && other && other.area > here.area * 2.2)) { anFlip(l.side === 'front' ? 'back' : 'front', () => anFocus(g, r)); return; }
     l.g = g; l.r = r || null; anApplyFocus(l); anPanelSwap(l); anAnimTo(anFit(here.box, 0.22));
     if (l.r) anPulse(l.r);
   } else { l.g = null; l.r = null; anApplyFocus(l); anPanelSwap(l); anAnimTo(anBodyBox(l.side)); }
@@ -406,7 +407,7 @@ function anatAfterRender() {
 
 Object.assign(A, {
   anatOpen(el) { pushLayer({ type: 'anatomy', side: (el && el.dataset && el.dataset.side) || 'front', g: null, r: null }); },
-  anatSide(el) { const l = anLayer(); if (!l || l.side === el.dataset.v) return; const g = l.g; l.g = null; l.r = null; anPanelSwap(l); anFlip(el.dataset.v, () => { if (g && anGroupBox(el.dataset.v, g)) anFocus(g); else anAnimTo(anFit(anBodyBox(el.dataset.v), 0.02)); }); },
+  anatSide(el) { const l = anLayer(); if (!l || l.side === el.dataset.v) return; const g = l.g; l.g = null; l.r = null; anPanelSwap(l); anFlip(el.dataset.v, () => { if (g && anGroupBox(el.dataset.v, g)) anFocus(g, null, true); else anAnimTo(anFit(anBodyBox(el.dataset.v), 0.02)); }); },
   anatGroup(el) { anFocus(el.dataset.g); },
   anatRegion(el) { const l = anLayer(); if (!l) return; l.r = el.dataset.r; anApplyFocus(l); anPanelSwap(l); anPulse(l.r); },
   anatBack() { anFocus(null); },
