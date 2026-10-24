@@ -623,6 +623,9 @@ body.lp-dragging, body.lp-dragging * { -webkit-user-select: none; user-select: n
 .run-grid div { background: var(--surface); border-radius: 14px; padding: 12px 6px; text-align: center; }
 .run-grid b { display: block; font-family: var(--font-display); font-size: 28px; font-weight: 700; line-height: 1.1; }
 .run-grid span { font-size: 12px; color: var(--muted); }
+.run-sub { display: flex; justify-content: center; gap: 16px; font-size: 12.5px; color: var(--faint); }
+.run-sub:empty, .run-sub span:empty { display: none; }
+.warn-card { border-color: var(--ember); background: var(--warm-bg); }
 .gps { font-size: 12.5px; font-weight: 600; padding: 4px 10px; border-radius: 99px; background: var(--surface-2); color: var(--muted); }
 .gps.ok { color: var(--good); } .gps.warn { color: var(--gold); } .gps.bad { color: var(--bad); }
 .run-cd { font-family: var(--font-display); font-size: 150px; font-weight: 800; line-height: 1; text-align: center; color: #ff8a3d; animation: cd 1s ease infinite; }
@@ -7275,7 +7278,14 @@ function sessHint(s) { if (s.steps) { const tot = s.steps.reduce((a, x) => a + x
 
 /* ---------- live run: GPS, timer, voice ---------- */
 const RUN = { watch: null, tick: null, saveT: null, audio: null, url: null, primed: false, hold: null };
-function runMoving(a = S.runActive, now = Date.now()) { if (!a) return 0; return ((a.pauseAt || now) - a.start - (a.pausedMs || 0)) / 1000; }
+const RUN_HOLE = 20000;    // oltre 20 s senza un rilevamento usabile = segnale perso, non una sosta
+const RUN_ELEV_A = 0.15;   // quanto pesa una quota nuova nella media mobile
+const RUN_ELEV_H = 5;      // salita minima in metri da considerare vera e non rumore
+/* Tempo totale: quello del cronometro da polso. Si ferma solo con la pausa a mano. */
+function runElapsed(a = S.runActive, now = Date.now()) { if (!a) return 0; return ((a.pauseAt || now) - a.start - (a.pausedMs || 0)) / 1000; }
+/* Tempo misurato: il totale meno i tratti in cui il GPS era muto. E' la base di passi e
+   parziali, perche' di quei tratti non sappiamo ne' quanto si e' corso ne' quanta strada. */
+function runMoving(a = S.runActive, now = Date.now()) { if (!a) return 0; return runElapsed(a, now) - (a.lostMs || 0) / 1000; }
 function runSaveSoon() { if (RUN.saveT) return; RUN.saveT = setTimeout(() => { RUN.saveT = null; try { localStorage.setItem(KEY, serialize(S)); } catch (e) { } }, 6000); }
 function say(txt) {
   if (S.profile.runVoice === false) return;
@@ -7298,7 +7308,7 @@ function runTone(hi) {
 function startRun(o = {}) {
   unlockAudio(); speechPrime();
   if (S.runActive) return openRun();
-  S.runActive = { id: uid(), start: Date.now() + 3000, type: o.type || 'free', gps: o.gps !== false, sess: o.sess || null, planRef: o.planRef || null, pausedMs: 0, pauseAt: 0, pts: [], m: 0, splits: [], splitAt: 0, acc: null, si: 0, stepT0: 0 };
+  S.runActive = { id: uid(), start: Date.now() + 3000, type: o.type || 'free', gps: o.gps !== false, sess: o.sess || null, planRef: o.planRef || null, pausedMs: 0, pauseAt: 0, pts: [], m: 0, splits: [], splitAt: 0, acc: null, si: 0, stepT0: 0, lostMs: 0, fixAt: 0, holes: 0, elev: 0, eSm: null, eRef: null };
   save(); UI.runLock = false;
   closeLayersOfType('run'); pushLayer({ type: 'run' }); requestWake(); runResume();
 }
@@ -7310,7 +7320,7 @@ function runResume() {
     else try { RUN.watch = navigator.geolocation.watchPosition(runPos, runPosErr, { enableHighAccuracy: true, maximumAge: 0, timeout: 30000 }); } catch (e) { a.gpsErr = 'Posizione non disponibile'; }
   }
   if (!RUN.tick) RUN.tick = setInterval(runTick, 1000);
-  if (a.sess?.steps && !a.pauseAt && runMoving(a) > 0) runAudioStart();
+  if (a.sess?.steps && !a.pauseAt && runElapsed(a) > 0) runAudioStart();
 }
 function runDetach() { if (typeof liveMapDestroy === 'function') liveMapDestroy(); if (RUN.watch != null) { try { navigator.geolocation.clearWatch(RUN.watch); } catch (e) { } RUN.watch = null; } clearInterval(RUN.tick); RUN.tick = null; runAudioStop(); }
 function runPosErr(err) {
@@ -7318,12 +7328,29 @@ function runPosErr(err) {
   a.gpsErr = err && err.code === 1 ? 'Posizione negata: attivala in Impostazioni › Privacy › Localizzazione' : err && err.code === 3 ? null : 'Segnale GPS assente';
   runUpdateDom();
 }
+/* Dislivello positivo dal GPS. La quota satellitare balla di oltre 10 m anche stando fermi:
+   prima si smussa con una media mobile, poi si somma solo quando la salita supera RUN_ELEV_H.
+   Senza i due passaggi si "guadagnerebbero" centinaia di metri in pianura. */
+function runElev(a, c) {
+  const e = c.altitude;
+  if (e == null || !isFinite(e) || (c.altitudeAccuracy != null && c.altitudeAccuracy > 15)) return;
+  a.eSm = a.eSm == null ? e : a.eSm + RUN_ELEV_A * (e - a.eSm);
+  if (a.eRef == null) { a.eRef = a.eSm; return; }
+  if (a.eSm > a.eRef + RUN_ELEV_H) { a.elev = (a.elev || 0) + (a.eSm - a.eRef); a.eRef = a.eSm; }
+  else if (a.eSm < a.eRef - RUN_ELEV_H) a.eRef = a.eSm;
+}
 function runPos(p) {
   const a = S.runActive; if (!a) return;
   const c = p.coords; a.acc = Math.round(c.accuracy); a.gpsAt = Date.now(); a.gpsErr = null;
   const ts = p.timestamp && p.timestamp > 1e12 ? Math.min(p.timestamp, Date.now()) : Date.now();
+  if (runElapsed(a, ts) < 0 || a.pauseAt || c.accuracy > 35) return;
+  // Buco di segnale: per un po' non e' arrivato nessun rilevamento usabile. Non sappiamo se ha
+  // corso o si e' fermato, quindi quel tratto resta non misurato - tempo e distanza - invece di
+  // scaricare tutti i minuti morti sul chilometro che era in corso.
+  if (a.fixAt && ts - a.fixAt > RUN_HOLE) { a.lostMs = (a.lostMs || 0) + (ts - a.fixAt); a.holes = (a.holes || 0) + 1; a.gap = true; }
+  a.fixAt = ts;
+  runElev(a, c);
   const t = runMoving(a, ts);
-  if (t < 0 || a.pauseAt || c.accuracy > 35) return;
   const pt = [+c.latitude.toFixed(6), +c.longitude.toFixed(6), Math.round(t * 10) / 10];
   const last = a.pts[a.pts.length - 1];
   if (!last || a.gap) { a.gap = false; a.pts.push([...pt, Math.round(a.m)]); if (typeof liveMapUpdate === 'function') liveMapUpdate(); runSaveSoon(); return; }
@@ -7366,7 +7393,9 @@ function runStepCue(a) {
 }
 function runTick() {
   const a = S.runActive; if (!a) { runDetach(); return; }
-  const t = runMoving(a);
+  // I tratti dell'allenamento seguono il tempo totale: un buco di GPS non deve allungare
+  // un minuto di corsa veloce. Passi e parziali invece usano il tempo misurato.
+  const t = runElapsed(a);
   if (t < 0) { const n = Math.ceil(-t); if (a.cd !== n) { a.cd = n; if (n <= 3) { say(String(n)); runTone(false); } } }
   else if (!a.go) { a.go = true; if (!a.sess?.steps) say('Via!'); runTone(true); if (a.sess?.steps) runStepCue(a); runAudioStart(); if (topLayer()?.type === 'run') renderLayers(); }
   if (a.sess?.steps && !a.pauseAt && t >= 0) {
@@ -7375,21 +7404,27 @@ function runTick() {
     if (changed) { runStepCue(a); save(); if (topLayer()?.type === 'run') renderLayers(); }
     else { const cur = st[a.si]; if (cur) { const left = Math.ceil(a.stepT0 + cur.s - t); if (left >= 1 && left <= 3 && a.cdBeep !== a.si * 10 + left) { a.cdBeep = a.si * 10 + left; runTone(false); } } }
   }
-  if (a.sess?.km && !a.kmDone && a.m >= a.sess.km * 1000) { a.kmDone = true; say({ it: `Obiettivo raggiunto: ${String(a.sess.km).replace('.', vw().comma)} ${vw().km[1]}. Tempo ${sayDur(t)}.`, en: `Goal reached: ${String(a.sess.km).replace('.', vw().comma)} ${vw().km[1]}. Time ${sayDur(t)}.`, es: `Objetivo alcanzado: ${String(a.sess.km).replace('.', vw().comma)} ${vw().km[1]}. Tiempo ${sayDur(t)}.` }[lang()]); runTone(true); }
+  if (a.sess?.km && !a.kmDone && a.m >= a.sess.km * 1000) { a.kmDone = true; say({ it: `Obiettivo raggiunto: ${String(a.sess.km).replace('.', vw().comma)} ${vw().km[1]}. Tempo ${sayDur(runMoving(a))}.`, en: `Goal reached: ${String(a.sess.km).replace('.', vw().comma)} ${vw().km[1]}. Time ${sayDur(runMoving(a))}.`, es: `Objetivo alcanzado: ${String(a.sess.km).replace('.', vw().comma)} ${vw().km[1]}. Tiempo ${sayDur(runMoving(a))}.` }[lang()]); runTone(true); }
   runUpdateDom();
 }
 function runVals(a) {
-  const t = runMoving(a), km = a.m / 1000;
-  return { time: fmtClock(Math.max(0, t) * 1000), km: kmTxt(a.m), avg: km > 0.05 ? paceTxt(t / km) : '–:––', cur: paceTxt(runCurPace(a)), gps: runGps(a), t };
+  const t = runMoving(a), te = runElapsed(a), km = a.m / 1000;
+  return {
+    time: fmtClock(Math.max(0, t) * 1000), km: kmTxt(a.m), avg: km > 0.05 ? paceTxt(t / km) : '–:––',
+    cur: paceTxt(runCurPace(a)), gps: runGps(a), t, te,
+    tot: te - t >= 10 ? `totale ${fmtClock(Math.max(0, te) * 1000)}` : '',
+    elev: a.elev >= 5 ? `${Math.round(a.elev)} m D+` : '',
+  };
 }
 function runUpdateDom() {
   const a = S.runActive; if (!a || topLayer()?.type !== 'run') return;
   const v = runVals(a), set = (id, x) => { const el = document.getElementById(id); if (el && el.textContent !== x) el.textContent = x; };
   set('rn-time', v.time); set('rn-km', v.km); set('rn-avg', v.avg); set('rn-cur', v.cur); set('rl-time', v.time); set('rl-km', v.km); set('rl-pace', v.cur !== '–:––' ? v.cur : v.avg);
+  set('rn-tot', v.tot); set('rn-elev', v.elev);
   const g = document.getElementById('rn-gps'); if (g) { g.textContent = v.gps[0]; g.className = 'gps ' + v.gps[1]; }
-  const cd = document.getElementById('rn-cd'); if (cd) { if (v.t >= 0) cd.remove(); else cd.textContent = Math.ceil(-v.t); }
+  const cd = document.getElementById('rn-cd'); if (cd) { if (v.te >= 0) cd.remove(); else cd.textContent = Math.ceil(-v.te); }
   const st = a.sess?.steps && a.sess.steps[a.si];
-  if (st) { const left = Math.max(0, a.stepT0 + st.s - Math.max(0, v.t)); set('rn-step', fmtClock(left * 1000 + 999)); const b = document.getElementById('rn-stepbar'); if (b) b.style.width = (100 * (1 - left / st.s)).toFixed(1) + '%'; }
+  if (st) { const left = Math.max(0, a.stepT0 + st.s - Math.max(0, v.te)); set('rn-step', fmtClock(left * 1000 + 999)); const b = document.getElementById('rn-stepbar'); if (b) b.style.width = (100 * (1 - left / st.s)).toFixed(1) + '%'; }
 }
 function runRoute(P) {
   const out = []; let last = null;
@@ -7407,6 +7442,9 @@ function runFinish() {
   closeLayersOfType('run');
   if (t < 20 && a.m < 50) { save(); renderLayers(); render(); toast('Corsa troppo breve: non salvata'); return; }
   const r = { id: a.id, start: a.start, sec: Math.round(t), km: a.gps ? +(a.m / 1000).toFixed(2) : 0, type: a.type, splits: a.splits, route: runRoute(a.pts), src: a.gps ? 'gps' : 'man' }; if (!a.gps) r.indoor = true;
+  const tot = Math.max(0, runElapsed(a));
+  if (tot - t >= 10) { r.secTot = Math.round(tot); r.lost = Math.round((a.lostMs || 0) / 1000); r.holes = a.holes || 0; }
+  if (a.elev >= 5) r.elev = Math.round(a.elev);
   if (a.sess?.n) r.title = a.sess.n;
   if (a.planRef) r.plan = a.planRef;
   if (!r.route.length) delete r.route;
@@ -7439,7 +7477,7 @@ function runAudioStop() { try { if (RUN.audio) { RUN.audio.pause(); RUN.audio.sr
 function runAudioStart() {
   runAudioStop();
   const a = S.runActive; if (!a || !a.sess?.steps || !S.profile.runLockBeep || a.pauseAt) return;
-  const t = Math.max(0, runMoving(a)), st = a.sess.steps, beeps = []; let acc = a.stepT0 - t;
+  const t = Math.max(0, runElapsed(a)), st = a.sess.steps, beeps = []; let acc = a.stepT0 - t;
   for (let i = a.si; i < st.length; i++) { acc += st[i].s; const nk = st[i + 1]?.k, hi = !nk || STEP_HI.includes(nk); beeps.push([acc - 3, 440, 0.12], [acc - 2, 440, 0.12], [acc - 1, 440, 0.12], [acc, hi ? 880 : 330, hi ? 0.6 : 0.4]); }
   const total = acc + 1; if (total < 6 || total > 100 * 60) return;
   try {
@@ -7602,10 +7640,11 @@ function layerRun(l, i) {
       <div class="row"><span class="gps ${v.gps[1]}" id="rn-gps">${v.gps[0]}</span><span class="grow"></span>${a.pauseAt ? '<span class="chip warm">In pausa</span>' : ''}</div>
       ${a.gps && mapOn() ? `<div class="run-modes"><button class="${UI.runMode !== 'data' ? 'on' : ''}" data-a="runViewMode" data-v="map">Mappa</button><button class="${UI.runMode === 'data' ? 'on' : ''}" data-a="runViewMode" data-v="data">Solo dati</button></div>
       ${UI.runMode !== 'data' ? `<div class="route-card live big" data-map="live">${a.pts.length > 2 ? routeSVG(a.pts, 320, 260) : ''}<button class="btn sm" id="rn-center" data-a="mapFollow" ${MAP.follow ? 'hidden' : ''}>${icon('target', 14)} Centra</button></div>` : ''}` : ''}
-      ${v.t < 0 ? `<div class="run-cd" id="rn-cd">${Math.ceil(-v.t)}</div>` : ''}
-      ${a.sess?.steps ? stepCard(a, v.t) : a.sess?.km ? `<div class="step-card k-steady"><div class="row"><b class="grow">Obiettivo ${fmtN(a.sess.km, 1)} km</b><span class="small">${a.sess.p ? paceLabel(a.sess.p) : ''}</span></div><div class="step-bar"><i style="width:${Math.min(100, a.m / 10 / a.sess.km).toFixed(1)}%"></i></div></div>` : ''}
+      ${v.te < 0 ? `<div class="run-cd" id="rn-cd">${Math.ceil(-v.te)}</div>` : ''}
+      ${a.sess?.steps ? stepCard(a, v.te) : a.sess?.km ? `<div class="step-card k-steady"><div class="row"><b class="grow">Obiettivo ${fmtN(a.sess.km, 1)} km</b><span class="small">${a.sess.p ? paceLabel(a.sess.p) : ''}</span></div><div class="step-bar"><i style="width:${Math.min(100, a.m / 10 / a.sess.km).toFixed(1)}%"></i></div></div>` : ''}
       <div class="run-big"><b id="rn-km" class="tnum">${v.km}</b><span>km</span></div>
       <div class="run-grid"><div><b id="rn-time" class="tnum">${v.time}</b><span>Tempo</span></div><div><b id="rn-avg" class="tnum">${v.avg}</b><span>Passo medio</span></div><div><b id="rn-cur" class="tnum">${v.cur}</b><span>Passo attuale</span></div></div>
+      <div class="run-sub"><span id="rn-tot">${v.tot}</span><span id="rn-elev">${v.elev}</span></div>
       ${a.gps && mapOn() ? '' : a.pts.length > 2 ? `<div class="route-card">${routeSVG(a.pts, 320, 180)}</div>` : ''}
       ${a.splits.length ? `<div class="card tight"><div class="section-title">Parziali</div>${splitsHTML(a.splits, 0, 0)}</div>` : ''}
       <div class="small faint">${a.gps ? 'Lo schermo resta acceso da solo: usa "Blocca" per evitare tocchi in tasca. Su iPhone, se blocchi il telefono il GPS si ferma e il tratto viene stimato in linea retta.' : 'Senza GPS: a fine corsa inserisci la distanza letta sul tapis roulant.'}</div>
@@ -7647,6 +7686,7 @@ function layerRunView(l, i) {
       ${r.route && r.route.length > 2 ? `<div class="route-card" data-map="run:${r.id}">${routeSVG(r.route, 320, 200)}</div>` : ''}
       <div class="run-big"><b>${fmtN(r.km, 2)}</b><span>km</span></div>
       <div class="tiles"><div class="tile"><div class="v">${fmtClock(r.sec * 1000)}</div><div class="k">Tempo</div></div><div class="tile"><div class="v">${paceTxt(runPace(r))}</div><div class="k">Passo /km</div></div><div class="tile"><div class="v">${runKcal(r)}</div><div class="k">kcal attive</div></div></div>
+      ${r.lost > 0 ? `<div class="card tight warn-card"><div class="small"><b>Segnale GPS perso per ${durShort(r.lost)}</b>${r.holes > 1 ? ` in ${r.holes} tratti` : ''}. Di quel tratto non si sa quanta strada hai fatto, quindi distanza e tempo non lo contano: il cronometro totale segnava ${fmtClock(r.secTot * 1000)}.</div></div>` : r.secTot > r.sec ? `<div class="small faint">Cronometro totale ${fmtClock(r.secTot * 1000)} · in movimento ${fmtClock(r.sec * 1000)}</div>` : ''}
       ${kcalLine(kcalRun(r), 'corsa')}
       ${r.hr || r.elev || r.rpe ? `<div class="tiles">${r.hr ? `<div class="tile"><div class="v">${r.hr}</div><div class="k">FC media</div></div>` : ''}${r.elev ? `<div class="tile"><div class="v">${r.elev}<small>m</small></div><div class="k">Dislivello</div></div>` : ''}${r.rpe ? `<div class="tile"><div class="v">${r.rpe}<small>/10</small></div><div class="k">Fatica</div></div>` : ''}</div>` : ''}
       ${r.splits && r.splits.length ? `<div class="card"><div class="section-title">Parziali</div>${splitsHTML(r.splits, r.km, r.sec)}</div>` : ''}
@@ -7816,7 +7856,8 @@ document.addEventListener('input', ev => {
   const l = topLayer(); if (!l || l.type !== 'runEdit') return; const r = l.draft;
   if (k === 'reDate' || k === 'reTime') { const d = $('[data-in="reDate"]')?.value, t = $('[data-in="reTime"]')?.value || '12:00'; if (d) { const [y, mo, dd] = d.split('-').map(Number), [hh, mm] = t.split(':').map(Number); r.start = new Date(y, mo - 1, dd, hh || 0, mm || 0).getTime(); } }
   if (k === 'reKm') r.km = num(el.value) || 0;
-  if (k === 'reDur') { const g = f => num($(`[data-in="reDur"][data-f="${f}"]`)?.value) || 0; r.sec = g('h') * 3600 + g('m') * 60 + g('s'); }
+  // durata riscritta a mano: il cronometro totale e i buchi di segnale non c'entrano piu' nulla
+  if (k === 'reDur') { const g = f => num($(`[data-in="reDur"][data-f="${f}"]`)?.value) || 0; r.sec = g('h') * 3600 + g('m') * 60 + g('s'); delete r.secTot; delete r.lost; delete r.holes; }
   if (k === 'reNum') { const v = num(el.value); r[el.dataset.f] = v ? Math.round(v) : undefined; }
   if (k === 'reNote') r.note = el.value;
   const p = $('#re-pace'); if (p) p.innerHTML = r.km > 0 && r.sec > 0 ? `Passo medio <b>${paceTxt(r.sec / r.km)}/km</b> · ~${runKcal(r)} kcal attive` : 'Inserisci distanza e durata';
