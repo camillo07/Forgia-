@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 build.py)",
+      "Bash(bash tools/test_all.sh)",
+      "Bash(bash tools/serve.sh)",
+      "Bash(bash tools/controlla_online.sh)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(bash tools/rilascio.sh:*)"
+    ]
+  }
+}

@@ -385,6 +385,6 @@ Object.assign(A, {
     }
     UI.fopen = UI.fopen || {}; UI.fopen[f.id] = true;
     save(); UI.layers = UI.layers.filter(x => x.type !== 'import'); UI.tab = 'train'; render(); renderLayers();
-    toast(`${r.days.length} ${r.days.length === 1 ? 'scheda importata' : 'schede importate'} in “${f.name}”`);
+    toast(`${r.days.length} ${r.days.length === 1 ? 'scheda importata' : 'schede importate'} in “${esc(f.name)}”`);
   },
 });

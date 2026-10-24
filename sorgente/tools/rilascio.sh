@@ -1,5 +1,6 @@
 #!/bin/bash
-# Rilascio Forgia: test, alza la cache del service worker, build, commit, pubblica e verifica online.
+# Rilascio Forgia: test, alza la cache del service worker, build, commit, pubblica, verifica online
+# e archivia la copia fisica della versione in V5/V5.X/ (cartella + zip).
 # Uso: bash tools/rilascio.sh "cosa e' cambiato"
 #      bash tools/rilascio.sh --salta-test "cosa e' cambiato"   (solo se i test li hai appena fatti)
 set -e
@@ -40,9 +41,20 @@ attesa=$(grep -o 'forgia-shell-v[0-9]*' src/sw.js | head -1)
 # 2. build: scrive i 9 file del sito nella root del repo
 python3 build.py | tail -2
 
-# 3. commit + push
+# 3. commit + push: si aggiungono solo i file del progetto.
+#    Mai "git add -A" cieco: e' cosi' che un file estraneo e' finito nel repo pubblico.
 cd ..
-git add -A
+git add -A -- index.html manifest.webmanifest sw.js supabase.min.js zxing.min.js \
+              leaflet.min.js icon-180.png icon-192.png icon-512.png \
+              .nojekyll .gitignore CLAUDE.md .claude sorgente
+
+fuori=$(git status --porcelain | grep -E '^(\?\?| [MD])' || true)
+if [ -n "$fuori" ]; then
+  echo "NOTA: questi file NON entrano nel rilascio perche' sono fuori dal progetto:"
+  echo "$fuori"
+fi
+
+echo "file che entrano nel rilascio:"
 git status --short
 git commit -q -m "$msg"
 git push
@@ -62,6 +74,31 @@ for i in $(seq 1 18); do
     exit 1
   fi
 done
+
+# 5. copia fisica nell'archivio delle versioni: V5/V5.X/forgia-v5.X/ + lo zip.
+#    Numerazione minore crescente, e mai sovrascrivere una cartella che esiste gia'.
+python3 - <<'PY'
+import re, shutil, pathlib
+FILES = ["index.html", "manifest.webmanifest", "sw.js", "supabase.min.js", "zxing.min.js",
+         "leaflet.min.js", "icon-180.png", "icon-192.png", "icon-512.png"]
+repo = pathlib.Path.cwd()
+base = repo.parent.parent          # .../V5  (il repo sta in .../V5/<cartella>/<repo>)
+nums = [int(d.name[3:]) for d in base.iterdir() if d.is_dir() and re.fullmatch(r"V5\.\d+", d.name)]
+if not nums:
+    print("archivio: in", base, "non ci sono cartelle V5.N - copia fisica saltata.")
+    raise SystemExit
+n = max(nums) + 1
+ver = base / ("V5.%d" % n)
+if ver.exists():
+    print("archivio:", ver.name, "esiste gia' - copia fisica saltata.")
+    raise SystemExit
+dest = ver / ("forgia-v5.%d" % n)
+dest.mkdir(parents=True)
+for f in FILES:
+    shutil.copy2(repo / f, dest / f)
+shutil.make_archive(str(dest), "zip", root_dir=str(dest))
+print("archivio: creata", ver, "(cartella + zip)")
+PY
 
 if [ "$ok" = "1" ]; then
   echo "FATTO - $attesa e' online su https://camillo07.github.io/Forgia-/"
