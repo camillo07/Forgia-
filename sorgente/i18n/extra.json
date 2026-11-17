@@ -922,5 +922,13 @@
 "Segui la scheda e lascia 2 ripetizioni di margine.": [
 "Follow the plan and leave 2 reps in reserve.",
 "Sigue la rutina y deja 2 repeticiones de margen."
+],
+"Allenamento rimasto aperto: durata corretta in base all'ultima serie. La puoi cambiare dallo storico.": [
+"Workout was left open: duration fixed from the last set. You can change it from history.",
+"El entrenamiento quedó abierto: duración corregida según la última serie. Puedes cambiarla desde el historial."
+],
+"Ho tolto i dati di esempio: ora contano solo i tuoi": [
+"Sample data removed: now only your own data counts",
+"He quitado los datos de ejemplo: ahora solo cuentan los tuyos"
 ]
 }

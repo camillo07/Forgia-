@@ -148,6 +148,7 @@ async function syncNow() {
     syncMetaSave(meta);
     SYNC.status = 'ok'; SYNC.lastOk = Date.now();
     if (changed && typeof microFillAll === 'function' && microFillAll()) save();
+    if (changed && demoCleanup()) changed = true;
     if (changed) {
       CACHE.k = null; try { localStorage.setItem(KEY, serialize(S)); } catch (e) { }
       const ae = document.activeElement; if (!ae || !/INPUT|TEXTAREA|SELECT/.test(ae.tagName)) render();

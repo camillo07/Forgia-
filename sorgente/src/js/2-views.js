@@ -275,7 +275,7 @@ function viewMe() {
     <div class="list">
       <button class="li" data-a="exportData">${icon('download')}<div class="grow"><div class="t">Esporta backup</div><div class="s">File JSON con tutti i tuoi dati</div></div></button>
       <label class="li" style="cursor:pointer">${icon('upload')}<div class="grow"><div class="t">Importa backup</div><div class="s">Sostituisce i dati attuali</div></div><input type="file" id="importFile" accept=".json,application/json" hidden></label>
-      ${hasDemo ? `<button class="li" data-a="removeDemo">${icon('trash')}<div class="grow"><div class="t">Rimuovi dati di esempio</div><div class="s">Tiene solo i tuoi dati reali</div></div></button>` : `<button class="li" data-a="addDemo">${icon('sparkle')}<div class="grow"><div class="t">Carica dati di esempio</div><div class="s">6 settimane di allenamenti e corse, 2 di diario e il peso</div></div></button>`}
+      ${hasDemo ? `<button class="li" data-a="removeDemo">${icon('trash')}<div class="grow"><div class="t">Rimuovi dati di esempio</div><div class="s">Tiene solo i tuoi dati reali</div></div></button>` : hasRealTraining() ? '' : `<button class="li" data-a="addDemo">${icon('sparkle')}<div class="grow"><div class="t">Carica dati di esempio</div><div class="s">6 settimane di allenamenti e corse, 2 di diario e il peso</div></div></button>`}
     </div>
     <div class="small faint">${SYNC.user ? 'I dati sono salvati su questo dispositivo e sincronizzati con il tuo account.' : 'I dati sono salvati solo su questo dispositivo. Accedi con un account per salvarli online, oppure fai un backup ogni tanto.'}</div>
   </div>

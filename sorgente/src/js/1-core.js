@@ -137,7 +137,23 @@ let S = loadState();
 function applyExLang() { const L = S.profile.exLang; for (const x of EXMAP.values()) { x.n = L === 'it' && x.it ? x.it : L === 'es' && x.es ? x.es : x.en; x._s = null; } }
 applyExLang();
 let saveTimer = null;
+/* dati di esempio: servono solo finché non ci sono dati veri. Mescolati ai veri gonfiavano
+   i conteggi (es. 9 allenamenti a settimana invece di 5), quindi appena compare un allenamento
+   o una corsa vera li togliamo tutti. Non vanno nel cloud: restavano solo sul telefono. */
+function hasRealTraining() { return S.workouts.some(w => !w.demo) || (S.runs || []).some(r => !r.demo); }
+function hasDemoData() { return S.workouts.some(w => w.demo) || (S.runs || []).some(r => r.demo) || Object.values(S.diary || {}).some(d => (d.e || []).some(e => e.demo)) || Object.values(S.body || {}).some(d => d && d.demo); }
+function demoCleanup(quiet) {
+  if (!hasRealTraining() || !hasDemoData()) return false;
+  S.workouts = S.workouts.filter(w => !w.demo);
+  if (typeof removeDietDemo === 'function') removeDietDemo();
+  if (typeof removeBodyDemo === 'function') removeBodyDemo();
+  if (typeof removeRunDemo === 'function') removeRunDemo();
+  CACHE.k = null;
+  if (!quiet && typeof toast === 'function') setTimeout(() => toast('Ho tolto i dati di esempio: ora contano solo i tuoi'), 400);
+  return true;
+}
 function save() {
+  demoCleanup();
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => { try { localStorage.setItem(KEY, serialize(S)); } catch (e) { } }, 120);
   CACHE.k = null;

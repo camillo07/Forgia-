@@ -166,6 +166,7 @@ const A = {
       toast(mt === 'time' ? 'Inserisci i secondi' : mt === 'dist' ? 'Inserisci km o minuti' : 'Inserisci kg e ripetizioni');
       const miss = [...row.querySelectorAll('input[data-f]')].find(i => i.dataset.f !== 'rir' && s[i.dataset.f] == null); if (miss) miss.focus(); return;
     }
+    if (!S.active.past) S.active.lastDone = Date.now();   // per non salvare ore di "allenamento" se ci si dimentica di chiuderlo
     s.done = true;
     if (e.sets.every(o => o.done)) e.col = true;
     haptic(25);

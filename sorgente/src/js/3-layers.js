@@ -222,9 +222,11 @@ function finishWorkout(force, decided) {
     }
   }
   restAudioStop();
+  const endAt = workoutEnd(w);
+  if (endAt < Date.now() - 60e3) setTimeout(() => toast('Allenamento rimasto aperto: durata corretta in base all\'ultima serie. La puoi cambiare dallo storico.'), 600);
   const before = levelInfo(), badgesBefore = new Set(badgeState().filter(b => b.got).map(b => b.id));
   const rec = {
-    id: w.id, name: w.name || 'Allenamento', rid: w.rid, start: w.start, end: w.past ? w.start + w.dur * 60000 : Date.now(), note: w.note || '', hr: w.hr || undefined,
+    id: w.id, name: w.name || 'Allenamento', rid: w.rid, start: w.start, end: endAt, note: w.note || '', hr: w.hr || undefined,
     ex: w.ex.map(e => ({ id: e.id, mt: mtOf(e), tags: e.tags && e.tags.length ? e.tags : undefined, note: e.note || '', sets: e.sets.filter(s => s.done).map(s => { const o = { t: s.t }; for (const f of ['kg', 'r', 'rir', 'sec', 'km', 'min']) if (s[f] != null) o[f] = s[f]; return o; }) })).filter(e => e.sets.length),
   };
   if (w.editId) { S.workouts = S.workouts.map(x => x.id === w.editId ? Object.assign(rec, x.demo ? { demo: true } : {}) : x); S.active = null; save(); CACHE.k = null; UI.layers = []; pushLayer({ type: 'history', id: rec.id }); render(); toast('Allenamento aggiornato'); return; }
@@ -236,6 +238,16 @@ function finishWorkout(force, decided) {
   UI.layers = [];
   pushLayer({ type: 'summary', wid: rec.id, xp: after.xp - before.xp, before, after, newBadges });
   render();
+}
+/* fine dell'allenamento: se è rimasto aperto più di 4 ore (dimenticato) non salviamo giorni
+   di durata: finisce 3 minuti dopo l'ultima serie spuntata, o con una stima dalle serie */
+function workoutEnd(w, now = Date.now()) {
+  if (w.past) return w.start + w.dur * 60000;
+  if (now - w.start <= 4 * 3600e3) return now;
+  const n = w.ex.reduce((a, e) => a + e.sets.filter(s => s.done).length, 0);
+  const est = w.start + clamp(n * 3.5, 20, 180) * 60000;
+  const last = w.lastDone && w.lastDone > w.start ? w.lastDone + 3 * 60000 : est;
+  return Math.min(now, last - w.start <= 4 * 3600e3 ? last : est);
 }
 function discardWorkout() { const ed = S.active?.editId; restAudioStop(); S.active = null; save(); releaseWake(); UI.layers = []; if (ed) pushLayer({ type: 'history', id: ed }); render(); toast(ed ? 'Modifiche annullate' : 'Allenamento annullato'); }
 
