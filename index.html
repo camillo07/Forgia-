@@ -2219,6 +2219,11 @@ function increment(x) {
   if (x.e === 'barbell' && isLower(x)) return 5;
   return 2.5;
 }
+/* doppia progressione anche con le reps secche: se la scheda dice "8" e basta, prima si sale
+   di ripetizioni (8 → 9 → 10 …) e solo in cima al range si alza il peso. Senza questo, con
+   10 kg × 8 fatte l'app diceva subito "passa a 12 kg". Range: +4 reps per i complementari,
+   +2 per i multiarticolari (che hanno range più stretti). */
+function repTop(a, b, x) { return b != null && b > a ? b : a + (x && x.k === 'compound' ? 2 : 4); }
 function suggestion(aex, wid) {
   const x = ex(aex.id), mt = mtOf(aex);
   if (mt === 'dist' || x.c === 'stretching') return null;
@@ -2231,11 +2236,11 @@ function suggestion(aex, wid) {
   if (aex.prog === 'fixed') { const l0 = lastSession(aex.id, wid), kg = l0 ? Math.max(...workSets(l0.e).map(s => s.kg || 0)) : null; return kg ? { kind: 'hold', kg, text: `Peso fisso: <b>${fmtKg(kg)} kg</b>. Il carico non cambia: cerca ripetizioni pulite e controllate.` } : { kind: 'new', text: 'Peso fisso: scegli il carico e tienilo uguale a ogni seduta.' }; }
   if (aex.prog === 'rir' && typeof rirSuggestion === 'function') { const rs = rirSuggestion(aex, wid); if (rs) return rs; }
   if (aex.prog === 'linear' && typeof linearSuggestion === 'function') { const ls = linearSuggestion(aex, wid); if (ls) return ls; }
-  const T = workTargets(aex), T0 = T[0] || { a: aex.rmin || 8, b: aex.rmax || 12 };
+  const T = workTargets(aex).map(t => ({ a: t.a, b: repTop(t.a, t.b, x) })), T0 = T[0] || { a: aex.rmin || 8, b: repTop(aex.rmin || 8, aex.rmax || 12, x) };
   const rmin = T0.a, rmax = T0.b, rirT = rirTarget(aex), same = T.every(t => t.a === T0.a && t.b === T0.b);
   const maxTxt = same ? `${rmax} reps` : 'il massimo delle reps', minTxt = same ? `le ${rmin} reps` : 'il minimo di reps';
   const last = lastSession(aex.id, wid);
-  if (!last) return { kind: 'new', text: `Prima volta: scegli un carico con cui arrivi a <b>${rmax}</b> ripetizioni lasciandone <b>${rirT}</b> in riserva.` };
+  if (!last) return { kind: 'new', text: `Prima volta: scegli un carico con cui arrivi a <b>${(workTargets(aex)[0] || {}).b || rmax}</b> ripetizioni lasciandone <b>${rirT}</b> in riserva.` };
   const ws = workSets(last.e);
   const top = Math.max(...ws.map(s => s.kg));
   const tg = i => T[i] || T[T.length - 1] || T0;
@@ -4257,10 +4262,10 @@ function liveAdvice(e) {
   if (!done.length || done.length === work.length) return null;
   const last = done[done.length - 1], next = work.find(s => !s.done);
   if (last.r == null) return null;
-  const tA = last.ta ?? e.rmin, tB = last.tb ?? last.ta ?? e.rmax;
+  const tA = last.ta ?? e.rmin;
   if (tA == null) return null;
-  const x = ex(e.id), inc = increment(x) || (mt === 'bw' ? 0 : 2.5), kg = last.kg ?? 0;
-  const nA = next.ta ?? tA, nB = next.tb ?? next.ta ?? tB;
+  const x = ex(e.id), tB = repTop(tA, last.ta != null ? last.tb : e.rmax, x), inc = increment(x) || (mt === 'bw' ? 0 : 2.5), kg = last.kg ?? 0;
+  const nA = next.ta ?? tA, nB = next.ta != null ? repTop(next.ta, next.tb, x) : tB;
   if (next.t === 'bo' || next.bpct || next.rm) return null;   // the plan already decides the next load
   if (last.r >= tB + 2 && nB <= tB + 1) return inc ? { kg: +(kg + inc).toFixed(2), kind: 'up', text: `${last.r} reps: troppo facile. Prossima serie <b>${fmtKg(kg + inc)} kg</b>.` } : { kind: 'up', text: `${last.r} reps: troppo facile. Rallenta l'eccentrica o aggiungi zavorra.` };
   if (last.r < tA && nA >= tA - 1) {
@@ -4280,7 +4285,12 @@ function routineAfter(w, withReps) {
     const plan = e.sets.map(s => {
       const p0 = s.pi != null && bplan[s.pi] ? { ...bplan[s.pi] } : { t: s.t, a: s.ta ?? s.r ?? 10, b: s.tb ?? null };
       p0.t = s.t;
-      if (withReps && s.done && s.r != null && isWork(s) && p0.a != null && (s.r < p0.a || s.r > (p0.b ?? p0.a))) { p0.a = s.r; p0.b = null; }
+      // reps secche: diventano quelle fatte. Range: si abbassa solo il minimo se si è finiti sotto;
+      // sopra il massimo il range resta, ci pensa la doppia progressione ad alzare il peso
+      if (withReps && s.done && s.r != null && isWork(s) && p0.a != null) {
+        if (p0.b == null || p0.b <= p0.a) { if (s.r !== p0.a) { p0.a = s.r; p0.b = null; } }
+        else if (s.r < p0.a) p0.a = s.r;
+      }
       return p0;
     });
     const o = { ...base, id: e.id, plan, ss: !!e.ss, tags: e.tags && e.tags.length ? [...e.tags] : undefined, rest: e.rest || base.rest };

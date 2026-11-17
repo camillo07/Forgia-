@@ -414,6 +414,11 @@ function increment(x) {
   if (x.e === 'barbell' && isLower(x)) return 5;
   return 2.5;
 }
+/* doppia progressione anche con le reps secche: se la scheda dice "8" e basta, prima si sale
+   di ripetizioni (8 → 9 → 10 …) e solo in cima al range si alza il peso. Senza questo, con
+   10 kg × 8 fatte l'app diceva subito "passa a 12 kg". Range: +4 reps per i complementari,
+   +2 per i multiarticolari (che hanno range più stretti). */
+function repTop(a, b, x) { return b != null && b > a ? b : a + (x && x.k === 'compound' ? 2 : 4); }
 function suggestion(aex, wid) {
   const x = ex(aex.id), mt = mtOf(aex);
   if (mt === 'dist' || x.c === 'stretching') return null;
@@ -426,11 +431,11 @@ function suggestion(aex, wid) {
   if (aex.prog === 'fixed') { const l0 = lastSession(aex.id, wid), kg = l0 ? Math.max(...workSets(l0.e).map(s => s.kg || 0)) : null; return kg ? { kind: 'hold', kg, text: `Peso fisso: <b>${fmtKg(kg)} kg</b>. Il carico non cambia: cerca ripetizioni pulite e controllate.` } : { kind: 'new', text: 'Peso fisso: scegli il carico e tienilo uguale a ogni seduta.' }; }
   if (aex.prog === 'rir' && typeof rirSuggestion === 'function') { const rs = rirSuggestion(aex, wid); if (rs) return rs; }
   if (aex.prog === 'linear' && typeof linearSuggestion === 'function') { const ls = linearSuggestion(aex, wid); if (ls) return ls; }
-  const T = workTargets(aex), T0 = T[0] || { a: aex.rmin || 8, b: aex.rmax || 12 };
+  const T = workTargets(aex).map(t => ({ a: t.a, b: repTop(t.a, t.b, x) })), T0 = T[0] || { a: aex.rmin || 8, b: repTop(aex.rmin || 8, aex.rmax || 12, x) };
   const rmin = T0.a, rmax = T0.b, rirT = rirTarget(aex), same = T.every(t => t.a === T0.a && t.b === T0.b);
   const maxTxt = same ? `${rmax} reps` : 'il massimo delle reps', minTxt = same ? `le ${rmin} reps` : 'il minimo di reps';
   const last = lastSession(aex.id, wid);
-  if (!last) return { kind: 'new', text: `Prima volta: scegli un carico con cui arrivi a <b>${rmax}</b> ripetizioni lasciandone <b>${rirT}</b> in riserva.` };
+  if (!last) return { kind: 'new', text: `Prima volta: scegli un carico con cui arrivi a <b>${(workTargets(aex)[0] || {}).b || rmax}</b> ripetizioni lasciandone <b>${rirT}</b> in riserva.` };
   const ws = workSets(last.e);
   const top = Math.max(...ws.map(s => s.kg));
   const tg = i => T[i] || T[T.length - 1] || T0;

@@ -12,10 +12,10 @@ function liveAdvice(e) {
   if (!done.length || done.length === work.length) return null;
   const last = done[done.length - 1], next = work.find(s => !s.done);
   if (last.r == null) return null;
-  const tA = last.ta ?? e.rmin, tB = last.tb ?? last.ta ?? e.rmax;
+  const tA = last.ta ?? e.rmin;
   if (tA == null) return null;
-  const x = ex(e.id), inc = increment(x) || (mt === 'bw' ? 0 : 2.5), kg = last.kg ?? 0;
-  const nA = next.ta ?? tA, nB = next.tb ?? next.ta ?? tB;
+  const x = ex(e.id), tB = repTop(tA, last.ta != null ? last.tb : e.rmax, x), inc = increment(x) || (mt === 'bw' ? 0 : 2.5), kg = last.kg ?? 0;
+  const nA = next.ta ?? tA, nB = next.ta != null ? repTop(next.ta, next.tb, x) : tB;
   if (next.t === 'bo' || next.bpct || next.rm) return null;   // the plan already decides the next load
   if (last.r >= tB + 2 && nB <= tB + 1) return inc ? { kg: +(kg + inc).toFixed(2), kind: 'up', text: `${last.r} reps: troppo facile. Prossima serie <b>${fmtKg(kg + inc)} kg</b>.` } : { kind: 'up', text: `${last.r} reps: troppo facile. Rallenta l'eccentrica o aggiungi zavorra.` };
   if (last.r < tA && nA >= tA - 1) {
@@ -35,7 +35,12 @@ function routineAfter(w, withReps) {
     const plan = e.sets.map(s => {
       const p0 = s.pi != null && bplan[s.pi] ? { ...bplan[s.pi] } : { t: s.t, a: s.ta ?? s.r ?? 10, b: s.tb ?? null };
       p0.t = s.t;
-      if (withReps && s.done && s.r != null && isWork(s) && p0.a != null && (s.r < p0.a || s.r > (p0.b ?? p0.a))) { p0.a = s.r; p0.b = null; }
+      // reps secche: diventano quelle fatte. Range: si abbassa solo il minimo se si è finiti sotto;
+      // sopra il massimo il range resta, ci pensa la doppia progressione ad alzare il peso
+      if (withReps && s.done && s.r != null && isWork(s) && p0.a != null) {
+        if (p0.b == null || p0.b <= p0.a) { if (s.r !== p0.a) { p0.a = s.r; p0.b = null; } }
+        else if (s.r < p0.a) p0.a = s.r;
+      }
       return p0;
     });
     const o = { ...base, id: e.id, plan, ss: !!e.ss, tags: e.tags && e.tags.length ? [...e.tags] : undefined, rest: e.rest || base.rest };
