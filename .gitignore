@@ -1,4 +1,5 @@
 .DS_Store
+.superpowers/
 sorgente/__pycache__/
 sorgente/dist/
 sorgente/shots/

@@ -34,23 +34,35 @@ function gradeChip(f, small) {
 
 /* ---------- micronutrients ---------- */
 const MICROS = [
-  { k: 'fib', n: 'Fibre', u: 'g', ref: () => 30 },
-  { k: 'k', n: 'Potassio', u: 'mg', ref: () => 3500 },
-  { k: 'ca', n: 'Calcio', u: 'mg', ref: () => 1000 },
-  { k: 'fe', n: 'Ferro', u: 'mg', ref: s => s === 'f' ? 18 : 10 },
-  { k: 'mg', n: 'Magnesio', u: 'mg', ref: s => s === 'f' ? 300 : 350 },
-  { k: 'zn', n: 'Zinco', u: 'mg', ref: s => s === 'f' ? 9 : 12 },
-  { k: 'se', n: 'Selenio', u: 'µg', ref: () => 55 },
-  { k: 'vita', n: 'Vitamina A', u: 'µg', ref: s => s === 'f' ? 600 : 700 },
-  { k: 'vitc', n: 'Vitamina C', u: 'mg', ref: s => s === 'f' ? 85 : 105 },
-  { k: 'vitd', n: 'Vitamina D', u: 'µg', ref: () => 15 },
-  { k: 'vite', n: 'Vitamina E', u: 'mg', ref: s => s === 'f' ? 11 : 13 },
-  { k: 'b6', n: 'Vitamina B6', u: 'mg', ref: () => 1.3 },
-  { k: 'b9', n: 'Folati (B9)', u: 'µg', ref: () => 400 },
-  { k: 'b12', n: 'Vitamina B12', u: 'µg', ref: () => 2.4 },
-  { k: 'om3', n: 'Omega-3', u: 'g', ref: () => 2 },
-  { k: 'crea', n: 'Creatina', u: 'g', ref: () => 5 },
+  /* minerali */
+  { k: 'k', n: 'Potassio', u: 'mg', ref: () => 3500, group: 'min' },
+  { k: 'ca', n: 'Calcio', u: 'mg', ref: () => 1000, group: 'min' },
+  { k: 'ph', n: 'Fosforo', u: 'mg', ref: () => 700, group: 'min' },
+  { k: 'mg', n: 'Magnesio', u: 'mg', ref: s => s === 'f' ? 300 : 350, group: 'min' },
+  { k: 'fe', n: 'Ferro', u: 'mg', ref: s => s === 'f' ? 18 : 10, group: 'min' },
+  { k: 'zn', n: 'Zinco', u: 'mg', ref: s => s === 'f' ? 9 : 12, group: 'min' },
+  { k: 'cu', n: 'Rame', u: 'mg', ref: () => 0.9, group: 'min' },
+  { k: 'mn', n: 'Manganese', u: 'mg', ref: () => 3, group: 'min' },
+  { k: 'io', n: 'Iodio', u: 'µg', ref: () => 150, group: 'min' },
+  { k: 'se', n: 'Selenio', u: 'µg', ref: () => 55, group: 'min' },
+  /* vitamine */
+  { k: 'vita', n: 'Vitamina A', u: 'µg', ref: s => s === 'f' ? 600 : 700, group: 'vit' },
+  { k: 'vitc', n: 'Vitamina C', u: 'mg', ref: s => s === 'f' ? 85 : 105, group: 'vit' },
+  { k: 'vitd', n: 'Vitamina D', u: 'µg', ref: () => 15, group: 'vit' },
+  { k: 'vite', n: 'Vitamina E', u: 'mg', ref: s => s === 'f' ? 11 : 13, group: 'vit' },
+  { k: 'vitk', n: 'Vitamina K', u: 'µg', ref: () => 70, group: 'vit' },
+  { k: 'b1', n: 'Vitamina B1', u: 'mg', ref: s => s === 'f' ? 1.1 : 1.2, group: 'vit' },
+  { k: 'b2', n: 'Vitamina B2', u: 'mg', ref: s => s === 'f' ? 1.3 : 1.6, group: 'vit' },
+  { k: 'b3', n: 'Vitamina B3 (niacina)', u: 'mg', ref: () => 16, group: 'vit' },
+  { k: 'b6', n: 'Vitamina B6', u: 'mg', ref: () => 1.3, group: 'vit' },
+  { k: 'b9', n: 'Folati (B9)', u: 'µg', ref: () => 400, group: 'vit' },
+  { k: 'b12', n: 'Vitamina B12', u: 'µg', ref: () => 2.4, group: 'vit' },
+  /* altro */
+  { k: 'fib', n: 'Fibre', u: 'g', ref: () => 30, group: 'alt' },
+  { k: 'om3', n: 'Omega-3', u: 'g', ref: () => 2, group: 'alt' },
+  { k: 'crea', n: 'Creatina', u: 'g', ref: () => 5, group: 'alt' },
 ];
+const MICRO_GROUPS = { min: 'Minerali', vit: 'Vitamine', alt: 'Altro' };
 const MICRO_TIPS = {
   crea: 'Con la dieta ne assumi circa 1 g al giorno (carne e pesce, stima). Per i benefici sulla forza servono 3–5 g al giorno di integratore, tutti i giorni, anche quelli di riposo.',
   vitd: 'La vitamina D arriva soprattutto dal sole (15–20 min al giorno su braccia e viso). Con il cibo è difficile arrivarci: pesce grasso e uova aiutano; in inverno valuta un integratore con il medico.',
@@ -177,8 +189,14 @@ function sugarSplit(tot) {
 function microCard(tot, daysN, k, open) {
   const rows = microRows(tot, daysN, k);
   const ok = rows.filter(r => r.pct >= 1).length;
+  let body = '', grp = null;
+  for (const r of rows) {
+    if (r.group && r.group !== grp) { grp = r.group; body += `<div class="eyebrow" style="margin:10px 2px 3px">${MICRO_GROUPS[grp] || ''}</div>`; }
+    const col = r.pct >= 1 ? 'var(--good)' : r.pct >= 0.5 ? 'var(--gold)' : 'var(--bad)';
+    body += `<button class="mrow" data-a="microInfo" data-k="${r.k}"><span class="mn">${r.n}</span><span class="mtrack"><i style="width:${Math.min(100, r.pct * 100)}%;background:${col}"></i></span><span class="mv tnum">${fmtN(r.v, r.v < 10 ? 1 : 0)} <small>/ ${fmtN(r.r, r.r < 10 ? 1 : 0)} ${r.u}</small></span></button>`;
+  }
   return `<div class="card tight"><button class="row" data-a="toggleMicro" style="text-align:left"><b class="grow">Micronutrienti</b><span class="small muted">${ok}/${rows.length} a obiettivo</span>${icon(open ? 'up' : 'down', 18)}</button>
-    ${open ? `<div class="micros">${rows.map(r => { const col = r.pct >= 1 ? 'var(--good)' : r.pct >= 0.5 ? 'var(--gold)' : 'var(--bad)'; return `<button class="mrow" data-a="microInfo" data-k="${r.k}"><span class="mn">${r.n}</span><span class="mtrack"><i style="width:${Math.min(100, r.pct * 100)}%;background:${col}"></i></span><span class="mv tnum">${fmtN(r.v, r.v < 10 ? 1 : 0)} <small>/ ${fmtN(r.r, r.r < 10 ? 1 : 0)} ${r.u}</small></span></button>`; }).join('')}</div>
+    ${open ? `<div class="micros">${body}</div>
     <div class="small faint">Riferimenti LARN/EFSA per adulti. ${k ? 'Alcuni prodotti confezionati non riportano le vitamine: il totale può essere sottostimato.' : 'Media giornaliera sui giorni registrati.'} Tocca una riga per sapere dove trovarlo.</div>` : ''}
   </div>`;
 }

@@ -542,7 +542,7 @@ function layerQuick(l) {
 function layerFoodEdit(l) {
   const f = l.food, basis = l.basis || '100';
   const fld = (k, lab, mode = 'decimal', mx) => `<div class="field"><label>${lab}</label><input class="input" data-in="feNut" data-k="${k}" inputmode="${mode}" data-max="${mx ?? (k === 'kcal' ? 900 : 100)}" value="${f.per[k] ?? ''}"></div>`;
-  const microMax = { k: 99999, ca: 99999, fe: 9999, mg: 99999, zn: 9999, se: 99999, vita: 99999, vitc: 99999, vitd: 9999, vite: 9999, b6: 999, b9: 99999, b12: 99999, om3: 100 };
+  const microMax = { k: 99999, ca: 99999, fe: 9999, mg: 99999, zn: 9999, se: 99999, vita: 99999, vitc: 99999, vitd: 9999, vite: 9999, b6: 999, b9: 99999, b12: 99999, om3: 100, ph: 99999, cu: 999, mn: 999, io: 99999, vitk: 99999, b1: 999, b2: 999, b3: 9999 };
   return `<div class="layer">${head(l.isNew ? (f.cat === 'supp' ? 'Nuovo integratore' : 'Nuovo alimento') : 'Modifica alimento', 'x', `<button class="btn primary sm" data-a="foodSave">Salva</button>`)}
     <div class="layer-body"><div class="layer-inner">
       <div class="field"><label for="fe-n">Nome</label><input id="fe-n" class="input" data-in="feStr" data-k="n" maxlength="60" value="${esc(f.n)}" placeholder="${f.cat === 'supp' ? 'Es. Vitamina D3 Prozis' : 'Es. Yogurt greco Lidl'}"></div>

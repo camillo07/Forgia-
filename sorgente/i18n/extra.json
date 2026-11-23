@@ -930,5 +930,45 @@
 "Ho tolto i dati di esempio: ora contano solo i tuoi": [
 "Sample data removed: now only your own data counts",
 "He quitado los datos de ejemplo: ahora solo cuentan los tuyos"
+],
+"Fosforo": [
+"Phosphorus",
+"Fósforo"
+],
+"Rame": [
+"Copper",
+"Cobre"
+],
+"Manganese": [
+"Manganese",
+"Manganeso"
+],
+"Iodio": [
+"Iodine",
+"Yodo"
+],
+"Vitamina K": [
+"Vitamin K",
+"Vitamina K"
+],
+"Vitamina B1": [
+"Vitamin B1",
+"Vitamina B1"
+],
+"Vitamina B2": [
+"Vitamin B2",
+"Vitamina B2"
+],
+"Vitamina B3 (niacina)": [
+"Vitamin B3 (niacin)",
+"Vitamina B3 (niacina)"
+],
+"Minerali": [
+"Minerals",
+"Minerales"
+],
+"Vitamine": [
+"Vitamins",
+"Vitaminas"
 ]
 }
